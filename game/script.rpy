@@ -5,6 +5,16 @@
 
 define e = Character("Eileen")
 
+define mc = Character("Raine")
+define na = Character()
+define le = Character("Leona")
+define ju = Character("Juneau")
+
+define lj = Character("Leona's journal", kind=nvl)
+define rj = Character("Raine's journal", kind=nvl)
+
+
+
 
 # The game starts here.
 
