@@ -294,7 +294,7 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
+        xpos gui.navigation_xalign
         yalign 0.5
 
         spacing gui.navigation_spacing
@@ -528,7 +528,7 @@ style game_menu_label_text:
     yalign 0.5
 
 style return_button:
-    xpos gui.navigation_xpos
+    xpos gui.navigation_xalign
     yalign 1.0
     yoffset -45
 
@@ -835,7 +835,7 @@ style pref_label_text:
     yalign 1.0
 
 style pref_vbox:
-    xsize 338
+    xsize 350
 
 style radio_vbox:
     spacing gui.pref_button_spacing
@@ -869,7 +869,7 @@ style slider_button_text:
     properties gui.button_text_properties("slider_button")
 
 style slider_vbox:
-    xsize 675
+    xsize 600
 
 
 ## History screen ##############################################################
