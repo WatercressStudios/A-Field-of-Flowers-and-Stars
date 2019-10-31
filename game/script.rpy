@@ -13,15 +13,22 @@ define ju = Character("Juneau")
 define lj = Character("Leona's journal", kind=nvl)
 define rj = Character("Raine's journal", kind=nvl)
 
+image logo = "gui/Star Filled-48.png"
+label splashscreen:
+    show logo with Dissolve(2.0)
+    hide logo with Dissolve(1.0)
 
+label main_menu:
+    return
 
-
-# The game starts here.
-
-# The game starts here.
 label start:
-
+    $ quick_menu = False
     show screen starfield
+    pause (2.0)
+    call screen navigation_2 with Dissolve(2.0)
+    $ quick_menu = False
+
+
     
     "Space."
     
@@ -39,3 +46,7 @@ label start:
     # This ends the game.
 
     return
+
+
+
+
