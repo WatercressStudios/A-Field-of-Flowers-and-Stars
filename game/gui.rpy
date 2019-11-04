@@ -17,6 +17,18 @@ init python:
 ## GUI Configuration Variables
 ################################################################################
 
+## Custom colours
+define colors.base = '#FFF0E7'
+define colors.neutral = '#44484F'
+define colors.namebox = {
+    'Default': '#44484FCD',
+    'Raine': '#88ABDFCD',
+    'Leona': '#9F2F2ECD',
+    'Juneau': '#9465B5CD',
+}
+define colors.raine = '#4A658C'
+define colors.leona = '#9F2F2E'
+define colors.ai = '#694085'
 
 ## Colors ######################################################################
 ##
@@ -48,32 +60,32 @@ define gui.muted_color = '#003d51'
 define gui.hover_muted_color = '#005b7a'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#ffffff'
-define gui.interface_text_color = '#ffffff'
+define gui.text_color = colors.neutral
+define gui.interface_text_color = colors.neutral
 
 
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "gui/sagi/Comfortaa/Comfortaa_Bold.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "gui/sagi/Comfortaa/Comfortaa_Bold.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "gui/sagi/Comfortaa/Comfortaa_Bold.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 33
+define gui.text_size = 30
 
 ## The size of character names.
-define gui.name_text_size = 45
+define gui.name_text_size = 42
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 33
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 36
+define gui.label_text_size = 48
 
 ## The size of text on the notify screen.
 define gui.notify_text_size = 24
@@ -95,12 +107,13 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = 278
+define gui.textbox_height = 180
+define gui.textbox_width = 1000
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
-define gui.textbox_yalign = 1.0
-
+define gui.textbox_xalign = 0.5
+define gui.textbox_yalign = 0.95
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
@@ -128,15 +141,16 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
-define gui.dialogue_xpos = 402
-define gui.dialogue_ypos = 75
+define gui.dialogue_xpos = 0.1
+define gui.dialogue_ypos = 0.185
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 1116
+define gui.dialogue_width = 840
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
 define gui.dialogue_text_xalign = 0.0
+define gui.dialogue_text_line_spacing = 6
 
 
 ## Buttons #####################################################################
@@ -469,6 +483,3 @@ init python:
 
         gui.nvl_button_width = 1860
         gui.nvl_button_xpos = 30
-
-
-

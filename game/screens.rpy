@@ -70,10 +70,9 @@ style vslider:
     base_bar Frame("gui/slider/vertical_[prefix_]bar.png", gui.vslider_borders, tile=gui.slider_tile)
     thumb "gui/slider/vertical_[prefix_]thumb.png"
 
-
 style frame:
     padding gui.frame_borders.padding
-    background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
+    background Frame("gui/sagi/frame.png", gui.frame_borders)
 
 
 
@@ -104,9 +103,18 @@ screen say(who, what):
         if who is not None:
 
             window:
-                id "namebox"
-                style "namebox"
-                text who id "who"
+                # id "namebox"
+                # style "namebox"
+                if who in colors.namebox:
+                    background colors.namebox[who]
+                else:
+                    background colors.namebox['Default']
+                xysize (225, 55)
+                pos (182, -3)
+                text who id "who":
+                    xalign 0.5
+                    text_align 0.5
+                    color colors.base
 
         text what id "what"
 
@@ -115,6 +123,29 @@ screen say(who, what):
     ## phone variant - there's no room.
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
+
+transform change_transform(old, new):
+    contains:
+        old
+        xalign 0.08
+        yalign 1.0
+        yoffset 520
+        easeout 0.2 yoffset 1080
+    contains:
+        new
+        xalign 0.08
+        yalign 1.0
+        yoffset 1080
+        easein 0.2 yoffset 500
+        ease 0.1 yoffset 520
+
+define config.side_image_change_transform = change_transform
+
+transform same_transform(old, new):
+    old
+    new with Dissolve(0.2, alpha=True)
+
+define config.side_image_same_transform = same_transform
 
 
 ## Make the namebox available for styling through the Character object.
@@ -131,12 +162,12 @@ style namebox_label is say_label
 
 
 style window:
-    xalign 0.5
-    xfill True
+    xalign gui.textbox_xalign
     yalign gui.textbox_yalign
+    xsize gui.textbox_width
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Frame("gui/sagi/textframe.png", Borders(72, 0, 72, 0), xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -145,7 +176,7 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    background colors.neutral
     padding gui.namebox_borders.padding
 
 style say_label:
