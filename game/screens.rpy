@@ -75,6 +75,16 @@ style frame:
     background Frame("gui/sagi/frame.png", gui.frame_borders)
 
 
+label splashscreen:
+    show logo with Dissolve(2.0)
+    hide logo with Dissolve(1.0)
+
+label main_menu:
+    $ main_menu = True
+    scene starfield with dissolve
+    pause (2.0)
+    call screen main_menu with Dissolve(2.0)
+
 
 ################################################################################
 ## In-game screens
@@ -136,7 +146,7 @@ transform change_transform(old, new):
         xalign 0.08
         yalign 1.0
         yoffset 1080
-        easein 0.2 yoffset 500
+        easein 0.3 yoffset 500
         ease 0.1 yoffset 520
 
 define config.side_image_change_transform = change_transform
@@ -330,10 +340,12 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
+        if main_menu:
+            textbutton _("Start") action Jump("start")
+        else:
+            textbutton _("History") action ShowMenu("history")
 
-        textbutton _("History") action ShowMenu("history")
-
-        textbutton _("Save") action ShowMenu("save")
+            textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
 
@@ -346,38 +358,6 @@ screen navigation():
         elif not main_menu:
 
             textbutton _("Main Menu") action MainMenu()
-
-        textbutton _("About") action ShowMenu("about")
-
-        if renpy.variant("pc"):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
-
-            ## The quit button is banned on iOS and unnecessary on Android.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
-
-screen navigation_2():
-
-    vbox:
-        style_prefix "navigation"
-
-        xpos gui.navigation_xalign
-        yalign 0.5
-
-        spacing gui.navigation_spacing
-
-
-        textbutton _("Start") action Return()
-
-        textbutton _("Load") action ShowMenu("load")
-
-        textbutton _("Preferences") action ShowMenu("preferences")
-
-        if _in_replay:
-
-            textbutton _("End Replay") action EndReplay(confirm=True)
-
 
         textbutton _("About") action ShowMenu("about")
 
@@ -444,7 +424,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    background None
 
 style main_menu_vbox:
     xalign 1.0
@@ -486,10 +466,6 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
         hbox:
 
-            ## Reserve space for the navigation section.
-            frame:
-                style "game_menu_navigation_frame"
-
             frame:
                 style "game_menu_content_frame"
 
@@ -525,6 +501,9 @@ screen game_menu(title, scroll=None, yinitial=0.0):
                 else:
 
                     transclude
+            ## Reserve space for the navigation section.
+            frame:
+                style "game_menu_navigation_frame"
 
     use navigation
 
@@ -556,15 +535,15 @@ style game_menu_outer_frame:
     bottom_padding 45
     top_padding 180
 
-    background "gui/overlay/game_menu.png"
+    #background "gui/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
     xsize 420
     yfill True
 
 style game_menu_content_frame:
-    left_margin 60
-    right_margin 30
+    left_margin 160
+    right_margin 130
     top_margin 15
 
 style game_menu_viewport:
