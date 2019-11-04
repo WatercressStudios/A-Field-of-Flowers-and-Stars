@@ -79,12 +79,11 @@ label splashscreen:
     show logo with Dissolve(2.0)
     hide logo with Dissolve(1.0)
 
-label main_menu:
-    $ main_menu = True
-    scene starfield with dissolve
-    pause (2.0)
-    call screen main_menu with Dissolve(2.0)
-
+# label main_menu:
+#     $ main_menu = True
+#     scene starfield with dissolve
+#     pause (2.0)
+#     call screen main_menu with Dissolve(2.0)
 
 ################################################################################
 ## In-game screens
@@ -281,6 +280,173 @@ style choice_button_text is default:
 ## The quick menu is displayed in-game to provide easy access to the out-of-game
 ## menus.
 
+transform flower_menu_transform:
+    anchor (0.5, 0.5)
+    on show:
+        zoom 0.0
+        easein 0.15 zoom 1.02
+        ease 0.05 zoom 1.0
+    on hide:
+        easein 0.2 zoom 0.0
+
+screen flower_menu_button():
+    if quick_menu:
+        frame at flower_menu_transform:
+            background None
+            align (1.0, 0.0)
+            offset (-110, 220)
+            imagebutton:
+                align (0.5, 0.5)
+                idle 'gui/sagi/roundbutton-idle.png'
+                hover 'gui/sagi/roundbutton-hover.png'
+                action [
+                ]
+            text "j":
+                align (0.5, 0.5)
+                text_align 0.5
+        frame at flower_menu_transform:
+            background None
+            align (1.0, 0.0)
+            offset (-110, 100)
+            imagebutton:
+                align (0.5, 0.5)
+                idle 'gui/sagi/roundbutton-idle.png'
+                hover 'gui/sagi/roundbutton-hover.png'
+                hovered [
+                    HoverFlowerButton(),
+                    Hide('flower_menu_button'),
+                    Show('flower_menu'),
+                    Show('flower_menu_moon'),
+                ]
+                action Null
+            text "i":
+                align (0.5, 0.5)
+                text_align 0.5
+        key "mouseup_3" action [
+            RightClickFlower(),
+            Hide('flower_menu_button'),
+            Show('flower_menu'),
+            Show('flower_menu_moon'),
+        ]
+
+init python:
+    import math
+
+    _game_menu_screen = None
+    right_click_pos = (0, 0)
+
+    flower_menu_actions = [
+        ('save', ShowMenu('save')),
+        ('load', ShowMenu('load')),
+        ('pref', ShowMenu('preferences')),
+        ('quit', MainMenu()),
+        ('skip', Null),
+    ]
+
+    def polygon_point_offset(ind, distance=75, points=5):
+        ang = -2.0 * math.pi / points
+        x = math.sin(ang * (2 + ind)) * distance
+        y = math.cos(ang * (2 + ind)) * distance
+        return (x, y)
+
+    class HoverFlowerButton:
+        def __call__(self):
+            global right_click_pos
+            dim = (110, 100)
+            right_click_pos = (config.screen_width - dim[0], dim[1])
+
+    class RightClickFlower:
+        def __call__(self):
+            global right_click_pos
+            dim = (110, 100)
+            right_click_pos = list(renpy.get_mouse_pos())
+            if config.screen_width - right_click_pos[0] < dim[0]:
+                right_click_pos[0] = config.screen_width - dim[0]
+            elif right_click_pos[0] < dim[0]:
+                right_click_pos[0] = dim[0]
+            if right_click_pos[1] < dim[1]:
+                right_click_pos[1] = dim[1]
+            elif config.screen_height - right_click_pos[1] < dim[1]:
+                right_click_pos[1] = config.screen_height - dim[1]
+            right_click_pos = tuple(right_click_pos)
+
+transform flower_moon_transform:
+    anchor (0.5, 0.5)
+    on show:
+        parallel:
+            rotate 0
+            linear 5.0 rotate 180
+            repeat
+        parallel:
+            zoom 0.0
+            easein 0.2 zoom 1.02
+            ease 0.3 zoom 1.0
+    on hide:
+        easein 0.2 zoom 0.0
+
+screen flower_menu_moon():
+    if quick_menu:
+        frame at flower_moon_transform:
+            background None
+            pos right_click_pos
+
+            add im.FactorScale('gui/sagi/roundbutton-hover.png', 0.15):
+                align (0.5, 0.5)
+                xoffset -25
+            add im.FactorScale('gui/sagi/roundbutton-hover.png', 0.15):
+                align (0.5, 0.5)
+                xoffset 25
+
+screen flower_menu():
+    if quick_menu:
+        button:
+            background None
+            xysize (1.0, 1.0)
+            key "mouseup_3" action [
+                Hide('flower_menu'),
+                Show('flower_menu_button'),
+                Hide('flower_menu_moon'),
+            ]
+            action [
+                Hide('flower_menu'),
+                Show('flower_menu_button'),
+                Hide('flower_menu_moon'),
+            ]
+
+        button at flower_menu_transform:
+            background None
+            xysize (250, 250)
+            pos right_click_pos
+
+            add im.FactorScale('gui/sagi/roundbutton-hover.png', 0.4):
+                align (0.5, 0.5)
+            for i in range(0,5):
+                frame:
+                    background None
+                    offset polygon_point_offset(i)
+                    imagebutton:
+                        align (0.5, 0.5)
+                        idle 'gui/sagi/roundbutton-idle.png'
+                        hover 'gui/sagi/roundbutton-hover.png'
+                        action [
+                            Hide('flower_menu'),
+                            Show('flower_menu_button'),
+                            Hide('flower_menu_moon'),
+                            flower_menu_actions[i][1],
+                        ]
+                    text flower_menu_actions[i][0]:
+                        align (0.5, 0.5)
+                        yoffset 13
+                        text_align 0.5
+                        size 15
+            action []
+            mousearea:
+                unhovered [
+                    Hide('flower_menu'),
+                    Show('flower_menu_button'),
+                    Hide('flower_menu_moon'),
+                ]
+
 screen quick_menu():
 
     ## Ensure this appears on top of other screens.
@@ -303,11 +469,11 @@ screen quick_menu():
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
 
-
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
-init python:
-    config.overlay_screens.append("quick_menu")
+# init python:
+#     config.overlay_screens.append("quick_menu")
+#     config.overlay_screens.append("flower_menu_button")
 
 default quick_menu = True
 
@@ -341,7 +507,7 @@ screen navigation():
         spacing gui.navigation_spacing
 
         if main_menu:
-            textbutton _("Start") action Jump("start")
+            textbutton _("Start") action Start("start")
         else:
             textbutton _("History") action ShowMenu("history")
 

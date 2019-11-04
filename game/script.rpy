@@ -21,6 +21,7 @@ image le = "gui/sagi/test/leona.png"
 
 label start:
     scene testbg with dissolve
+    show screen flower_menu_button
 
     mc "Rather, here, everyone travels among the same streets, trodding upon the same dusty ground - where an alien like myself can find home among the pleasantries of the locals."
 
@@ -37,5 +38,4 @@ label start:
     "To seek out new life, and new civilisations."
 
     # This ends the game.
-
     return
