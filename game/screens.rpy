@@ -344,21 +344,25 @@ init python:
     ]
 
     def polygon_point_offset(ind, distance=75, points=5):
+        if points == 1:
+            ind += 0.5
+        elif points > 1:
+            ind += (points - 1) * 0.5
         ang = -2.0 * math.pi / points
-        x = math.sin(ang * (2 + ind)) * distance
-        y = math.cos(ang * (2 + ind)) * distance
+        x = math.sin(ang * ind) * distance
+        y = math.cos(ang * ind) * distance
         return (x, y)
 
     class HoverFlowerButton:
         def __call__(self):
             global right_click_pos
-            dim = (110, 100)
+            dim = (115, 110)
             right_click_pos = (config.screen_width - dim[0], dim[1])
 
     class RightClickFlower:
         def __call__(self):
             global right_click_pos
-            dim = (110, 100)
+            dim = (115, 110)
             right_click_pos = list(renpy.get_mouse_pos())
             if config.screen_width - right_click_pos[0] < dim[0]:
                 right_click_pos[0] = config.screen_width - dim[0]
@@ -420,10 +424,10 @@ screen flower_menu():
 
             add im.FactorScale('gui/sagi/roundbutton-hover.png', 0.4):
                 align (0.5, 0.5)
-            for i in range(0,5):
+            for i in range(0, len(flower_menu_actions)):
                 frame:
                     background None
-                    offset polygon_point_offset(i)
+                    offset polygon_point_offset(i, points=len(flower_menu_actions))
                     imagebutton:
                         align (0.5, 0.5)
                         idle 'gui/sagi/roundbutton-idle.png'
