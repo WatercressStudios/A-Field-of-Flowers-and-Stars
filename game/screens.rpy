@@ -27,11 +27,14 @@ style gui_text:
 
 style button:
     properties gui.button_properties("button")
+    idle_background Frame('gui/sagi/button-idle.png', Borders(55, 0, 55, 0))
+    insensitive_background Frame('gui/sagi/button-disabled.png', Borders(55, 0, 55, 0))
+    hover_background Frame('gui/sagi/button-highlighted.png', Borders(55, 0, 55, 0))
+    xysize (250, 107)
 
 style button_text is gui_text:
     properties gui.text_properties("button")
     yalign 0.5
-
 
 style label_text is gui_text:
     properties gui.text_properties("label", accent=True)
@@ -289,17 +292,25 @@ transform flower_menu_transform:
     on hide:
         easein 0.2 zoom 0.0
 
+transform flower_button_transform:
+    on idle:
+        linear 0.2 alpha 0.5
+    on hover:
+        linear 0.2 alpha 1
+
 screen flower_menu_button():
     if quick_menu:
         frame at flower_menu_transform:
             background None
             align (1.0, 0.0)
             offset (-110, 220)
-            imagebutton:
+            imagebutton at flower_button_transform:
                 align (0.5, 0.5)
                 idle 'gui/sagi/roundbutton-idle.png'
                 hover 'gui/sagi/roundbutton-hover.png'
                 action [
+                    Hide('flower_menu_button'),
+                    Show('journal'),
                 ]
             text "j":
                 align (0.5, 0.5)
@@ -308,7 +319,7 @@ screen flower_menu_button():
             background None
             align (1.0, 0.0)
             offset (-110, 100)
-            imagebutton:
+            imagebutton at flower_button_transform:
                 align (0.5, 0.5)
                 idle 'gui/sagi/roundbutton-idle.png'
                 hover 'gui/sagi/roundbutton-hover.png'
@@ -392,6 +403,8 @@ screen flower_menu_moon():
     if quick_menu:
         frame at flower_moon_transform:
             background None
+            padding (0, 0)
+            margin (0, 0)
             pos right_click_pos
 
             add im.FactorScale('gui/sagi/roundbutton-hover.png', 0.15):
@@ -405,6 +418,8 @@ screen flower_menu():
     if quick_menu:
         button:
             background None
+            padding (0, 0)
+            margin (0, 0)
             xysize (1.0, 1.0)
             key "mouseup_3" action [
                 Hide('flower_menu'),
@@ -419,6 +434,8 @@ screen flower_menu():
 
         button at flower_menu_transform:
             background None
+            padding (0, 0)
+            margin (0, 0)
             xysize (250, 250)
             pos right_click_pos
 
@@ -427,6 +444,8 @@ screen flower_menu():
             for i in range(0, len(flower_menu_actions)):
                 frame:
                     background None
+                    padding (0, 0)
+                    margin (0, 0)
                     offset polygon_point_offset(i, points=len(flower_menu_actions))
                     imagebutton:
                         align (0.5, 0.5)
@@ -450,6 +469,192 @@ screen flower_menu():
                     Show('flower_menu_button'),
                     Hide('flower_menu_moon'),
                 ]
+
+transform fade_transform:
+    on show:
+        alpha 0
+        linear 0.3 alpha 1
+    on hide:
+        linear 0.3 alpha 0
+
+transform journal_transform:
+    on show:
+        xpos 1.5
+        alpha 0
+        easein 0.3 xalign 0.4 alpha 1
+        easeout 0.1 xalign 0.5
+    on hide:
+        ease 0.1 xalign 0.4
+        easeout 0.3 xpos 1.5 alpha 0
+
+init python:
+    import math
+
+    journal_selected_entry = 0
+
+    class JournalSelected:
+        def __init__(self, _entry):
+            self.entry = _entry
+
+        def __call__(self):
+            global journal_selected_entry
+            journal_selected_entry = self.entry
+            renpy.restart_interaction()
+
+screen journal():
+    ## Ensure other screens do not get input while this screen is displayed.
+    modal True
+
+    style_prefix "journal"
+
+    button at fade_transform:
+        background "#000000CC"
+        xysize (1.0, 1.0)
+        action [
+            Hide('journal'),
+            Show('flower_menu_button'),
+        ]
+
+    frame at journal_transform:
+        align (0.5, 0.5)
+        xysize (1200, 800)
+        margin (0, 0)
+        button:
+            background None
+            xysize (1.0, 1.0)
+            action NullAction()
+        frame:
+            background colors.namebox['Default']
+            xysize (255, 55)
+            align (0, 0)
+            offset (50, -105)
+            label "Journal":
+                xysize (255, 55)
+                align (0.5, 0.5)
+                text_xalign 0.5
+                text_color colors.base
+
+        frame:
+            background None
+            padding (0, 0)
+            margin (0, 0)
+            xysize (300, 700)
+            align (0.0, 0.5)
+            # LEFT
+            vbox:
+                xalign 0.5
+                xsize 300
+                button:
+                    style_prefix 'list'
+                    align (0.5, 0.5)
+                    selected journal_selected_entry == 0
+                    text 'Chat log':
+                        style_prefix 'list_button'
+                    action JournalSelected(0)
+
+                text '.    .    .':
+                    xysize (300, 700)
+                    align (0.5, 0.5)
+                null height 15
+                button:
+                    style_prefix 'list'
+                    align (0.5, 0.5)
+                    selected journal_selected_entry == 1
+                    text 'Day 26':
+                        style_prefix 'list_button'
+                    action JournalSelected(1)
+        # DIVIDER
+        frame:
+            background colors.neutral
+            padding (0, 0)
+            margin (0, 0)
+            xysize (3, 700)
+            align (0.35, 0.5)
+
+        frame:
+            background None
+            padding (0, 0)
+            margin (0, 0)
+            xysize (590, 700)
+            align (1.0, 0.5)
+            xoffset 5
+            # RIGHT
+
+            if journal_selected_entry == 0:
+                if _history_list:
+                    vbox:
+                        xsize 590
+                        spacing 5
+                        for h in _history_list:
+                            if h.who:
+                                hbox:
+                                    spacing 10
+                                    xsize 590
+                                    if h.who:
+                                        label h.who:
+                                            substitute False
+                                            ## Take the color of the who text from the Character, if
+                                            ## set.
+                                            text_color colors.base
+                                            if h.who in colors.namebox:
+                                                background colors.namebox[h.who]
+                                            text_size 26
+                                            text_align (0.5, 0.5)
+                                            xysize (100, 35)
+                                    else:
+                                        label '':
+                                            xysize (100, 35)
+                                    $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+                                    label what:
+                                        substitute False
+                                        xsize 480
+                                        text_align (0.0, 0.0)
+                                        text_size 30
+                                        if "color" in h.what_args:
+                                            text_color h.what_args["color"]
+                            else:
+                                $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+                                label what:
+                                    substitute False
+                                    xsize 550
+                                    text_xalign 0.5
+                                    text_size 30
+                else:
+                    label _("The chat log is empty."):
+                        text_size 32
+            else:
+                pass
+
+        button:
+            xysize (70, 70)
+            align (1.0, 0.0)
+            offset (52, -85)
+            idle_background 'gui/sagi/roundbutton-idle.png'
+            hover_background 'gui/sagi/roundbutton-hover.png'
+            action [
+                Hide('journal'),
+                Show('flower_menu_button'),
+            ]
+            text 'X':
+                align (0.5, 0.5)
+
+    ## Right-click and escape answer "no".
+    key "game_menu" action [
+        Hide('journal'),
+        Show('flower_menu_button'),
+    ]
+
+style list_button:
+    properties gui.button_properties("button")
+    idle_background None
+    insensitive_background None
+    hover_background Frame('gui/sagi/smallbutton-idle.png', Borders(55, 0, 55, 0))
+    selected_background Frame('gui/sagi/smallbutton-selected.png', Borders(55, 0, 55, 0))
+    xysize (270, 57)
+
+style list_button_text is gui_text:
+    properties gui.text_properties("button")
+    align (0.5, 0.5)
 
 screen quick_menu():
 
@@ -1351,9 +1556,9 @@ screen confirm(message, yes_action, no_action):
 
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.png"
+    add "#000000CC" at fade_transform
 
-    frame:
+    frame at fade_transform:
 
         vbox:
             xalign .5
@@ -1382,7 +1587,7 @@ style confirm_button is gui_medium_button
 style confirm_button_text is gui_medium_button_text
 
 style confirm_frame:
-    background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    background Frame("gui/sagi/frame.png", gui.confirm_frame_borders)
     padding gui.confirm_frame_borders.padding
     xalign .5
     yalign .5
@@ -1391,11 +1596,11 @@ style confirm_prompt_text:
     text_align 0.5
     layout "subtitle"
 
-style confirm_button:
-    properties gui.button_properties("confirm_button")
-
-style confirm_button_text:
-    properties gui.button_text_properties("confirm_button")
+# style confirm_button:
+#     properties gui.button_properties("confirm_button")
+#
+# style confirm_button_text:
+#     properties gui.button_text_properties("confirm_button")
 
 
 ## Skip indicator screen #######################################################
