@@ -351,7 +351,7 @@ init python:
         ('load', ShowMenu('load')),
         ('pref', ShowMenu('preferences')),
         ('quit', MainMenu()),
-        ('skip', Null),
+        ('skip', Skip()),
     ]
 
     def polygon_point_offset(ind, distance=75, points=5):
