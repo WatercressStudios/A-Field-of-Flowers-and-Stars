@@ -734,12 +734,12 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        # textbutton _("About") action ShowMenu("about")
 
         if renpy.variant("pc"):
 
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            # ## Help isn't necessary or relevant to mobile devices.
+            # textbutton _("Help") action ShowMenu("help")
 
             ## The quit button is banned on iOS and unnecessary on Android.
             textbutton _("Quit") action Quit(confirm=not main_menu)
@@ -1000,14 +1000,14 @@ screen save():
 
     tag menu
 
-    use file_slots(_("Save"))
+    use custom_file_slots(_("Save"))
 
 
 screen load():
 
     tag menu
 
-    use file_slots(_("Load"))
+    use custom_file_slots(_("Load"))
 
 
 screen file_slots(title):
@@ -1084,6 +1084,84 @@ screen file_slots(title):
                     textbutton "[page]" action FilePage(page)
 
                 textbutton _(">") action FilePageNext()
+
+screen custom_file_slots(title):
+    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    style_prefix "journal"
+
+    if main_menu:
+        $ close_action = [
+            Hide('custom_file_slots'),
+            Return(),
+        ]
+    else:
+        $ close_action = [
+            Hide('custom_file_slots'),
+            Show('flower_menu_button'),
+            Return(),
+        ]
+    button at fade_transform:
+        background "#000000CC"
+        xysize (1.0, 1.0)
+        action close_action
+    frame at fade_transform:
+        align (0.5, 0.5)
+        xysize (1200, 800)
+        margin (0, 0)
+        button:
+            background None
+            xysize (1.0, 1.0)
+            action NullAction()
+        frame:
+            background colors.namebox['Default']
+            xysize (255, 55)
+            align (0, 0)
+            offset (50, -105)
+            label title:
+                xysize (255, 55)
+                align (0.5, 0.5)
+                text_xalign 0.5
+                text_color colors.base
+
+        frame:
+            background None
+            padding (0, 0)
+            margin (0, 0)
+            xysize (900, 700)
+            align (0.5, 0.5)
+
+            ## The grid of file slots.
+            grid gui.file_slot_cols gui.file_slot_rows:
+                style_prefix "slot"
+                xalign 0.5
+                yalign 0.5
+                spacing gui.slot_spacing
+                for i in range(gui.file_slot_cols * gui.file_slot_rows):
+                    $ slot = i + 1
+                    button:
+                        action FileAction(slot)
+                        has vbox
+                        add FileScreenshot(slot) xalign 0.5
+                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                            style "slot_time_text"
+                            yoffset 15
+                        text FileSaveName(slot):
+                            style "slot_name_text"
+                            yoffset 15
+                        key "save_delete" action FileDelete(slot)
+
+        button:
+            xysize (70, 70)
+            align (1.0, 0.0)
+            offset (52, -85)
+            idle_background 'gui/sagi/roundbutton-idle.png'
+            hover_background 'gui/sagi/roundbutton-hover.png'
+            action close_action
+            text 'X':
+                align (0.5, 0.5)
+
+    ## Right-click and escape answer "no".
+    key "game_menu" action close_action
 
 
 style page_label is gui_label
@@ -1212,6 +1290,65 @@ screen preferences():
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
 
+screen custom_preferences():
+    tag menu
+    use game_menu(_("Preferences"), scroll="viewport"):
+        vbox:
+            hbox:
+                box_wrap True
+                if renpy.variant("pc"):
+                    vbox:
+                        style_prefix "radio"
+                        label _("Display")
+                        textbutton _("Window") action Preference("display", "window")
+                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                vbox:
+                    style_prefix "radio"
+                    label _("Rollback Side")
+                    textbutton _("Disable") action Preference("rollback side", "disable")
+                    textbutton _("Left") action Preference("rollback side", "left")
+                    textbutton _("Right") action Preference("rollback side", "right")
+                vbox:
+                    style_prefix "check"
+                    label _("Skip")
+                    textbutton _("Unseen Text") action Preference("skip", "toggle")
+                    textbutton _("After Choices") action Preference("after choices", "toggle")
+                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+
+                ## Additional vboxes of type "radio_pref" or "check_pref" can be
+                ## added here, to add additional creator-defined preferences.
+
+            null height (4 * gui.pref_spacing)
+            hbox:
+                style_prefix "slider"
+                box_wrap True
+                vbox:
+                    label _("Text Speed")
+                    bar value Preference("text speed")
+                    label _("Auto-Forward Time")
+                    bar value Preference("auto-forward time")
+                vbox:
+                    if config.has_music:
+                        label _("Music Volume")
+                        hbox:
+                            bar value Preference("music volume")
+                    if config.has_sound:
+                        label _("Sound Volume")
+                        hbox:
+                            bar value Preference("sound volume")
+                            if config.sample_sound:
+                                textbutton _("Test") action Play("sound", config.sample_sound)
+                    if config.has_voice:
+                        label _("Voice Volume")
+                        hbox:
+                            bar value Preference("voice volume")
+                            if config.sample_voice:
+                                textbutton _("Test") action Play("voice", config.sample_voice)
+                    if config.has_music or config.has_sound or config.has_voice:
+                        null height gui.pref_spacing
+                        textbutton _("Mute All"):
+                            action Preference("all mute", "toggle")
+                            style "mute_all_button"
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text
