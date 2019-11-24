@@ -13,9 +13,9 @@ init:
 
     ##Style Properties
     ##Text Outlines: They take a value, a color, an x offset, and a y offset. The offsets are used if you want a drop shadow effect. Add more as needed.
-    $ style.say_thought.outlines = [(1, "000000", 0, 0), (1, "#202020", 0, 0)]
-    $ style.say_dialogue.outlines = [(1, "000000", 0, 0), (1, "#202020", 0, 0)]
-    $ style.pref_label_text.outlines = [(0.2, "000000", 0, 0), (1, "#202020", 0, 0)]
+    $ style.say_thought.outlines = [(0.2, "000000", 0, 0), (1, "#CCCCCC", 0, 0)]
+    $ style.say_dialogue.outlines = [(0.2, "FFFFFF", 0, 0), (1, "#CCCCCC", 0, 0)]
+    $ style.pref_label_text.outlines = [(0.2, "000000", 0, 0), (1, "#CCCCCC", 0, 0)]
 
     #This is the default transition used when changing from one expression to the next while the character is on screen. Doesn't affect when they enter or leave.
     define config.say_attribute_transition = dissolve
@@ -52,10 +52,10 @@ init:
 
     ##background images, stored in images/backgrounds
     image white = "backgrounds/white.png"
-
+    image stars = "backgrounds/stars.jpg"
+    image cockpitoverlay = "overlays/cockpitoverlay.png"
     ##computer-graphics images, stored in images/cgs
     image cgTree = "cgs/cgtree.png"
-
     ##Sagi's stuff . Remove when it's no longer needed.
     image logo = "gui/Star Filled-48.png"
     image testbg = "gui/sagi/test/bg.jpg"
@@ -109,8 +109,8 @@ label splashscreen:
     show afofaslogo at center with dissolve:
         zoom 0.3
         yanchor .5
-        xpos .4
-        ypos .5
+        xpos .50
+        ypos .45
     $ renpy.pause(2, hard=True)
     hide afofaslogo with dissolve
 
@@ -129,22 +129,4 @@ label update:
         return
 
 label start:
-    scene testbg with dissolve
-    show screen flower_menu_button
-
-    mc "Rather, here, everyone travels among the same streets, trodding upon the same dusty ground - where an alien like myself can find home among the pleasantries of the locals."
-
-    show le with dissolve
-    le "Space."
-
-    le "The final frontier."
-
-    ju "These are the voyages of the starship Enterprise."
-
-    show starfield bigstars with dissolve
-
-    "It's continuing mission, to explore strange new worlds."
-    "To seek out new life, and new civilisations."
-
-    # This ends the game.
-    return
+    jump scene1
