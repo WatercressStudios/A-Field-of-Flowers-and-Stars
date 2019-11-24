@@ -24,7 +24,6 @@ style hyperlink_text:
 style gui_text:
     properties gui.text_properties("interface")
 
-
 style button:
     properties gui.button_properties("button")
     idle_background Frame('gui/sagi/button-idle.png', Borders(55, 0, 55, 0))
@@ -76,11 +75,6 @@ style vslider:
 style frame:
     padding gui.frame_borders.padding
     background Frame("gui/sagi/frame.png", gui.frame_borders)
-
-
-label splashscreen:
-    show logo with Dissolve(2.0)
-    hide logo with Dissolve(1.0)
 
 # label main_menu:
 #     $ main_menu = True
