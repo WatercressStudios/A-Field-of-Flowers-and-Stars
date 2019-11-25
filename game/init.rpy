@@ -50,7 +50,7 @@ init:
 
     ##Sprite Definitions: Ask sagi
     init python:
-        layerorder = ['base', 'arms', 'tail','mouth','eyes','brow', 'hair']
+        layerorder = ['hair', 'base', 'arms', 'tail','mouth','eyes','brow',]
         DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder)
 
         MapEmote('le n normal', 'le neutral base arms_default brow_default ed_default md_default')

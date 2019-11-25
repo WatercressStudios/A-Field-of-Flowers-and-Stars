@@ -522,12 +522,13 @@ init -50 python:
     dynamicspritespreview_text_selectedlayers = {}
     values = {}
     valuespath = {}
+    valueszoom = 1.0
     mapemotecode = None
     mapemotecode_postscript = None
     def DynamicSprites_VarUpdate():
         global dynamicspritespreview_var_selectedchar, dynamicspritespreview_var_selectedpose, dynamicspritespreview_var_selectedlayers
         global dynamicspritespreview_text_selectedchar, dynamicspritespreview_text_selectedpose, dynamicspritespreview_text_selectedlayers
-        global values, valuespath, mapemotecode, mapemotecode_postscript
+        global values, valuespath, valueszoom, mapemotecode, mapemotecode_postscript
         if len(charlist) == 0:
             dynamicspritespreview_text_selectedchar = "No character"
         else:
@@ -556,6 +557,7 @@ init -50 python:
             valuespath['base'] = []
             for base in values['base']:
                 valuespath['base'].append('_'.join(basepath+(base,)))
+            valueszoom = float(config.screen_height) / sizedict[basepath][1]
 
             values['eyes'] = list(infodict['eyes'])
             if 'ed_default' in values['eyes']:
@@ -682,7 +684,7 @@ screen dynamicspritespreview_dropdown(currentselected, selectionlist, callback, 
                         button:
                             background Solid("000e")
                             hover_background Solid("225e")
-                            xsize 1.0
+                            xysize (1.0, 60)
                             hovered [ callback(i, layer),
                                     Show('dynamicspritespreview'),
                                     Show('dynamicspritespreview_dropdown',
@@ -695,8 +697,9 @@ screen dynamicspritespreview_dropdown(currentselected, selectionlist, callback, 
                             text t:
                                 size 24
                                 color "fff"
-                                xalign 0.5
+                                align (0.5, 0.5)
                                 text_align 0.5
+
             vbar value YScrollValue("dynamicspritespreview_viewport_dropdown"):
                 xalign 1.0
                 xoffset 35
@@ -709,7 +712,7 @@ screen dynamicspritespreview:
         xysize (1.0, 1.0)
         margin (0,0)
         padding (0,0)
-        action Hide("dynamicspritespreview")
+        action [Hide("dynamicspritespreview"), Hide("dynamicspritespreview_dropdown")]
         text "DYNAMIC SPRITES PREVIEW (click here to close)":
             size 40
             color "000f"
@@ -732,11 +735,12 @@ screen dynamicspritespreview:
                         xinitial 0.5
                         yinitial 0.5
                         for layer in layerorder:
-                            $ img = valuespath[layer][dynamicspritespreview_var_selectedlayers[layer]]
-                            if not img is None:
-                                add valuespath[layer][dynamicspritespreview_var_selectedlayers[layer]]:
-                                    align (0.5, 0.5)
-                                    zoom 0.8
+                            if layer in values:
+                                $ img = valuespath[layer][dynamicspritespreview_var_selectedlayers[layer]]
+                                if not img is None:
+                                    add valuespath[layer][dynamicspritespreview_var_selectedlayers[layer]]:
+                                        align (0.5, 0.5)
+                                        zoom 0.8 * valueszoom
                 frame:
                     background None
                     margin (0,0)
@@ -796,34 +800,35 @@ screen dynamicspritespreview:
                     null height 20
                     for i in range(len(layerorder)):
                         $ l = layerorder[i]
-                        hbox:
-                            spacing 10
-                            label l:
-                                xysize (150, 60)
-                                margin (0,0)
-                                padding (0,0)
-                                text_size 24
-                                text_color "000"
-                                text_align (0.5, 0.5)
-                                text_text_align 1.0
-                            button:
-                                background Solid("222")
-                                hover_background Solid("225e")
-                                xysize (290, 60)
-                                margin (0,0)
-                                padding (0,0)
-                                hovered Show("dynamicspritespreview_dropdown",
-                                    currentselected=dynamicspritespreview_text_selectedlayers[l],
-                                    selectionlist=values[l],
-                                    callback=DynamicSprites_ChangeSelectedLayer,
-                                    layer=l,
-                                    offset=(0,i*60))
-                                action Hide("dynamicspritespreview_dropdown")
-                                text dynamicspritespreview_text_selectedlayers[l]:
-                                    size 20
-                                    color "fff"
-                                    align (0.5, 0.5)
-                                    text_align 0.5
+                        if l in values:
+                            hbox:
+                                spacing 10
+                                label l:
+                                    xysize (150, 60)
+                                    margin (0,0)
+                                    padding (0,0)
+                                    text_size 24
+                                    text_color "000"
+                                    text_align (0.5, 0.5)
+                                    text_text_align 1.0
+                                button:
+                                    background Solid("222")
+                                    hover_background Solid("225e")
+                                    xysize (290, 60)
+                                    margin (0,0)
+                                    padding (0,0)
+                                    hovered Show("dynamicspritespreview_dropdown",
+                                        currentselected=dynamicspritespreview_text_selectedlayers[l],
+                                        selectionlist=values[l],
+                                        callback=DynamicSprites_ChangeSelectedLayer,
+                                        layer=l,
+                                        offset=(0,i*60))
+                                    action Hide("dynamicspritespreview_dropdown")
+                                    text dynamicspritespreview_text_selectedlayers[l]:
+                                        size 20
+                                        color "fff"
+                                        align (0.5, 0.5)
+                                        text_align 0.5
             button:
                 background Solid("fffe")
                 xysize (config.screen_width/4, 1.0)

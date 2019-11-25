@@ -345,7 +345,9 @@ init python:
         ('load', ShowMenu('load')),
         ('pref', ShowMenu('preferences')),
         ('quit', MainMenu()),
+        ('auto', Preference("auto-forward", "toggle")),
         ('skip', Skip()),
+        ('sprite', Show('dynamicspritespreview')),
     ]
 
     def polygon_point_offset(ind, distance=75, points=5):
