@@ -49,6 +49,17 @@ init:
     image afofaslogo = "logos/afofaslogo.png"
 
     ##Sprite Definitions: Ask sagi
+    init python:
+        layerorder = ['base', 'arms', 'tail','mouth','eyes','brow', 'hair']
+        DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder)
+
+        MapEmote('le n normal', 'le neutral base arms_default brow_default ed_default md_default')
+        MapEmote('le n raised', 'le neutral base arms_raised brow_uparrow ed_away mdo_o')
+        MapEmote('le sp normal', 'le sadprofile base ed_default')
+        MapEmote('le sp lookaway', 'le sadprofile base ed_away')
+        MapEmote('le h normal', 'le hip base arms_default brow_default ed_default md_default tail_default')
+        MapEmote('le h armraised', 'le hip base arms_raised brow_default ed_bedroom md_smuggrin tail_default')
+        MapEmote('ju b normal', 'ju blue base arms_default brow_default ed_default md_default')
 
     ##background images, stored in images/backgrounds
     image white = "backgrounds/white.png"
