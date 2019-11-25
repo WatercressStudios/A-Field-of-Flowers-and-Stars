@@ -115,7 +115,9 @@ init -50 python:
 
     batchmapemotes = False
     basedict = {}
+    originalsizedict = {}
     sizedict = {}
+    offsetdict = {}
     pathdict = {}
     mapemotedict = {}
     spritedict = {}
@@ -123,7 +125,7 @@ init -50 python:
     posedict = {}
     haseyeslist = []
     hasmouthlist = []
-    def DefineImages(imageFolder, composite=False, prepend=None, overrideCharname=None, overrideLayerOrder=None):
+    def DefineImages(imageFolder, composite=False, prepend=None, overrideCharname=None, overrideLayerOrder=None, offsets=None, zooms=None):
         if composite:
             imglist = []
 
@@ -209,7 +211,30 @@ init -50 python:
                         if len(path_list) - baselen == 1:
                             basedict[basepath]['bases'].append(path_list[-1])
                             img = Image(pathdict[path_list])
-                            sizedict[basepath] = renpy.image_size(img)
+                            imgsize = renpy.image_size(img)
+                            if imgsize[1] > config.screen_height:
+                                sizedict[basepath] = float(config.screen_height) / imgsize[1]
+                            else:
+                                sizedict[basepath] = 1.0
+                            originalsizedict[basepath] = sizedict[basepath]
+                            if zooms != None:
+                                if type(zooms) == float:
+                                    sizedict[basepath] *= zooms
+                                elif type(zooms) == dict:
+                                    if basepath in zooms and type(zooms[basepath]) == float:
+                                        sizedict[basepath] *= zooms[basepath]
+                                    elif basepath[0] in zooms and type(zooms[basepath[0]]) == float:
+                                        sizedict[basepath] *= zooms[basepath[0]]
+                            if offsets != None:
+                                if type(offsets) == tuple and len(offsets) == 2:
+                                    offsetdict[basepath] = offsets
+                                elif type(offsets) == dict:
+                                    if basepath in offsets and type(offsets[basepath]) == tuple and len(offsets[basepath]) == 2:
+                                        offsetdict[basepath] = offsets[basepath]
+                                    elif basepath[0] in offsets and type(offsets[basepath[0]]) == tuple and len(offsets[basepath[0]]) == 2:
+                                        offsetdict[basepath] = offsets[basepath[0]]
+                            if not basepath in offsetdict:
+                                offsetdict[basepath] = (0, 0)
                         if len(path_list) - baselen == 2:
                             part = path_list[-2]
                             emote = path_list[-1]
@@ -318,10 +343,7 @@ init -50 python:
                                 for emote in basedict[basepath]['emotes']:
                                     layers.append(Attribute(layer, emote, '_'.join(basepath + (ex, emote)), emote == 'default'))
 
-                if sizedict[basepath][1] > config.screen_height:
-                    layered = LayeredImage(layers, at=Transform(zoom=float(config.screen_height)/sizedict[basepath][1]))
-                else:
-                    layered = LayeredImage(layers)
+                layered = LayeredImage(layers, at=Transform(zoom=sizedict[basepath], offset=offsetdict[basepath]))
                 spritedict[basepath] = layered
                 renpy.image(basepath, layered)
 
@@ -338,7 +360,7 @@ init -50 python:
             layers = []
             for layer in layerorder:
                 layers += layereddict[layer]
-            layered = LayeredImage(layers)
+            layered = LayeredImage(layers, at=Transform(zoom=sizedict[charpath], offset=offsetdict[charpath]))
             spritedict[charpath] = layered
             renpy.image(charpath, layered)
 
@@ -357,6 +379,7 @@ init -50 python:
         if basepath is None:
             return None
         sizedict[charpath] = sizedict[basepath]
+        offsetdict[charpath] = offsetdict[basepath]
 
         bases = None
         eyes = None
@@ -460,10 +483,7 @@ init -50 python:
             layers = []
             for layer in layerorder:
                 layers += layereddict[layer]
-            if sizedict[charpath][1] > config.screen_height:
-                layered = LayeredImage(layers, at=Transform(zoom=float(config.screen_height)/sizedict[charpath][1]))
-            else:
-                layered = LayeredImage(layers)
+            layered = LayeredImage(layers, at=Transform(zoom=sizedict[charpath], offset=offsetdict[charpath]))
             spritedict[charpath] = layered
             renpy.image(charpath, layered)
 
@@ -557,7 +577,7 @@ init -50 python:
             valuespath['base'] = []
             for base in values['base']:
                 valuespath['base'].append('_'.join(basepath+(base,)))
-            valueszoom = float(config.screen_height) / sizedict[basepath][1]
+            valueszoom = originalsizedict[basepath]
 
             values['eyes'] = list(infodict['eyes'])
             if 'ed_default' in values['eyes']:

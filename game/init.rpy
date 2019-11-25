@@ -51,7 +51,7 @@ init:
     ##Sprite Definitions: Ask sagi
     init python:
         layerorder = ['hair', 'base', 'arms', 'tail','mouth','eyes','brow',]
-        DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder)
+        DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder, offsets=(0, 100), zooms=1.3)
 
         MapEmote('le n normal', 'le neutral base arms_default brow_default ed_default md_default')
         MapEmote('le n raised', 'le neutral base arms_raised brow_uparrow ed_away mdo_o')

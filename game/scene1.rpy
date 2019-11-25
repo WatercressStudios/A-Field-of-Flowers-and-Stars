@@ -23,13 +23,15 @@ label scene1:
 
     #Start text box overlay. Raine is narrating aloud.
 
-    show le n normal with dissolve
+    show le n normal with dissolve:
+        xalign 0.7
     na "All my life I've been looking for something."
 
     show le sp lookaway with dissolve
     na "No, it's more than that."
 
-    scene starfield with dissolve
+    #scene starfield with dissolve
+    hide le with dissolve
     na "All my life, something has been calling out to me."
 
     show ju b normal with dissolve:
@@ -40,7 +42,7 @@ label scene1:
     #SFX Sound of the warp drive comes louder to accompany the ship coming into focus.
 
     show le h armraised with dissolve:
-        xalign 0.7
+        xalign 1.0
     na "And when this ship is ready, there will be nothing out of my reach."
 
     show le h normal with dissolve
