@@ -3,14 +3,12 @@ init python:
     random = renpy.random
 
 
-    def rectangle_displayable(colour=(128, 128, 255, 255), width=1, height=1):
+    def rectangle_displayable(colour=(255, 255, 255, 255), width=1, height=1):
         """ Create a displayable to use as a particle.
-
         Args:
             colour (tuple): RGBA for the particle.
             width (int): Width of the particle.
             height (int): Height of the particle.
-
         Returns:
             displayable
         """
@@ -20,21 +18,18 @@ init python:
 
     class ProjectionStarfield(renpy.Displayable, NoRollback):
         """ Fires a displayable from the centre of the screen outwards.
-
         Args:
             star_amount (int): Number of stars to display
             depth (int): Highest z coordinate
             perspective (float): Amount of perspective projection to use
             speed (int): How quickly the stars move off screen
             image (displayable): Visual representation of a star.
-
         Attributes:
             origin_x (int): Center x coordinate of the projection.
             origin_y (int): Center y coordinate of the projection.
             ranges (list): xy coordinates where a particle can spawn.
             depth_ranges (list): Every possible depth. Spawning randomly picks from this list.
             transforms_amount (int): Amount of size/alpha transformations
-
         """
         def __init__(self, star_amount=128, depth=16, perspective=128.0, speed=5, image=None):
             super(renpy.Displayable, self).__init__()
@@ -67,9 +62,7 @@ init python:
 
         def __star_data(self):
             """ Create a list with data for each star.
-
             ie: [x, y, depth, transform index]
-
             Returns:
                 list: Coordinates for building a star
             """
@@ -87,7 +80,6 @@ init python:
             """
             Pre-calculate all the size/alpha transforms that are possible
             so they don't have to be recreated in render() every single frame.
-
             Returns:
                 list: Displayables for every possible size/alpha
             """
@@ -168,8 +160,9 @@ init python:
 init:
     # Simple black background to show under the stars
     define space = Solid((0, 0, 0, 255))
+
     # Create the starfield displayables. Optional keyword arguments can tweak the default display.
-    $starfield = ProjectionStarfield(star_amount=256, depth=16, perspective=64.0, speed=10)
+    $starfield = ProjectionStarfield(star_amount=128, depth=16, perspective=128.0, speed=5)
 
     # Create another with an image used.
     image star:
@@ -178,7 +171,7 @@ init:
         #linear 2.0 rotate 360
         #repeat
 
-    $i_starfield = ProjectionStarfield(star_amount=512, depth=32, perspective=64.0, speed=10, image="star")
+    $i_starfield = ProjectionStarfield(star_amount=128, depth=16, perspective=128.0, speed=5, image="star")
 
 layeredimage starfield:
     always:
