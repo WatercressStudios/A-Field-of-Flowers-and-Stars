@@ -145,12 +145,26 @@ transform change_transform(old, new):
         easein 0.3 yoffset 500
         ease 0.1 yoffset 520
 
-define config.side_image_change_transform = change_transform
+transform change_transform_static(old, new):
+    contains:
+        old
+        xalign 0.08
+        yalign 1.0
+        yoffset 520
+        ease 0.2 alpha 0
+    contains:
+        new
+        alpha 0
+        xalign 0.08
+        yalign 1.0
+        yoffset 520
+        ease 0.2 alpha 1
 
 transform same_transform(old, new):
     old
     new with Dissolve(0.2, alpha=True)
 
+define config.side_image_change_transform = change_transform_static
 define config.side_image_same_transform = same_transform
 
 
