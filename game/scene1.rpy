@@ -52,7 +52,7 @@ label scene1:
     hide ju with dissolve
     na "So…"
 
-    mc "So why won't you finish these damn calibrations already so we can do some exploring?"
+    mc sad "So why won't you finish these damn calibrations already so we can do some exploring?"
 
     mc "Finish!"
 

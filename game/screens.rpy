@@ -128,7 +128,7 @@ screen say(who, what):
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
     if not renpy.variant("small"):
-        add SideImage() xalign 0.0 yalign 1.0
+        add SideImage() xalign 0.15 yalign 1.0
 
 transform change_transform(old, new):
     contains:
@@ -148,24 +148,23 @@ transform change_transform(old, new):
 transform change_transform_static(old, new):
     contains:
         old
-        xalign 0.08
         yalign 1.0
-        yoffset 520
+        xpos 0.0 xanchor 0.0 xoffset 180
         ease 0.2 alpha 0
     contains:
         new
-        alpha 0
-        xalign 0.08
         yalign 1.0
-        yoffset 520
+        xpos 0.0 xanchor 0.0 xoffset 180
+        alpha 0
         ease 0.2 alpha 1
 
 transform same_transform(old, new):
     old
     new with Dissolve(0.2, alpha=True)
+    xpos 0.0 xanchor 0.0 xoffset 180
 
-define config.side_image_change_transform = change_transform_static
-define config.side_image_same_transform = same_transform
+define config.side_image_change_transform = None
+define config.side_image_same_transform = None
 
 
 ## Make the namebox available for styling through the Character object.

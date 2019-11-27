@@ -51,7 +51,7 @@ init:
     ##Sprite Definitions: Ask sagi
     init python:
         layerorder = ['hair', 'base', 'arms', 'tail','mouth','eyes','brow',]
-        DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder, offsets=(0, 100), zooms=1.3)
+        DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder, offsets=(0, 100), zooms={'mc':0.4, 'le': 1.3, 'ju':1.3}, sides=['mc'])
 
         MapEmote('le n normal', 'le neutral base arms_default brow_default ed_default md_default')
         MapEmote('le n raised', 'le neutral base arms_raised brow_uparrow ed_away mdo_o')
@@ -60,6 +60,8 @@ init:
         MapEmote('le h normal', 'le hip base arms_default brow_default ed_default md_default tail_default')
         MapEmote('le h armraised', 'le hip base arms_raised brow_default ed_bedroom md_smuggrin tail_default')
         MapEmote('ju b normal', 'ju blue base arms_default brow_default ed_default md_default')
+
+        MapEmote('mc sad', 'mc normal base md_default ed_default brow_sad')
 
     ##background images, stored in images/backgrounds
     image white = "backgrounds/white.png"
@@ -74,8 +76,8 @@ init:
     ##Sagi's stuff . Remove when it's no longer needed.
     image logo = "gui/Star Filled-48.png"
     image testbg = "gui/sagi/test/bg.jpg"
-    image side mc = "gui/sagi/test/raine.png"
-    image le = "gui/sagi/test/leona.png"
+    # image side mc = "gui/sagi/test/raine.png"
+    # image le = "gui/sagi/test/leona.png"
 
     ##Audio
     ##Channel for environment sound. This will allow audio for environmentals to be placed on it's own channel and levels for environmental effects to be adjusted with a fader

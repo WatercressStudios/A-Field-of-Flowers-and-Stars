@@ -117,6 +117,7 @@ init -50 python:
     basedict = {}
     originalsizedict = {}
     sizedict = {}
+    sidelist = []
     offsetdict = {}
     pathdict = {}
     mapemotedict = {}
@@ -125,9 +126,13 @@ init -50 python:
     posedict = {}
     haseyeslist = []
     hasmouthlist = []
-    def DefineImages(imageFolder, composite=False, prepend=None, overrideCharname=None, overrideLayerOrder=None, offsets=None, zooms=None):
+    def DefineImages(imageFolder, composite=False, prepend=None, autoEmotes=False, overrideCharname=None, overrideLayerOrder=None, offsets=None, zooms=None, sides=None):
         if composite:
             imglist = []
+        if sides != None and type(sides) == list:
+            for s in sides:
+                if not s in sidelist:
+                    sidelist.append(s)
 
         excludeFirstXFolders = len(imageFolder.split('/'))
         if prepend is None:
@@ -329,10 +334,14 @@ init -50 python:
                             layers.append(Attribute(layer, base, '_'.join(basepath+(base,)), base == 'base'))
                     elif layer == 'eyes' and basepath in haseyeslist:
                         for emote in basedict[basepath]['emotes']:
+                            if not autoEmotes and emote != 'default':
+                                continue
                             eyes = basepath+(u'ed', emote)
                             layers.append(Attribute(layer, emote, '_'.join(eyes), emote == 'default'))
                     elif layer == 'mouth' and basepath in hasmouthlist:
                         for emote in basedict[basepath]['emotes']:
+                            if not autoEmotes and emote != 'default':
+                                continue
                             mouth = basepath+(u'md', emote)
                             layers.append(Attribute(layer, emote, '_'.join(mouth), emote == 'default'))
                     elif layer in basedict[basepath]['optionals']:
@@ -341,11 +350,17 @@ init -50 python:
                         for ex in sorted(basedict[basepath]['extraparts'].keys()):
                             if layer == ex:
                                 for emote in basedict[basepath]['emotes']:
+                                    if not autoEmotes and emote != 'default':
+                                        continue
                                     layers.append(Attribute(layer, emote, '_'.join(basepath + (ex, emote)), emote == 'default'))
 
-                layered = LayeredImage(layers, at=Transform(zoom=sizedict[basepath], offset=offsetdict[basepath]))
+                layered = LayeredImage(layers, at=Transform(zoom=sizedict[basepath], pos=offsetdict[basepath]))
                 spritedict[basepath] = layered
                 renpy.image(basepath, layered)
+                if basepath in sidelist:
+                    renpy.image(('side',)+basepath, layered)
+                elif basepath[0] in sidelist:
+                    renpy.image(('side',)+basepath, layered)
 
             #pretty(basedict)
             DynamicSprites_VarUpdate()
@@ -360,9 +375,11 @@ init -50 python:
             layers = []
             for layer in layerorder:
                 layers += layereddict[layer]
-            layered = LayeredImage(layers, at=Transform(zoom=sizedict[charpath], offset=offsetdict[charpath]))
+            layered = LayeredImage(layers, at=Transform(zoom=sizedict[charpath], pos=offsetdict[charpath]))
             spritedict[charpath] = layered
             renpy.image(charpath, layered)
+            if charpath[0] in sidelist:
+                renpy.image(('side',)+charpath, layered)
 
     def MapEmote(newname, oldname, addOptionals=True):
         newpath = tuple(newname.split())
@@ -483,9 +500,11 @@ init -50 python:
             layers = []
             for layer in layerorder:
                 layers += layereddict[layer]
-            layered = LayeredImage(layers, at=Transform(zoom=sizedict[charpath], offset=offsetdict[charpath]))
+            layered = LayeredImage(layers, at=Transform(zoom=sizedict[charpath], pos=offsetdict[charpath]))
             spritedict[charpath] = layered
             renpy.image(charpath, layered)
+            if charname in sidelist:
+                renpy.image(('side',)+charpath, layered)
 
     # This is set to the name of the character that is speaking, or
     # None if no character is currently speaking.
