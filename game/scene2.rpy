@@ -45,14 +45,10 @@ label scene_2:
 
     #show CG_02b
     show le curious onlayer master:
-        bounce
         xflip
-        subpixel True ypos 100 xanchor None yanchor None xzoom -1.0 rotate None
-        parallel:
-            xpos -743
-            power_in2 1.0 xpos -743
-            power_in2 0.63 xpos 212
+        bounce
     na "The girl climbs up the tree with surprising speed. Within seconds she's at my side."
+    show le questioning a1
     le "Ulo'ulo' e, uamo'oh e!"
 
     #cable tearing SFX
@@ -60,7 +56,7 @@ label scene_2:
     na "The cables fall away..."
     mc "W-Woah!"
     mc "...Leaving me to fall to the ground."
-    le "Ohaw i ānān!"
+    le @ questioning a2 "Ohaw i ānān!"
     na "The girl leaps forward from the branch and catches me mid-air."
     na "Perhaps it's because of the planet's reduced gravity, but we seem to float down, rather than fall."
     na "Or maybe I'm just relieved that I'm not going to die."
@@ -72,8 +68,8 @@ label scene_2:
     na "It's not English. Or Lucoan, or Halcynth either. She must be speaking a language the system doesn't recognize."
     mc "S-Sorry, can you say that again?"
     na "I need her to keep speaking. Any second now it should begin to translate her words."
-    le "Ohaw i ānān!"
-    le "Did you break anything? No broken bones, right?"
+    le @ questioning a2 "Ohaw i ānān!"
+    le questioning a1 "Did you break anything? No broken bones, right?"
     na "Finally, my implant starts to work and I can understand her words."
     na "I check myself over. Aside from some rope burn and some really sore spots, I seem to be alright."
     mc "I'm okay. Mostly."

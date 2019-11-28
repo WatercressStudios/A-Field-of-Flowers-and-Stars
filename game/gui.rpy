@@ -82,7 +82,7 @@ define gui.text_size = 30
 define gui.name_text_size = 42
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 24
 
 ## The size of labels in the game's user interface.
 define gui.label_text_size = 48
@@ -159,8 +159,8 @@ define gui.dialogue_text_line_spacing = 6
 ## how buttons are displayed.
 
 ## The width and height of a button, in pixels. If None, Ren'Py computes a size.
-define gui.button_width = None
-define gui.button_height = None
+define gui.button_width = 150
+define gui.button_height = 50
 
 ## The borders on each side of the button, in left, top, right, bottom order.
 define gui.button_borders = Borders(6, 6, 6, 6)

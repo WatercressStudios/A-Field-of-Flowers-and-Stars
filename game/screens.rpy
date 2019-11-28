@@ -360,6 +360,7 @@ init python:
         ('quit', MainMenu()),
         ('auto', Preference("auto-forward", "toggle")),
         ('skip', Skip()),
+        ('back', Rollback()),
         ('sprite', Show('dynamicspritespreview')),
     ]
 
