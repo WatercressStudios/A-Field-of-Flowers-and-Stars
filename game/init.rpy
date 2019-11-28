@@ -75,12 +75,14 @@ init:
 
     ##background images, stored in images/backgrounds
     image white = "backgrounds/white.png"
-    image stars = "backgrounds/stars.jpg"
+    image stars = "backgrounds/stars.png"
     image cockpitoverlay = "overlays/cockpitoverlay.png"
     image cockpit_space = "backgrounds/cockpit_space.png"
     image cockpit_ground = "backgrounds/cockpit_ground.png"
     image cave = "backgrounds/cave.png"
+    image street = "backgrounds/street.png"
     image spaceship_crashed = "backgrounds/spaceship_crashed.png"
+    image house = "backgrounds/house.png"
     ##computer-graphics images, stored in images/cgs
     image cgTree = "cgs/cgtree.png"
     ##Sagi's stuff . Remove when it's no longer needed.

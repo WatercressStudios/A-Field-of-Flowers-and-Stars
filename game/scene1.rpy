@@ -1,24 +1,8 @@
 label scene1:
     show screen flower_menu_button with easeinright
     #This is the start of the game.
-    show cockpitoverlay:
-        zoom 1.35
-    show stars behind cockpitoverlay:
-        subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor .5 rotate None
-        parallel:
-            xpos 0.75
-            ease 30 xpos .25
-            ease 3 xpos .27
-        parallel:
-            ypos .5
-            ease 5.0 ypos .53
-            ease 5.0 ypos .47
-            ease 5.0 ypos .52
-            ease 5.0 ypos .49
-            ease 5.0 ypos .5
-        parallel:
-            ease 20 rotate 10
-
+    show cockpit_space:
+        zoom .85
     #ART We begin in space. Nothing else is on the screen. "Warp drive particles" move slowly from left to right to imply motion. The stars in the background are still.
 
     #Start text box overlay. Raine is narrating aloud.

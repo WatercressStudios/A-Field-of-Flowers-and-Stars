@@ -1,10 +1,14 @@
 label scene_2:
 
     #birds chirping SFX
-    scene testbg with dissolve
+    scene white with dissolve
+    pause (2)
+    scene black with vpunch
+    pause (4)
     mc "Ugh..."
     na "What the hell happened? I recall entering the atmosphere of that planet..."
-
+    scene spaceship_crashed with irisin:
+        yzoom -1
     #iris open
     #show BG_outdoors_upside_down
 
@@ -22,7 +26,7 @@ label scene_2:
     na "The last thing I recall from the ship is that this planet is not registered on any starmap."
     na "So, I'm most likely the only human on this planet."
     na "I'd probably cry, if I weren't so bitter with how this day turned out."
-    #iris close
+    scene black with irisout
     na "I close my eyes and wait to die. Dehydration will most likely take me in a few days."
     na "Well, can't say it wasn't fun. Goodbye cruel world."
     #pause for ten or so seconds
@@ -45,7 +49,6 @@ label scene_2:
 
     #show CG_02b
     show le curious onlayer master:
-        xflip
         bounce
     na "The girl climbs up the tree with surprising speed. Within seconds she's at my side."
     show le questioning a1
