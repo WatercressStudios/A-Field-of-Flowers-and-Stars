@@ -48,22 +48,30 @@ init:
     image sarchalenlogo = "logos/sarchalenlogo.png"
     image afofaslogo = "logos/afofaslogo.png"
 
-    ##Sprite Definitions: Ask sagi
+    ##Sprite Definitions: The ones that are commented out are ones that don't look right.
     init python:
         layerorder = ['hair', 'base', 'arms', 'tail','mouth','eyes','brow',]
         DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder, offsets=(0, 100), zooms={'mc':0.4, 'le': 1.3, 'ju':1.3}, sides=['mc'])
 
-        MapEmote('le n normal', 'le neutral base arms_default brow_default ed_default md_default')
-        MapEmote('le thinking smile', 'le think base tail_default2 mdo_default ed_default brow_default')
+        #Leona
+        MapEmote('le curious', 'le think base tail_default mdo_default ed_default brow_default')
+        MapEmote('le speaking a1', 'le neutral base arms_default mdo_default ed_default brow_default')
+        MapEmote('le speaking a2', 'le neutral base arms_raised mdo_default ed_default brow_default')
+        MapEmote('le questioning a1', 'le neutral base arms_default mdo_o ed_default brow_line')
+        MapEmote('le questioning a2', 'le neutral base arms_raised mdo_o ed_default brow_line')
+        MapEmote('le smug a2', 'le hip base arms_default tail_default mdo_smuggrin ed_default brow_default')
+        MapEmote('le smug a1', 'le hip base arms_pout tail_default mdo_smuggrin ed_default brow_default')
+        MapEmote('le smug a3', 'le hip base arms_raised tail_default mdo_smuggrin ed_default brow_default')
+        MapEmote('le frustrated a1', 'le angry base arms_default mdo_default ed_default brow_default')
+        MapEmote('le frustrated a2', 'le angry base arms_raised mdo_default ed_default brow_default')
+        MapEmote('le sad', 'le sad base md_default ed_default brow_default')
+        MapEmote('le happy a1', 'le neutral base arms_default md_default ed_default brow_default')
+        MapEmote('le happy a2', 'le neutral base arms_raised md_default ed_default brow_default')
+        MapEmote('le suspicious a2', 'le think base tail_default md_default ed_bedroom brow_default')
+        MapEmote('le crying', 'le sad base md_default ed_sad brow_default')
+        #MapEmote('le pout p1 1', 'le neutral base arms_default md_default ed_away brow_line')
+        #MapEmote('le pout p1 2', 'le neutral base arms_raised md_default ed_away brow_line')
 
-        MapEmote('le n raised', 'le neutral base arms_raised brow_uparrow ed_away mdo_o')
-        MapEmote('le sp normal', 'le sadprofile base ed_default')
-        MapEmote('le sp lookaway', 'le sadprofile base ed_away')
-        MapEmote('le h normal', 'le hip base arms_default brow_default ed_default md_default tail_default')
-        MapEmote('le h armraised', 'le hip base arms_raised brow_default ed_bedroom md_smuggrin tail_default')
-        MapEmote('ju b normal', 'ju blue base arms_default brow_default ed_default md_default')
-
-        MapEmote('mc sad', 'mc normal base md_default ed_default brow_sad')
 
     ##background images, stored in images/backgrounds
     image white = "backgrounds/white.png"

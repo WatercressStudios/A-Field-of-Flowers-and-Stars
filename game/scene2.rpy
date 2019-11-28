@@ -44,7 +44,14 @@ label scene_2:
     le "Olal i ohi e u'ai eo' ea' e, a'ap e!"
 
     #show CG_02b
-
+    show le curious onlayer master:
+        bounce
+        xflip
+        subpixel True ypos 100 xanchor None yanchor None xzoom -1.0 rotate None
+        parallel:
+            xpos -743
+            power_in2 1.0 xpos -743
+            power_in2 0.63 xpos 212
     na "The girl climbs up the tree with surprising speed. Within seconds she's at my side."
     le "Ulo'ulo' e, uamo'oh e!"
 
