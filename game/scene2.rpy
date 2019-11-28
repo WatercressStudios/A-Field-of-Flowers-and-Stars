@@ -64,14 +64,13 @@ label scene_2:
 
     #landing on ground SFX
 
-    mc "Phew. Thought I was a goner..."
     le "Ikah iwi uam eh? Anomom eli?"
-    na "A thought occurs to me. This girl doesn't speak anything resembling English, Lucoan, or Halcynth."
-    na "My translator implant should be kicking in..."
-    ti "AUTO TRANSLATION SUCCESSFUL."
-    na "My translation chip finally kicks into gear. When it comes to completely unknown languages, it needs to hear enough of it to translate."
-    na "I don't know what I'd do without it. It's basically a requirement in the galactic community."
+    na "A thought occurs to me. My translator implant should be kicking in..."
+    na "It's not English. Or Lucoan, or Halcynth either. She must be speaking a language the system doesn't recognize."
     mc "S-Sorry, can you say that again?"
+    na "I need her to keep speaking. Any second now it should begin to translate her words."
+    le "Ohaw i ānān!"
+    na "When it comes to completely unknown languages, it needs to hear enough of it to translate."
     le "Did you break anything? No broken bones, right?"
     na "I check myself over. Nothing broken, but I've got a nasty scrape on my legs."
     mc "I'm okay. Mostly."
