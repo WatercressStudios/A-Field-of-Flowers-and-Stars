@@ -54,6 +54,8 @@ init:
         DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder, offsets=(0, 100), zooms={'mc':0.4, 'le': 1.3, 'ju':1.3}, sides=['mc'])
 
         MapEmote('le n normal', 'le neutral base arms_default brow_default ed_default md_default')
+        MapEmote('le thinking smile', 'le think base tail_default2 mdo_default ed_default brow_default')
+
         MapEmote('le n raised', 'le neutral base arms_raised brow_uparrow ed_away mdo_o')
         MapEmote('le sp normal', 'le sadprofile base ed_default')
         MapEmote('le sp lookaway', 'le sadprofile base ed_away')

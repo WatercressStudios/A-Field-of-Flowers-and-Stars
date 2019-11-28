@@ -13,26 +13,22 @@ label scene_2:
     na "I guess Juneau must have ejected me before the crash."
     na "My parachute is tangled up in the branches, my seat, and me."
     mc "Can't... move..."
-    na "I can't reach the buckle to free me from the harness, thanks to my arms being tied up by the parachute cables."
-    na "This is it. Great. This is how I die on this godforsaken planet. Entangled by my own parachute."
-    na "I want to cry, but I'm too bitter to make the attempt."
+    na "My arms are trapped above my head."
+    na "I'm tangled in the mess of cables in such a way that makes it impossible for me to free myself."
+    na "This is it. Great. This is how I die. On some godforsaken planet. Entangled by my own parachute."
+    na "All alone, with no one to mourn me."
     na "Well, this fucking sucks."
+
     na "The last thing I recall from the ship is that this planet is not registered on any starmap."
     na "So, I'm most likely the only human on this planet."
-    na "All alone, with no one to mourn me."
-
+    na "I'd probably cry, if I weren't so bitter with how this day turned out."
     #iris close
-
     na "I close my eyes and wait to die. Dehydration will most likely take me in a few days."
     na "Well, can't say it wasn't fun. Goodbye cruel world."
-
     #pause for ten or so seconds
-
     le "Eo'ahola! I'akiam eo'ahap?!?"
-
     #iris open, fast
     #show BG_outdoors_upside_down
-
     na "What was that?"
     na "That was definitely a voice I heard just now. Where is it?"
     na "Straining my neck, I try to look around."
@@ -58,7 +54,7 @@ label scene_2:
     mc "W-Woah!"
     mc "...Leaving me to fall to the ground."
     le "Ohaw i ānān!"
-    na "The girl leaps down to grab me mid-air and catches me before I hit the ground."
+    na "The girl leaps forward from the branch and catches me mid-air."
     na "Perhaps it's because of the planet's reduced gravity, but we seem to float down, rather than fall."
     na "Or maybe I'm just relieved that I'm not going to die."
 
@@ -70,27 +66,34 @@ label scene_2:
     mc "S-Sorry, can you say that again?"
     na "I need her to keep speaking. Any second now it should begin to translate her words."
     le "Ohaw i ānān!"
-    na "When it comes to completely unknown languages, it needs to hear enough of it to translate."
     le "Did you break anything? No broken bones, right?"
-    na "I check myself over. Nothing broken, but I've got a nasty scrape on my legs."
+    na "Finally, my implant starts to work and I can understand her words."
+    na "I check myself over. Aside from some rope burn and some really sore spots, I seem to be alright."
     mc "I'm okay. Mostly."
-    na "There's the issue of my ship, too, but I don't know where it is."
+    na "There's the issue of my ship, too."
+    na "I look around but I don't see it. It must have come down some distance away."
     le "Good! I'm glad you're okay."
-    mc "I didn't realize there were other humans on this planet. What sector am I in?"
+    mc "Thanks for cutting me down. I didn't think there'd be any other humans this far out."
+    mc "What sector are we in anyway?"
     le "'Sector'? 'Human'? What are those?"
     mc "Uh..."
     mc "Ah! Y-You're..."
     le "Hm?"
+    na "At first glance the girl appears to be human but..."
     na "There's a pair of horns on this girl's head. Honest-to-goodness horns, like you'd see on a goat or a ram."
     mc "H-Horns..."
     le "Oh? Oh! You don't have any horns? They must have broken off in the crash. You poor thing."
     mc "N-No, wait! I never had any horns to begin with! I'm human!"
     na "The girl thinks for a moment."
     le "Okay! Hello, Human! It's nice to meet you. I'm Leona!"
-    le "Come on, you must be a new arrival to Fireside. Let me take you back to the city!"
+    le "Come on, you must be a new arrival! I'll take you back to the city!"
+    le "Welcome to Fireside!"
     mc "Fireside?"
-    le "You know, the name of this planet?"
+    le "Yeah, you know? Cuz' of the cozy warmth given by the planet's position in the binary system?"
+    le "When we finally vote on a name, I think we should give it one that sounds cozy!"
+    mc "Fireside."
     mc "Hang on. What planet do you think I'm from again?"
+
     le "Oh man, you must have hit your head. I should definitely take you to the city and get you patched up."
     mc "Hold on..."
     le "We're from Dawne, a few light years away from here. This is our first colony!"
@@ -101,6 +104,8 @@ label scene_2:
     le "You're... an alien?"
     mc "No, I'm --"
     na "Wait, yeah. She's right. I'm technically the alien here."
+    le "You mean you're not from Dawne? You're from...somewhere else?"
+
     mc "Yeah. I'm from a planet called Lumin. Ever heard of it?"
     le "That's not a planet I've heard of... How far away are you from home?"
     mc "I don't really know. My ship had all the info, but it crashed."
@@ -111,6 +116,7 @@ label scene_2:
     le "And look what I found! An honest-to-goodness alien!"
     le "Though, I've never seen an alien look so much like me before..."
     mc "Likewise, actually."
+
     le "Well, let's get you to my place. We should really make sure you're okay."
     na "Thankfully, Leona has a ride back into town, a primitive hoverbike with extra space for me and the few meager belongings I had on my person."
     na "For a second, I thought we'd be walking the whole way back."
