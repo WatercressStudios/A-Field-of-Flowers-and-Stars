@@ -284,7 +284,7 @@ label scene_10:
 
     le "Raine..."
 
-    le "For a second, she appears disappointed, but gives in."
+    na "For a second, she appears disappointed, but gives in."
 
     na "Leona leaps at me, embracing me with the power of a bear, lifting me up and crying 'thank you! thank you!' again and again."
 
