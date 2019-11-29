@@ -18,12 +18,15 @@ label scene_7:
 
     na "...Maybe I fell too hard?"
 
+    voice "voice/7-scene_7-1.ogg" #Raine (VA Name)
     mc "Why'd you take me to your roof? This isn't any different from the cafe."
 
+    voice "voice/7-scene_7-2.ogg" #Leona (VA Name)
     le "Shushushush! Check out the view!"
 
     na "Squeezing my hand tight, she plops herself on the ground."
 
+    voice "voice/7-scene_7-3.ogg" #Raine (VA Name)
     mc "Wha-Oh."
 
     na "I follow suit, stretching myself out, back to the ground and face towards the stars."
@@ -34,26 +37,35 @@ label scene_7:
 
     na "I can see stars like these wherever and whenever I want, but..."
 
+    voice "voice/7-scene_7-4.ogg" #Leona (VA Name)
     le "I thought they'd be different, seeing 'em down here from our perspective."
 
     na "She turns her body, gazing into me with her deep auburn eyes."
 
+    voice "voice/7-scene_7-5.ogg" #Leona (VA Name)
     le "Was I right?"
 
+    voice "voice/7-scene_7-6.ogg" #Raine (VA Name)
     mc "..."
 
     #Gotta have that dank lonely ellipses, or it wouldn't be an EVN, right?
 
+    voice "voice/7-scene_7-7.ogg" #Raine (VA Name)
     mc "Yeah. I never thought about it, but I don't think I've seen a sight like this in a very, very long time."
 
+    voice "voice/7-scene_7-8.ogg" #Raine (VA Name)
     mc "The last time was... my childhood home, I think. Way back on Lumin."
 
+    voice "voice/7-scene_7-9.ogg" #Raine (VA Name)
     mc "Due to a terraforming mishap, wild wheat grew in groves all throughout the largest continent."
 
+    voice "voice/7-scene_7-10.ogg" #Raine (VA Name)
     mc "I used to walk through the fields, finding my special spot among the sea of tan and gold. Unlike humanity's homeworld, Lumin had regular, frequent meteor showers."
 
+    voice "voice/7-scene_7-11.ogg" #Raine (VA Name)
     mc "You could see them every night, falling from above, streaks of light floating across the sky."
 
+    voice "voice/7-scene_7-12.ogg" #Raine (VA Name)
     mc "Venturing out to the cove I dug for myself, I'd lay on my back, just like this. I'd stare up at the stars hoping that one day I too would wander among them."
 
     na "Up until now, I never realized what I was missing, way back then."
@@ -64,6 +76,7 @@ label scene_7:
 
     na "I was always alone."
 
+    voice "voice/7-scene_7-13.ogg" #Leona (VA Name)
     le "Then you're in luck! We're just in time for ours!"
 
     na "As if on cue, one by one bright lights slowly move along the horizon, following the gradient between the sun and the stars."
@@ -88,18 +101,24 @@ label scene_7:
 
     na "It's the first true adventure I've had in my life."
 
+    voice "voice/7-scene_7-14.ogg" #Leona (VA Name)
     le "I'd love to spread my wings, ya know that?"
 
+    voice "voice/7-scene_7-15.ogg" #Leona (VA Name)
     le "Just like you when you were a little kid! I'd love to see more of what's out there!"
 
+    voice "voice/7-scene_7-16.ogg" #Leona (VA Name)
     le "But I'd have to leave my home."
 
+    voice "voice/7-scene_7-17.ogg" #Leona (VA Name)
     le "And this is the only home I've ever known."
 
     na "Leona closes her eyes, bringing her hands to her chest, clasping them together."
 
+    voice "voice/7-scene_7-18.ogg" #Leona (VA Name)
     le "This {b}is{/b} my home."
 
+    voice "voice/7-scene_7-19.ogg" #Leona (VA Name)
     le "Maybe I just get too attached too quickly, but I'd miss this sunset more than anything! I'm a little emotional like that, I guess."
 
     na "We continue to watch the shower as it slowly dwindles to nothingness. The sun has set, and we're left with the blues and blacks of the lonely pinprick stars"
