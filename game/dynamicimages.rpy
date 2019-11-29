@@ -436,7 +436,7 @@ init -50 python:
             for layer in layerorder:
                 layereddict[layer] = []
             for p in spritedict:
-                if p[0] == charpath[0]:
+                if p == charpath:
                     for a in spritedict[p].attributes:
                         layer = a.group
                         emote = a.attribute
