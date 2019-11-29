@@ -83,6 +83,7 @@ init:
     image street = "backgrounds/street.png"
     image spaceship_crashed = "backgrounds/spaceship_crashed.png"
     image house = "backgrounds/house.png"
+    image cafe = "backgrounds/cafe.png"
     ##computer-graphics images, stored in images/cgs
     image cgTree = "cgs/cgtree.png"
     ##Sagi's stuff . Remove when it's no longer needed.
