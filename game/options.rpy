@@ -12,13 +12,13 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("yj2019")
+define config.name = _("A Field of Flowers and Stars")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## The version of the game.
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "yj2019"
+define build.name = "AFOFAS"
 
 
 ## Sounds and music ############################################################
@@ -75,7 +75,8 @@ define config.has_voice = True
 define config.enter_transition = dissolve
 define config.exit_transition = dissolve
 
-
+#A transition used when coming out of the splash screen and into the menu
+define config.end_splash_transition = dissolve
 ## Between screens of the game menu.
 
 define config.intra_transition = dissolve

@@ -31,7 +31,7 @@ label scene_2:
     scene black with wipedown
     na "I close my eyes and wait to die. Dehydration will most likely take me in a few days."
     na "Well, can't say it wasn't fun. Goodbye cruel world."
-
+    scene black with fade
     pause 5.0
 
     play sound "sfx/footsteps.ogg"
@@ -97,7 +97,7 @@ label scene_2:
     mc thankful "S-Sorry, can you say that again?"
     na "I need her to keep speaking. Any second now it should begin to translate her words."
     #voice "voice/2-scene_2-14.ogg" #Leona (VA Name)
-    le @ questioning a2 "Ohaw i ānān!"
+    le questioning a2 "Ohaw i ānān!"
     #voice "voice/2-scene_2-15.ogg" #Leona (VA Name)
     le questioning a1 "Did you break anything? No broken bones, right?"
     play music "music/meeting leona.ogg" fadein 2.0
@@ -136,7 +136,7 @@ label scene_2:
     #voice "voice/2-scene_2-27.ogg" #Leona (VA Name)
     le happy a2 "Okay! Hello, Human! It's nice to meet you. I'm Leona!"
     #voice "voice/2-scene_2-28.ogg" #Leona (VA Name)
-    le @ a1 "Come on, you must be a new arrival! I'll take you back to the city!"
+    le a1 "Come on, you must be a new arrival! I'll take you back to the city!"
     #voice "voice/2-scene_2-29.ogg" #Leona (VA Name)
     le smug a1 "Welcome to Fireside!"
     #voice "voice/2-scene_2-30.ogg" #Raine (VA Name)
@@ -195,42 +195,60 @@ label scene_2:
 
     #voice "voice/2-scene_2-54.ogg" #Leona (VA Name)
     le "Well, let's get you to my place. We should really make sure you're okay."
-    na "Thankfully, Leona has a ride back into town, a primitive hoverbike with extra space for me and the few meager belongings I had on my person."
-    na "For a second, I thought we'd be walking the whole way back."
-    na "After a relatively short trip, we arrive."
 
+    na "Thankfully, Leona has a ride back into town, a primitive hoverbike with extra space for me and the few meager belongings I had on my person."
+
+    na "For a second, I thought we'd be walking the whole way back."
+    hide leona with dissolve
     stop env fadeout 2.0
     #voice "voice/2-scene_2-55.ogg" #Leona (VA Name)
+    scene street onlayer master with wiperight:
+        subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
+        parallel:
+            xpos 0.85
+            ease 20 xpos 0.25
+    show le happy a1 at le_side with dissolve
     le "We're here!"
+
+    na "After a relatively short trip, we arrive."
+
     na "Leona disembarks, helping me down from the bike."
     #voice "voice/2-scene_2-56.ogg" #Leona (VA Name)
-    le "Welcome to the city of Aster!"
+    le happy a2 "Welcome to the city of Aster!"
     play env "amb/City Day.ogg" fadein 1.0
     na "The city is a massive sprawl, all centered on a large tower about a mile away."
     #voice "voice/2-scene_2-57.ogg" #Raine (VA Name)
     mc "What's that tower?"
     #voice "voice/2-scene_2-58.ogg" #Leona (VA Name)
-    le "That's the colony ship we arrived on several decades ago! Nowadays it's been refitted as a government office and communications relay."
+    le speaking a1 "That's the colony ship we arrived on several decades ago! Nowadays it's been refitted as a government office and communications relay."
     #voice "voice/2-scene_2-59.ogg" #Raine (VA Name)
     mc "Decades? So this is a new colony?"
     #voice "voice/2-scene_2-60.ogg" #Leona (VA Name)
-    le "More or less. I was born here, so I hear a lot of stories about our homeworld."
+    le curious a1 "More or less. I was born here, so I hear a lot of stories about our homeworld."
     #voice "voice/2-scene_2-61.ogg" #Leona (VA Name)
-    le "But this place is growing a lot! We want to expand to make another small city out west for some researchers and stuff."
+    le happy a1 "But this place is growing a lot! We want to expand to make another small city out west for some researchers and stuff."
     #voice "voice/2-scene_2-62.ogg" #Leona (VA Name)
     le "That's where I come in! I help survey and explore new areas that we might be able to live in!"
     #voice "voice/2-scene_2-63.ogg" #Raine (VA Name)
     mc "By yourself?"
     #voice "voice/2-scene_2-64.ogg" #Leona (VA Name)
-    le "Nah, I've got a whole crew who helps out. Maybe you'll meet them!"
+    le happy2 a1  "Nah, I've got a whole crew who helps out. Maybe you'll meet them!"
+
+
+    show le happy2 a1:
+        subpixel True xpos 0.67 ypos 577 xanchor 1.55 yanchor 1 xzoom -1.0 zoom 1.13 rotate None alpha 1.0
+        parallel:
+            ypos 525
+            ease_back 0.5 ypos 1109
     na "Leona goes on for a few more minutes about her background and past expeditions while I silently nod and listen."
     na "While our civilization made first contact centuries ago, I don't think Leona's species has ever been encountered."
     na "We've mostly encountered non-humanoid species, so for Leona to look so humanlike is really surprising."
     na "We arrive at what appears to be a small first-aid station a few minutes later."
     #voice "voice/2-scene_2-65.ogg" #Leona (VA Name)
+    show le happy a1 at stage_left with dissolve
     le "All right, we're here!"
     #voice "voice/2-scene_2-66.ogg" #Leona (VA Name)
-    le "Hey, stay here, Raine. I'll get you something that'll make you feel better instantly!"
+    le happy2 a1 "Hey, stay here, Raine. I'll get you something that'll make you feel better instantly!"
     na "She returns with gauze and a strange paste."
     #voice "voice/2-scene_2-67.ogg" #Leona (VA Name)
     le "Okay, hold still…"
@@ -238,7 +256,7 @@ label scene_2:
     #voice "voice/2-scene_2-68.ogg" #Raine (VA Name)
     mc "Ow!"
     #voice "voice/2-scene_2-69.ogg" #Leona (VA Name)
-    le "Easy there, just give it a bit."
+    le kind a2 "Easy there, just give it a bit."
     na "It stings a lot, but it's quickly replaced by a soothing sensation."
     na "She carefully places the gauze on top and massages it, letting the paste underneath stick to it."
     na "She's clearly done this before."
@@ -250,42 +268,51 @@ label scene_2:
     #voice "voice/2-scene_2-71.ogg" #Raine (VA Name)
     mc "Yeah, the pain's pretty much gone now."
     #voice "voice/2-scene_2-72.ogg" #Leona (VA Name)
-    le "Great! So, I was thinking... you'll need a place to stay, right?"
+    le speaking surprised a1 "Great! So, I was thinking... you'll need a place to stay, right?"
     #voice "voice/2-scene_2-73.ogg" #Raine (VA Name)
     mc "You're not wrong. I don't know where my ship is, so I can't exactly leave just yet."
     #voice "voice/2-scene_2-74.ogg" #Leona (VA Name)
-    le "Well, why don't you rest at my place, then? We can try to find your ship tomorrow."
+    le speaking a2 "Well, why don't you rest at my place, then? We can try to find your ship tomorrow."
     na "After the various traumas of today, I think I deserve a break."
     #voice "voice/2-scene_2-75.ogg" #Raine (VA Name)
     mc "Sure. I could use the rest."
     #voice "voice/2-scene_2-76.ogg" #Leona (VA Name)
-    le "Right, then! Hop on and I'll take you home!"
-
-    na "Entering the large gate to the city, we travel down the main street, turning at an intersection. It only takes us a few more minutes to reach her house."
+    le smug a1 "Right, then! Hop on and I'll take you home!"
+    hide le
+    scene black with fade
     #show bg_leonahouse
     stop env fadeout 2.0
     stop music fadeout 2.0
     play sound3 "amb/Leonas house.ogg" fadeout 2.0
 
+    scene house onlayer master with fade:
+        subpixel True xpos 0.5 ypos 1.25 xanchor 0.5 yanchor 1.0 rotate None
+        parallel:
+            xpos 0.35
+            ease 10 xpos 0.66
     #voice "voice/2-scene_2-77.ogg" #Leona (VA Name)
+    show le happy2 a1 at le_side with dissolve
     le "Ta-dahhh! Welcome to my little plot of land."
     na "While it looks like one of those old prefabricated shelters, the inside is surprisingly cozy."
     na "There's a shelf of knick-knacks, a messy pile of papers on a desk, and a small kitchenette in the corner."
     #voice "voice/2-scene_2-78.ogg" #Leona (VA Name)
-    le "Oh, you'll probably --"
+    le explaining "Oh, you'll probably --"
     na "I immediately target the bed, or what I assume to be the bed -- a pile of cushions and blankets seems to be where Leona sleeps."
 
     #POMF
     play sound "sfx/bed fall.ogg"
-
+    show le surprised with vpunch
     na "Without another word, I flop down onto the 'bed' and turn to Leona."
+
     #voice "voice/2-scene_2-79.ogg" #Raine (VA Name)
     mc "I'm going to sleep for a bit. Sorry."
     #voice "voice/2-scene_2-80.ogg" #Leona (VA Name)
-    le "No problem! Sleep well!"
+    le relaxed "No problem! Sleep well!"
     stop sound3 fadeout 2.0
     na "It doesn't take much effort before I pass out completely."
 
+    scene black with Dissolve(2.0)
+    hide le with dissolve
 
     #iris close
 
@@ -293,5 +320,5 @@ label scene_2:
     #voice "voice/2-scene_2-81.ogg" #Leona (VA Name)
     le "Logdate 2301: Today was interesting. I found an alien! She -- or at least, I think it's a she -- crash-landed..."
     na "How funny. Guess she isn't that much different from the girls on my home planet if she keeps a diary."
-
+    scene black with fade
     jump scene_3

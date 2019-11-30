@@ -44,6 +44,13 @@ init:
         ypos 0
         xpos .75
 
+    transform stage_left:
+        xanchor .5
+        yanchor 1
+        zoom 1.21
+        ypos 0
+        xpos .25
+
     transform bounce:
     ##Makes a character slightly bounce when they pop into the scene. Gives them a bit of pep.
         easein .10 yoffset 0
@@ -60,6 +67,9 @@ init:
 
     transform ju_side:
         xpos 0.67 ypos 577 xanchor 1.55 yanchor 1 xzoom -1.0 zoom 1.13 alpha .9
+
+    transform le_side:
+        xpos 0.67 ypos 577 xanchor 1.55 yanchor 1 xzoom -1.0 zoom 1.13 alpha 1.0
 
     transform shake:
         linear 0.1 xoffset -2 yoffset 2
@@ -94,6 +104,7 @@ init:
         MapEmote('le curious', 'le think base tail_default mdo_default ed_default brow_default')
         MapEmote('le speaking a1', 'le neutral base arms_default mdo_default ed_default brow_default')
         MapEmote('le speaking a2', 'le neutral base arms_raised mdo_default ed_default brow_default')
+        MapEmote('le speaking surprised a1', 'le neutral base arms_default mdo_o ed_default brow_default')
         MapEmote('le questioning a1', 'le neutral base arms_default mdo_o ed_default brow_line')
         MapEmote('le questioning a2', 'le neutral base arms_raised mdo_o ed_default brow_line')
         MapEmote('le smug a2', 'le hip base arms_default tail_default mdo_smuggrin ed_default brow_default')
@@ -104,6 +115,7 @@ init:
         MapEmote('le sad', 'le sad base md_default ed_default brow_default')
         MapEmote('le happy a1', 'le neutral base arms_default md_default ed_default brow_default')
         MapEmote('le happy a2', 'le neutral base arms_raised md_default ed_default brow_default')
+        MapEmote('le happy2 a1', 'le hip base arms_pout tail_default mdo_smuggrin ed_wide brow_up')
         MapEmote('le suspicious a2', 'le think base tail_default md_default ed_bedroom brow_default')
         MapEmote('le crying', 'le sad base md_default ed_sad brow_default')
         MapEmote('le catching', 'le angry base arms_default md_default ed_default brow_default')
@@ -112,6 +124,8 @@ init:
         MapEmote('le explaining', 'le hip base arms_raised tail_default mdo_pout ed_default brow_default')
         MapEmote('le crazy', 'le hip base arms_pout tail_default mdo_default ed_wide brow_downarrow')
         MapEmote('le surprised', 'le hip base arms_raised tail_default2 mdo_pout ed_wide brow_up')
+        MapEmote('le kind a2', 'le neutral base arms_raised mdo_default ed_default brow_uparrow')
+        MapEmote('le relaxed', 'le neutral base arms_default md_default ec_default brow_default')
         #MapEmote('le pout p1 1', 'le neutral base arms_default md_default ed_away brow_line')
         #MapEmote('le pout p1 2', 'le neutral base arms_raised md_default ed_away brow_line')
 
@@ -207,7 +221,7 @@ label splashscreen:
     ##Play the music configured in options so that the music begins as soon as the splash screen shows
     $ renpy.music.play(config.main_menu_music)
 
-    scene black
+    scene starfield
     show afofaslogo at center with dissolve:
         zoom 0.3
         yanchor .5
