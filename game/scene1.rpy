@@ -14,8 +14,6 @@ label scene1:
     #scene starfield with dissolve
     na "All my life, something has been calling out to me."
 
-    show ju b normal with dissolve:
-        xalign 0.3
     na "Calling me towards the stars. Asking, begging to be found."
     play env "sfx/Warp engines.ogg" fadein 2.0
 
@@ -26,7 +24,6 @@ label scene1:
 
     na "No star in the sky I can't touch."
 
-    hide ju with dissolve
     na "So…"
 
     #voice "voice/1-scene1-1.ogg" #Raine (VA Name)
@@ -52,6 +49,7 @@ label scene1:
     #ART If we want to show Juneau on a console inside the ship, we can do that here. Else, we'll just have her as a #voice off screen for when she's not in hologram form.
 
     #voice "voice/1-scene1-3.ogg" #Juneau (VA Name)
+    show ju snarky a1 at ju_side
     ju "Hey! Don't kick the control panel!"
 
     #voice "voice/1-scene1-4.ogg" #Raine (VA Name)
@@ -59,41 +57,46 @@ label scene1:
 
     #ART Juneau pouting
     #voice "voice/1-scene1-5.ogg" #Juneau (VA Name)
-    ju "I've been hard at work, I'll have you know. I'm just… having a little trouble with the procedure is all."
+    ju @ a2 "I've been hard at work, I'll have you know. I'm just… having a little trouble with the procedure is all."
 
     #voice "voice/1-scene1-6.ogg" #Juneau (VA Name)
-    ju "The results keep coming back... wrong."
-
+    ju @ concerned "The results keep coming back... wrong."
 
     #voice "voice/1-scene1-7.ogg" #Raine (VA Name)
     mc "Hmm. Your programming must be messed up."
 
     #voice "voice/1-scene1-8.ogg" #Juneau (VA Name)
+    show ju snarky
     ju "Big talk coming from someone with a haywire personality routine."
 
     #voice "voice/1-scene1-9.ogg" #Juneau (VA Name)
-    ju "Oh I'm Raine! I'm so impatient. The universe didn't love me enough as a baby so I’ll just take out all my frustrations on my poor, defenseless starship."
+    ju sarcastic a1 e2 "Oh I'm Raine! I'm so impatient."
+
+    ju sarcastic a1 e1 b4 "The universe didn't love me enough as a baby so I’ll just take out all my frustrations on my poor, defenseless starship."
 
     #voice "voice/1-scene1-10.ogg" #Raine (VA Name)
     mc "I do {b}not{/b} sound like that."
 
     #voice "voice/1-scene1-11.ogg" #Juneau (VA Name)
-    ju "You do too!"
+    ju snarky "You do too!"
 
     #voice "voice/1-scene1-12.ogg" #Raine (VA Name)
     mc "*sigh* I need coffee. Take over for a bit, will ya?"
-
+    hide ju with easeoutleft
     #ART In a flash of light she disappears from the console and appears in hologram form in the passenger seat beside us. She's a full body human-like AI.
 
+    show ju snarky a2 onlayer master:
+        stage_right
+        hologram
     na "The hologram projectors spin up, Juneau taking a seat at the controls. I spin around and turn on the food synthesizer at the back of the ship."
 
     na "I set it to coffee, with French vanilla and sugar."
 
     #voice "voice/1-scene1-13.ogg" #Juneau (VA Name)
-    ju "The sensor's picking up some strange gravimetric readings around these asteroids."
+    ju concerned a2"The sensor's picking up some strange gravimetric readings around these asteroids."
 
     #voice "voice/1-scene1-14.ogg" #Juneau (VA Name)
-    ju "We'd better scan the area just to be safe. If we get stranded out here, I'll be stuck with you 'til you're dead and my batteries run out."
+    ju speaking eclosed"We'd better scan the area just to be safe. If we get stranded out here, I'll be stuck with you 'til you're dead and my batteries run out."
 
     #voice "voice/1-scene1-15.ogg" #Raine (VA Name)
     mc "Oh, don't be a worrywart. Besides, it wouldn't be that bad!"
@@ -102,7 +105,8 @@ label scene1:
     mc "I'd just rewrite your program to make the perfect AI girlfriend for myself."
 
     #voice "voice/1-scene1-17.ogg" #Juneau (VA Name)
-    ju "I'll eject you."
+    show ju annoyed a1 with vpunch
+    ju "I'll eject you." (what_size=50)
 
     #voice "voice/1-scene1-18.ogg" #Raine (VA Name)
     mc "Don't worry, I'm only kidding. I like you just the way you are — annoyingly useful."
@@ -110,7 +114,7 @@ label scene1:
     #VA: Make a pout sound. Have fun with it! Whatever "pouting" sounds like LOL
 
     #voice "voice/1-scene1-19.ogg" #Juneau (VA Name)
-    ju "I've set the computer to run a full scan of the belt. I estimate it'll take four hours to complete."
+    ju annoyed a2 "I've set the computer to run a full scan of the belt. I estimate it'll take four hours to complete."
 
     #voice "voice/1-scene1-20.ogg" #Raine (VA Name)
     mc "*sigh* fine."
@@ -118,7 +122,7 @@ label scene1:
     na "I grab my coffee and bring it back to my seat."
 
     na "A cup of holographic tea materializes into Juneau's hand. She sips it gingerly."
-
+    hide ju with Dissolve(2)
     na "Damn. Four hours."
 
     na "At least I can take the scans back to the cartographer's guild on Lumin."
@@ -151,13 +155,16 @@ label scene1:
     play env "sfx/SSL1.ogg" fadein 1.0
 
     #voice "voice/1-scene1-25.ogg" #Juneau (VA Name)
-    ju "Woah!"
-
+    ju "Woah!" with vpunch
 
     #voice "voice/1-scene1-26.ogg" #Raine (VA Name)
     mc "Juneau, report!"
 
     #voice "voice/1-scene1-27.ogg" #Juneau (VA Name)
+    show ju red concerned a1:
+        ju_side
+        hologram
+
     ju "We ran right into some kind of gravity well. Gravimetric readings are off the charts."
 
     #voice "voice/1-scene1-28.ogg" #Raine (VA Name)
@@ -175,7 +182,8 @@ label scene1:
     play music "Music/wormhole.ogg" fadein 3.0
 
     #voice "voice/1-scene1-31.ogg" #Juneau (VA Name)
-    ju "Huh? Okay! Forward thrust increased to full. What are you doing?"
+
+    ju red worried a1 "Huh? Okay! Forward thrust increased to full. What are you doing?"
 
     #layer 2 spaceship
     play env "sfx/SSL1.ogg" fadein 1.0
@@ -186,21 +194,28 @@ label scene1:
     mc "We gotta go through."
 
     #voice "voice/1-scene1-34.ogg" #Juneau (VA Name)
-    ju "That's dangerous! Are you sure?"
 
-    na "I instantly recognize Juneau's safety protocolskicking in. Though her personality routines may pretend otherwise, as the ship's navigator AI, Juneau has a responsibility to protect me."
+    ju worried speaking "That's dangerous! Are you sure?"
+
+    na "I instantly recognize Juneau's safety protocols kicking in. Though her personality routines may pretend otherwise, as the ship's navigator AI, Juneau has a responsibility to protect me."(what_size=29)
 
     #voice "voice/1-scene1-35.ogg" #Raine (VA Name)
     mc "Disengage safety. It's the only way we get out of this."
 
     #voice "voice/1-scene1-36.ogg" #Juneau (VA Name)
-    ju "*sigh* If you kill me, it'll be on your conscience."
+
+    ju @ red sassy"*sigh* If you kill me, it'll be on your conscience."
 
     #voice "voice/1-scene1-37.ogg" #Juneau (VA Name)
     ju "Handing you full navigational control."
+    #SFX acceleration
+    hide ju with dissolve
+
+    play sound3 "sfx/SSL1V2.ogg" fadein 1.0
+    show cockpit_space:
+        shake
 
     #laayer 2 spaceship v2
-    play sound3 "sfx/SSL1V2.ogg" fadein 1.0
     na "Faster and faster we go as I fly the ship straight into the  well."
 
     na "The ship begins to shake as we pick up speed."
@@ -266,10 +281,11 @@ label scene1:
     na "Suddenly my console lights up. A notification from Juneau. Text only."
 
     #ART Juneau icon on one of the screens, animated? Indicating that you should put a helmet on.
-
+    show cockpit_space:
+        shake2
     #voice "voice/1-scene1-48.ogg" #Juneau (VA Name)
     ju "You might want to put your helmet on now."
-
+    scene white with Dissolve(3)
     #SFX roaring and crash sound effect.
 
     #ART fade to white, show the crash however you like.

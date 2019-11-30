@@ -242,4 +242,5 @@ label scene_3:
     le "Oh! Right, just this way!"
 
     stop sound3 fadeout 2.0
-    jump scene_4
+    return
+    #jump scene_4

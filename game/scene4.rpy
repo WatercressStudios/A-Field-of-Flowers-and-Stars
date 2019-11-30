@@ -21,7 +21,7 @@ label scene_4:
     #voice "voice/4-scene_4-7.ogg" #Raine (VA Name)
     mc "Not sure. The hardware will be a pain to repair, but I can do it."
     #voice "voice/4-scene_4-8.ogg" #Raine (VA Name)
-    mc "The software is the issue. If it's trashed, I'm not sure if I can fixit."
+    mc "The software is the issue. If it's trashed, I'm not sure if I can fix it."
     na "Juneau... please be alright."
     #voice "voice/4-scene_4-9.ogg" #Leona (VA Name)
     le "Hey, don't look so down!"
