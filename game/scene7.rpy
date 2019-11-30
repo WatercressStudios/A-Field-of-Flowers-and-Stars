@@ -1,5 +1,7 @@
 label scene_7:
 
+    play sound3 "amb/city night.ogg" fadein 2.0
+
     na "The walk home is peaceful and uneventful. Not much conversation is had - the silence is of a comfortable kind, one shared between two good friends."
 
     na "Despite her being so loud and bubbly, I don't find myself as annoyed by her as I'd expect myself to be."
@@ -32,6 +34,8 @@ label scene_7:
     na "I follow suit, stretching myself out, back to the ground and face towards the stars."
 
     na "And by god, {i}are there stars.{/i}"
+
+    play music "music/on the roof.ogg" fadein 2.0
 
     na "It's a strange scene, seeing the warm glow of the sunset juxtaposed against the blues and blacks around the bright pinprick stars."
 
@@ -148,6 +152,9 @@ label scene_7:
     na "But that can come later. For now, I should get some sleep."
 
     na "We have a big day tomorrow, don't we?"
+
+    stop music fadeout 2.0
+    stop sound3 fadeout 2.0
 
     #Timeskip, passing time, you know the deal
 

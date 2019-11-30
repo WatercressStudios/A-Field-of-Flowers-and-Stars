@@ -93,9 +93,11 @@ init:
     # image le = "gui/sagi/test/leona.png"
 
     ##Audio
-    ##Channel for environment sound. This will allow audio for environmentals to be placed on it's own channel and levels for environmental effects to be adjusted with a fader
+    ##Channel for environment sound and extra sfx channel. This will allow audio for environmentals to be placed on it's own channel and levels for environmental effects to be adjusted with a fader
     $renpy.music.register_channel("env", mixer="sfx", loop=True, stop_on_mute=True, tight=False, buffer_queue=True, movie=False)
-
+    $renpy.music.register_channel("sound2", mixer="sfx", loop=False, stop_on_mute=True, tight=False, buffer_queue=True, movie=False)
+    $renpy.music.register_channel("sound3", mixer="sfx", loop=True, stop_on_mute=True, tight=False, buffer_queue=True, movie=False)
+    $renpy.music.register_channel("sound4", mixer="sfx", loop=True, stop_on_mute=True, tight=False, buffer_queue=True, movie=False)
 
     ##**Note: Music and SFX will be referenced in-line and therefor don't need their own declarations**##
 

@@ -1,4 +1,5 @@
 label scene_12:
+    play env "amb/workshop.ogg" fadein 2.0
     na "Well, it took a few days, but I think I have everything working now."
     na "The drive's in place, albeit with a few... extra modifications to work with my custom chassis."
     na "The rest of the parts Leona and I found were more than enough to get the rest of the ship up and running."
@@ -71,22 +72,33 @@ label scene_12:
     #voice "voice/12-scene_12-26.ogg" #Raine (VA Name)
     mc "Okay, okay, easy girl."
     na "I take a seat and get the ship ready for launch."
+    stop env fadeout 1.0
 
     #plane engine SFX
+    play sound "sfx/engines up.ogg"
+    pause 2.0
+    play env "sfx/engines3.ogg" fadein 1.0
 
     #voice "voice/12-scene_12-27.ogg" #Leona (VA Name)
     le "So how do we get to—"
 
+    play sound3 "sfx/engines2.ogg" fadein 1.0
     #faster engine SFX
 
     #voice "voice/12-scene_12-28.ogg" #Leona (VA Name)
     le "—spaaaaaaaace!?"
 
     na "The new drive whirs to life and rapidly accelerates us to escape velocity."
+    play sound "sfx/power down 2.ogg"
+    stop env fadeout 1.0
+    stop sound3 fadeout 1.0
     na "In about a minute, we're at the edge of the atmosphere, successfully in orbit around Fireside."
 
     #voice "voice/12-scene_12-29.ogg" #Juneau (VA Name)
     ju "Okay, we're stable. You guys want to try zero gravity?"
+
+    play music "music/floating.ogg" fadein 2.0
+
     #voice "voice/12-scene_12-30.ogg" #Leona (VA Name)
     le "Huh?"
     #voice "voice/12-scene_12-31.ogg" #Raine (VA Name)
@@ -106,8 +118,10 @@ label scene_12:
     na "How long has it been since I've really enjoyed myself?"
     na "And Juneau always said that I needed a vacation. Somehow, I don't think this is what she had in mind..."
 
-    #timeskip
+    stop music fadeout 2.0
 
+    #timeskip
+    play env "amb/Leonas house.ogg" fadein 2.0
     na "Sometime later, we finish up our test flight and land back on Fireside."
     #voice "voice/12-scene_12-36.ogg" #Leona (VA Name)
     le "Raine, that was amazing!"
@@ -249,6 +263,7 @@ label scene_12:
     le "Um..."
     #voice "voice/12-scene_12-92.ogg" #Leona (VA Name)
     le "..."
+    stop env fadeout 2.0
     #show kiss_CG1
     #pause (3)
     na "The kiss lingers in the air, fading out all of the sounds of the city outside."
@@ -261,6 +276,8 @@ label scene_12:
     #voice "voice/12-scene_12-95.ogg" #Leona (VA Name)
     le "I don't want to be alone."
     #show kiss_CG2
+    play music "music/they cry.ogg" fadein 2.0
+    play sound3 "amb/leonas house.ogg" fadein 2.0
     na "Her #voice breaks as she starts crying."
     na "I'm stunned. All I can do is hug her tighter in response."
     na "There's so much I want to say."
@@ -311,6 +328,8 @@ label scene_12:
     mc "I need some fresh air."
     na "I run outside towards the ship."
     #show outdoors_night
+    stop sound3 fadeout 2.0
+    play env "amb/city night.ogg" fadein 2.0
     na "The night air is cool and crisp, like a slap to the face."
     na "I have to do this now, or I'll miss my chance."
     na "If I leave the way I am now, I can do it with no regrets."
@@ -365,6 +384,10 @@ label scene_12:
     mc "Juneau... thank you."
     #voice "voice/12-scene_12-130.ogg" #Juneau (VA Name)
     ju "That's what I'm here for. Now go, before you make things worse."
+
+    stop env fadeout 2.0
+    play sound3 "amb/leonas house.ogg" fadein 2.0
+
     #show leona_house
     na "I run back to a still-sobbing Leona, who's curled up in her piles of cushions in a vain attempt to sleep."
     na "She instantly embraces me."
@@ -403,6 +426,7 @@ label scene_12:
     na "We're not pulling away from each other, we're getting closer and closer."
     na "I'm falling into Leona, and all the heat and pressure that comes with it feels so relieving."
     na "And I know she's feeling the same way."
+    stop music fadeout 2.0
     #voice "voice/12-scene_12-146.ogg" #Raine (VA Name)
     mc "I love you, Leona."
     #voice "voice/12-scene_12-147.ogg" #Leona (VA Name)
@@ -440,6 +464,7 @@ label scene_12:
     na "I didn't have the heart to tell her that there's no stove on board, just the synthesizer."
     na "It wouldn't be that hard to install one later, though."
     na "Leona: the GOAT homemaker."
+    play music "music/leaving fireside.ogg" fadein 2.0
     #voice "voice/12-scene_12-157.ogg" #Raine (VA Name)
     mc "Well, I think that's everything."
     #voice "voice/12-scene_12-158.ogg" #Leona (VA Name)
@@ -599,5 +624,6 @@ label scene_12:
     na "And I'm excited too. Scared, but excited."
     na "We'll get you back home one day, Leona. I promise."
     #fade to black
+    stop music
 
 return
