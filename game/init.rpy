@@ -28,16 +28,53 @@ init:
     $ rightoffset2 = Position(xpos = .85)
 
     ##Transform Definitions: These are pre-defined animations we can call up so we don't have to code them every time.
+    transform hologram:
+        parallel:
+            alpha 0.0
+            easeout 0.25 alpha 1.0
+            easeout 0.25 alpha 0.9
+        parallel:
+            additive 0.0
+            easeout 0.25 additive 1.0
+            easein_cubic 0.75 additive 0.0
+    transform stage_right:
+        xanchor .5
+        yanchor 1
+        zoom 1.21
+        ypos 0
+        xpos .75
 
     transform bounce:
     ##Makes a character slightly bounce when they pop into the scene. Gives them a bit of pep.
-        yoffset 15
         easein .10 yoffset 0
         easeout .175 yoffset 15
 
     transform xflip:
     ##Used to flip a character to face the other direction.
         xzoom -1
+
+    transform easeback_right:
+        subpixel True xpos 1.15
+        parallel:
+            ease_back 1.0 xpos 0.75
+
+    transform ju_side:
+        xpos 0.67 ypos 577 xanchor 1.55 yanchor 1 xzoom -1.0 zoom 1.13 alpha .9
+
+    transform shake:
+        linear 0.1 xoffset -2 yoffset 2
+        linear 0.1 xoffset 3 yoffset -3
+        linear 0.1 xoffset 2 yoffset -2
+        linear 0.1 xoffset -3 yoffset 3
+        linear 0.1 xoffset 0 yoffset 0
+        repeat
+    transform shake2:
+        linear 0.1 xoffset -3 yoffset 3
+        linear 0.1 xoffset 4 yoffset -4
+        linear 0.1 xoffset 3 yoffset -4
+        linear 0.1 xoffset -5 yoffset 6
+        linear 0.1 xoffset 6 yoffset 7
+        repeat
 
     #Image Declarations: Image Tag = "file"
     ##Make sure the file names and extensions match, and that the files are in the correct directory. If there's image errors, check this section first.
@@ -69,10 +106,43 @@ init:
         MapEmote('le happy a2', 'le neutral base arms_raised md_default ed_default brow_default')
         MapEmote('le suspicious a2', 'le think base tail_default md_default ed_bedroom brow_default')
         MapEmote('le crying', 'le sad base md_default ed_sad brow_default')
+        MapEmote('le catching', 'le angry base arms_default md_default ed_default brow_default')
+        MapEmote('le sassyquestioning', 'le hip base arms_default tail_default mdo_pout ed_default brow_up')
+        MapEmote('le concerned', 'le sad base md_default ed_default brow_default')
+        MapEmote('le explaining', 'le hip base arms_raised tail_default mdo_pout ed_default brow_default')
+        MapEmote('le crazy', 'le hip base arms_pout tail_default mdo_default ed_wide brow_downarrow')
+        MapEmote('le surprised', 'le hip base arms_raised tail_default2 mdo_pout ed_wide brow_up')
         #MapEmote('le pout p1 1', 'le neutral base arms_default md_default ed_away brow_line')
         #MapEmote('le pout p1 2', 'le neutral base arms_raised md_default ed_away brow_line')
 
+        #juneau
+        MapEmote('ju snarky a1', 'ju blue base arms_default mdo_O ed_slightlyclosed brow_raised')
+        MapEmote('ju snarky a2', 'ju blue base arms_raised mdo_O ed_slightlyclosed brow_raised')
+        MapEmote('ju concerned a1', 'ju blue base arms_default mdo_O ed_default brow_uparrow')
+        MapEmote('ju concerned a2', 'ju blue base arms_raised mdo_O ed_default brow_uparrow')
+        MapEmote('ju speaking eclosed', 'ju blue base arms_default mdo_O ec_default brow_raised')
+        MapEmote('ju sarcastic a1 e2', 'ju blue base arms_default md_O ec_default brow_default')
+        MapEmote('ju sarcastic a1 e1 b4', 'ju blue base arms_default mdo_line ed_default brow_uparrow')
+        MapEmote('ju annoyed a1', 'ju blue base arms_default mdo_O ed_default brow_downarrow')
+        MapEmote('ju annoyed a2', 'ju blue base arms_raised md_O ed_slightlyclosed brow_default')
 
+        MapEmote('ju red concerned a1', 'ju red hair_default base arms_worried mdo_O ed_default brow_worried')
+        MapEmote('ju red sorry a3', 'ju red hair_default base arms_worried md_default ed_default brow_worried')
+        MapEmote('ju red worried a1', 'ju red hair_default base arms_default mdo_small ed_glitch brow_raised')
+        MapEmote('ju red worried speaking', 'ju red hair_default base arms_default mdo_small ed_glitch brow_worried')
+        MapEmote('ju red sassy', 'ju red hair_default base arms_default mdo_default ec_angry brow_default')
+        #raine
+        MapEmote('mc thankful', 'mc normal base mdo_default ed_default brow_sad')
+        MapEmote('mc yawn', 'mc armraised base mdo_default ed_default')
+        MapEmote('mc neutral', 'mc normal base md_default ed_default brow_up')
+        MapEmote('mc questioning', 'mc confident base mdo_O ed_lookaway brow_raised')
+        MapEmote('mc surprised', 'mc confident base mdo_stretchO ed_default brow_raised')
+        MapEmote('mc shocked', 'mc armraised base mdo_default ed_shock')
+        MapEmote('mc unimpressed', 'mc normal base mdo_O ed_lookaway brow_dreamworks')
+        MapEmote('mc speaking', 'mc normal base mdo_default ed_liddrop brow_up')
+        MapEmote('mc annoyed', 'mc angry base mdo_default ed_default brow_default')
+        MapEmote('mc upset', 'mc angry hands md_default ec_default brow_angry')
+        MapEmote('mc amused', 'mc normal base mdo_line ed_lookaway brow_sad')
     ##background images, stored in images/backgrounds
     image white = "backgrounds/white.png"
     image stars = "backgrounds/stars.png"

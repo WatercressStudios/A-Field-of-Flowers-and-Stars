@@ -235,5 +235,5 @@ label scene_3:
     #voice "voice/3-scene_3-90.ogg" #Leona (VA Name)
     le "Oh! Right, just this way!"
 
-
-    jump scene_4
+    return
+    #jump scene_4
