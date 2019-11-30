@@ -196,9 +196,9 @@ init:
 init python:
     ##define VA info and parsing
     voices = {}
-    voices['mc'] = '#Raine (VA Name)'
-    voices['le'] = '#Leona (VA Name)'
-    voices['ju'] = '#Juneau (VA Name)'
+    voices['mc'] = '#Raine (Nat)'
+    voices['le'] = '#Leona (Dot)'
+    voices['ju'] = '#Juneau (Lily)'
     # To do VA parsing after filling the above:
     # 1. Run the game in Ren'Py
     # 2. Call the console with 'shift+o'
