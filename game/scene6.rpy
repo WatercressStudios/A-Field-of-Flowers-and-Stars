@@ -1,4 +1,5 @@
 label scene_6:
+    play env "amb/Workshop.ogg" fadein 2.0
 
     na "It's been nearly two weeks since we first found the caves. We've been making excellent progress on the vault, and it appears we'll be able to open it very, very soon."
 
@@ -45,6 +46,9 @@ label scene_6:
     na "I answer her in kind."
 
     mc "Oh, piss off June!"
+
+    stop env fadeout 2.0
+    play sound3 "amb/cafe.ogg" fadein 2.0
 
     na "After a short walk down the street, we find it."
 
@@ -117,6 +121,9 @@ label scene_6:
     le "No fun..."
 
     na "After fetching our... caffeinated drinks and topping them off with cream, Leona leads me up a small staircase up to the veranda."
+
+    stop sound3 fadeout 2.0
+    play env "amb/cafe out.ogg" fadein 2.0    
 
     na "Chairs are oriented closest to the side of the sunset, arrayed with umbrellas for cover."
 
@@ -205,5 +212,7 @@ label scene_6:
     mc "By the way, where do you put the trash?"
 
     le "Over here. We recycle, of course!"
+
+    stop env fadeout 2.0
 
     jump scene_7

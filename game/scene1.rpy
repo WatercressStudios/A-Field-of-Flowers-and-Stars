@@ -17,6 +17,7 @@ label scene1:
     show ju b normal with dissolve:
         xalign 0.3
     na "Calling me towards the stars. Asking, begging to be found."
+    play env "sfx/Warp engines.ogg" fadein 2.0
 
     #ART We see our ship from a distance, moving slowly from the right to the center of the screen, as if the camera is catching up to the fast moving ship.
     #SFX Sound of the warp drive comes louder to accompany the ship coming into focus.
@@ -28,16 +29,21 @@ label scene1:
     hide ju with dissolve
     na "So…"
 
+
     mc sad "So why won't you finish these damn calibrations already so we can do some exploring?"
 
     mc "Finish!"
 
     #SFX she kicks something.
+    play sound2 "sfx/clunk.ogg"
+    play sound "sfx/power down 1.ogg"
 
     #ART With a flash of light the ship comes out of light speed. Particles stop moving. An asteroid belt pops into view. Our camera zooms in on the cockpit area of the ship and we transition to an interior shot.
     #ART Increase the size of the ship sprite to simulate zooming in on the cockpit window. Fade the screen as we do to make a smooth transition.
 
     #SFX Decelerating from lightspeed travel.
+    pause 2.0
+    play env "sfx/engines.ogg" fadein 1.0
 
     #Scene spaceship normal
 
@@ -120,7 +126,12 @@ label scene1:
     #SFX whoosh
     #ART Wormhole appears outside the cockpit. Screen shake."
 
+    #layer 2 spaceship
+    play env "sfx/SSL1.ogg" fadein 1.0
+
+
     ju "Woah!"
+
 
 
     mc "Juneau, report!"
@@ -133,12 +144,16 @@ label scene1:
 
     na "Dammit! I should have known."
 
+
+
     mc "It's a wormhole. We got caught in its well."
 
     mc "Forward full thrust. Give me manual control."
+    play music "Music/wormhole.ogg" fadein 3.0
 
     ju "Huh? Okay! Forward thrust increased to full. What are you doing?"
-
+    #layer 2 spaceship
+    play env "sfx/SSL1.ogg" fadein 1.0
     mc "We're caught in a gravity field. It'll tear the ship apart before we ever break free."
 
     mc "We gotta go through."
@@ -152,8 +167,8 @@ label scene1:
     ju "*sigh* If you kill me, it'll be on your conscience."
 
     ju "Handing you full navigational control."
-    #SFX acceleration
-
+    #laayer 2 spaceship v2
+    play sound3 "sfx/SSL1V2.ogg" fadein 1.0
     na "Faster and faster we go as I fly the ship straight into the  well."
 
     na "The ship begins to shake as we pick up speed."
@@ -173,6 +188,7 @@ label scene1:
     #SFX bang
     #ART asteroid flies across the windshield and hits towards the top of our ship.
     #art planet
+    play sound2 "sfx/Crash.ogg"
 
     mc "..."
     ju "..."
@@ -183,6 +199,8 @@ label scene1:
     ju "Impact! Hull breach det-"
 
     #SFX start ramping up the sound of atmosphere around the ship. Build it up on top of their conversation until we fade out of this scene.
+    #spaceshhip layer 3
+    play sound4 "sfx/SSL2.ogg" fadein 1.0
 
     na "I turn to Juneau . She's gone."
 
@@ -199,6 +217,9 @@ label scene1:
     mc "Juneau come back!"
 
     #SFX alarm starts going off. Cockpit is flashing red.
+    play sound "sfx/entry_intro.ogg"
+    pause 2.0
+    play env "sfx/SSL3.ogg" fadein 2.0
 
     na "Suddenly my console lights up. A notification from Juneau. Text only."
 
@@ -207,6 +228,14 @@ label scene1:
     ju "You might want to put your helmet on now."
 
     #SFX roaring and crash sound effect.
+
     #ART fade to white, show the crash however you like.
+
+    stop sound3 fadeout 2.0
+    stop sound4 fadeout 2.0
+    stop env fadeout 2.0
+    stop music fadeout 2.0
+    play sound2 "sfx/Crash.ogg"
+
 
     jump scene_2

@@ -1,6 +1,7 @@
 label scene_10:
 
     scene black
+    play env "amb/cave.ogg" fadein 2.0
 
     le "Careful, there's a low hanging rock here."
 
@@ -27,6 +28,7 @@ label scene_10:
     le "I'm gonna let go of you now, so I can look around."
 
     na "Leona releases her grip on my hand and wanders off into the dark."
+    play sound "sfx/torch handling.ogg"
 
     na "I stay by the opening and beat the daylights out ofinto this flashlight, hoping it isn't just a battery issue keeping me blind."
 
@@ -39,6 +41,8 @@ label scene_10:
     na "I return to the panel we found weeks ago."
 
     na "With a solid thunk, I kick it the panel in hopes that doing so it might provide useful."
+
+    play sound "sfx/Kicking panel.ogg"
 
     na "The lights stay distinctly off, with no signout promise of light ever returning to the buttons in front of me."
 
@@ -86,8 +90,9 @@ label scene_10:
 
     #scene black
 
+    play sound "sfx/battery.ogg"
     na "I yank the battery out and press the diode into the panel'stwisted wiring I've pulled from behind the paneling."
-
+    play sound "sfx/door.ogg"
     na "There's a spark of electricity and a loud crack, followed by shrill creaking to our right can be heard next to us."
 
     mc "Is that the door moving?"
@@ -105,7 +110,7 @@ label scene_10:
     mc "Be careful, we don't know what's waiting in there!"
 
     le "It's fine, it's fine!"
-
+    play sound "sfx/box break.ogg"
     na "As I replace the flashlight battery, I can hear shuffling from beyond the door, followed by a loud thunk."
 
     mc "Everything okay!?"
@@ -177,6 +182,8 @@ label scene_10:
     na "Leona slinks into view, tail between her legs."
 
     le "Promise?"
+
+    play music "music/leaving together.ogg" fadein 2.0
 
     mc "Cross my heart and hope to die."
 
@@ -311,5 +318,8 @@ label scene_10:
     mc "Onward?"
 
     le "ONWARD!"
+
+    stop music fadeout 2.0
+    stop env fadeout 2.0
 
     jump scene_11

@@ -1,6 +1,7 @@
 label scene_5:
 
     #passing time screen/animation/whatever
+    play env "amb/workshop.ogg" fadein 2.0
 
     le "Back at it again, huh?"
 
@@ -58,6 +59,7 @@ label scene_5:
 
     na "The light blinks slowly, then quickly, eventually becoming a solid green."
 
+    play sound "sfx/power up.ogg"
     na "Juneau materializes."
 
 
@@ -102,6 +104,7 @@ label scene_5:
     na "This looks absolutely ancient, but in true sci fi fashion, it's easily more advanced than whatever the locals have."
 
     na "Some of this I can actually use!"
+    play sound "sfx/rustle.ogg"
 
     na "Rifling through it, there's plenty that'll help me get basic functions online, like life support and carbon dioxide scrubbing."
 
@@ -149,6 +152,7 @@ label scene_5:
     ju "I'll save you the trouble. Entering Hibernation Mode."
 
     ##SFX Powering down
+    play sound "sfx/power down.ogg"
 
     na "So much for help. Annoyingly useless."
 
@@ -162,6 +166,8 @@ label scene_5:
 
     mc "Ah!"
     #SFX headbang
+    play sound "sfx/headbang.ogg"
+
 
     na "Startled, I bang my head on the compartment I've been working under."
 
@@ -392,7 +398,8 @@ label scene_5:
     na "That's all I can hope for, right now."
 
     ##Timeskip
-
+    stop env fadeout 2.0
+    play sound3 "Amb/Cave.ogg" fadein 2.0
     le "I told you it wouldn't be a big deal!"
 
     mc "It's so {i}hot{/i}, and I didn't expect the trip to last {i}hours{/i}."
@@ -466,6 +473,7 @@ label scene_5:
     na "I get no answer."
 
     na "It's so dark that I can't even see my hand in front of me."
+    play music "music/raine lost.ogg" fadein 2.0
 
     na "I hold onto the wet, slightly slimy wall to keep my bearings."
 
@@ -552,6 +560,8 @@ label scene_5:
     na "That train of thought is too terrifying to continue."
 
     na "So, I hold onto her tight, and let her guide me towards my goal."
+
+    stop music fadeout 3.0
 
     na "After about half an hour of walking, we finally reach our destination. In a rather large room sits a very large hangar door inlayed into the stone wall."
 
@@ -646,5 +656,7 @@ label scene_5:
     na "Discovering all that we can, we make our way back through the cave system, promising to open this vault in a couple week's time."
 
     #Timeskip, passing time, yadda yadda
+
+    stop sound3 fadeout 2.0
 
     jump scene_6

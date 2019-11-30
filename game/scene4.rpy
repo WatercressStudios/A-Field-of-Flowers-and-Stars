@@ -1,4 +1,5 @@
 label scene_4:
+    play env "amb/workshop.ogg" fadein 2.0
     na "After turning around and heading back to her street,  we reach the base that my poor ship has been taken to."
     na "I hope Juneau is okay, or that her programming is at least salvageable. She's annoying, but she's all I have."
     na "I guess she's what I imagine family to be."
@@ -17,6 +18,7 @@ label scene_4:
     le "Hey, don't look so down!"
     le "I'm sure you'll get it fixed! You're a high-tech alien, I'm sure this is nothing for you!"
     mc "Heh. While your baseless confidence is flattering, I think you might be overestimating me."
+    play sound "sfx/metal fix.ogg"
     na "I push together two pieces of metal, one of which was mildly bent. Holding them in place, I readjust the screw that originally held them together."
     le "Regardless, you'll be staying with me until you've got your ship back together."
     na "I stand up, brushing myself off."
@@ -35,6 +37,7 @@ label scene_4:
     le "I never could have imagined this type of metal could be used like this..."
     le "...or that this shape would make for a good space ship..."
     le "...or that... or..."
+    play sound "sfx/metal break.ogg"
     le "..."
     le "...oops."
     le "That was the part Raine just fixed, wasn't it?"
@@ -58,6 +61,8 @@ label scene_4:
     na "After a couple of hours working on the ship, I decide to take a break. Juneau won't be online for a little bit anyways, so I have some time to kill."
     na "And I'm hungry."
     na "After a short trip to a nearby convenience store, we return to Leona's abode, eggs in tow."
+    stop env fadeout 2.0
+    play sound3 "amb/Leonas house.ogg"
     na "...It's already mid-afternoon."
     na "If I go back to the base to work on my ship now, I'll be there all night."
     na "Juneau..."
@@ -108,4 +113,5 @@ label scene_4:
     na "I'm running out of time. Or I'm already out of time - I'm not sure of either. I have to assume that the wormhole won't be there forever."
     na "But there's nothing I can do until I have Juneau back, and that has to wait till tomorrow."
     na "Resigned to this fact, I follow Leona's advice and head to bed."
+    stop sound3 fadeout 2.0
     jump scene_5

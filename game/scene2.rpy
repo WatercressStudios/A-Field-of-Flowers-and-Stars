@@ -11,6 +11,7 @@ label scene_2:
         yzoom -1
     #iris open
     #show BG_outdoors_upside_down
+    play env "Amb/Outdoors.ogg" fadein 2.0
 
     mc "Shit."
     na "I'm upside down in what appears to be a... tree?"
@@ -29,6 +30,13 @@ label scene_2:
     scene black with irisout
     na "I close my eyes and wait to die. Dehydration will most likely take me in a few days."
     na "Well, can't say it wasn't fun. Goodbye cruel world."
+
+    pause 5.0
+
+    play sound "sfx/footsteps.ogg"
+
+    pause 5.0
+
     #pause for ten or so seconds
     le "Eo'ahola! I'akiam eo'ahap?!?"
     #iris open, fast
@@ -55,16 +63,18 @@ label scene_2:
     le "Ulo'ulo' e, uamo'oh e!"
 
     #cable tearing SFX
+    play sound "sfx/tree.ogg"
 
     na "The cables fall away..."
     mc "W-Woah!"
+
     mc "...Leaving me to fall to the ground."
     le @ questioning a2 "Ohaw i ānān!"
     na "The girl leaps forward from the branch and catches me mid-air."
     na "Perhaps it's because of the planet's reduced gravity, but we seem to float down, rather than fall."
     na "Or maybe I'm just relieved that I'm not going to die."
 
-    #landing on ground SFX
+    play sound "sfx/falling.ogg"
 
     le "Ikah iwi uam eh? Anomom eli?"
     na "A thought occurs to me. My translator implant should be kicking in..."
@@ -73,6 +83,7 @@ label scene_2:
     na "I need her to keep speaking. Any second now it should begin to translate her words."
     le @ questioning a2 "Ohaw i ānān!"
     le questioning a1 "Did you break anything? No broken bones, right?"
+    play music "music/meeting leona.ogg" fadein 2.0
     na "Finally, my implant starts to work and I can understand her words."
     na "I check myself over. Aside from some rope burn and some really sore spots, I seem to be alright."
     mc "I'm okay. Mostly."
@@ -127,10 +138,11 @@ label scene_2:
     na "Thankfully, Leona has a ride back into town, a primitive hoverbike with extra space for me and the few meager belongings I had on my person."
     na "For a second, I thought we'd be walking the whole way back."
     na "After a relatively short trip, we arrive."
-
+    stop env fadeout 2.0
     le "We're here!"
     na "Leona disembarks, helping me down from the bike."
     le "Welcome to the city of Aster!"
+    play env "amb/City Day.ogg" fadein 1.0
     na "The city is a massive sprawl, all centered on a large tower about a mile away."
     mc "What's that tower?"
     le "That's the colony ship we arrived on several decades ago! Nowadays it's been refitted as a government office and communications relay."
@@ -165,9 +177,12 @@ label scene_2:
     na "After the various traumas of today, I think I deserve a break."
     mc "Sure. I could use the rest."
     le "Right, then! Hop on and I'll take you home!"
+
     na "Entering the large gate to the city, we travel down the main street, turning at an intersection. It only takes us a few more minutes to reach her house."
     #show bg_leonahouse
-
+    stop env fadeout 2.0
+    stop music fadeout 2.0
+    play sound3 "amb/Leonas house.ogg" fadeout 2.0
 
     le "Ta-dahhh! Welcome to my little plot of land."
     na "While it looks like one of those old prefabricated shelters, the inside is surprisingly cozy."
@@ -176,11 +191,14 @@ label scene_2:
     na "I immediately target the bed, or what I assume to be the bed -- a pile of cushions and blankets seems to be where Leona sleeps."
 
     #POMF
+    play sound "sfx/bed fall.ogg"
 
     na "Without another word, I flop down onto the 'bed' and turn to Leona."
     mc "I'm going to sleep for a bit. Sorry."
     le "No problem! Sleep well!"
+    stop sound3 fadeout 2.0
     na "It doesn't take much effort before I pass out completely."
+
 
     #iris close
 

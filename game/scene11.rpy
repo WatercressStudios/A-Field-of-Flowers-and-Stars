@@ -1,5 +1,6 @@
 label scene_11:
 
+    play sound3 "amb/camp.ogg" fadein 2.0
     na "Heading out of the cave system, we're greeted by still air and a setting sun. Slowly, the creatures of the night wake, chirping and chittering underneath shrubs and dusty rocks."
 
     na "I'm sure they're just the Fireside equivalent to Earth's long lost grasshoppers and cicadas."
@@ -96,5 +97,6 @@ label scene_11:
     na  "I can't wait to take you up in the morning. I've learned so much, getting to see what you see."
 
     na "Now I'll be able to return the favor."
+    stop sound3 fadeout 2.0
 
     jump scene_12
