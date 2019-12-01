@@ -1,4 +1,4 @@
-label scene1:
+label start:
     show screen flower_menu_button with easeinright
     #This is the start of the game.
     show cockpit_space:

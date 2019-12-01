@@ -98,7 +98,7 @@ init:
     ##Sprite Definitions: The ones that are commented out are ones that don't look right.
     init python:
         layerorder = ['hair', 'base', 'arms', 'tail','mouth','eyes','brow',]
-        DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder, offsets=(0, 100), zooms={'mc':0.4, 'le': 1.3, 'ju':1.3}, sides=['mc'])
+        DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder, offsets=(0, 100), zooms={'mc':0.55, 'le': 1.3, 'ju':1.3}, sides=['mc'])
 
         #Leona
         MapEmote('le curious', 'le think base tail_default mdo_default ed_default brow_default')
@@ -200,14 +200,6 @@ init:
 
     ##**Note: Music and SFX will be referenced in-line and therefor don't need their own declarations**##
 
-
-    ##Game updater. These are declarations used for the updater script to work. The important thing to know is that UPDATE URL
-    ##points to a json file hosted online as an HTML accessable directory. When we build a new revision, Renpy will generate a few files used to update the game, including This
-    ##json file. All of the files need to be uploaded to the webserver using cpanel or the command line and placed in this directory.
-
-    ##Defines a URL where the .json file is hosted. It needs to be a public html with the compressed game files stored in the same directory.
-    $ UPDATE_URL = "http://sarchalen.com/afieldofflowersandstars/update/updates.json"
-
 init python:
     ##define VA info and parsing
     voices = {}
@@ -221,10 +213,6 @@ init python:
 
 ##This is our splash screen. It runs before the main menu and shows logos. It also requests game updates while the logos are showing (because of the delay it takes to contact the server)
 label splashscreen:
-
-    ##Used to check if a new version of the game exists. Returns a version number, or None.
-    $ new_version = updater.UpdateVersion(url=UPDATE_URL, simulate=None)
-
     ##This sets default levels for audio channels in the prefs screen for the first time the player launches the game. It does nothing if the persistent file exists.
     python:
             if not persistent.set_volumes:
@@ -244,20 +232,26 @@ label splashscreen:
         ypos .45
     $ renpy.pause(2, hard=True)
     hide afofaslogo with dissolve
-
     ##When the splash screen ends, we jump to the updater script. If theres no updates, it will go to the menu screen and be invisible to the player.
     jump update
 
 label update:
+
+    ##Game updater. These are declarations used for the updater script to work. The important thing to know is that UPDATE URL
+    ##points to a json file hosted online as an HTML accessable directory. When we build a new revision, Renpy will generate a few files used to update the game, including This
+    ##json file. All of the files need to be uploaded to the webserver using cpanel or the command line and placed in this directory.
+
+    ##Defines a URL where the .json file is hosted. It needs to be a public html with the compressed game files stored in the same directory.
+    $ UPDATE_URL = "http://sarchalen.com/afieldofflowersandstars/update/updates.json"
+
     ##If a new update exists, run the updater script located in the engine files at renpy/common/00updater.rpy
     ##**Note: Sarchalen uses a modified version of 00updater.rpy which integrates our GUI to create a seamless user experience.**##
     ##**If renpy is not using our game's GUI when the updater is run, you need to add this file to the renpy SDK before you create a build.**##
     ##**If anyone knows how to do this without modifying engine files please let us know :) **##
 
+    #Used to check if a new version exists. Returns either a version number, or none.
+    $ new_version = updater.UpdateVersion(url=UPDATE_URL, simulate=False)
     if new_version != None:
-        $ updater.update(url=UPDATE_URL, base=None, force=False, public_key=None, simulate=None, add=[], restart=True)
+        $ updater.update(url=UPDATE_URL, base=None, force=False, public_key=None, simulate=False, add=[], restart=True, confirm=False)
     else:
         return
-
-label start:
-    jump scene1
