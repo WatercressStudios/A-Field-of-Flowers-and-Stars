@@ -16,7 +16,7 @@ label scene1:
     na "All my life, something has been calling out to me."
 
     na "Calling me towards the stars. Asking, begging to be found."
-    play env "sfx/Warp engines.ogg" fadein 2.0
+    play env "sfx/Warp engines.ogg" fadein 1.0
     scene cockpit_space:
         zoom 0.75
         anchor (0.5, 0.5)
@@ -39,14 +39,16 @@ label scene1:
 
     #SFX she kicks something.
     play sound2 "sfx/clunk.ogg"
+    pause 1.0
     play sound "sfx/power down 1.ogg"
 
     #ART With a flash of light the ship comes out of light speed. Particles stop moving. An asteroid belt pops into view. Our camera zooms in on the cockpit area of the ship and we transition to an interior shot.
     #ART Increase the size of the ship sprite to simulate zooming in on the cockpit window. Fade the screen as we do to make a smooth transition.
 
     #SFX Decelerating from lightspeed travel.
-    pause 2.0
-    play env "sfx/engines.ogg" fadein 1.0
+    pause 1.0
+    stop env fadeout 2.0
+    play sound3 "sfx/engines.ogg" fadein 1.0
 
     #Scene spaceship normal
 
@@ -87,9 +89,9 @@ label scene1:
 
     #voice "voice/1-scene1-13.ogg" #Raine (Nat)
     mc "*sigh* I need coffee. Take over for a bit, will ya?"
+    play sound "sfx/power up.ogg"
     hide ju with easeoutleft
     #ART In a flash of light she disappears from the console and appears in hologram form in the passenger seat beside us. She's a full body human-like AI.
-
     show ju snarky a2 onlayer master:
         stage_right
         hologram
@@ -156,8 +158,11 @@ label scene1:
     mc "Hey Juneau. When we get back to Lumi-"
 
     #SFX whoosh
+    play sound "sfx/wormhole.ogg"
     #ART Wormhole appears outside the cockpit. Screen shake."
-    play env "sfx/SSL1.ogg" fadein 1.0
+    pause 1.0
+    play env "sfx/SSL1.ogg" fadein 2.0
+    play music "Music/wormhole.ogg" fadein 3.0
 
     #voice "voice/1-scene1-26.ogg" #Juneau (Lily)
     ju "Woah!" with vpunch
@@ -184,13 +189,14 @@ label scene1:
 
     #voice "voice/1-scene1-31.ogg" #Raine (Nat)
     mc "Forward full thrust. Give me manual control."
-    play music "Music/wormhole.ogg" fadein 3.0
+
 
     #voice "voice/1-scene1-32.ogg" #Juneau (Lily)
     ju red worried a1 "Huh? Okay! Forward thrust increased to full. What are you doing?"
 
     #layer 2 spaceship
-    play env "sfx/SSL1.ogg" fadein 1.0
+    stop env fadeout 2.0
+    play sound4 "sfx/SSL1V2.ogg" fadein 2.0
 
     #voice "voice/1-scene1-33.ogg" #Raine (Nat)
     mc "We're caught in a gravity field. It'll tear the ship apart before we ever break free."
@@ -214,12 +220,14 @@ label scene1:
     #SFX acceleration
     hide ju with dissolve
 
-    play sound3 "sfx/SSL1V2.ogg" fadein 1.0
+    play env "sfx/engines2.ogg" fadein 2.0
     show cockpit_space:
         shake
 
     #laayer 2 spaceship v2
     na "Faster and faster we go as I fly the ship straight into the  well."
+
+    play sound4 "sfx/wormhole loop.ogg" fadein 1.0
 
     na "The ship begins to shake as we pick up speed."
 
@@ -241,7 +249,7 @@ label scene1:
     #SFX bang
     #ART asteroid flies across the windshield and hits towards the top of our ship.
     #art planet
-    play sound2 "sfx/Crash.ogg"
+    play sound2 "sfx/astroid impact.ogg"
 
     #voice "voice/1-scene1-43.ogg" #Raine (Nat)
     mc "..."
@@ -252,13 +260,14 @@ label scene1:
     #voice "voice/1-scene1-45.ogg" #Raine (Nat)
     mc "What the fuck was that?"
     #Juneau glitches out
-
+    stop sound4 fadeout 2.0
+    play sound5 "sfx/SSL2.ogg" fadein 2.0
     #voice "voice/1-scene1-46.ogg" #Juneau (Lily)
     ju "Impact! Hull breach det-"
 
     #SFX start ramping up the sound of atmosphere around the ship. Build it up on top of their conversation until we fade out of this scene.
     #spaceshhip layer 3
-    play sound4 "sfx/SSL2.ogg" fadein 1.0
+
 
     na "I turn to Juneau . She's gone."
 
@@ -279,7 +288,7 @@ label scene1:
     #SFX alarm starts going off. Cockpit is flashing red.
     play sound "sfx/entry_intro.ogg"
     pause 2.0
-    play env "sfx/SSL3.ogg" fadein 2.0
+    play sound4 "sfx/SSL3.ogg" fadein 1.0
 
     na "Suddenly my console lights up. A notification from Juneau. Text only."
 
@@ -297,6 +306,7 @@ label scene1:
     stop sound3 fadeout 2.0
     stop sound4 fadeout 2.0
     stop env fadeout 2.0
+    stop sound5 fadeout 2.0
     stop music fadeout 2.0
     play sound2 "sfx/Crash.ogg"
 

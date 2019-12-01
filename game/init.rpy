@@ -182,7 +182,7 @@ init:
     $renpy.music.register_channel("sound2", mixer="sfx", loop=False, stop_on_mute=True, tight=False, buffer_queue=True, movie=False)
     $renpy.music.register_channel("sound3", mixer="sfx", loop=True, stop_on_mute=True, tight=False, buffer_queue=True, movie=False)
     $renpy.music.register_channel("sound4", mixer="sfx", loop=True, stop_on_mute=True, tight=False, buffer_queue=True, movie=False)
-
+    $renpy.music.register_channel("sound5", mixer="sfx", loop=True, stop_on_mute=True, tight=False, buffer_queue=True, movie=False)
     ##**Note: Music and SFX will be referenced in-line and therefor don't need their own declarations**##
 
 
@@ -235,7 +235,7 @@ label splashscreen:
                 _preferences.volumes['sfx'] *= .75
 
     ##Play the music configured in options so that the music begins as soon as the splash screen shows
-    $ renpy.music.play(config.main_menu_music)
+    $ renpy.music.play(config.main_menu_music) 
 
     #scene starfield
     scene stars at main_menu_bg_transform with Dissolve(2.0)

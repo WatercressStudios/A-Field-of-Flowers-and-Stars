@@ -11,6 +11,7 @@ label scene_3:
 
     #movement SFX
     play sound "sfx/footsteps 2.ogg"
+    play music "music/Aster.ogg" fadein 2.0
 
     show le happy a1 at stage_right with dissolve
     #voice "voice/3-scene_3-1.ogg" #Leona (Dot)
@@ -102,6 +103,7 @@ label scene_3:
     hide le with easeoutright
     na "She runs to the sink for a glass of water and— "
     scene black with vpunch
+    play sound "sfx/water splash.ogg"
     na "—splashes my mouth — and the rest of my face — with it."
     scene house with Dissolve(2.0)
     #voice "voice/3-scene_3-19.ogg" #Raine (Nat)
@@ -199,6 +201,7 @@ label scene_3:
 
     #voice "voice/3-scene_3-44.ogg" #Leona (Dot)
     le crazy "Coming right up!"
+    stop music fadeout 2.0
 
     show le:
         zoom 1.5
@@ -381,6 +384,7 @@ label scene_3:
     le questioning p2 "Oh! Right, just this way!"
 
     stop sound3 fadeout 2.0
+    stop music fadeout 2.0
     scene black with fade
 
     return
