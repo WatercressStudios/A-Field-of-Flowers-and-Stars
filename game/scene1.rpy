@@ -70,10 +70,9 @@ label scene1:
     ju "Big talk coming from someone with a haywire personality routine."
 
     #voice "voice/1-scene1-9.ogg" #Juneau (Lily)
-    ju sarcastic a1 e2 "Oh I'm Raine! I'm so impatient."
+    ju sarcastic a1 e1 b4 "Oh I'm Raine! I'm so impatient! The universe didn't love me enough as a baby so I’ll just take out all my frustrations on my poor, defenseless starship!"
 
     #voice "voice/1-scene1-10.ogg" #Juneau (Lily)
-    ju sarcastic a1 e1 b4 "The universe didn't love me enough as a baby so I’ll just take out all my frustrations on my poor, defenseless starship."
 
     #voice "voice/1-scene1-11.ogg" #Raine (Nat)
     mc "I do {b}not{/b} sound like that."
