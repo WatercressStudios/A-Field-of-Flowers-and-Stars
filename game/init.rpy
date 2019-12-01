@@ -109,14 +109,31 @@ init:
 
 init python:
     ##define VA info and parsing
+    voicefile_template = 'voice/{filenum}-{labelname}-{filelinenum}.ogg'
+    #
+    # {filename} the script file name
+    # {filenum} the number in the script file name
+    # {labelname} the name of the current label
+    # {charname} the character short name
+    # {filelinenum} the line number in the file
+    # {labellinenum} the line number in the label
+    # {charlinenum} the line number for the character in the file
+    # {charlabellinenum} the line number for the character in the label
+    #
+
     voices = {}
     voices['mc'] = '#Raine (VA Name)'
     voices['le'] = '#Leona (VA Name)'
     voices['ju'] = '#Juneau (VA Name)'
-    # To do VA parsing after filling the above:
+    #
+    # To generate these:
     # 1. Run the game in Ren'Py
     # 2. Call the console with 'shift+o'
-    # 3. Type 'ParseVoices()' and hit enter
+    # 3. Type 'ParseVoices()' or 'ParseVoices(comment_out_if_missing=True)' and hit enter
+    #
+    # Use the 'comment_out_if_missing=True' version if you want the script to comment out
+    # the line automatically if the VA file doesn't exist
+    #
 
 ##This is our splash screen. It runs before the main menu and shows logos. It also requests game updates while the logos are showing (because of the delay it takes to contact the server)
 label splashscreen:
