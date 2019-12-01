@@ -814,8 +814,8 @@ transform main_menu_bg_restore_transform:
     parallel:
         ease 3 rotate 0.0 align (0.5, 0.5)
     parallel:
-        pause 3
-        ease 3 zoom 1.0
+        pause 1.5
+        ease 4.5 zoom 1.0
 
 screen main_menu():
 

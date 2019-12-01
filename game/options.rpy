@@ -73,7 +73,7 @@ define config.has_voice = True
 ## Entering or exiting the game menu.
 
 define config.enter_transition = dissolve
-define config.exit_transition = None
+define config.exit_transition = dissolve
 
 #A transition used when coming out of the splash screen and into the menu
 define config.end_splash_transition = None

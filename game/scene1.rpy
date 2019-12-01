@@ -2,23 +2,26 @@ label scene1:
     scene stars at main_menu_bg_restore_transform
     pause 6.0
     scene cockpit_space with dissolve:
-        zoom .85
+        zoom 0.75
+        anchor (0.5, 0.5)
+        align (0.5, 0.5)
     show screen flower_menu_button with easeinright
     #This is the start of the game.
     #ART We begin in space. Nothing else is on the screen. "Warp drive particles" move slowly from left to right to imply motion. The stars in the background are still.
-
-    #Start text box overlay. Raine is narrating aloud.
 
     na "All my life I've been looking for something."
 
     na "No, it's more than that."
 
-    #scene starfield with dissolve
     na "All my life, something has been calling out to me."
 
     na "Calling me towards the stars. Asking, begging to be found."
     play env "sfx/Warp engines.ogg" fadein 2.0
-
+    scene cockpit_space:
+        zoom 0.75
+        anchor (0.5, 0.5)
+        align (0.5, 0.5)
+        ease 1.0 zoom 0.85
     #ART We see our ship from a distance, moving slowly from the right to the center of the screen, as if the camera is catching up to the fast moving ship.
     #SFX Sound of the warp drive comes louder to accompany the ship coming into focus.
 
