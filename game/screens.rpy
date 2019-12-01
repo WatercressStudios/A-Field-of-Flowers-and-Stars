@@ -76,12 +76,6 @@ style frame:
     padding gui.frame_borders.padding
     background Frame("gui/sagi/frame.png", gui.frame_borders)
 
-# label main_menu:
-#     $ main_menu = True
-#     scene starfield with dissolve
-#     pause (2.0)
-#     call screen main_menu with Dissolve(2.0)
-
 ################################################################################
 ## In-game screens
 ################################################################################
@@ -745,12 +739,13 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        if main_menu:
-            textbutton _("Start") action Start("start")
-        else:
-            textbutton _("History") action ShowMenu("history")
-
-            textbutton _("Save") action ShowMenu("save")
+        # if main_menu:
+        #     textbutton _("Start") action Start("start")
+        # else:
+        #     textbutton _("History") action ShowMenu("history")
+        #
+        #     textbutton _("Save") action ShowMenu("save")
+        textbutton _("Start") action Start("start")
 
         textbutton _("Load") action ShowMenu("load")
 
@@ -760,9 +755,9 @@ screen navigation():
 
             textbutton _("End Replay") action EndReplay(confirm=True)
 
-        elif not main_menu:
-
-            textbutton _("Main Menu") action MainMenu()
+        # elif not main_menu:
+        #
+        #     textbutton _("Main Menu") action MainMenu()
 
         # textbutton _("About") action ShowMenu("about")
 
@@ -784,13 +779,43 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-
+    idle_color "#000"
+    hover_color colors.selected
+    outlines [ (3, colors.base, 0, 0) ]
 
 ## Main Menu screen ############################################################
 ##
 ## Used to display the main menu when Ren'Py starts.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
+
+init python:
+    time = 0.0
+    speed = 1.0
+
+    def UpdateRotation(trans, st, at):
+        global time, speed
+        time += 0.03 * speed
+        trans.rotate = time
+
+transform main_menu_bg_transform:
+    anchor (0.5, 0.5)
+    zoom 3.0
+    align (0.40, 0.40)
+    function UpdateRotation
+    pause 0.03
+    repeat
+
+transform main_menu_bg_restore_transform:
+    anchor (0.5, 0.5)
+    zoom 3.0
+    align (0.40, 0.40)
+    rotate time
+    parallel:
+        ease 3 rotate 0.0 align (0.5, 0.5)
+    parallel:
+        pause 3
+        ease 3 zoom 1.0
 
 screen main_menu():
 
@@ -799,11 +824,12 @@ screen main_menu():
 
     style_prefix "main_menu"
 
-    add gui.main_menu_background
+    #add gui.main_menu_background at fade_transform
+    add "backgrounds/stars.png" at main_menu_bg_transform
 
-    ## This empty frame darkens the main menu.
-    frame:
-        pass
+    # # This empty frame darkens the main menu.
+    # frame:
+    #     pass
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.

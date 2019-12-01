@@ -237,17 +237,31 @@ label splashscreen:
     ##Play the music configured in options so that the music begins as soon as the splash screen shows
     $ renpy.music.play(config.main_menu_music)
 
-    scene starfield
-    show afofaslogo at center with dissolve:
-        zoom 0.3
-        yanchor .5
-        xpos .50
-        ypos .45
-    $ renpy.pause(2, hard=True)
-    hide afofaslogo with dissolve
+    #scene starfield
+    scene stars at main_menu_bg_transform with Dissolve(2.0)
+    show afofaslogo:
+        alpha 0
+        zoom 0.4
+        anchor (0.5, 0.5)
+        align (0.5, 0.5)
+        parallel:
+            linear 2 alpha 1
+        parallel:
+            linear 6 zoom 0.3
+    $ renpy.pause(3, hard=False)
+    hide afofaslogo with Dissolve(1.0)
+    #scene black with Dissolve(2.0)
 
     ##When the splash screen ends, we jump to the updater script. If theres no updates, it will go to the menu screen and be invisible to the player.
-    jump update
+    #jump update
+
+# label main_menu:
+#     # $ main_menu = True
+#     $ speed = 0.5
+#     scene stars at main_menu_bg_transform with Dissolve(2.0)
+#     $ speed = 1.0
+#     # show screen main_menu
+#     $ renpy.call_in_new_context("main_menu")
 
 label update:
     ##If a new update exists, run the updater script located in the engine files at renpy/common/00updater.rpy
@@ -259,6 +273,12 @@ label update:
         $ updater.update(url=UPDATE_URL, base=None, force=False, public_key=None, simulate=None, add=[], restart=True)
     else:
         return
+
+# label main_menu:
+#     $ main_menu = True
+#     scene starfield with dissolve
+#     pause (2.0)
+#     call screen main_menu with Dissolve(2.0)
 
 label start:
     jump scene1

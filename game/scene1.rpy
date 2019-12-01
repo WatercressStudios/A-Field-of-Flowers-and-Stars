@@ -1,8 +1,10 @@
 label scene1:
+    scene stars at main_menu_bg_restore_transform
+    pause 6.0
+    scene cockpit_space with dissolve:
+        zoom .85
     show screen flower_menu_button with easeinright
     #This is the start of the game.
-    show cockpit_space:
-        zoom .85
     #ART We begin in space. Nothing else is on the screen. "Warp drive particles" move slowly from left to right to imply motion. The stars in the background are still.
 
     #Start text box overlay. Raine is narrating aloud.

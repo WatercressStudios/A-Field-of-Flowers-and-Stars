@@ -20,6 +20,7 @@ init python:
 ## Custom colours
 define colors.base = '#FFF0E7'
 define colors.neutral = '#44484F'
+define colors.selected = '#FFD770'
 define colors.namebox = {
     'Default': '#44484FCD',
     'Raine': '#88ABDFCD',
@@ -210,6 +211,7 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ## navigation button.
 
 # define gui.navigation_button_width = 250
+define gui.navigation_button_text_size = 52
 
 
 ## Choice Buttons ##############################################################
@@ -272,7 +274,7 @@ define gui.notify_ypos = 68
 define gui.choice_spacing = 33
 
 ## Buttons in the navigation section of the main and game menus.
-define gui.navigation_spacing = 6
+define gui.navigation_spacing = 40
 
 ## Controls the amount of spacing between preferences.
 define gui.pref_spacing = 15
