@@ -565,14 +565,14 @@ screen journal():
                 text '.    .    .':
                     xysize (300, 700)
                     align (0.5, 0.5)
-                null height 15
-                button:
-                    style_prefix 'list'
-                    align (0.5, 0.5)
-                    selected journal_selected_entry == 1
-                    text 'Day 26':
-                        style_prefix 'list_button'
-                    action JournalSelected(1)
+                # null height 15
+                # button:
+                #     style_prefix 'list'
+                #     align (0.5, 0.5)
+                #     selected journal_selected_entry == 1
+                #     text 'Day 26':
+                #         style_prefix 'list_button'
+                #     action JournalSelected(1)
         # DIVIDER
         frame:
             background colors.neutral
@@ -592,43 +592,47 @@ screen journal():
 
             if journal_selected_entry == 0:
                 if _history_list:
-                    vbox:
-                        xsize 590
-                        spacing 5
-                        for h in _history_list:
-                            if h.who:
-                                hbox:
-                                    spacing 10
-                                    xsize 590
-                                    if h.who:
-                                        label h.who:
+                    viewport id "history_list":
+                        draggable True mousewheel True
+                        vbox:
+                            xsize 590
+                            spacing 5
+                            for h in _history_list:
+                                if h.who:
+                                    hbox:
+                                        spacing 10
+                                        xsize 590
+                                        if h.who:
+                                            label h.who:
+                                                substitute False
+                                                ## Take the color of the who text from the Character, if
+                                                ## set.
+                                                text_color colors.base
+                                                if h.who in colors.namebox:
+                                                    background colors.namebox[h.who]
+                                                text_size 26
+                                                text_align (0.5, 0.5)
+                                                xysize (100, 35)
+                                        else:
+                                            label '':
+                                                xysize (100, 35)
+                                        $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+                                        label what:
                                             substitute False
-                                            ## Take the color of the who text from the Character, if
-                                            ## set.
-                                            text_color colors.base
-                                            if h.who in colors.namebox:
-                                                background colors.namebox[h.who]
-                                            text_size 26
-                                            text_align (0.5, 0.5)
-                                            xysize (100, 35)
-                                    else:
-                                        label '':
-                                            xysize (100, 35)
+                                            xsize 480
+                                            text_align (0.0, 0.0)
+                                            text_size 30
+                                            if "color" in h.what_args:
+                                                text_color h.what_args["color"]
+                                else:
                                     $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                                     label what:
                                         substitute False
-                                        xsize 480
-                                        text_align (0.0, 0.0)
+                                        xsize 550
+                                        text_xalign 0.5
                                         text_size 30
-                                        if "color" in h.what_args:
-                                            text_color h.what_args["color"]
-                            else:
-                                $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
-                                label what:
-                                    substitute False
-                                    xsize 550
-                                    text_xalign 0.5
-                                    text_size 30
+                    vbar value YScrollValue("history_list"):
+                        xalign -0.063
                 else:
                     label _("The chat log is empty."):
                         text_size 32
