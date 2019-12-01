@@ -76,7 +76,7 @@ define gui.name_text_font = "gui/sagi/Comfortaa/Comfortaa_Bold.ttf"
 define gui.interface_text_font = "gui/sagi/Comfortaa/Comfortaa_Bold.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 30
+define gui.text_size = 40
 
 ## The size of character names.
 define gui.name_text_size = 42
@@ -107,8 +107,8 @@ define gui.game_menu_background = None
 ## time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = 180
-define gui.textbox_width = 1000
+define gui.textbox_height = 234
+define gui.textbox_width = 1300
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
@@ -145,7 +145,7 @@ define gui.dialogue_xpos = 0.1
 define gui.dialogue_ypos = 0.185
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 840
+define gui.dialogue_width = 1092
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.

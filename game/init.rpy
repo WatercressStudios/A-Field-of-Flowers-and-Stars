@@ -98,17 +98,15 @@ init:
     ##Sprite Definitions: The ones that are commented out are ones that don't look right.
     init python:
         layerorder = ['hair', 'base', 'arms', 'tail','mouth','eyes','brow',]
-        DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder, offsets=(0, 100), zooms={'mc':0.55, 'le': 1.3, 'ju':1.3}, sides=['mc'])
+        DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder, offsets=(0, 100), zooms={'mc':0.4, 'le': 1.3, 'ju':1.3}, sides=['mc'])
 
         #Leona
         MapEmote('le curious', 'le think base tail_default mdo_default ed_default brow_default')
         MapEmote('le speaking a1', 'le neutral base arms_default mdo_default ed_default brow_default')
         MapEmote('le speaking a2', 'le neutral base arms_raised mdo_default ed_default brow_default')
-        MapEmote('le speakingsurprised a1', 'le neutral base arms_default mdo_o ed_default brow_default')
+        MapEmote('le speaking surprised a1', 'le neutral base arms_default mdo_o ed_default brow_default')
         MapEmote('le questioning a1', 'le neutral base arms_default mdo_o ed_default brow_line')
         MapEmote('le questioning a2', 'le neutral base arms_raised mdo_o ed_default brow_line')
-        MapEmote('le questioning a3', 'le hip base arms_raised tail_default mdo_pout ed_wide brow_default')
-        MapEmote('le questioning p2', 'le neutral base arms_raised mdo_o ed_default brow_default')
         MapEmote('le smug a2', 'le hip base arms_default tail_default mdo_smuggrin ed_default brow_default')
         MapEmote('le smug a1', 'le hip base arms_pout tail_default mdo_smuggrin ed_default brow_default')
         MapEmote('le smug a3', 'le hip base arms_raised tail_default mdo_smuggrin ed_default brow_default')
@@ -117,13 +115,9 @@ init:
         MapEmote('le sad', 'le sad base md_default ed_default brow_default')
         MapEmote('le happy a1', 'le neutral base arms_default md_default ed_default brow_default')
         MapEmote('le happy a2', 'le neutral base arms_raised md_default ed_default brow_default')
-        MapEmote('le happy speaking a2', 'le hip base arms_pout tail_default mdo_default ec_default brow_up')
-        MapEmote('le happy speaking a3', 'le hip base arms_raised tail_default mdo_default ed_default brow_up')
         MapEmote('le happy2 a1', 'le hip base arms_pout tail_default mdo_smuggrin ed_wide brow_up')
-        MapEmote('le smirk a2', 'le hip base arms_pout tail_default md_default ec_default brow_default')
         MapEmote('le suspicious a2', 'le think base tail_default md_default ed_bedroom brow_default')
         MapEmote('le crying', 'le sad base md_default ed_sad brow_default')
-        MapEmote('le crying2', 'le sad base md_default ed_sad brow_default')
         MapEmote('le catching', 'le angry base arms_default md_default ed_default brow_default')
         MapEmote('le sassyquestioning', 'le hip base arms_default tail_default mdo_pout ed_default brow_up')
         MapEmote('le concerned', 'le sad base md_default ed_default brow_default')
@@ -132,7 +126,6 @@ init:
         MapEmote('le surprised', 'le hip base arms_raised tail_default2 mdo_pout ed_wide brow_up')
         MapEmote('le kind a2', 'le neutral base arms_raised mdo_default ed_default brow_uparrow')
         MapEmote('le relaxed', 'le neutral base arms_default md_default ec_default brow_default')
-
         #MapEmote('le pout p1 1', 'le neutral base arms_default md_default ed_away brow_line')
         #MapEmote('le pout p1 2', 'le neutral base arms_raised md_default ed_away brow_line')
 
@@ -156,22 +149,14 @@ init:
         MapEmote('mc thankful', 'mc normal base mdo_default ed_default brow_sad')
         MapEmote('mc yawn', 'mc armraised base mdo_default ed_default')
         MapEmote('mc neutral', 'mc normal base md_default ed_default brow_up')
-        MapEmote('mc questioning', 'mc normal base mdo_O ed_lookup brow_sad')
-        MapEmote('mc questioning2', 'mc confident base mdo_O ed_lookaway brow_raised')
+        MapEmote('mc questioning', 'mc confident base mdo_O ed_lookaway brow_raised')
         MapEmote('mc surprised', 'mc confident base mdo_stretchO ed_default brow_raised')
         MapEmote('mc shocked', 'mc armraised base mdo_default ed_shock')
-        MapEmote('mc shocked m2', 'mc armraised base mdo_O ed_shock')
         MapEmote('mc unimpressed', 'mc normal base mdo_O ed_lookaway brow_dreamworks')
         MapEmote('mc speaking', 'mc normal base mdo_default ed_liddrop brow_up')
         MapEmote('mc annoyed', 'mc angry base mdo_default ed_default brow_default')
         MapEmote('mc upset', 'mc angry hands md_default ec_default brow_angry')
         MapEmote('mc amused', 'mc normal base mdo_line ed_lookaway brow_sad')
-        MapEmote('mc happy', 'mc confident base md_default ed_default brow_default')
-        MapEmote('mc blech', 'mc confident base mdo_stretchO ec_default brow_angry')
-        MapEmote('mc onfire', 'mc confident base mdo_stretch ec_blocky brow_angry')
-        MapEmote('mc satisfied', 'mc confident base md_default ec_default brow_default')
-        MapEmote('mc sighing', 'mc normal base md_line ed_lookup brow_sad')
-
     ##background images, stored in images/backgrounds
     image white = "backgrounds/white.png"
     image stars = "backgrounds/stars.png"
@@ -199,6 +184,14 @@ init:
     $renpy.music.register_channel("sound4", mixer="sfx", loop=True, stop_on_mute=True, tight=False, buffer_queue=True, movie=False)
 
     ##**Note: Music and SFX will be referenced in-line and therefor don't need their own declarations**##
+
+
+    ##Game updater. These are declarations used for the updater script to work. The important thing to know is that UPDATE URL
+    ##points to a json file hosted online as an HTML accessable directory. When we build a new revision, Renpy will generate a few files used to update the game, including This
+    ##json file. All of the files need to be uploaded to the webserver using cpanel or the command line and placed in this directory.
+
+    ##Defines a URL where the .json file is hosted. It needs to be a public html with the compressed game files stored in the same directory.
+    $ UPDATE_URL = "http://sarchalen.com/afieldofflowersandstars/update/updates.json"
 
 init python:
     ##define VA info and parsing
@@ -229,6 +222,10 @@ init python:
 
 ##This is our splash screen. It runs before the main menu and shows logos. It also requests game updates while the logos are showing (because of the delay it takes to contact the server)
 label splashscreen:
+
+    ##Used to check if a new version of the game exists. Returns a version number, or None.
+    $ new_version = updater.UpdateVersion(url=UPDATE_URL, simulate=None)
+
     ##This sets default levels for audio channels in the prefs screen for the first time the player launches the game. It does nothing if the persistent file exists.
     python:
             if not persistent.set_volumes:
@@ -248,26 +245,20 @@ label splashscreen:
         ypos .45
     $ renpy.pause(2, hard=True)
     hide afofaslogo with dissolve
+
     ##When the splash screen ends, we jump to the updater script. If theres no updates, it will go to the menu screen and be invisible to the player.
     jump update
 
 label update:
-
-    ##Game updater. These are declarations used for the updater script to work. The important thing to know is that UPDATE URL
-    ##points to a json file hosted online as an HTML accessable directory. When we build a new revision, Renpy will generate a few files used to update the game, including This
-    ##json file. All of the files need to be uploaded to the webserver using cpanel or the command line and placed in this directory.
-
-    ##Defines a URL where the .json file is hosted. It needs to be a public html with the compressed game files stored in the same directory.
-    $ UPDATE_URL = "http://sarchalen.com/afieldofflowersandstars/update/updates.json"
-
     ##If a new update exists, run the updater script located in the engine files at renpy/common/00updater.rpy
     ##**Note: Sarchalen uses a modified version of 00updater.rpy which integrates our GUI to create a seamless user experience.**##
     ##**If renpy is not using our game's GUI when the updater is run, you need to add this file to the renpy SDK before you create a build.**##
     ##**If anyone knows how to do this without modifying engine files please let us know :) **##
 
-    #Used to check if a new version exists. Returns either a version number, or none.
-    $ new_version = updater.UpdateVersion(url=UPDATE_URL, simulate=False)
     if new_version != None:
-        $ updater.update(url=UPDATE_URL, base=None, force=False, public_key=None, simulate=False, add=[], restart=True, confirm=False)
+        $ updater.update(url=UPDATE_URL, base=None, force=False, public_key=None, simulate=None, add=[], restart=True)
     else:
         return
+
+label start:
+    jump scene1
