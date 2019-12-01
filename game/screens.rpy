@@ -336,7 +336,12 @@ screen flower_menu_button():
                     Show('flower_menu'),
                     Show('flower_menu_moon'),
                 ]
-                action Null
+                action [
+                    TapFlowerButton(),
+                    Hide('flower_menu_button'),
+                    Show('flower_menu'),
+                    Show('flower_menu_moon'),
+                ]
             text "i":
                 align (0.5, 0.5)
                 text_align 0.5
@@ -352,6 +357,7 @@ init python:
 
     _game_menu_screen = None
     right_click_pos = (0, 0)
+    tap_mode = False
 
     flower_menu_actions = [
         ('save', ShowMenu('save')),
@@ -376,13 +382,21 @@ init python:
 
     class HoverFlowerButton:
         def __call__(self):
-            global right_click_pos
+            global right_click_pos, tap_mode
             dim = (115, 110)
             right_click_pos = (config.screen_width - dim[0], dim[1])
+            tap_mode = False
+
+    class TapFlowerButton:
+        def __call__(self):
+            global right_click_pos, tap_mode
+            dim = (115, 110)
+            right_click_pos = (config.screen_width - dim[0], dim[1])
+            tap_mode = True
 
     class RightClickFlower:
         def __call__(self):
-            global right_click_pos
+            global right_click_pos, tap_mode
             dim = (115, 110)
             right_click_pos = list(renpy.get_mouse_pos())
             if config.screen_width - right_click_pos[0] < dim[0]:
@@ -394,6 +408,7 @@ init python:
             elif config.screen_height - right_click_pos[1] < dim[1]:
                 right_click_pos[1] = config.screen_height - dim[1]
             right_click_pos = tuple(right_click_pos)
+            tap_mode = False
 
 transform flower_moon_transform:
     anchor (0.5, 0.5)
@@ -446,7 +461,7 @@ screen flower_menu():
             background None
             padding (0, 0)
             margin (0, 0)
-            xysize (250, 250)
+            xysize (800, 800)
             pos right_click_pos
 
             add im.FactorScale('gui/sagi/roundbutton-hover.png', 0.4):
@@ -473,12 +488,13 @@ screen flower_menu():
                         text_align 0.5
                         size 15
             action []
-            mousearea:
-                unhovered [
-                    Hide('flower_menu'),
-                    Show('flower_menu_button'),
-                    Hide('flower_menu_moon'),
-                ]
+            if not tap_mode:
+                mousearea:
+                    unhovered [
+                        Hide('flower_menu'),
+                        Show('flower_menu_button'),
+                        Hide('flower_menu_moon'),
+                    ]
 
 transform fade_transform:
     on show:
