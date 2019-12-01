@@ -246,7 +246,7 @@ label scene_2:
     na "Thankfully, Leona has a ride back into town, a primitive hoverbike with extra space for me and the few meager belongings I had on my person."
 
     na "For a second, I thought we'd be walking the whole way back."
-    hide leona with dissolve
+    hide le with dissolve
     stop env fadeout 2.0
 
     scene street onlayer master with wiperight:
@@ -278,7 +278,7 @@ label scene_2:
     mc "Decades? So this is a new colony?"
 
     #voice "voice/2-scene_2-59.ogg" #Leona (Dot)
-    le curious a1 "More or less. I was born here, so I hear a lot of stories about our homeworld."
+    le curious "More or less. I was born here, so I hear a lot of stories about our homeworld."
 
     #voice "voice/2-scene_2-60.ogg" #Leona (Dot)
     le happy a1 "But this place is growing a lot! We want to expand to make another small city out west for some researchers and stuff."
@@ -334,7 +334,7 @@ label scene_2:
     mc "Yeah, the pain's pretty much gone now."
 
     #voice "voice/2-scene_2-71.ogg" #Leona (Dot)
-    le speaking surprised a1 "Great! So, I was thinking... you'll need a place to stay, right?"
+    le speakingsurprised a1 "Great! So, I was thinking... you'll need a place to stay, right?"
 
     #voice "voice/2-scene_2-72.ogg" #Raine (Nat)
     mc "You're not wrong. I don't know where my ship is, so I can't exactly leave just yet."

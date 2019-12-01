@@ -131,9 +131,9 @@ label scene_3:
 
     #voice "voice/3-scene_3-24.ogg" #Raine (Nat)
     mc "So that's why it hurts to eat spicy food."
-
+    show le questioning a2 at stage_right with dissolve
     #voice "voice/3-scene_3-25.ogg" #Leona (Dot)
-    le questioning a2 "Wow, that 'capsaicin' stuff must really hurt your species, then."
+    le "Wow, that 'capsaicin' stuff must really hurt your species, then."
 
     #voice "voice/3-scene_3-26.ogg" #Leona (Dot)
     le surprised "Again, sorry about that. I should have thought about it before giving you our food."
@@ -336,6 +336,8 @@ label scene_3:
     #voice "voice/3-scene_3-81.ogg" #Leona (Dot)
     le smirk a2 "All right!"
     scene black with fade
+    ##This is where the demo is ending
+    return
     scene street onlayer master with wiperight:
         subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
         parallel:
