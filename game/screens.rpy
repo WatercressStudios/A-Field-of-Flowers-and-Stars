@@ -362,7 +362,7 @@ init python:
     flower_menu_actions = [
         ('save', ShowMenu('save')),
         ('load', ShowMenu('load')),
-        ('pref', ShowMenu('preferences')),
+        ('pref', ShowMenu('custom_preferences')),
         ('quit', MainMenu()),
         ('auto', Preference("auto-forward", "toggle")),
         ('skip', Skip()),
@@ -754,7 +754,7 @@ screen navigation():
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("Preferences") action ShowMenu("custom_preferences")
 
         if _in_replay:
 
@@ -1322,63 +1322,155 @@ screen preferences():
 
 screen custom_preferences():
     tag menu
-    use game_menu(_("Preferences"), scroll="viewport"):
-        vbox:
-            hbox:
-                box_wrap True
-                if renpy.variant("pc"):
+
+    if main_menu:
+        $ close_action = [
+            Hide('custom_preferences'),
+            Return(),
+        ]
+    else:
+        $ close_action = [
+            Hide('custom_preferences'),
+            Show('flower_menu_button'),
+            Return(),
+        ]
+    button at fade_transform:
+        background "#000000CC"
+        xysize (1.0, 1.0)
+        action close_action
+    frame at fade_transform:
+        align (0.5, 0.5)
+        xysize (1200, 600)
+        margin (0, 0)
+        button:
+            background None
+            xysize (1.0, 1.0)
+            action NullAction()
+        frame:
+            background colors.namebox['Default']
+            xysize (330, 55)
+            align (0, 0)
+            offset (50, -105)
+            label "Preferences":
+                xysize (255, 55)
+                align (0.5, 0.5)
+                text_xalign 0.5
+                text_color colors.base
+
+        frame:
+            background None
+            padding (0, 0)
+            margin (0, 0)
+            xysize (900, 550)
+            align (0.5, 0.5)
+            offset (-10, -30)
+
+            vbox:
+                spacing 10
+                xysize (900, 550)
+                align (0.5, 0.5)
+                null height 0
+                frame:
+                    background None
+                    padding (0, 0)
+                    margin (0, 0)
+                    xysize (780, 200)
+                    align (0.5, 0.5)
+                    hbox:
+                        spacing 10
+                        if renpy.variant("pc"):
+                            vbox:
+                                xsize 230
+                                style_prefix "radio"
+                                label _("Display"):
+                                    text_size 32
+                                null height 10
+                                textbutton _("Window") action Preference("display", "window"):
+                                    xsize 250
+                                    text_xalign 0.0
+                                    text_xpos 12
+                                    yoffset 1
+                                textbutton _("Fullscreen") action Preference("display", "fullscreen"):
+                                    xsize 250
+                                    text_xalign 0.0
+                                    text_xpos 12
+                        vbox:
+                            xsize 260
+                            style_prefix "check"
+                            label _("Skip"):
+                                text_size 32
+                            null height 10
+                            textbutton _("Unseen Text") action Preference("skip", "toggle"):
+                                xsize 250
+                                text_xalign 0.0
+                                text_xpos 12
+                            # textbutton _("After Choices") action Preference("after choices", "toggle"):
+                            #     xsize 250
+                            #     text_xalign 0.0
+                            #     text_xpos 12
+                            textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle")):
+                                xsize 250
+                                text_xalign 0.0
+                                text_xpos 12
+
+                        ## Additional vboxes of type "radio_pref" or "check_pref" can be
+                        ## added here, to add additional creator-defined preferences.
+
+                        hbox:
+                            xsize 260
+                            style_prefix "slider"
+                            box_wrap True
+                            vbox:
+                                label _("Text Speed"):
+                                    text_size 32
+                                bar value Preference("text speed"):
+                                    xsize 280
+                                label _("Auto-Forward Time"):
+                                    text_size 32
+                                bar value Preference("auto-forward time"):
+                                    xsize 280
+                frame:
+                    background None
+                    padding (0, 0)
+                    margin (0, 0)
+                    xysize (800, 250)
+                    align (0.5, 0.5)
                     vbox:
-                        style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
-                vbox:
-                    style_prefix "radio"
-                    label _("Rollback Side")
-                    textbutton _("Disable") action Preference("rollback side", "disable")
-                    textbutton _("Left") action Preference("rollback side", "left")
-                    textbutton _("Right") action Preference("rollback side", "right")
-                vbox:
-                    style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                        if config.has_music:
+                            label _("Music Volume"):
+                                text_size 32
+                            hbox:
+                                bar value Preference("music volume")
+                        if config.has_sound:
+                            label _("Sound Volume"):
+                                text_size 32
+                            hbox:
+                                bar value Preference("sound volume")
+                                if config.sample_sound:
+                                    textbutton _("Test") action Play("sound", config.sample_sound)
+                        if config.has_voice:
+                            label _("Voice Volume"):
+                                text_size 32
+                            hbox:
+                                bar value Preference("voice volume")
+                                if config.sample_voice:
+                                    textbutton _("Test") action Play("voice", config.sample_voice)
+                        if config.has_music or config.has_sound or config.has_voice:
+                            null height gui.pref_spacing
+                            textbutton _("Mute All"):
+                                action Preference("all mute", "toggle")
+                                style "mute_all_button"
 
-                ## Additional vboxes of type "radio_pref" or "check_pref" can be
-                ## added here, to add additional creator-defined preferences.
+        button:
+            xysize (70, 70)
+            align (1.0, 0.0)
+            offset (52, -85)
+            idle_background 'gui/sagi/roundbutton-idle.png'
+            hover_background 'gui/sagi/roundbutton-hover.png'
+            action close_action
+            text 'X':
+                align (0.5, 0.5)
 
-            null height (4 * gui.pref_spacing)
-            hbox:
-                style_prefix "slider"
-                box_wrap True
-                vbox:
-                    label _("Text Speed")
-                    bar value Preference("text speed")
-                    label _("Auto-Forward Time")
-                    bar value Preference("auto-forward time")
-                vbox:
-                    if config.has_music:
-                        label _("Music Volume")
-                        hbox:
-                            bar value Preference("music volume")
-                    if config.has_sound:
-                        label _("Sound Volume")
-                        hbox:
-                            bar value Preference("sound volume")
-                            if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
-                    if config.has_voice:
-                        label _("Voice Volume")
-                        hbox:
-                            bar value Preference("voice volume")
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
-                    if config.has_music or config.has_sound or config.has_voice:
-                        null height gui.pref_spacing
-                        textbutton _("Mute All"):
-                            action Preference("all mute", "toggle")
-                            style "mute_all_button"
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text
@@ -1421,7 +1513,7 @@ style radio_vbox:
 
 style radio_button:
     properties gui.button_properties("radio_button")
-    foreground "gui/button/check_[prefix_]foreground.png"
+    foreground "gui/button/radio_[prefix_]foreground.png"
 
 style radio_button_text:
     properties gui.button_text_properties("radio_button")
