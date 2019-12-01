@@ -1146,6 +1146,9 @@ screen custom_file_slots(title):
     style_prefix "journal"
 
     if main_menu:
+        add "backgrounds/stars.png" at main_menu_bg_transform
+
+    if main_menu:
         $ close_action = [
             Hide('custom_file_slots'),
             Return(),
@@ -1360,6 +1363,8 @@ screen custom_preferences():
             Show('flower_menu_button'),
             Return(),
         ]
+    if main_menu:
+        add "backgrounds/stars.png" at main_menu_bg_transform
     button at fade_transform:
         background "#000000CC"
         xysize (1.0, 1.0)
@@ -1841,6 +1846,8 @@ screen confirm(message, yes_action, no_action):
 
     style_prefix "confirm"
 
+    if main_menu:
+        add "backgrounds/stars.png" at main_menu_bg_transform
     add "#000000CC" at fade_transform
 
     frame at fade_transform:
