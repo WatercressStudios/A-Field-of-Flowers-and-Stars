@@ -2,6 +2,7 @@ label scene_3:
 
     #iris open
     #show bg_leonahouse
+    play env "amb/Leonas house.ogg"
 
     na "I wake up to an unfamiliar place. Some kind of hut?"
     na "Oh, wait. I remember now. I crash-landed."
@@ -9,6 +10,7 @@ label scene_3:
     na "Where is she, by the way?"
 
     #movement SFX
+    play sound "sfx/footsteps 2.ogg"
 
     #voice "voice/3-scene_3-1.ogg" #Leona (VA Name)
     le "Hey Raine! You awake? You've been out for a long time, the sun just came up!"
@@ -29,6 +31,7 @@ label scene_3:
     na "The smell of oil and vegetables cooking in a pan is unmistakable."
 
     #stomach growl SFX
+    play sound "sfx/stomach.ogg"
 
     na "My stomach immediately begs for something edible."
     #voice "voice/3-scene_3-8.ogg" #Raine (VA Name)
@@ -178,6 +181,7 @@ label scene_3:
     le "You even went through a wormhole! I never thought that would be possible."
     #voice "voice/3-scene_3-68.ogg" #Raine (VA Name)
     mc "Yeah... I guess so."
+    play sound "sfx/get up.ogg"
     na "Leona suddenly stands up."
     #voice "voice/3-scene_3-69.ogg" #Leona (VA Name)
     le "So, I think it's high time I took you on a short tour of Aster!"
@@ -211,6 +215,8 @@ label scene_3:
     le "All right!"
 
     #show city_outside
+    stop env fadeout 2.0
+    play sound3 "amb/City Day.ogg" fadein 2.0
 
     na "Leona's neighborhood is full of people just like her, with different horn shapes and a variety of builds."
     na "They're super similar to humans, minus the whole 'having horns' part."
@@ -235,5 +241,6 @@ label scene_3:
     #voice "voice/3-scene_3-90.ogg" #Leona (VA Name)
     le "Oh! Right, just this way!"
 
-
-    jump scene_4
+    stop sound3 fadeout 2.0
+    return
+    #jump scene_4
