@@ -137,7 +137,7 @@ label scene_2:
     mc surprised "Uh..."
 
     voice "voice/2-scene_2-21.ogg" #Raine (Nat)
-    mc shocked "Ah! Y-You're..."
+    mc shocked armraised "Ah! Y-You're..."
 
     voice "voice/2-scene_2-22.ogg" #Leona (Dot)
     le questioning a1 "Hm?"

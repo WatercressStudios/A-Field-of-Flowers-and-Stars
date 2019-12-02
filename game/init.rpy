@@ -159,7 +159,7 @@ init:
         MapEmote('mc questioning', 'mc normal base mdo_O ed_lookup brow_sad')
         MapEmote('mc questioning2', 'mc confident base mdo_O ed_lookaway brow_raised')
         MapEmote('mc surprised', 'mc confident base mdo_stretchO ed_default brow_raised')
-        MapEmote('mc shocked', 'mc armraised base mdo_default ed_shock')
+        MapEmote('mc shocked armraised', 'mc armraised base mdo_default ed_shock')
         MapEmote('mc shocked m2', 'mc armraised base mdo_O ed_shock')
         MapEmote('mc unimpressed', 'mc normal base mdo_O ed_lookaway brow_dreamworks')
         MapEmote('mc speaking', 'mc normal base mdo_default ed_liddrop brow_up')
@@ -250,7 +250,7 @@ label splashscreen:
                 _preferences.volumes['sfx'] *= .75
 
     ##Play the music configured in options so that the music begins as soon as the splash screen shows
-    $ renpy.music.play(config.main_menu_music) 
+    $ renpy.music.play(config.main_menu_music)
 
     #scene starfield
     scene stars at main_menu_bg_transform with Dissolve(2.0)

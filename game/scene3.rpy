@@ -341,6 +341,7 @@ label scene_3:
     scene black with dissolve
 
     hide screen flower_menu_button
+    $ renpy.music.play(config.main_menu_music)
     call screen tobecontinued_announce
     call screen demo_letter with dissolve
     call screen credits with dissolve
