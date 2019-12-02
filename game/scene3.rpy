@@ -343,7 +343,8 @@ label scene_3:
     hide screen flower_menu_button
     call screen tobecontinued_announce
     call screen demo_letter with dissolve
-    #jump credits
+    call screen credits with dissolve
+    pause 2.0
 
     ##This is where the demo is ending
 

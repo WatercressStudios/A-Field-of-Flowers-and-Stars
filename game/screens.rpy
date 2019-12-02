@@ -751,6 +751,8 @@ screen navigation():
 
         textbutton _("Preferences") action ShowMenu("custom_preferences")
 
+        textbutton _("Credits") action ShowMenu("credits")
+
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
@@ -2290,3 +2292,245 @@ screen demo_letter():
 
     ## Right-click and escape answer "no".
     key "game_menu" action Return()
+
+#
+# Generate credits screen based on parameters below
+#
+
+init python:
+    credits_duration = 30.0
+    credits_height = 3300
+    credits_content = [
+        ( "Developed for Yurijam 2019.",
+            [
+            ]
+        ),
+        ( "Directing",
+            [
+                "Tristan 'Wolf' Barber",
+                "Kevin Bomer",
+            ]
+        ),
+        ( "Story",
+            [
+                (
+                    "Writing",
+                    "Tristan 'Wolf' Barber",
+                    "Kevin Bomer",
+                    "Hamadyne",
+                    "Hoa",
+                    "Monochrome",
+                ),
+                (
+                    "Story Concept",
+                    "Zodai",
+                ),
+            ]
+        ),
+        ( "Editing Directing",
+            [
+                "TheAlchemyst",
+            ]
+        ),
+        ( "Editing",
+            [
+                "Tristan 'Wolf' Barber",
+                "Wei Yuan Lee",
+            ]
+        ),
+        ( "Audio",
+            [
+                (
+                    "Music Directing",
+                    "Kierious",
+                ),
+                (
+                    "Music",
+                    "Noah 'Speedy' Aman",
+                    "JamieD",
+                    "Jae",
+                ),
+                (
+                    "Sound Design",
+                    "Paul Robins",
+                ),
+                (
+                    "Audio Production",
+                    "Tristan 'Wolf' Barber",
+                ),
+            ]
+        ),
+
+        ( "Art",
+            [
+                (
+                    "Sprite",
+                    "Kart Prowler",
+                ),
+                (
+                    "Concept Art",
+                    "Voiderling",
+                    "Liah",
+                ),
+                (
+                    "BG Art",
+                    "Erezu",
+                    "Alison 'Draz' Huang",
+                ),
+                (
+                    "UI Design and Art",
+                    "Sagittaeri",
+                ),
+                (
+                    "Logo Design",
+                    "TheAlchemyst",
+                ),
+            ]
+        ),
+
+        ( "Code",
+            [
+                (
+                    "Development Director",
+                    "Steve/DreadLindwyrm",
+                ),
+                (
+                    "Tools and UI",
+                    "Sagittaeri",
+                ),
+            ]
+        ),
+
+        ( "Ren'py Scripting",
+            [
+                (
+                    "General",
+                    "Kevin Bomer",
+                    "Gabriel (Ebagigi)",
+                    "Sagittaeri",
+                ),
+                (
+                    "Audio",
+                    "Paul Robins",
+                ),
+            ]
+        ),
+
+        ( "Voice Direction",
+            [
+                "Sandra 'SandraMJ' Molina",
+            ]
+        ),
+        ( "Voice Overs",
+            [
+                (
+                    "Leona",
+                    "Dottovu",
+                ),
+                (
+                    "Raine",
+                    "Natalie",
+                ),
+                (
+                    "Juneau",
+                    "Lily Lammers",
+                ),
+            ]
+        ),
+
+        ( "Marketing Directing",
+            [
+                "TheAlchemyst",
+            ]
+        ),
+        ( "Marketing",
+            [
+                "Bodo",
+            ]
+        ),
+        ( "Cinematics Directing",
+            [
+                "TheAlchemyst",
+            ]
+        ),
+
+        ( "Special thanks to",
+            [
+                "Ren'py Tom",
+                "The Lemmasoft Forum",
+                "Our Fans",
+            ]
+        ),
+        ( "A thank you to all of our Patrons, including",
+            [
+                "Merritt Barber",
+                "Jonas Lee",
+                "TheAlchemyst",
+            ]
+        ),
+    ]
+
+transform credits_roll(duration, dest):
+    on show:
+        alpha 0 pos (0, 0)
+        parallel:
+            linear duration ypos -dest
+        parallel:
+            linear 1 alpha 1
+    on hide:
+        linear 1 alpha 0
+
+screen credits():
+    if not main_menu:
+        timer (credits_duration-2) action Return()
+        key "dismiss" action Return()
+    else:
+        timer (credits_duration-2) action Hide("credits")
+        key "dismiss" action Hide("credits")
+    frame at credits_roll(credits_duration, credits_height):
+        background "#000"
+        xsize 1920
+        vbox:
+            xalign 0.5
+            null height 500
+            for title, names in credits_content:
+                null height 50
+                text title:
+                    text_align 0.5
+                    xalign 0.5
+                    size 50
+                    color "#7ECBDD"
+                for name in names:
+                    if type(name) == type(()):
+                        hbox:
+                            xalign 0.5
+                            frame:
+                                background None
+                                padding (0,0,0,0)
+                                margin (0,0,0,0)
+                                xsize 900
+                                text name[0]:
+                                    text_align 1.0
+                                    xalign 1.0
+                                    size 30
+                                    color "#fff"
+                            null width 50
+                            frame:
+                                background None
+                                padding (0,0,0,0)
+                                margin (0,0,0,0)
+                                xsize 900
+                                vbox:
+                                    for n in name[1:]:
+                                        text n:
+                                            text_align 0.0
+                                            xalign 0.0
+                                            size 30
+                                            color "#fff"
+                    else:
+                        text name:
+                            text_align 0.5
+                            xalign 0.5
+                            size 30
+                            color "#fff"
+            null height 5000
