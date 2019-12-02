@@ -7,25 +7,25 @@ label scene_11:
 
     na "The surrounding air is warm, but cooling down in the way arid climates do."
 
-    #voice "voice/11-scene_11-1.ogg" #Leona (Dot)
+    voice "voice/11-scene_11-1.ogg" #Leona (Dot)
     le "We should settle in the tent until morning! IWhile it would be no problem to make the trek back home, but I like camping!"
 
-    #voice "voice/11-scene_11-2.ogg" #Leona (Dot)
+    voice "voice/11-scene_11-2.ogg" #Leona (Dot)
     le "Seeing the sun set outside of the city is super duper cool, right?"
 
-    #voice "voice/11-scene_11-3.ogg" #Raine (Nat)
+    voice "voice/11-scene_11-3.ogg" #Raine (Nat)
     mc "Yeah, that's true. Rooftops can get in the way down here."
 
-    #voice "voice/11-scene_11-4.ogg" #Raine (Nat)
+    voice "voice/11-scene_11-4.ogg" #Raine (Nat)
     mc "Now, if you were in space, you could see it regardless."
 
-    #voice "voice/11-scene_11-5.ogg" #Raine (Nat)
+    voice "voice/11-scene_11-5.ogg" #Raine (Nat)
     mc "...but then you'd have no sunrise or sunset. Just a floating ball of cosmic fire."
 
-    #voice "voice/11-scene_11-6.ogg" #Leona (Dot)
+    voice "voice/11-scene_11-6.ogg" #Leona (Dot)
     le "If you can fly, then just land whenever you want! There's always a sunset somewhere in the world."
 
-    #voice "voice/11-scene_11-7.ogg" #Raine (Nat)
+    voice "voice/11-scene_11-7.ogg" #Raine (Nat)
     mc "True, true."
 
     na "With the setting of the sun, Leona uses the last moments of light to feverishly read her alien books."
@@ -66,46 +66,46 @@ label scene_11:
 
     na "I pretend not to notice, and she scoots closer. And closer. And closer."
 
-    #voice "voice/11-scene_11-8.ogg" #Raine (Nat)
+    voice "voice/11-scene_11-8.ogg" #Raine (Nat)
     mc "Getting a little cold?"
 
-    #voice "voice/11-scene_11-9.ogg" #Leona (Dot)
+    voice "voice/11-scene_11-9.ogg" #Leona (Dot)
     le "Y-Yeah! It's just the frigid air is all. No other reason, no!"
 
     na "Putting her face right up next to mine, she nudges me like a... cat."
 
     na "I pat her on the head."
 
-    #voice "voice/11-scene_11-10.ogg" #Leona (Dot)
+    voice "voice/11-scene_11-10.ogg" #Leona (Dot)
     le "You're the best thing that's happened to me, Raine."
 
-    #voice "voice/11-scene_11-11.ogg" #Leona (Dot)
+    voice "voice/11-scene_11-11.ogg" #Leona (Dot)
     le "When I first found you all tangled up in that tree, I have to admit, I was very curious!"
 
-    #voice "voice/11-scene_11-12.ogg" #Leona (Dot)
+    voice "voice/11-scene_11-12.ogg" #Leona (Dot)
     le "And a little nervous, too."
 
-    #voice "voice/11-scene_11-13.ogg" #Leona (Dot)
+    voice "voice/11-scene_11-13.ogg" #Leona (Dot)
     le "But you were always so kind to me."
 
-    #voice "voice/11-scene_11-14.ogg" #Leona (Dot)
+    voice "voice/11-scene_11-14.ogg" #Leona (Dot)
     le "Not everyone can handle how..."
 
-    #voice "voice/11-scene_11-15.ogg" #Raine (Nat)
+    voice "voice/11-scene_11-15.ogg" #Raine (Nat)
     mc "Insatiable?"
 
-    #voice "voice/11-scene_11-16.ogg" #Leona (Dot)
+    voice "voice/11-scene_11-16.ogg" #Leona (Dot)
     le "{i}Adventurous{/i} as I can be."
 
-    #voice "voice/11-scene_11-17.ogg" #Leona (Dot)
+    voice "voice/11-scene_11-17.ogg" #Leona (Dot)
     le "But you indulged me! Very few can do that for so long."
 
-    #voice "voice/11-scene_11-18.ogg" #Leona (Dot)
+    voice "voice/11-scene_11-18.ogg" #Leona (Dot)
     le "You're the best adventure I've ever found there, dangling from a tree, strapped to a chair!"
 
     na "Giving her a couple final pats, I look into her eyes."
 
-    #voice "voice/11-scene_11-19.ogg" #Raine (Nat)
+    voice "voice/11-scene_11-19.ogg" #Raine (Nat)
     mc "You're the best adventure I've ever found, waiting here through a wormhole, on the other end of the universe."
 
     na "I give her a light, admittedly uncharacteristic peck on the forehead."
