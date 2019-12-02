@@ -338,8 +338,15 @@ label scene_3:
 
     voice "voice/3-scene_3-81.ogg" #Leona (Dot)
     le smirk a2 "All right!"
-    scene black with fade
+    scene black with dissolve
+
+    hide screen flower_menu_button
+    call screen tobecontinued_announce
+    call screen demo_letter with dissolve
+    #jump credits
+
     ##This is where the demo is ending
+
     return
     scene street onlayer master with wiperight:
         subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None

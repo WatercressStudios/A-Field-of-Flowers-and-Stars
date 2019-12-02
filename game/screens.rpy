@@ -360,8 +360,8 @@ init python:
         ('quit', MainMenu()),
         ('auto', Preference("auto-forward", "toggle")),
         ('skip', Skip()),
-        ('back', Rollback()),
-        ('sprite', Show('dynamicspritespreview')),
+        # ('back', Rollback()),
+        # ('sprite', Show('dynamicspritespreview')),
     ]
 
     def polygon_point_offset(ind, distance=75, points=5):
@@ -2217,3 +2217,76 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 900
+
+
+transform announce_inout:
+    on show:
+        alpha 0
+        linear 1.5 alpha 1
+    on hide:
+        linear 1.5 alpha 0
+
+screen tobecontinued_announce():
+    frame align (0.5, 0.4) at announce_inout:
+        background None
+        padding (100,100,100,100)
+        text 'To be continued...':
+            align (0.5, 0.5)
+            text_align 0.5
+            size 100
+            color '#fff'
+    timer 2 action Return()
+
+init python:
+    demo_letter_text = """Thanks for playing our demo, everyone!
+
+We hope you enjoyed this short introduction to our game! The full game will be updated and revised, and the game itself will be around 15,000 words long. In the meantime, come hang out with us on Discord to meet the devs and to check out our other fun projects!
+
+We will see you in itch.io and Steam when the time comes!
+
+~A Field of Flowers and Stars Development Team
+
+https://discord.gg/watercress"""
+
+screen demo_letter():
+    ## Ensure other screens do not get input while this screen is displayed.
+    modal True
+
+    style_prefix "journal"
+
+    button at fade_transform:
+        background "#000000CC"
+        xysize (1.0, 1.0)
+        action Return()
+
+    frame at fade_transform:
+        align (0.5, 0.5)
+        xysize (1200, 800)
+        margin (0, 0)
+        button:
+            background None
+            xysize (1.0, 1.0)
+            action NullAction()
+
+        frame:
+            background None
+            padding (0, 0)
+            margin (0, 0)
+            xysize (850, 750)
+            align (0.5, 0.5)
+            text demo_letter_text:
+                size 32
+                align (0.5, 0.5)
+
+        button:
+            xysize (70, 70)
+            align (1.0, 0.0)
+            offset (52, -85)
+            idle_background 'gui/sagi/roundbutton-idle.png'
+            hover_background 'gui/sagi/roundbutton-hover.png'
+            action Return()
+            text 'X':
+                align (0.5, 0.5)
+
+    ## Right-click and escape answer "no".
+    key "game_menu" action Return()
