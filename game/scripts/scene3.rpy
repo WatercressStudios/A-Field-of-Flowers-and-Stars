@@ -340,12 +340,12 @@ label scene_3:
     le smirk a2 "All right!"
     scene black with dissolve
 
-    hide screen flower_menu_button
-    $ renpy.music.play(config.main_menu_music)
-    call screen tobecontinued_announce
-    call screen demo_letter with dissolve
-    call screen credits with dissolve
-    pause 2.0
+    #hide screen flower_menu_button
+    #$ renpy.music.play(config.main_menu_music)
+    #call screen tobecontinued_announce
+    #call screen demo_letter with dissolve
+    #call screen credits with dissolve
+    #pause 2.0
 
     ##This is where the demo is ending
 
