@@ -362,8 +362,8 @@ label scene_3:
     na "They're super similar to humans, minus the whole 'having horns' part."
     na "Were I more interested in xenobiology, I'd certainly be interested in how they grow. Are they part of the skull, or are they more like antlers?"
 
-    #Voice lines not implimented yet?
-    
+    #Voice lines are not implimented yet
+
     #voice "voice/3-scene_3-82.ogg" #Leona (Dot)
     show le explaining at le_side with dissolve
 
