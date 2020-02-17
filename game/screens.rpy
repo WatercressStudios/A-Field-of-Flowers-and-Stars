@@ -360,8 +360,9 @@ init python:
         ('quit', MainMenu()),
         ('auto', Preference("auto-forward", "toggle")),
         ('skip', Skip()),
-        # ('back', Rollback()),
-        # ('sprite', Show('dynamicspritespreview')),
+        ### DEBUG BUTTONS
+        ('back', Rollback()),
+        ('sprite', Show('dynamicspritespreview')),
     ]
 
     def polygon_point_offset(ind, distance=75, points=5):
