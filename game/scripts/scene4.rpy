@@ -1,8 +1,7 @@
 label scene_4:
 
-###
-#ART - GARAGE BG
-###
+    #ART - GARAGE BG
+
 na "After heading back towards Leona's house, we turn the corner and reach the base my poor ship had been taken to."
 na "I hope Juneau is okay. She's annoying, but she's all I have now."
 na "She's what I imagine a little sister would be like."
@@ -45,9 +44,9 @@ le "...or that this shape would make for a good space ship..."
 le "...or that, or..."
 na "..."
 
-###
-#SFX - METALLIC POP
-###
+
+    #SFX - METALLIC POP
+
 
 le "...oops."
 le "And she just fixed that too..."
@@ -77,17 +76,17 @@ le "Tell you what, you tell me what kind of tools you need and I'll get them for
 le "And while you work, I'll give you a rundown!"
 mc "You've got a deal."
 
-###
-#VFX - FADE TO BLACK
-###
+
+    #VFX - FADE TO BLACK
+
 
 na "..."
 na "After a couple of hours listening to Leona's stories while working on the ship, I decide to take a break. Juneau won't be online for a little bit anyways, so I have some time to kill."
 na "And I'm hungry."
 
-###
+
     #ART - LEONA'S HOUSE
-###
+
 
 na "After a short trip to a nearby convenience store in search of eggs, we return to Leona's abode."
 na "It's already mid-afternoon."
@@ -150,6 +149,7 @@ na "Leona takes her leave and I set about making notes of what I've seen and hea
 na "When we were talking in the garage earlier she told me an interesting story about their homeworld; Dawne."
 na "I figure that's as good a place as any to start before I decide to nod off."
 
-###
-#VFX - JOURNAL ENTRY ADDED - 1
-###
+
+    #VFX - JOURNAL ENTRY ADDED - 1
+
+ jump scene_5
