@@ -1,7 +1,7 @@
-Scene 4
+label scene_4:
 
 ###
-ART - GARAGE BG
+#ART - GARAGE BG
 ###
 na "After heading back towards Leona's house, we turn the corner and reach the base my poor ship had been taken to."
 na "I hope Juneau is okay. She's annoying, but she's all I have now."
@@ -36,7 +36,7 @@ le "Well, I hope he can at least."
 mc "You're not coming?"
 le "I kinda wanna look at your ship. It's alien technology! I've never seen anything like it."
 mc "Sure, just don't go pressing any random buttons."
-na "I smile at her as I turn towards the direction of a door with a sign that reads "STORAGE ROOM"."
+na "I smile at her as I turn towards the direction of a door with a sign that reads 'STORAGE ROOM'."
 na "Behind me, I listen to Leona talk to herself as she prods about with my ship."
 na "..."
 le "This is really amazing stuff, even when it's in shambles."
@@ -46,7 +46,7 @@ le "...or that, or..."
 na "..."
 
 ###
-SFX - METALLIC POP
+#SFX - METALLIC POP
 ###
 
 le "...oops."
@@ -78,7 +78,7 @@ le "And while you work, I'll give you a rundown!"
 mc "You've got a deal."
 
 ###
-VFX - FADE TO BLACK
+#VFX - FADE TO BLACK
 ###
 
 na "..."
@@ -86,7 +86,7 @@ na "After a couple of hours listening to Leona's stories while working on the sh
 na "And I'm hungry."
 
 ###
-ART - LEONA'S HOUSE
+    #ART - LEONA'S HOUSE
 ###
 
 na "After a short trip to a nearby convenience store in search of eggs, we return to Leona's abode."
@@ -151,5 +151,5 @@ na "When we were talking in the garage earlier she told me an interesting story 
 na "I figure that's as good a place as any to start before I decide to nod off."
 
 ###
-VFX - JOURNAL ENTRY ADDED - 1
+#VFX - JOURNAL ENTRY ADDED - 1
 ###
