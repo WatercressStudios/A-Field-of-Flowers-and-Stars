@@ -345,5 +345,4 @@
 
 scene black with fade
 
-return
 #jump scene_6
