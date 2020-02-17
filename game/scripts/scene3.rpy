@@ -350,13 +350,13 @@ label scene_3:
     ##This is where the demo is ending
 
     #return
-    #scene street onlayer master with wiperight:
-    #    subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
-    #    parallel:
-    #        xpos 0.25
-    #        ease 20 xpos 0.85
-    #stop env fadeout 2.0
-    #play sound3 "amb/City Day.ogg" fadein 2.0
+    scene street onlayer master with wiperight:
+        subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
+        parallel:
+            xpos 0.25
+            ease 20 xpos 0.85
+    stop env fadeout 2.0
+    play sound3 "amb/City Day.ogg" fadein 2.0
 
     na "Leona's neighborhood is full of people just like her, with different horn shapes and a variety of builds."
     na "They're super similar to humans, minus the whole 'having horns' part."
