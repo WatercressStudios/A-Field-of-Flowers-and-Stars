@@ -2,6 +2,8 @@ label scene_4:
 
     #ART - GARAGE BG
 
+    scene street onlayer master:
+        subpixel True xpos 0.00 ypos -1.24 zoom 1.78
 na "After heading back towards Leona's house, we turn the corner and reach the base my poor ship had been taken to."
 na "I hope Juneau is okay. She's annoying, but she's all I have now."
 na "She's what I imagine a little sister would be like."
