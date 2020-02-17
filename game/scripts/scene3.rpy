@@ -362,34 +362,36 @@ label scene_3:
     na "They're super similar to humans, minus the whole 'having horns' part."
     na "Were I more interested in xenobiology, I'd certainly be interested in how they grow. Are they part of the skull, or are they more like antlers?"
 
-    voice "voice/3-scene_3-82.ogg" #Leona (Dot)
+    #Voice lines not implimented yet?
+    
+    #voice "voice/3-scene_3-82.ogg" #Leona (Dot)
     show le explaining at le_side with dissolve
 
     le "And there is Xennia's place, who has the best vegetables this time of year, and over there's my mechanic's house..."
     na "Meanwhile, Leona is dragging me around, pointing at various buildings and landmarks without a care in the world."
 
-    voice "voice/3-scene_3-83.ogg" #Raine (Nat)
+    #voice "voice/3-scene_3-83.ogg" #Raine (Nat)
     mc "Just how far away is this base of yours?"
 
-    voice "voice/3-scene_3-84.ogg" #Leona (Dot)
+    #voice "voice/3-scene_3-84.ogg" #Leona (Dot)
     le speakingsurprised a1 "Oh, right across the street from my house!"
 
-    voice "voice/3-scene_3-85.ogg" #Raine (Nat)
+    #voice "voice/3-scene_3-85.ogg" #Raine (Nat)
     mc "Wait, aren't we walking away from it, then?"
 
-    voice "voice/3-scene_3-86.ogg" #Leona (Dot)
+    #voice "voice/3-scene_3-86.ogg" #Leona (Dot)
     le happy a2"Yep!"
 
-    voice "voice/3-scene_3-87.ogg" #Raine (Nat)
+    #voice "voice/3-scene_3-87.ogg" #Raine (Nat)
     mc "..."
 
-    voice "voice/3-scene_3-88.ogg" #Leona (Dot)
+    #voice "voice/3-scene_3-88.ogg" #Leona (Dot)
     le suspicious a2 "...?"
 
-    voice "voice/3-scene_3-89.ogg" #Raine (Nat)
+    #voice "voice/3-scene_3-89.ogg" #Raine (Nat)
     mc "Can I see my ship?"
 
-    voice "voice/3-scene_3-90.ogg" #Leona (Dot)
+    #voice "voice/3-scene_3-90.ogg" #Leona (Dot)
     le questioning p2 "Oh! Right, just this way!"
 
     stop sound3 fadeout 2.0
