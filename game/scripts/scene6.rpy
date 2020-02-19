@@ -1,8 +1,6 @@
-Scene 6
+label scene6:
 
-###
-ART - BLACK BG
-###
+scene black with dissolve #return to this later regarding coding in blackness or whater
 
 le "See? It's not {i}that{/i} hot."
 mc "It has to be at least 35c in here!"
@@ -44,7 +42,7 @@ mc "Once we get out of here, remind me to show you how good my throwing arm is."
 lc "Weird, but alright."
 na "We continue our trek into the caves, the air growing ever more humid."
 na "As we navigate the caves, the temperature slowly drops and damp water settles on my skin."
-na "Great, first it was hot and now I'm nearly shivering.
+na "Great, first it was hot and now I'm nearly shivering."
 na "Leona continues forward, ahead of me. I walk quietly and carefully behind her, trusting her as the expert here."
 na "I may be able to navigate an asteroid belt and maneuver around a pulsar, but down here, she's queen."
 na "She's a little airheaded, but… she knows what she's doing. I have more faith in her than I do myself in a place like this."
@@ -105,15 +103,15 @@ na "..."
 na "I feel tears fall from my eyes, as quiet sobs echo through the cavern."
 
 ###
-Pause for effect.
-ART - Load Cave1 BG but really dark (Cave1 BG just cave, not the same as Cave2BG which has the door and panel and whatnot.)
-VFX - slowly increase the light
+#Pause for effect.
+#ART - Load Cave1 BG but really dark (Cave1 BG just cave, not the same as Cave2BG which has the door and panel and whatnot.)
+#VFX - slowly increase the light
 ###
 
 na "Slowly, the cave begins to light up. A figure enters the tunnel to my right, its radiance blinding me."
 mc "Leona!?"
 le "RAINE!"
-na "She dashes over to me and pulls me into her arms, squeezing me tightly with all of her strength. 
+na "She dashes over to me and pulls me into her arms, squeezing me tightly with all of her strength."
 le "Are you okay? Are you hurt? I'm so sorry! I should have been paying more attention, I'm sorry, I'm sorry, I'm so sorry!"
 le "Need something to drink? Something to eat? Need a break? You're not hurt, right?"
 mc "I-ack! I'm fine! Just a little cold!"
@@ -140,7 +138,7 @@ le "Please hold my hand."
 mc "R-Right."
 
 ###
-ART - CaveBG2 (the one with the door and panel)
+#ART - CaveBG2 (the one with the door and panel)
 ###
 
 na "After about half an hour of walking, we finally reach our destination; a large alcove with a door and panel at the very back of the cave. "
@@ -204,11 +202,11 @@ na "With a pop, the bolt comes free and a gentle whistle can be heard coming fro
 na "Just as I'm about to lean back in to see what might be on the other side-"
 
 ###
-SFX - Heavy sound effect of stone scraping against stone
+#SFX - Heavy sound effect of stone scraping against stone
 ###
 
 na "My ears shoot up at a sound from higher up in the cave."
-na "Something heavy. Stone scrawling against stone, echoing against the walls.
+na "Something heavy. Stone scrawling against stone, echoing against the walls."
 le "Hey, did you hear that?"
 mc "I'd be surprised if I didn't. What the hell was that?"
 le "Ssh! Don't be so loud, please!"
@@ -282,6 +280,6 @@ le "Right, as I was saying, the family and the home are equally important-"
 
 
 ###
-VFX - JOURNAL ENTRY ADDED - 3
+#VFX - JOURNAL ENTRY ADDED - 3
 ###
 
