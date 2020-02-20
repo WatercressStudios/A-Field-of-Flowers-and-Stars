@@ -48,7 +48,7 @@ label scene_3:
     mc surprised "Sure, I'd like that."
 
     voice "voice/3-scene_3-9.ogg" #Leona (Dot)
-    le smug a3 "One plate of grub, coming up!"
+    le smug a3 "c plate of grub, coming up!"
     hide le with easeoutright
     na "A few moments later, and Leona slides a dish onto the table."
     na "It's a strange collection of what appears to be purple disks, a deep orange-colored fried egg, and... white jelly?"
@@ -340,16 +340,16 @@ label scene_3:
     le smirk a2 "All right!"
     scene black with dissolve
 
-    hide screen flower_menu_button
-    $ renpy.music.play(config.main_menu_music)
-    call screen tobecontinued_announce
-    call screen demo_letter with dissolve
-    call screen credits with dissolve
-    pause 2.0
+        #hide screen flower_menu_button
+    #$ renpy.music.play(config.main_menu_music)
+    #call screen tobecontinued_announce
+    #call screen demo_letter with dissolve
+    #call screen credits with dissolve
+    #pause 2.0
 
     ##This is where the demo is ending
 
-    return
+    #return
     scene street onlayer master with wiperight:
         subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
         parallel:
@@ -362,39 +362,40 @@ label scene_3:
     na "They're super similar to humans, minus the whole 'having horns' part."
     na "Were I more interested in xenobiology, I'd certainly be interested in how they grow. Are they part of the skull, or are they more like antlers?"
 
-    voice "voice/3-scene_3-82.ogg" #Leona (Dot)
+    #Voice lines are not implimented yet
+
+    #voice "voice/3-scene_3-82.ogg" #Leona (Dot)
     show le explaining at le_side with dissolve
 
     le "And there is Xennia's place, who has the best vegetables this time of year, and over there's my mechanic's house..."
     na "Meanwhile, Leona is dragging me around, pointing at various buildings and landmarks without a care in the world."
 
-    voice "voice/3-scene_3-83.ogg" #Raine (Nat)
+    #voice "voice/3-scene_3-83.ogg" #Raine (Nat)
     mc "Just how far away is this base of yours?"
 
-    voice "voice/3-scene_3-84.ogg" #Leona (Dot)
+    #voice "voice/3-scene_3-84.ogg" #Leona (Dot)
     le speakingsurprised a1 "Oh, right across the street from my house!"
 
-    voice "voice/3-scene_3-85.ogg" #Raine (Nat)
+    #voice "voice/3-scene_3-85.ogg" #Raine (Nat)
     mc "Wait, aren't we walking away from it, then?"
 
-    voice "voice/3-scene_3-86.ogg" #Leona (Dot)
+    #voice "voice/3-scene_3-86.ogg" #Leona (Dot)
     le happy a2"Yep!"
 
-    voice "voice/3-scene_3-87.ogg" #Raine (Nat)
+    #voice "voice/3-scene_3-87.ogg" #Raine (Nat)
     mc "..."
 
-    voice "voice/3-scene_3-88.ogg" #Leona (Dot)
+    #voice "voice/3-scene_3-88.ogg" #Leona (Dot)
     le suspicious a2 "...?"
 
-    voice "voice/3-scene_3-89.ogg" #Raine (Nat)
+    #voice "voice/3-scene_3-89.ogg" #Raine (Nat)
     mc "Can I see my ship?"
 
-    voice "voice/3-scene_3-90.ogg" #Leona (Dot)
+    #voice "voice/3-scene_3-90.ogg" #Leona (Dot)
     le questioning p2 "Oh! Right, just this way!"
 
     stop sound3 fadeout 2.0
     stop music fadeout 2.0
-    scene black with fade
+    #scene black with fade
 
-    jump scene6
-    #jump scene_4
+    jump scene_4
