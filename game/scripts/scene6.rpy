@@ -10,26 +10,28 @@ label scene6:
     mc unimpressed "I think I'd rather be out there in the direct sunlight, thanks."
     mc "Besides, if you think it's freezing outside, you'd hate Lumin."
     le questioning a3 "The sun and exercise is good for you! You're so pale... and thin? What's a good word for it...?"
-    na "Leona pokes at my arms through the shroud of darkness."
-    mc shocked armraised "NYuUugH, no touchy. I can already feel my skin crawling, it's so humid in here."
+    na "Leona pokes at my arms through the shroud of darkness." #later program some kind of screenshake or vpunch maybe
+    mc blech "NYuUugH, no touchy. I can already feel my skin crawling, it's so humid in here."
     mc blech "Please, PLEASE tell me there’s no blood-sucking bugs in here, eyuckh..."
+    show le relaxed with dissolve
     na "Leona and I make our way through the deep, deep cave."
+    #mark: leona just like stands here maybe put her away even for a moment or make her neutrl
     play sound "sfx/footsteps.ogg"
     na "The floor is rocky and uneven, slippery with some sort of slimy mess. I can barely keep my footing, not to mention the awful smell."
-    mc questiong2 "How does a species from a bright desert planet even get off having such good night vision anyway?"
-    le relaxed "I dunno. I've always liked small, dark corners, but so does everyone else I know."
+    mc questioning2 "How does a species from a bright desert planet even get off having such good night vision anyway?"
+    le explaining "I dunno. I've always liked small, dark corners, but so does everyone else I know."
     le explaining "Mom always said Dad loved these sorts of places when the colony arrived."
     mc sighing "I'll take your word for it..."
     na "I give a small sigh as we move deeper in."
     le concerned "Are you sure you don't want to use the flashlight?"
     mc thankful "It's fine, I can't tell how much charge the battery has in it anyway. Better to save it for an emergency."
-    mc "I mean, I've got you! Be my eyes. Can't think of anyone else better suited to lead us through a dark, damp, disturbing tunnel."
+    mc happy "I mean, I've got you! Be my eyes. Can't think of anyone else better suited to lead us through a dark, damp, disturbing tunnel."
     le questioning a2 "Hmm... Oh!"
     le happy speaking a3 "I found the word I was looking for. You’re scrawny!"
     mc annoyed "I'll show you scrawny, ya dingbat."
     le sassyquestioning "Oho? And how will you do that?"
     na "A playful smirk comes across my face."
-    mc amused "Let's just say I have a little secret."
+    mc satisfied "Let's just say I have a little secret."
     le curious "I like secrets. Tell me."
     mc questioning "Do you remember when you cut me down out of that tree?"
     mc "Specifically the part when you jumped to catch me?"
@@ -42,18 +44,19 @@ label scene6:
     mc satisfied "Grab two that are roughly the same size and weight and hold onto them for me."
     mc "Once we get out of here, remind me to show you how good my throwing arm is."
     le curious "Weird, but alright."
+    hide le curious with dissolve
     na "We continue our trek into the caves, the air growing ever more humid."
     na "As we navigate the caves, the temperature slowly drops and damp water settles on my skin."
     na "Great, first it was hot and now I'm nearly shivering."
     na "Leona continues forward, ahead of me. I walk quietly and carefully behind her, trusting her as the expert here."
     na "I may be able to navigate an asteroid belt and maneuver around a pulsar, but down here, she's queen."
     na "She's a little airheaded, but… she knows what she's doing. I have more faith in her than I do myself in a place like this."
-    le suspicious a2 "Smell that?"
-    questioning2 "What?"
-    show le happy a2 onlayer master:
-        stage_right
-        bounce
-    le "Rust! We're getting close to something." 
+    show le suspicious a2:
+        xpos -0.5
+        easein 1.0 xpos 0.3
+    le "Smell that?"
+    mc questioning2 "What?"
+    le happy a2 "Rust! We're getting close to something." #i wanted to put a bounce but couldnt figure out the right format since i keep getting errors
     mc neutral "I can't smell anything. Maybe a little bit of sulphur from the caves, but that's it." 
     hide le with easeoutright
     na "But, if she's right about the rust, then we're getting close to something man made."
@@ -116,7 +119,9 @@ label scene6:
 
     na "Slowly, the cave begins to light up. A figure enters the tunnel to my right, its radiance blinding me."
     mc shocked m2  "Leona!?"
-    show le concerned with fade 
+    show le concerned:
+        xpos -0.5
+        easein 1.0 xpos 0.3
     le "RAINE!"
     na "She dashes over to me and pulls me into her arms, squeezing me tightly with all of her strength."
     le sad "Are you okay? Are you hurt? I'm so sorry! I should have been paying more attention, I'm sorry, I'm sorry, I'm so sorry!"
