@@ -279,7 +279,11 @@ label scene6:
     le happy a1 "Right, as I was saying, the family and the home are equally important-"
     hide le happy a1 with dissolve
 
+<<<<<<< Updated upstream
     #jump scene_7
+=======
+    jump scene_7
+>>>>>>> Stashed changes
 ###
 #VFX - JOURNAL ENTRY ADDED - 3
 ###
