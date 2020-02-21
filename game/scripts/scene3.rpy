@@ -350,7 +350,7 @@ label scene_3:
     ##This is where the demo is ending
 
     #return
-    scene street onlayer master with wiperight:
+    scene street onlayer master with wipeleft:
         subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
         parallel:
             xpos 0.25
