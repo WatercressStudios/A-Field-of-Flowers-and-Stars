@@ -1,6 +1,9 @@
 ###
+<<<<<<< Updated upstream
 ART - FOREST BG (NO SHIP)
 VFX - BG Should be super zoomed in too. See end of this scene for clarity.
+=======
+>>>>>>> Stashed changes
 ###
 scene forest with zoomin 
 mc sighing "Lovely. I was sort of hoping I'd never see this neck of the woods again."
@@ -32,19 +35,28 @@ le concerned "Careful, it might fall apart if you're too rough with them."
 mc satisfied "If it can survive in a cave for a thousand years and then make it through your deathtrap of a bike in one piece, I doubt my delicate hands will be enough to leave a scratch."
 
 ###
+<<<<<<< Updated upstream
 SFX - PAGE TURNING
+=======
+>>>>>>> Stashed changes
 ###
 
 mc speaking "Looks like nothing but random squiggles."
 
 ###
+<<<<<<< Updated upstream
 SFX - PAGE TURNING
+=======
+>>>>>>> Stashed changes
 ###
 
 mc "More squiggles..."
 
 ###
+<<<<<<< Updated upstream
 SFX - PAGE TURNING
+=======
+>>>>>>> Stashed changes
 ###
 
 mc surprised "Squig- Wait! Here we go, finally kicking in!"
@@ -121,7 +133,10 @@ le speakingsurprised "A big enough explosion could cause them all to collapse at
 mc upset "Get on the horn, warn everyone to get away from those mountains!"
 
 ###
+<<<<<<< Updated upstream
 SFX - Faint explosion
+=======
+>>>>>>> Stashed changes
 ###
 
 na "Leona and I look to the horizon as we feel the ground shake beneath our feet, a burst of sound echoing through the air."
@@ -194,6 +209,8 @@ na "I don't give her an answer. I simply take aim and fire."
 
 ###
 SFX - Rock hitting wood
+=======
+>>>>>>> Stashed changes
 ###
 
 na "It sails straight like a bullet, and the bark explodes at the center of impact.."
@@ -204,7 +221,10 @@ mc "The gravity here is weaker than what my species is used to, so my body can h
 mc "Stronger too, since my muscles are more dense."
 mc unimpressed "That reminds me. I have a gift for you."
 na "From my own bag I fetch the neatly wrapped box I'd prepared the night before as Leona slept."
+<<<<<<< Updated upstream
 mc "Your present. As promised; A little "thanks" for all the help."
+=======
+>>>>>>> Stashed changes
 mc neutral "It's a music player. Brought it with me from Lumin. You just hit the button in the middle when you want to start it."
 mc "I had Juneau translate the interface and attach lyrics to all the songs."
 le sad "Raine..."
@@ -213,7 +233,10 @@ mc "I'll see you around, Leona."
 na "I turn away from her and start walking."
 
 ###
+<<<<<<< Updated upstream
 VFX - BG and Leona sprite zooms out a step with every following line until end of scene.
+=======
+>>>>>>> Stashed changes
 ###
 
 le "Raine?"
@@ -228,9 +251,12 @@ hide le crying2 with dissolve
 
 
 ###
+<<<<<<< Updated upstream
 VFX - Quickly cut to black
 Timing - add an extra couple seconds of nothing but black before next line
 VFX - Journal entry added - 4
+=======
+>>>>>>> Stashed changes
 ###
 
 
