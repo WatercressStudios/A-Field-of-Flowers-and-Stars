@@ -2,19 +2,29 @@ label scene6:
 
     scene black with dissolve #return to this later regarding coding in blackness or whater
     play sound "sfx/footsteps 2.ogg"
+    show le happy a1 with dissolve:
+        xalign 0.5
     le "See? It's not {i}that{/i} hot."
     mc surprised "It has to be at least 35c in here!"
+    show le happy speaking a2 with dissolve
+    "Whatever that means. I think it's nice 'n' toasty."
     le "Much better than outside, it's always freezing out there."
     mc unimpressed "I think I'd rather be out there in the direct sunlight, thanks."
     mc "Besides, if you think it's freezing outside, you'd hate Lumin."
     le questioning a3 "The sun and exercise is good for you! You're so pale... and thin? What's a good word for it...?"
+    show le happy speaking a2 with hpunch:
+        xalign 0.5
     na "Leona pokes at my arms through the shroud of darkness." #later program some kind of screenshake or vpunch maybe
     mc blech "NYuUugH, no touchy. I can already feel my skin crawling, it's so humid in here."
     mc blech "Please, PLEASE tell me there’s no blood-sucking bugs in here, eyuckh..."
+    hide le questioning a3 with dissolve
     na "Leona and I make our way through the deep, deep cave."
     play sound "sfx/footsteps.ogg"
     na "The floor is rocky and uneven, slippery with some sort of slimy mess. I can barely keep my footing, not to mention the awful smell."
     mc questioning2 "How does a species from a bright desert planet even get off having such good night vision anyway?"
+    show le explaining with dissolve:
+        xalign 0.5
+    le "I dunno. I've always liked small, dark corners, but so does everyone else I know."
     le explaining "Mom always said Dad loved these sorts of places when the colony arrived."
     mc sighing "I'll take your word for it..."
     na "I give a small sigh as we move deeper in."
@@ -51,6 +61,10 @@ label scene6:
         easein 1.0 xpos 0.3
     le "Smell that?"
     mc questioning2 "What?"
+    show le happy a2:
+        xalign 0.5
+        bounce
+    "Rust! We're getting close to something." #i wanted to put a bounce but couldnt figure out the right format since i keep getting errors
     mc neutral "I can't smell anything. Maybe a little bit of sulphur from the caves, but that's it." 
     hide le with easeoutright
     na "But, if she's right about the rust, then we're getting close to something man made."
@@ -124,10 +138,13 @@ label scene6:
     na "She tightens her grip on me, crushing me a little."
     na "Maybe I should follow her advice and bulk up a bit..."
     na "Leona produces a blanket from her pack, wiping me down and wrapping it gently around my shoulders."
+    le sad_lee "I was so worried…"
+    show le crying with dissolve
     na "She looks at me with a pained expression, her breathing erratic and her heart beating fast. I think she's about to cry."
     na "Crap, now I feel bad."
     mc "No, it's my fault. I'm stupid. We should have used the flashlight from the start, I should have stuck with you, and said something rather than just walking away."
     mc "I guess I'm just used to doing stuff on my own."
+    le "It's okay, it's okay. I'm just happy you're okay. You're with me now, right?"
     mc sighing "R-right."
     na "She pulls me back in, and we share a quiet embrace."
     mc thankful "Thank you, Leona. If it weren't for you, I'd be a goner."
@@ -149,6 +166,8 @@ label scene6:
     na "After about half an hour of walking, we finally reach our destination; a large alcove with a door and panel at the very back of the cave. "
     na "Everything here looks to be scaled up compared to human or dawnese standards."
     na "Whoever built this must have been pretty tall."
+    show le happy a2 with dissolve:
+        xalign 0.5
     "Here we go!"
     mc questioning2 "Yeah, this is a biggun. Why would anyone build something like that inside a cave though?"
     le curious "Maybe they needed to hide something in it? It's weird that they'd leave this crate outside though."
@@ -161,6 +180,16 @@ label scene6:
     na "As Leona gingerly flips through muddied pages, I saunter towards the panel adjacent to the metal behemoth."
     na "It's a digital lock alright. I'd be surprised if it still had any juice left in it."
     mc "One thing's for sure, this control panel's as old as dirt. Wanna take a guess at how long it's been here?"
+    show le happy a2 with dissolve:
+        align 0.5
+        bounce
+    le "Books? Lemme see!"#vary it up a bit here
+    mc "Yeah, you have fun with that. I'll take a crack at this big ol' door I guess."
+    hide le happy a2 with dissolve
+    na "As Leona gingerly flips through muddied pages, I saunter towards the panel adjacent to the metal behemoth."
+    na "It's a digital lock alright. I'd be surprised if it still had any juice left in it."
+    mc "One thing's for sure, this control panel's as old as dirt. Wanna take a guess at how long it's been here?"
+    le questioning a3 "A while?"
     na "Leona continues to study her books, eyes only occasionally glancing back in my direction."
     le "At least a few decades? With all the rot and stuff."
     le curious "What do you think?"
@@ -178,6 +207,7 @@ label scene6:
     mc "There's a lot of energy noise floating around. The detector's going kind of crazy."
     mc "Not a good sign."
     mc "If that generator's unstable this is going to be a lot harder than I'd hoped."
+    hide le speakingsurprised a1 with dissolve
     na "If it'll even fit in our ship to begin with. The door's massive, so whatever's inside might be as well."
     na "I move forward to investigate, working through the details in my mind."
     na "There are some bolts bulging out of the door's frame. Giving one a yank proves fruitless."
@@ -198,6 +228,7 @@ label scene6:
     mc satisfied "Worth a shot."
     mc "Start gathering up whatever you want to keep from that crate, we'll get out of here in a minute."
     le happy a2 "Okey-doke."
+    hide le happy a2 with dissolve
     na "Leona returns to her books, and I to my bolt."
     na "I lean in and blow on it a bit, hoping the lubricant will seep in enough to gain leeway."
     na "Then, I grab and pull. When that doesn't work, I try twisting."
@@ -210,21 +241,20 @@ label scene6:
     mc questioning2 "I'd be surprised if I didn't. What the hell was that?"
     le concerned "Ssh! Don't be so loud, please!"
     na "Leona looks around cautiously, keeping her eyes and ears open."
+    le suspicious a2 "I think it was back the way we came?"
     mc "Are you sure?"
     le "No, but the cave is just a straight path. One way in, one way out."
     le "I think we should get out of here, just to be safe."
     mc "Do you smell anything?"
+    le questioning a3 "What does that matter?"
     mc "It matters. Is there more sulfur than before? Anything that might be a gas?"
     le "No, aside from the sound I think we're fine."
     le concerned "C'mon, let's go back. I'll walk a little bit ahead of you in case we run into something."
     mc "Okay... But don't get too far away. Talk to me so I don't lose you again."
     le "Good idea."
     na "Leona and I quickly gather up the old books she'd set aside and head out."
-
-    ###
-   # ART - Cave1BG
-    ###
-
+    hide le concerned with fade 
+    scene cave with dissolve
     na "Walking back the way we came, Leona and I got to talking about something she said earlier."
     na "About how everyone she knows including herself likes small, dark corners."
     na "Looking at the city of Aster, and even Leona's home, I can see it. Their architecture is downright utilitarian, edging on brutalist."
@@ -232,24 +262,36 @@ label scene6:
     na "To me, this felt like a contradiction, but as I'm about to say something..."
     mc questioning "Everything alright up there?"
     le happy speaking a3 "Yeah! Just need to check something out, won't take me long!"
+    show le happy a2:
+        xalign 0.5
+        bounce
+    le "H-Hey, Raine! Can you stay there for a second?"
+    mc questioning "Everything alright up there?"
+    le happy speaking a3 "Yeah! Just need to check something out, won't take me long!"
+    hide le happy speaking a3 with easeoutright
     na "I look ahead into the darkness."
     na "In the distance… lies a hallway that wasn't there before. With sharp, edged corners, and a green glow illuminating its form."
     mc questioning2 "You'll be alright, right!?"
     le "I'll be fine! Just stay there!"
+    play sound "sfx/door.ogg" 
     na "A sudden loud, mechanical grinding forces an audible wince out of me."
     na "About as bad as nails on a chalkboard."
+    le speakingsurprised a1 "...Oops. That was louder than I thought."
     mc questioning2 "Everything alright? I think my ears are ringing."
     le concerned "Y-Yeah. God, that hurt."
     mc shocked m2 "Are you alright?! What the hell was that!?"
+    le happy a2 "I'm fine, I'm fine! I just had to close a door."
     mc questioning2 "You found a door? Why didn't you just say so?"
-    le suspicious "Because... well..."
+    le suspicious a2 "Because... well..."
     na "..."
     mc "...Leona?"
     le explaining "Bodies. We must have done something back in the alcove that opened a door over here."
     le "There was a pile of bones n stuff and I didn't want you to see it."
     mc shocked m2 "Bodies? You mean, like {i}people{/i} bodies?"
     le "I couldn't tell. The room was full of them. Not a pretty sight."
+    le sad_lee "I don't think we should open that door again. Ever."
     mc questioning "If you say so..."
+    mc questioning2"But now I'm really curious about whoever was here before us."
     mc "At least we know what that noise was."
     le concerned "Can we please move on now? Just knowing what's on the other side of this door is giving me the shivers."
     mc neutral "Yeah, let's go back home. I don't want to hang around any longer either."
@@ -265,7 +307,7 @@ label scene6:
     le happy a1 "Right, as I was saying, the family and the home are equally important-"
     hide le happy a1 with dissolve
 
-    jump scene_7
+    jump scene7
 
 ###
 #VFX - JOURNAL ENTRY ADDED - 3
