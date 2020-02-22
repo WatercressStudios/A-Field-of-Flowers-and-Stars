@@ -2,13 +2,15 @@
 label scene7: 
     #ART - FOREST BG (NO SHIP)
     #VFX - BG Should be super zoomed in too. See end of this scene for clarity.
-
     ###
     scene forest with zoomin 
     mc sighing "Lovely. I was sort of hoping I'd never see this neck of the woods again."
     mc "Why are we here again?"
     #tbh im kind of confused on whether to add leona here. i will probably figure that out loud
     le explaining "Remember the alien tech we found while bringing in your ship?"
+    show le explaining with dissolve:
+        xalign 0.5
+    le "Remember the alien tech we found while bringing in your ship?"
     le "I was thinking the crash uncovered some supplies that got left behind by the previous inhabitants, but then we found all that crate inside the cave."
     le questioning a3 "Why is there stuff all the way out here when the cave base would suffice?"
     le "Think about it; a hidden base inside a cave, things buried underground-"
@@ -28,22 +30,20 @@ label scene7:
     le happy a1 "You can? How?"
     mc "I can't actually speak your language, remember?"
     le happy a2 "Oooh, your translator! I didn't think about it, but that must be why you can use the mediapad I gave you."
+    le questioning a2 "We didn't find much of anything in the cave, except some old books."
+    le "And it's not like we can read them anyway."
+    mc satisfied "Actually, I might be able to help with that!"
+    le speakingsurprised a1 "You can? How?"
+    mc "I can't actually speak your language, remember?"
+    le happy speaking a3 "Oooh, your translator! I didn't think about it, but that must be why you can use the mediapad I gave you."
     mc neutral "Yeah, works just as well for the written word. Gimme one of the books and I'll take a look-see."
     na "Leona quickly shuffles through the hoverbike's storage compartment, coming out with one of the dusty books we'd brought back with us."
     le concerned "Careful, it might fall apart if you're too rough with them."
     mc satisfied "If it can survive in a cave for a thousand years and then make it through your deathtrap of a bike in one piece, I doubt my delicate hands will be enough to leave a scratch."
-
-
     #SFX - PAGE TURNING
-
-
-
     mc speaking "Looks like nothing but random squiggles."
-
     #SFX - PAGE TURNING
-
     mc "More squiggles..."
-
     mc surprised "Squig- Wait! Here we go, finally kicking in!"
     mc questioning2 "Eh? Looks like a manifest of some sort."
     mc speaking "Food, water, all sorts of supplies and components like batteries and computer chips."
@@ -60,12 +60,12 @@ label scene7:
     le "Record keeping is an important part of trade, so leaving them there would be a really bad move for an employee and a nightmare for an employer."
     le "But if they were a smuggler, they could just cook up another set of books."
     mc unimpressed "Or they were intending to get rid of evidence of smuggling, thinking nobody would find it there."
-    le questioning2 a1 "That leads me back to the stuff we found with your ship though."
+    le questioning a2 "That leads me back to the stuff we found with your ship though."
     le "Why go through the trouble of building something so deep inside a cave, hiding evidence of smuggling there but not leaving the smuggled cargo with it?"
     mc "I think you're onto something. It doesn't quite make sense, does it?"
     mc "Come to think of it, we found the cave because the power source inside shows up on sensors."
     mc "You might as well leave a giant arrow pointing straight to it."
-    le questioning2 a3 "...Huh. That's a really good point."
+    le questioning a3 "...Huh. That's a really good point."
     mc surprised "What if it's not a decoy, but a trap?"
     le surprised "A trap? Why would-"
     mc questioning2 "Leona, what about the bodies you found?"
@@ -84,12 +84,12 @@ label scene7:
     mc "I don't know. Maybe there's something inside set to go off as soon as..."
     mc "...as soon as..."
     mc questioning2 "...the pressure is released when the door opens."
-    le questiong a3 "Raine, didn't that hole start making a whistling noise when you pulled that bolt out?"
+    le questioning a3 "Raine, didn't that hole start making a whistling noise when you pulled that bolt out?"
     mc unimpressed "Crap."
     le speakingsurprised a1 "What do we do?!"
     mc "Absolutely nothing."
-    le  surprised "What? No! A bomb is gonna go off!"
-    mc yawning "Relax, it can't be that strong."
+    le speakingsurprised a1 "What? No! A bomb is gonna go off!"
+    mc yawn "Relax, it can't be that strong."
     mc "Why set up traps to kill people before they can even get to the door, if opening it is just going to kill everyone anyway?"
     le sad "...Uh, R-Raine?"
     mc neutral "Yeah?"
@@ -103,7 +103,7 @@ label scene7:
     mc unimpressed "What?"
     le "I miiight have l-lied..."
     mc upset "Why would you- Wait, what was glowing then?"
-    le speakingsurprised "There was a room, but it didn't have any corpses inside."
+    le speakingsurprised a1 "There was a room, but it didn't have any corpses inside."
     mc annoyed "Leona, what did you see?"
     le "It was this big, green glowy canister like thing sitting in the middle of the room with a bunch of wires coming out of it."
     mc "That could have been the power source we were looking for."
@@ -114,20 +114,18 @@ label scene7:
     mc unimpressed "I don't know. Big enough to blow away the entire cave, I imagine."
     le "Or anyone foolish enough to get close to it, looking for the smuggled cargo."
     le "Raine, those mountains have {i}tons{/i} of cave systems."
-    le speakingsurprised "A big enough explosion could cause them all to collapse at once!"
+    le speakingsurprised a1 "A big enough explosion could cause them all to collapse at once!"
     mc upset "Get on the horn, warn everyone to get away from those mountains!"
-
     #SFX - Faint explosion
-
-
     na "Leona and I look to the horizon as we feel the ground shake beneath our feet, a burst of sound echoing through the air."
     na "And in the distance, visible through the treetops…"
     na "Was a large chunk of a mountain torn right from the earth."
     mc shocked armraised "Oh my god."
+    show le surprised with dissolve(0.2)
     na "Leona stands there, stunned in place with a terrified look."
-    mc "Leona, the radio! Quick!"
+    mc unimpressed "Leona, the radio! Quick!"
     na "A gust of wind barrels through the forest, thrusting into my face as it batters the trees in its wake."
-    mc "Aah!"
+    mc annoyed "Aah!"
     na "By the time the wind dies down, Leona rushes to the radio on her bike, sweat dripping from her face."
     le explaining "This is Captain Leona broadcasting on all emergency channels!"
     le "I need reports from all units detailing locations and status on frequency 88.9, prioritizing vicinity to Southwest Mountain range!"
@@ -141,7 +139,9 @@ label scene7:
     le "All other units report to base and await our return. Captain Leona signing off."
     na "Leona stands there a moment, staring into the radio."
     mc neutral "Can we talk about this?"
-    le "Um…"
+    le sad_lee "Um…"
+    show le crying2 with dissolve:
+        xalign 0.5
     na "She opens her mouth to speak."
     na "But then turns her face away from me."
     na "..."
@@ -153,7 +153,7 @@ label scene7:
     mc unimpressed "I want to know why."
     na "Head still hung low, she turned her head to me, unable to look me in the eye."
     mc "Why?"
-    le sad "I-I was afraid."
+    le sad_lee "I-I was afraid."
     le "I only wanted to keep you safe."
     le "The room I found... I saw the power sources and got scared."
     le "For a moment I saw you back up in that tree."
@@ -181,16 +181,13 @@ label scene7:
     mc "I want you to hit it."
     le "Hit? Like, go up and-?"
     mc "No, I mean throw it. As hard as you can. Hit that tree."
-    le sad "I-I don't think I can-"
-    mc annoyed"I don't care. Throw the rock."
+    le sad_lee "I-I don't think I can-"
+    mc annoyed "I don't care. Throw the rock."
     na "Still looking nervous, she reels back and lets it fly."
     na "The rock sails through the air, but barely makes it halfway to the tree."
     le "R-Raine, what is this about?"
     na "I don't give her an answer. I simply take aim and fire."
-
-
     #SFX - Rock hitting wood
-
     na "It sails straight like a bullet, and the bark explodes at the center of impact.."
     le speakingsurprised "Oh my god-!"
     le "What was that?!"
@@ -200,19 +197,15 @@ label scene7:
     mc unimpressed "That reminds me. I have a gift for you."
     na "From my own bag I fetch the neatly wrapped box I'd prepared the night before as Leona slept."
     mc "Your present. As promised; A little \"thanks\" for all the help."
-
     mc neutral "It's a music player. Brought it with me from Lumin. You just hit the button in the middle when you want to start it."
     mc "I had Juneau translate the interface and attach lyrics to all the songs."
     le sad "Raine..."
     mc unimpressed "But, as you know, I won't be needing any more help from now on."
     mc "I'll see you around, Leona."
     na "I turn away from her and start walking."
-
-
     #VFX - BG and Leona sprite zooms out a step with every following line until end of scene.
     #
     ###
-
     le "Raine?"
     na "Just walking."
     le sad "R-Raine...?"
@@ -222,6 +215,8 @@ label scene7:
     le crying2 "{b}Raaaine{/b}!"
     na "Back to a prison."
     hide le crying2 with dissolve
+    jump scene8
+
 
 
     #VFX - Quickly cut to black
