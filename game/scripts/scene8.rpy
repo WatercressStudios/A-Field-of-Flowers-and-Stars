@@ -27,7 +27,7 @@
     na "But, then, she's not family."
     na "She's not even one of us."
 
-    le "So why does it hurt so much?
+    le "So why does it hurt so much?"
 
     na "Nobody said it would be like this."
     na "You're supposed to find someone really great."
@@ -64,4 +64,4 @@
 
     #VFX Journal Backups Loaded
 
-    #jump scene_9
+    jump scene_9
