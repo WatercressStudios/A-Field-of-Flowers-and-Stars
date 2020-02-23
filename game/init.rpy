@@ -114,14 +114,7 @@ init:
         MapEmote('le smug a3', 'le hip base arms_raised tail_default mdo_smuggrin ed_default brow_default')
         MapEmote('le frustrated a1', 'le angry base arms_default mdo_default ed_default brow_default')
         MapEmote('le frustrated a2', 'le angry base arms_raised mdo_default ed_default brow_default')
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
         MapEmote('le sad', 'le sad base md_default ed_default brow_default')
-=======
-        MapEmote('le sad_lee', 'le sad base md_default ed_default brow_default')
->>>>>>> Stashed changes
->>>>>>> Stashed changes
         MapEmote('le happy a1', 'le neutral base arms_default md_default ed_default brow_default')
         MapEmote('le happy a2', 'le neutral base arms_raised md_default ed_default brow_default')
         MapEmote('le happy speaking a2', 'le hip base arms_pout tail_default mdo_default ec_default brow_up')
