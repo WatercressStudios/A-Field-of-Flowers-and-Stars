@@ -273,4 +273,4 @@
     na "And if I have to get my shit together and work with her, then that's a small price to pay compared to what could happen otherwise."
     na "Buckle up, Raine. It's gonna be a rough ride."
 
-    #jump scene_10
+    jump scene_10

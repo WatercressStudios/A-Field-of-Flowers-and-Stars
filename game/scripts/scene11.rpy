@@ -450,4 +450,4 @@
     na "As Leona and I decided to go back to her house for the night, Juneau began conjuring up hard light blankets for the strung out crewmen."
     na "We waved goodnight and left, our spirits raised and optimistic for what may lay before us  tomorrow."
 
-    #jump epilogue
+    jump epilogue

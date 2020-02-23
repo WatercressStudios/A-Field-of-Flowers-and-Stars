@@ -1,4 +1,4 @@
-##This block runs before the game starts up. It's mostly used to define objects such as images, characters, music etc.
+    ##This block runs before the game starts up. It's mostly used to define objects such as images, characters, music etc.
 init:
 
     ##Character Declarations: Creates character objects for each character in the game and assigns tags that will be used to reference their assets.
