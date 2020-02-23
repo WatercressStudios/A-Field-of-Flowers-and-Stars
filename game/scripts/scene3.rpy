@@ -396,9 +396,5 @@ label scene_3:
     stop music fadeout 2.0
     scene black with fade
 
-<<<<<<< Updated upstream
     return
-    #jump scene_4
-=======
-    jump scene_5
->>>>>>> Stashed changes
+    jump scene_4
