@@ -1,7 +1,8 @@
 ﻿label scene_11:
 
     #ART Aster BG
-
+    scene street with dissolve
+    
     na "I head outside after my talk with Juneau to see Leona idling by herself, leaning on the wall of a building across the street."
 
     mc "Leona! Any word on how things are going?"
