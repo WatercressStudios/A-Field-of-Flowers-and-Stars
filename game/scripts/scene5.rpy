@@ -482,4 +482,4 @@
 
 #VFX JOURNAL ENTRY ADDED 2
 
-#jump scene_6
+jump scene_6

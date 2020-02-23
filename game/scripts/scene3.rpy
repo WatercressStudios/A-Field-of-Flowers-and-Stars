@@ -398,4 +398,6 @@ label scene_3:
     stop music fadeout 2.0
     #scene black with fade
 
-    jump scene_4
+
+    return
+

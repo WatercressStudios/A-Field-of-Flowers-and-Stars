@@ -64,4 +64,4 @@
 
     #VFX Journal Backups Loaded
 
-    #jump scene_9
+    jump scene_9

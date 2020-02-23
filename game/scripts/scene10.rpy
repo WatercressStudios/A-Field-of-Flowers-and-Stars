@@ -280,4 +280,4 @@
 
     mc "I didn't-fine, I'll go check up on her."
 
-    #jump scene_11
+    jump scene_11
