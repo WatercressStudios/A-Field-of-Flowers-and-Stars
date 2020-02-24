@@ -827,21 +827,17 @@ screen dynamicspritespreview:
                     margin (0,0)
                     padding (0,0)
                     align (0.5, 1.0)
-                    text mapemotecode_text:
-                        align (0.5, 0.5)
-                        text_align 0.5
-                        size 18
-                        color "000"
-                if mapemotecode_args in mapemotedefined.keys():
-                    frame:
-                        background None
-                        margin (0,0)
-                        padding (0,0)
-                        align (0.5, 0.97)
+                    if mapemotecode_args in mapemotedefined.keys():
                         text ("Mapped to: {b}" + mapemotedefined[mapemotecode_args] + "{/b}"):
                             align (0.5, 0.5)
                             text_align 0.5
                             size 22
+                            color "000"
+                    else:
+                        text mapemotecode_text:
+                            align (0.5, 0.5)
+                            text_align 0.5
+                            size 18
                             color "000"
             button:
                 background Solid("fffe")
