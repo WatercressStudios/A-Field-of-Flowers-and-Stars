@@ -48,7 +48,7 @@ label scene_3:
     mc surprised "Sure, I'd like that."
 
     voice "voice/3-scene_3-9.ogg" #Leona (Dot)
-    le smug a3 "One plate of grub, coming up!"
+    le smug a3 "c plate of grub, coming up!"
     hide le with easeoutright
     na "A few moments later, and Leona slides a dish onto the table."
     na "It's a strange collection of what appears to be purple disks, a deep orange-colored fried egg, and... white jelly?"
@@ -340,7 +340,8 @@ label scene_3:
     le smirk a2 "All right!"
     scene black with dissolve
 
-    #hide screen flower_menu_button
+        #hide screen flower_menu_button
+
     #$ renpy.music.play(config.main_menu_music)
     #call screen tobecontinued_announce
     #call screen demo_letter with dissolve
@@ -350,6 +351,7 @@ label scene_3:
     ##This is where the demo is ending
 
     #return
+
     scene street onlayer master with wipeleft:
         subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
         parallel:
