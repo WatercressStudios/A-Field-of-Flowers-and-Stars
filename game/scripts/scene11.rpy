@@ -11,39 +11,39 @@
             zoom 1.48
             ease 1.0 zoom 1.0
 
-    show le crying at stage_right with dissolve
+    show le tired at stage_right with dissolve
 
     na "I head outside after my talk with Juneau to see Leona idling by herself, leaning on the wall of a building across the street."
 
-    mc thankful "Leona! Any word on how things are going?"
+    mc concernspeak "Leona! Any word on how things are going?"
 
-    le "...We wait. That's about it, really."
+    le concernedspeaking "...We wait. That's about it, really."
 
-    le "It'll take at least twenty minutes to set everything up, assuming nothing bites us in the ass over there."
+    le speakingtired "It'll take at least twenty minutes to set everything up, assuming nothing bites us in the ass over there."
 
     le "I'm a little nervous, but it's far from the first time. We've been through rough spots before."
 
-    le "...Even after everything, a lot of them still look up to me. It feels strange."
+    le concerned "...Even after everything, a lot of them still look up to me. It feels strange."
 
-    mc "Can't say I don't understand it. Every now and then you run into someone who you were {i}sure{/i} hated your guts, and all of a sudden they're talking it up like you're the best of pals."
+    mc weary "Can't say I don't understand it. Every now and then you run into someone who you were {i}sure{/i} hated your guts, and all of a sudden they're talking it up like you're the best of pals."
 
-    mc "And it's hard to sit around doing nothing when there's something big going on. I can barely sit still for five minutes some of those days."
+    mc wearyspeak "And it's hard to sit around doing nothing when there's something big going on. I can barely sit still for five minutes some of those days."
 
-    le "Well, do you wanna do something for the time being, then?"
+    le shylook "Well, do you wanna do something for the time being, then?"
 
     le "Or…"
 
     na "Leona's face looks shyly towards the ground, before she looks back up as her eyes meet mine."
 
-    le "We should probably be talking about things while we still can. Since we have the time, I mean."
+    le concernedspeaking "We should probably be talking about things while we still can. Since we have the time, I mean."
 
     na "...Oh god, here we go."
 
-    mc "Y-You don't need to act so nervous about it, you know. Just makes me more anxious seeing you treat it like that."
+    mc shyspeak "Y-You don't need to act so nervous about it, you know. Just makes me more anxious seeing you treat it like that."
 
     na "Leona fidgets around with her fingers a little bit…"
 
-    le "W-well, I know this nice cafe that's a few blocks from here! I always liked going there whenever I had a bit of a break."
+    le speakingthink "W-well, I know this nice cafe that's a few blocks from here! I always liked going there whenever I had a bit of a break."
 
     mc "Can we head back to your place, actually?"
 
