@@ -127,6 +127,7 @@ init:
         MapEmote('le suspicious a2', 'le think base tail_default md_default ed_bedroom brow_default')
         MapEmote('le crying', 'le sad base md_default ed_sad brow_default')
         MapEmote('le crying2', 'le sad base md_default ed_sad brow_default')
+        MapEmote('le cryingtalk', 'le sad base mdo_default ed_sad brow_default')
         MapEmote('le catching', 'le angry base arms_default md_default ed_default brow_default')
         MapEmote('le sassyquestioning', 'le hip base arms_default tail_default mdo_pout ed_default brow_up')
         MapEmote('le concerned', 'le sad base md_default ed_default brow_default')
@@ -160,6 +161,7 @@ init:
         #raine
         MapEmote('mc thankful', 'mc normal base mdo_default ed_default brow_sad')
         MapEmote('mc yawn', 'mc armraised base mdo_default ed_default')
+        MapEmote('mc yawn2', 'mc armraised base mdo_default ed_squint')
         MapEmote('mc neutral', 'mc normal base md_default ed_default brow_up')
         MapEmote('mc questioning', 'mc normal base mdo_O ed_lookup brow_sad')
         MapEmote('mc questioning2', 'mc confident base mdo_O ed_lookaway brow_raised')
@@ -170,6 +172,7 @@ init:
         MapEmote('mc speaking', 'mc normal base mdo_default ed_liddrop brow_up')
         MapEmote('mc annoyed', 'mc angry base mdo_default ed_default brow_default')
         MapEmote('mc upset', 'mc angry hands md_default ec_default brow_angry')
+        MapEmote('mc stern', 'mc angry base md_default ed_default brow_default')
         MapEmote('mc amused', 'mc normal base mdo_line ed_lookaway brow_sad')
         MapEmote('mc happy', 'mc confident base md_default ed_default brow_default')
         MapEmote('mc blech', 'mc confident base mdo_stretchO ec_default brow_angry')
