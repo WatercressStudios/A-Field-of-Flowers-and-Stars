@@ -1,11 +1,21 @@
 ﻿label scene_11:
 
     #ART Aster BG
-    scene street with dissolve
-    
+
+    scene street onlayer master with dissolve:
+        subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
+        parallel:
+            xpos -0.22
+            ease 1.0 xpos 0.09
+        parallel:
+            zoom 1.48
+            ease 1.0 zoom 1.0
+
+    show le crying at stage_right with dissolve
+
     na "I head outside after my talk with Juneau to see Leona idling by herself, leaning on the wall of a building across the street."
 
-    mc "Leona! Any word on how things are going?"
+    mc thankful "Leona! Any word on how things are going?"
 
     le "...We wait. That's about it, really."
 
