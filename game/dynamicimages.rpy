@@ -120,6 +120,7 @@ init -50 python:
     sidelist = []
     offsetdict = {}
     pathdict = {}
+    mapemotedefined = {}
     mapemotedict = {}
     spritedict = {}
     charlist = []
@@ -382,6 +383,9 @@ init -50 python:
                 renpy.image(('side',)+charpath, layered)
 
     def MapEmote(newname, oldname, addOptionals=True):
+        mapemotedefined[newname] = oldname
+        mapemotedefined[oldname] = newname
+
         newpath = tuple(newname.split())
         charname = newpath[0]
         charpath = tuple(newpath[0:len(newpath)-1])
@@ -563,11 +567,12 @@ init -50 python:
     valuespath = {}
     valueszoom = 1.0
     mapemotecode = None
+    mapemotecode_args = None
     mapemotecode_postscript = None
     def DynamicSprites_VarUpdate():
         global dynamicspritespreview_var_selectedchar, dynamicspritespreview_var_selectedpose, dynamicspritespreview_var_selectedlayers
         global dynamicspritespreview_text_selectedchar, dynamicspritespreview_text_selectedpose, dynamicspritespreview_text_selectedlayers
-        global values, valuespath, valueszoom, mapemotecode, mapemotecode_postscript
+        global values, valuespath, valueszoom, mapemotecode, mapemotecode_args, mapemotecode_postscript
         if len(charlist) == 0:
             dynamicspritespreview_text_selectedchar = "No character"
         else:
@@ -629,8 +634,10 @@ init -50 python:
 
             dynamicspritespreview_text_selectedlayers = {}
             if len(basepath) < 2:
+                mapemotecode_args = "{char}".format(char=dynamicspritespreview_text_selectedchar)
                 mapemotecode = "MapEmote('{char} NEWEMOTE', '{char}".format(char=dynamicspritespreview_text_selectedchar)
             else:
+                mapemotecode_args = "{char} {pose}".format(char=dynamicspritespreview_text_selectedchar, pose=dynamicspritespreview_text_selectedpose)
                 mapemotecode = "MapEmote('{char} NEWEMOTE', '{char} {pose}".format(char=dynamicspritespreview_text_selectedchar, pose=dynamicspritespreview_text_selectedpose)
             for layer in layerorder:
                 if not layer in values:
@@ -639,15 +646,20 @@ init -50 python:
                     dynamicspritespreview_var_selectedlayers[layer] = 0
                 dynamicspritespreview_text_selectedlayers[layer] = values[layer][dynamicspritespreview_var_selectedlayers[layer]]
                 if layer == 'base':
+                    mapemotecode_args += " " + dynamicspritespreview_text_selectedlayers[layer]
                     mapemotecode += " " + dynamicspritespreview_text_selectedlayers[layer]
                 elif layer == 'eyes':
+                    mapemotecode_args += " " + dynamicspritespreview_text_selectedlayers[layer]
                     mapemotecode += " " + dynamicspritespreview_text_selectedlayers[layer]
                 elif layer == 'mouth':
+                    mapemotecode_args += " " + dynamicspritespreview_text_selectedlayers[layer]
                     mapemotecode += " " + dynamicspritespreview_text_selectedlayers[layer]
                 elif layer in infodict['optionals']:
                     if dynamicspritespreview_text_selectedlayers[layer] == "Yes":
+                        mapemotecode_args += " " + layer
                         mapemotecode += " " + layer
                 else:
+                    mapemotecode_args += " " + layer + "_" + dynamicspritespreview_text_selectedlayers[layer]
                     mapemotecode += " " + layer + "_" + dynamicspritespreview_text_selectedlayers[layer]
             mapemotecode += "')"
             DynamicSprites_CheckClipboard()()
@@ -702,7 +714,6 @@ screen dynamicspritespreview_dropdown(currentselected, selectionlist, callback, 
         xysize (1.0, 1.0)
         margin (0,0)
         padding (0,0)
-        #action Hide("dynamicspritespreview_dropdown")
         button:
             background Solid("222e")
             align (0.94, 0.3)
@@ -742,6 +753,37 @@ screen dynamicspritespreview_dropdown(currentselected, selectionlist, callback, 
             vbar value YScrollValue("dynamicspritespreview_viewport_dropdown"):
                 xalign 1.0
                 xoffset 35
+
+screen dynamicspritespreview_previewpopup(emotesdict, offset=(0,0)):
+    zorder 201
+    frame:
+        background None
+        xysize (1.0, 1.0)
+        margin (0,0)
+        padding (0,0)
+        button:
+            background Solid("222e")
+            align (0.64, 0.5)
+            offset offset
+            xysize (600, 800)
+            margin (0,0)
+            padding (15,15,50,15)
+            action Hide("dynamicspritespreview_previewpopup")
+            frame:
+                background None
+                margin (0,0,0,50)
+                padding (0,0)
+                align (0.5, 0.0)
+                viewport id "dynamicspritespreview_viewport_previewpopup":
+                    draggable True
+                    mousewheel True
+                    xinitial 0.5
+                    yinitial 0.5
+                    for layer in layerorder:
+                        if layer in emotesdict.keys():
+                            add emotesdict[layer].image.name[0]:
+                                align (0.5, 0.5)
+                                zoom 0.6 * valueszoom
 
 screen dynamicspritespreview:
     zorder 200
@@ -790,7 +832,17 @@ screen dynamicspritespreview:
                         text_align 0.5
                         size 18
                         color "000"
-
+                if mapemotecode_args in mapemotedefined.keys():
+                    frame:
+                        background None
+                        margin (0,0)
+                        padding (0,0)
+                        align (0.5, 0.97)
+                        text ("Mapped to: {b}" + mapemotedefined[mapemotecode_args] + "{/b}"):
+                            align (0.5, 0.5)
+                            text_align 0.5
+                            size 22
+                            color "000"
             button:
                 background Solid("fffe")
                 xysize (config.screen_width/4, 1.0)
@@ -837,6 +889,7 @@ screen dynamicspritespreview:
                                 align (0.5, 0.5)
                                 text_align 0.5
                     null height 20
+                    $ count = 0
                     for i in range(len(layerorder)):
                         $ l = layerorder[i]
                         if l in values:
@@ -861,16 +914,51 @@ screen dynamicspritespreview:
                                         selectionlist=values[l],
                                         callback=DynamicSprites_ChangeSelectedLayer,
                                         layer=l,
-                                        offset=(0,i*60))
+                                        offset=(0,count*70))
                                     action Hide("dynamicspritespreview_dropdown")
                                     text dynamicspritespreview_text_selectedlayers[l]:
                                         size 20
                                         color "fff"
                                         align (0.5, 0.5)
                                         text_align 0.5
+                            $ count += 1
             button:
                 background Solid("fffe")
                 xysize (config.screen_width/4, 1.0)
                 margin (5,50,10,10)
                 padding (5,5)
                 action Hide("dynamicspritespreview_dropdown")
+                vpgrid:
+                    cols 2
+                    spacing 0
+                    xalign 0.5
+                    draggable True
+                    mousewheel True
+                    scrollbars "vertical"
+                    side_xalign 0.5
+
+                    $ count = 0
+                    for k in sorted(mapemotedict.keys()):
+                        if k[0] == dynamicspritespreview_text_selectedchar:
+                            for e in sorted(mapemotedict[k]['emotesdict'].keys()):
+                                button:
+                                    background Solid("222")
+                                    hover_background Solid("225e")
+                                    xysize (220, 45)
+                                    margin (0,0)
+                                    padding (0,0)
+                                    if count % 2 == 1:
+                                        right_margin 10
+                                    hovered [ Hide("dynamicspritespreview_dropdown"),
+                                        Show("dynamicspritespreview_previewpopup",
+                                        emotesdict=mapemotedict[k]['emotesdict'][e],
+                                        offset=(0,0)) ]
+                                    unhovered Hide("dynamicspritespreview_previewpopup")
+                                    action [ Hide("dynamicspritespreview_previewpopup"),
+                                    ]
+                                    text ' '.join(k[1:]+(e,)):
+                                        size 18
+                                        color "fff"
+                                        align (0.5, 0.5)
+                                        text_align 0.5
+                                    $ count += 1
