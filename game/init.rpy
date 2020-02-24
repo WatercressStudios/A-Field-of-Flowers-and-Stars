@@ -105,10 +105,13 @@ init:
         MapEmote('le speaking a1', 'le neutral base arms_default mdo_default ed_default brow_default')
         MapEmote('le speaking a2', 'le neutral base arms_raised mdo_default ed_default brow_default')
         MapEmote('le speakingsurprised a1', 'le neutral base arms_default mdo_o ed_default brow_default')
+        MapEmote('le speakingthink', 'le think base tail_default mdo_default ed_bedroom brow_down')
+        MapEmote('le speakingtired', 'le neutral base arms_raised mdo_o ed_default brow_uparrow')
         MapEmote('le questioning a1', 'le neutral base arms_default mdo_o ed_default brow_line')
         MapEmote('le questioning a2', 'le neutral base arms_raised mdo_o ed_default brow_line')
         MapEmote('le questioning a3', 'le hip base arms_raised tail_default mdo_pout ed_wide brow_default')
         MapEmote('le questioning p2', 'le neutral base arms_raised mdo_o ed_default brow_default')
+        MapEmote('le shylook', 'le neutral base arms_raised md_default ed_away brow_uparrow')
         MapEmote('le smug a2', 'le hip base arms_default tail_default mdo_smuggrin ed_default brow_default')
         MapEmote('le smug a1', 'le hip base arms_pout tail_default mdo_smuggrin ed_default brow_default')
         MapEmote('le smug a3', 'le hip base arms_raised tail_default mdo_smuggrin ed_default brow_default')
@@ -127,6 +130,7 @@ init:
         MapEmote('le catching', 'le angry base arms_default md_default ed_default brow_default')
         MapEmote('le sassyquestioning', 'le hip base arms_default tail_default mdo_pout ed_default brow_up')
         MapEmote('le concerned', 'le sad base md_default ed_default brow_default')
+        MapEmote('le concernedspeaking', 'le sad base mdo_default ed_default brow_default')
         MapEmote('le explaining', 'le hip base arms_raised tail_default mdo_pout ed_default brow_default')
         MapEmote('le crazy', 'le hip base arms_pout tail_default mdo_default ed_wide brow_downarrow')
         MapEmote('le surprised', 'le hip base arms_raised tail_default2 mdo_pout ed_wide brow_up')
@@ -173,6 +177,9 @@ init:
         MapEmote('mc satisfied', 'mc confident base md_default ec_default brow_default')
         MapEmote('mc sighing', 'mc normal base md_line ed_lookup brow_sad')
         MapEmote('mc weary', 'mc normal base md_default ed_liddrop brow_sad')
+        MapEmote('mc wearyspeak', 'mc normal base mdo_default ed_liddrop brow_sad')
+        MapEmote('mc concernspeak', 'mc confident base mdo_stretchO ed_default brow_sad')
+        MapEmote('mc shyspeak', 'mc normal base mdo_default ed_lookaway brow_sad')
 
     ##background images, stored in images/backgrounds
     image white = "backgrounds/white.png"
