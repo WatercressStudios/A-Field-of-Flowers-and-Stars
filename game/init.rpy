@@ -171,6 +171,7 @@ init:
         MapEmote('mc onfire', 'mc confident base mdo_stretch ec_blocky brow_angry')
         MapEmote('mc satisfied', 'mc confident base md_default ec_default brow_default')
         MapEmote('mc sighing', 'mc normal base md_line ed_lookup brow_sad')
+        MapEmote('mc weary', 'mc normal base md_default ed_liddrop brow_sad')
 
     ##background images, stored in images/backgrounds
     image white = "backgrounds/white.png"
