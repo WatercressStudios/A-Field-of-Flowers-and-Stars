@@ -18,6 +18,16 @@ init.rpy
 init.rpyc
 options.rpy
 options.rpyc
+scene1.rpyc.bak
+scene10.rpyc.bak
+scene11.rpyc.bak
+scene12.rpyc.bak
+scene2.rpyc.bak
+scene3.rpyc.bak
+scene4.rpyc.bak
+scene5.rpyc.bak
+scene6.rpyc.bak
+scene7.rpyc.bak
 screens.rpy
 screens.rpyc
 starfield.rpy
@@ -189,6 +199,7 @@ images\backgrounds\house.png
 images\backgrounds\spaceship_crashed.png
 images\backgrounds\stars.png
 images\backgrounds\street.png
+images\backgrounds\street_open_garage.png
 images\backgrounds\white.png
 images\logos\afofaslogo.png
 images\logos\sarchalenlogo.png
@@ -357,8 +368,12 @@ images\sprites\mc\normal\m default.png
 images\sprites\mc\normal\m line.png
 images\sprites\mc\normal\mc default.png
 images\sprites\mc\normal\mc line.png
+saves\1-1-LT1.save
+saves\1-2-LT1.save
+saves\1-3-LT1.save
 saves\_reload-2-LT1.save
 saves\auto-1-LT1.save
+saves\auto-10-LT1.save
 saves\auto-2-LT1.save
 saves\auto-3-LT1.save
 saves\auto-4-LT1.save
@@ -366,16 +381,33 @@ saves\auto-5-LT1.save
 saves\auto-6-LT1.save
 saves\auto-7-LT1.save
 saves\auto-8-LT1.save
+saves\auto-9-LT1.save
 saves\navigation.json
 saves\persistent
 scripts\scene1.rpy
 scripts\scene1.rpyc
+scripts\scene10.rpy
+scripts\scene10.rpyc
+scripts\scene11.rpy
+scripts\scene11.rpyc
+scripts\scene12-epilogue.rpy
+scripts\scene12-epilogue.rpyc
 scripts\scene2.rpy
 scripts\scene2.rpyc
 scripts\scene3.rpy
 scripts\scene3.rpyc
+scripts\scene4.rpy
+scripts\scene4.rpyc
+scripts\scene5.rpy
+scripts\scene5.rpyc
 scripts\scene6.rpy
 scripts\scene6.rpyc
+scripts\scene7.rpy
+scripts\scene7.rpyc
+scripts\scene8.rpy
+scripts\scene8.rpyc
+scripts\scene9.rpy
+scripts\scene9.rpyc
 tl\None\common.rpym
 tl\None\common.rpymc
 voice\1-scene1-1.ogg
