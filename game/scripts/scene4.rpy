@@ -2,11 +2,15 @@ label scene_4:
 
     #ART - GARAGE BG
 
-    scene street onlayer master:
-        subpixel True xpos 0.00 ypos -1.24 zoom 1.78
+scene street onlayer master with wiperight:
+    subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
+    parallel:
+        xpos 1.00
+        ease 10 xpos 0.01
 na "After heading back towards Leona's house, we turn the corner and reach the base my poor ship had been taken to."
 na "I hope Juneau is okay. She's annoying, but she's all I have now."
 na "She's what I imagine a little sister would be like."
+show le speaking a2 at le_side with dissolve
 le "So, how's it look?"
 na "Leona snaps me out of my thoughts as I rest my eyes on what's left of my ship."
 mc "Oh man, what a stinking mess!"

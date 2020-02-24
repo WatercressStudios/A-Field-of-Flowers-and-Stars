@@ -355,8 +355,8 @@ label scene_3:
     scene street onlayer master with wipeleft:
         subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
         parallel:
-            xpos 0.25
-            ease 20 xpos 0.85
+            xpos 0.56
+            ease 30 xpos 1.00
     stop env fadeout 2.0
     play sound3 "amb/City Day.ogg" fadein 2.0
 
