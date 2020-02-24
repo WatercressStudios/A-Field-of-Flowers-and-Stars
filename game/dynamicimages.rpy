@@ -958,3 +958,19 @@ screen dynamicspritespreview:
                                         align (0.5, 0.5)
                                         text_align 0.5
                                     $ count += 1
+
+init 1000 python:
+    def show_sprite_viewer():
+        if not renpy.config.developer:
+            return
+        renpy.show_screen('dynamicspritespreview')
+        renpy.restart_interaction()
+
+    # Added keymap
+    config.underlay.append(renpy.Keymap(
+        show_sprite_viewer = show_sprite_viewer,
+        ))
+init 1100 python:
+    config.locked = False
+    config.keymap["show_sprite_viewer"] = ['S']
+    config.locked = True
