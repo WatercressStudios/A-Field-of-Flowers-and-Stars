@@ -82,9 +82,7 @@ le "Tell you what, you tell me what kind of tools you need and I'll get them for
 le "And while you work, I'll give you a rundown!"
 mc "You've got a deal."
 
-
-    #VFX - FADE TO BLACK
-
+scene black with dissolve
 
 na "..."
 na "After a couple of hours listening to Leona's stories while working on the ship, I decide to take a break. Juneau won't be online for a little bit anyways, so I have some time to kill."
@@ -93,7 +91,7 @@ na "And I'm hungry."
 
     #ART - LEONA'S HOUSE
 
-
+scene house with fade
 na "After a short trip to a nearby convenience store in search of eggs, we return to Leona's abode."
 na "It's already mid-afternoon."
 na "If I go back to the base to work on my ship now, I'll be there all night."
@@ -154,8 +152,6 @@ mc "Night night~"
 na "Leona takes her leave and I set about making notes of what I've seen and heard so far."
 na "When we were talking in the garage earlier she told me an interesting story about their homeworld; Dawne."
 na "I figure that's as good a place as any to start before I decide to nod off."
-
-
     #VFX - JOURNAL ENTRY ADDED - 1
 
- #jump scene_5
+    #jump scene_5
