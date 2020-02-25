@@ -152,7 +152,6 @@ init:
         MapEmote('ju sarcastic a1 e1 b4', 'ju blue base arms_default mdo_line ed_default brow_uparrow')
         MapEmote('ju annoyed a1', 'ju blue base arms_default mdo_O ed_default brow_downarrow')
         MapEmote('ju annoyed a2', 'ju blue base arms_raised md_O ed_slightlyclosed brow_default')
-
         MapEmote('ju red concerned a1', 'ju red hair_default base arms_worried mdo_O ed_default brow_worried')
         MapEmote('ju red sorry a3', 'ju red hair_default base arms_worried md_default ed_default brow_worried')
         MapEmote('ju red worried a1', 'ju red hair_default base arms_default mdo_small ed_glitch brow_raised')
@@ -192,6 +191,7 @@ init:
     image cockpit_ground = "backgrounds/cockpit_ground.png"
     image cave = "backgrounds/cave.png"
     image street = "backgrounds/street.png"
+    image street_open = "backgrounds/street_open_garage.png"
     image spaceship_crashed = "backgrounds/spaceship_crashed.png"
     image house = "backgrounds/house.png"
     image cafe = "backgrounds/cafe.png"
