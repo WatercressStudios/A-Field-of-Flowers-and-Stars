@@ -1,6 +1,9 @@
+#somewhat special transtion
+define fadehold = Fade(1.0,5,20)
+
 label scene6:
 
-    scene black with dissolve #return to this later regarding coding in blackness or whater
+    scene black with dissolve 
     play sound "sfx/footsteps 2.ogg"
     show le happy a1 with dissolve:
         xalign 0.5
@@ -19,6 +22,7 @@ label scene6:
     mc blech "Please, PLEASE tell me there’s no blood-sucking bugs in here, eyuckh..."
     hide le questioning a3 with dissolve
     na "Leona and I make our way through the deep, deep cave."
+    scene cave with fadehold #skip
     play sound "sfx/footsteps.ogg"
     na "The floor is rocky and uneven, slippery with some sort of slimy mess. I can barely keep my footing, not to mention the awful smell."
     mc questioning2 "How does a species from a bright desert planet even get off having such good night vision anyway?"
