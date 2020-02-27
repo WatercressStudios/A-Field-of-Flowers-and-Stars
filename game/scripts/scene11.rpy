@@ -2,53 +2,77 @@
 
     #ART Aster BG
 
+    scene street onlayer master with dissolve:
+        subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
+        parallel:
+            xpos -0.22
+            ease 1.0 xpos 0.09
+        parallel:
+            zoom 1.48
+            ease 1.0 zoom 1.0
+
+    show le tired at stage_right with dissolve
+
     na "I head outside after my talk with Juneau to see Leona idling by herself, leaning on the wall of a building across the street."
 
-    mc "Leona! Any word on how things are going?"
+    mc concernspeak "Leona! Any word on how things are going?"
 
-    le "...We wait. That's about it, really."
+    le concernedspeaking "...We wait. That's about it, really."
 
-    le "It'll take at least twenty minutes to set everything up, assuming nothing bites us in the ass over there."
+    le speakingtired "It'll take at least twenty minutes to set everything up, assuming nothing bites us in the ass over there."
 
     le "I'm a little nervous, but it's far from the first time. We've been through rough spots before."
 
-    le "...Even after everything, a lot of them still look up to me. It feels strange."
+    le concerned "...Even after everything, a lot of them still look up to me. It feels strange."
 
-    mc "Can't say I don't understand it. Every now and then you run into someone who you were {i}sure{/i} hated your guts, and all of a sudden they're talking it up like you're the best of pals."
+    mc weary "Can't say I don't understand it. Every now and then you run into someone who you were {i}sure{/i} hated your guts, and all of a sudden they're talking it up like you're the best of pals."
 
-    mc "And it's hard to sit around doing nothing when there's something big going on. I can barely sit still for five minutes some of those days."
+    mc wearyspeak "And it's hard to sit around doing nothing when there's something big going on. I can barely sit still for five minutes some of those days."
 
-    le "Well, do you wanna do something for the time being, then?"
+    le shylook "Well, do you wanna do something for the time being, then?"
 
     le "Or…"
 
     na "Leona's face looks shyly towards the ground, before she looks back up as her eyes meet mine."
 
-    le "We should probably be talking about things while we still can. Since we have the time, I mean."
+    le concernedspeaking "We should probably be talking about things while we still can. Since we have the time, I mean."
 
     na "...Oh god, here we go."
 
-    mc "Y-You don't need to act so nervous about it, you know. Just makes me more anxious seeing you treat it like that."
+    mc shyspeak "Y-You don't need to act so nervous about it, you know. Just makes me more anxious seeing you treat it like that."
 
     na "Leona fidgets around with her fingers a little bit…"
 
-    le "W-well, I know this nice cafe that's a few blocks from here! I always liked going there whenever I had a bit of a break."
+    le speakingthink "W-well, I know this nice cafe that's a few blocks from here! I always liked going there whenever I had a bit of a break."
 
-    mc "Can we head back to your place, actually?"
+    mc weary "Can we head back to your place, actually?"
 
-    mc "All this chaos out here is giving me a headache. I need someplace quiet."
+    mc yawn2 "All this chaos out here is giving me a headache. I need someplace quiet."
 
-    le "W-Well, it's a little bit messy…"
+    le shylook "W-Well, it's a little bit messy…"
 
-    mc "Don't care."
+    mc stern "Don't care."
 
-    le "You sure?"
+    le speakingtired "You sure?"
 
-    mc "Absolutely. I've been in my fair share of messes before. I'd prefer that mess over this one."
+    mc annoyed "Absolutely. I've been in my fair share of messes before. I'd prefer that mess over this one."
 
-    le "...Well, if you say so."
+    le concernedspeaking "...Well, if you say so."
 
     na "Leona eyes cast toward the ground as she turns to lead us back to her home."
+
+    show le concernedspeaking onlayer master:
+        subpixel True xpos 0.75 xanchor 0.5 yanchor 1 zoom 1.21 rotate None
+        parallel:
+            xpos 0.75
+            ease 0.5 xpos 0.7
+            ease 1.0 xpos 2.0
+        parallel:
+            ypos 0
+            ease 0.5 ypos 0
+    pause(0.8)
+    scene black with wiperight
+    pause(0.8)
     na "She walks ahead of me, slowly and methodically. Taking her time."
     na "When we reach the front door, she slips inside without a word."
     na "Once I step inside, it'll be too late to back out."
@@ -58,19 +82,26 @@
     na "Here goes nothing."
 
     #ART Leona's home BG
-
-    na "By the time I walk through the door, Leona is already sitting herself down on the couch. She crunches up her body, huddling her knees to her chest and wrapping them in her arms."
+    scene white with Dissolve(1.5)
+    pause(0.5)
+    scene house with Dissolve(4.5)
+    pause(0.5)
+    na "By the time I walk through the door, Leona is already sitting herself down on the couch."
+    show le crying with Dissolve(1.5):
+        subpixel True xpos 0.55 ypos 0 xanchor 0.5 yanchor 0.0 zoom 2.5 rotate None
+    na "She crunches up her body, huddling her knees to her chest and wrapping them in her arms."
+    $all_moves(camera_check_points={u'z': [(0, 0, None), (350, 30.0, 'ease')]})
     na "Careful not to disturb the quiet peace of this place, I slowly close the door behind me and walk over to her.."
     na "Several seconds pass, both of us unsure what to say to the other."
     na "But as always, she's the first to talk."
 
-    le "I'm sorry, Raine."
+    le cryingtalk "I'm sorry, Raine."
 
     na "Leona looks down to her feet, turning her eyes away from me."
 
-    le "I was selfish. I tried to make you stay. That was wrong of me to do."
+    le tired  "I was selfish. I tried to make you stay. That was wrong of me to do."
 
-    le "I let myself get scared and believe things I shouldn't have. I let myself think it was right because it was easier than saying goodbye."
+    le crying "I let myself get scared and believe things I shouldn't have. I let myself think it was right because it was easier than saying goodbye."
 
     le "I thought if you never found a way to power your ship, you wouldn't bother trying to repair it anymore. That you'd give up and stay with me."
 
