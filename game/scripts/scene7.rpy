@@ -1,5 +1,5 @@
 
-label scene_7: 
+label scene_7:
     #ART - FOREST BG (NO SHIP)
     #VFX - BG Should be super zoomed in too. See end of this scene for clarity.
     ###
@@ -381,7 +381,7 @@ label scene_7:
     le crying2 "{b}Raaaine{/b}!"
     na "Back to a prison."
     hide le crying2 with dissolve
-    jump scene8
+    jump scene_8
 
 
 

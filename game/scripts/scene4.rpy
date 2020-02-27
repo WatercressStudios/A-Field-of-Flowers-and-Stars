@@ -245,4 +245,4 @@ label scene_4:
     na "I figure that's as good a place as any to start before I decide to nod off."
     #VFX - JOURNAL ENTRY ADDED - 1
 
-    #jump scene_5
+    jump scene_5

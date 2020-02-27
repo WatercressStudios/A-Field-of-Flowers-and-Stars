@@ -310,4 +310,4 @@ label update:
 #     call screen main_menu with Dissolve(2.0)
 
 label start:
-    jump scene1
+    jump scene_1
