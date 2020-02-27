@@ -10,7 +10,6 @@ label scene7:
     mc sighing "Lovely. I was sort of hoping I'd never see this neck of the woods again."
     mc "Why are we here again?"
     #tbh im kind of confused on whether to add leona here. i will probably figure that out loud
-    le explaining "Remember the alien tech we found while bringing in your ship?"
     show le explaining with dissolve:
         xalign 0.5
     le "Remember the alien tech we found while bringing in your ship?"
@@ -21,13 +20,11 @@ label scene7:
     le concerned "Y-Yeah."
     mc "You might be onto something."
     le "What's more, why haven't we found anything out in the open?"
-    le questioning2 "Was this place really colonized at some point if there are no other structures?"
     mc "Assume it wasn't a populated planet then."
     mc questioning "What else would someone be doing here, living in a cave and hiding stuff underground so far away?"
     le explaining "I'm pretty sure whoever was here before us was a criminal, perhaps a smuggler."
     mc "That would make some sense, but it doesn't explain why there's stuff all the way out here."
     le "That's just it, isn't it?"
-    le questioning2 "We didn't find much of anything in the cave, except some old books."
     le "And it's not like we can read them anyway."
     mc satisfied "Actually, I might be able to help with that!"
     le happy a1 "You can? How?"
@@ -41,7 +38,6 @@ label scene7:
     le happy speaking a3 "Oooh, your translator! I didn't think about it, but that must be why you can use the mediapad I gave you."
     mc neutral "Yeah, works just as well for the written word. Gimme one of the books and I'll take a look-see."
     na "Leona quickly shuffles through the hoverbike's storage compartment, coming out with one of the dusty books we'd brought back with us."
-    le concerned "Careful, it might fall apart if you're too rough with them."
     mc satisfied "If it can survive in a cave for a thousand years and then make it through your deathtrap of a bike in one piece, I doubt my delicate hands will be enough to leave a scratch."
     #SFX - PAGE TURNING
     mc speaking "Looks like nothing but random squiggles."
@@ -94,7 +90,6 @@ label scene7:
     le speakingsurprised a1 "What? No! A bomb is gonna go off!"
     mc yawn "Relax, it can't be that strong."
     mc "Why set up traps to kill people before they can even get to the door, if opening it is just going to kill everyone anyway?"
-    le sad "...Uh, R-Raine?"
     mc neutral "Yeah?"
     le "I have a bit of confession and you're not going to like it."
     mc questioning "Go on...?"
@@ -104,7 +99,6 @@ label scene7:
     le "It uh... It didn't actually, sort of, have... any?"
     na "..."
     mc unimpressed "What?"
-    le "I miiight have l-lied..."
     mc upset "Why would you- Wait, what was glowing then?"
     le speakingsurprised a1 "There was a room, but it didn't have any corpses inside."
     mc annoyed "Leona, what did you see?"
@@ -124,7 +118,6 @@ label scene7:
     na "And in the distance, visible through the treetops…"
     na "Was a large chunk of a mountain torn right from the earth."
     mc shocked armraised "Oh my god."
-    show le surprised with dissolve(0.2)
     na "Leona stands there, stunned in place with a terrified look."
     mc unimpressed "Leona, the radio! Quick!"
     na "A gust of wind barrels through the forest, thrusting into my face as it batters the trees in its wake."
@@ -142,7 +135,6 @@ label scene7:
     le "All other units report to base and await our return. Captain Leona signing off."
     na "Leona stands there a moment, staring into the radio."
     mc neutral "Can we talk about this?"
-    le sad_lee "Um…"
     show le crying2 with dissolve:
         xalign 0.5
     na "She opens her mouth to speak."
@@ -150,7 +142,6 @@ label scene7:
     na "..."
     mc "If you're not going to talk, then listen."
     mc "Everyone makes mistakes. There isn't a person in the universe who goes through life flawlessly."
-    le sad "...I'm sorry."
     mc upset "But you lied to me. I trusted you, and you lied to me."
     le "...I'm sorry…"
     mc unimpressed "I want to know why."
@@ -163,9 +154,6 @@ label scene7:
     le "I thought about you being sucked into a wormhole and crashing into a planet."
     le "Not this one though. Not Fireside."
     le "Some random, lifeless rock somewhere a million miles away from any another person."
-    le crying "I didn't..."
-    na "She takes a step back into the bike, setting herself down on the seat."
-    le "I don't want you to get hurt again."
     mc "Is that so?"
     mc annoyed "And the easiest way to do that is to keep me from leaving."
     le "I'm sorry! I was scared!"
@@ -176,7 +164,6 @@ label scene7:
     mc "If I wanted to spend my life huddled up in the corner of my room on some backwater planet I wouldn't be in fucking space to begin with!"
     mc "And I don't need your help if I can't trust you to understand that."
     mc unimpressed "Get the rocks."
-    le speakingsurprised "R-Raine, what are you-"
     le "The ones I told you to hold on to. Right now."
     na "Looking more than a little sheepish, Leona fishes the rocks out of her bag."
     na "They're decently sized, a handful even. Much bigger than the pebbles around here."
@@ -184,7 +171,6 @@ label scene7:
     mc "I want you to hit it."
     le "Hit? Like, go up and-?"
     mc "No, I mean throw it. As hard as you can. Hit that tree."
-    le sad_lee "I-I don't think I can-"
     mc annoyed "I don't care. Throw the rock."
     na "Still looking nervous, she reels back and lets it fly."
     na "The rock sails through the air, but barely makes it halfway to the tree."
@@ -192,7 +178,6 @@ label scene7:
     na "I don't give her an answer. I simply take aim and fire."
     #SFX - Rock hitting wood
     na "It sails straight like a bullet, and the bark explodes at the center of impact.."
-    le speakingsurprised "Oh my god-!"
     le "What was that?!"
     mc satisfied "I could do that the whole time. I didn't figure it out until earlier today."
     mc "The gravity here is weaker than what my species is used to, so my body can handle more punishment than yours."
@@ -202,23 +187,19 @@ label scene7:
     mc "Your present. As promised; A little \"thanks\" for all the help."
     mc neutral "It's a music player. Brought it with me from Lumin. You just hit the button in the middle when you want to start it."
     mc "I had Juneau translate the interface and attach lyrics to all the songs."
-    le sad "Raine..."
     mc unimpressed "But, as you know, I won't be needing any more help from now on."
     mc "I'll see you around, Leona."
     na "I turn away from her and start walking."
     #VFX - BG and Leona sprite zooms out a step with every following line until end of scene.
     #
     ###
-    le "Raine?"
     na "Just walking."
-    le sad "R-Raine...?"
     na "Back to my ship."
     le crying "{b}Raine{/b}?!"
     na "Back to Aster."
     le crying2 "{b}Raaaine{/b}!"
     na "Back to a prison."
     hide le crying2 with dissolve
-    jump scene8
 
 
 
