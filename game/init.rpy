@@ -138,7 +138,8 @@ init:
         MapEmote('le kind a2', 'le neutral base arms_raised mdo_default ed_default brow_uparrow')
         MapEmote('le relaxed', 'le neutral base arms_default md_default ec_default brow_default')
         MapEmote('le tired', 'le sad base mdo_default ec_default brow_default')
-
+        MapEmote('le look', 'le neutral base arms_default md_default ed_away brow_uparrow')
+        MapEmote('le hmm', 'le hip base arms_pout tail_default md_pout ed_wide brow_up')
         #MapEmote('le pout p1 1', 'le neutral base arms_default md_default ed_away brow_line')
         #MapEmote('le pout p1 2', 'le neutral base arms_raised md_default ed_away brow_line')
 
@@ -182,6 +183,7 @@ init:
         MapEmote('mc wearyspeak', 'mc normal base mdo_default ed_liddrop brow_sad')
         MapEmote('mc concernspeak', 'mc confident base mdo_stretchO ed_default brow_sad')
         MapEmote('mc shyspeak', 'mc normal base mdo_default ed_lookaway brow_sad')
+        MapEmote('mc grumpy', 'mc normal base md_line ed_squint brow_angry')
 
     ##background images, stored in images/backgrounds
     image white = "backgrounds/white.png"
