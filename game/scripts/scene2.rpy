@@ -161,73 +161,73 @@ label scene_2:
     voice "voice/2-scene_2-27.ogg" #Leona (Dot)
     le a1 "Come on, you must be a new arrival to Fireside. Let me take you back to the city!"
 
-    voice "voice/2-scene_2-29.ogg" #Raine (Nat)
+    #voice "voice/2-scene_2-28.ogg" #Raine (Nat)
     mc "Fireside?"
 
-    voice "voice/2-scene_2-30.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-29.ogg" #Leona (Dot)
     le explaining "You know, the name of this planet?"
 
-    voice "voice/2-scene_2-33.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-30.ogg" #Raine (Nat)
     mc surprised "Hang on. What planet do you think I'm from again?"
 
-    voice "voice/2-scene_2-34.ogg" #Leona (Dot)
+    #voice "voice/2-scene_2-31.ogg" #Leona (Dot)
     le concerned "Oh man, you must have hit your head. I should definitely take you to the city and get you patched up."
 
-    voice "voice/2-scene_2-35.ogg" #Raine (Nat)
+    #voice "voice/2-scene_2-32.ogg" #Raine (Nat)
     mc @ speaking  "Hold on..."
 
-    voice "voice/2-scene_2-36.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-33.ogg" #Leona (Dot)
     le "We're from Dawne, a few light years away from here. This is our first colony!"
 
-    voice "voice/2-scene_2-37.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-34.ogg" #Raine (Nat)
     mc annoyed "I'm trying to tell you, I'm not one of... you guys."
 
-    voice "voice/2-scene_2-38.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-35.ogg" #Raine (Nat)
     mc upset "I'm from another planet. And my name isn't 'Human', it's 'Raine'!"
 
-    voice "voice/2-scene_2-39.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-36.ogg" #Leona (Dot)
     le "..."
     na "Finally, it hits her."
 
-    voice "voice/2-scene_2-40.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-37.ogg" #Leona (Dot)
     le "You're... an alien?"
 
-    voice "voice/2-scene_2-41.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-38.ogg" #Raine (Nat)
     mc amused "No, I'm --"
 
     na "Wait, yeah. She's right. I'm technically the alien here."
 
-    voice "voice/2-scene_2-43.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-39.ogg" #Raine (Nat)
     mc "Yeah. I'm from a planet called Lumin. Ever heard of it?"
 
-    voice "voice/2-scene_2-44.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-40.ogg" #Leona (Dot)
     le surprised "That's not a planet I've heard of... How far away are you from home?"
 
-    voice "voice/2-scene_2-45.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-41.ogg" #Raine (Nat)
     mc speaking "I don't really know. My ship had all the info, but it crashed."
 
-    voice "voice/2-scene_2-46.ogg" #Leona (Dot)
+    #voice "voice/2-scene_2-42.ogg" #Leona (Dot)
     le happy a2 "Ah, so that's what that thing was!"
 
-    voice "voice/2-scene_2-47.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-43.ogg" #Raine (Nat)
     mc surprised "You've seen it?"
 
-    voice "voice/2-scene_2-48.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-44.ogg" #Leona (Dot)
     le speaking a2 "Yeah, my team saw something enter the atmosphere a while ago, so they went to check it out."
 
-    voice "voice/2-scene_2-49.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-45.ogg" #Leona (Dot)
     le explaining "Lucky for me, I saw something else falling from the ship."
 
-    voice "voice/2-scene_2-50.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-46.ogg" #Leona (Dot)
     le speaking a1 "And look what I found! An honest-to-goodness alien!"
 
-    voice "voice/2-scene_2-51.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-47.ogg" #Leona (Dot)
     le questioning a1 "Though, I've never seen an alien look so much like me before..."
 
-    voice "voice/2-scene_2-52.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-48.ogg" #Raine (Nat)
     mc questioning "Likewise, actually."
 
-    voice "voice/2-scene_2-53.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-49.ogg" #Leona (Dot)
     le "Well, let's get you to my place. We should really make sure you're okay."
 
     na "Thankfully, Leona has a ride back into town, a primitive hoverbike with extra space for me and the few meager belongings I had on my person."
@@ -239,14 +239,14 @@ label scene_2:
     scene street onlayer master with wiperight:
         subpixel True xpos 0.85 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
 
-    voice "voice/2-scene_2-54.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-50.ogg" #Leona (Dot)
     le "We're here!"
 
     na "After a relatively short trip, we arrive."
 
     na "Leona disembarks, helping me down from the bike."
 
-    voice "voice/2-scene_2-55.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-51.ogg" #Leona (Dot)
     le happy a2 "Welcome to the city of Aster!"
     scene street onlayer master with None:
             subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
@@ -257,28 +257,28 @@ label scene_2:
     play env "amb/City Day.ogg" fadein 1.0
     na "The city is a massive sprawl, all centered on a large tower about a mile away."
 
-    voice "voice/2-scene_2-56.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-52.ogg" #Raine (Nat)
     mc "What's that tower?"
 
-    voice "voice/2-scene_2-57.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-53.ogg" #Leona (Dot)
     le speaking a1 "That's the colony ship we arrived on several decades ago! Nowadays it's been refitted as a government office and communications relay."
 
-    voice "voice/2-scene_2-58.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-54.ogg" #Raine (Nat)
     mc "Decades? So this is a new colony?"
 
-    voice "voice/2-scene_2-59.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-55.ogg" #Leona (Dot)
     le curious "More or less. I was born here, so I hear a lot of stories about our homeworld."
 
-    voice "voice/2-scene_2-60.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-56.ogg" #Leona (Dot)
     le happy a1 "But this place is growing a lot! We want to expand to make another small city out west for some researchers and stuff."
 
-    voice "voice/2-scene_2-61.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-57.ogg" #Leona (Dot)
     le "That's where I come in! I help survey and explore new areas that we might be able to live in!"
 
-    voice "voice/2-scene_2-62.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-58.ogg" #Raine (Nat)
     mc "By yourself?"
 
-    voice "voice/2-scene_2-63.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-59.ogg" #Leona (Dot)
     le happy2 a1  "Nah, I've got a whole crew who helps out. Maybe you'll meet them!"
 
     show le happy2 a1:
@@ -293,49 +293,49 @@ label scene_2:
 
     show le happy a1 at stage_left with dissolve
 
-    voice "voice/2-scene_2-64.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-60.ogg" #Leona (Dot)
     le "All right, we're here!"
 
-    voice "voice/2-scene_2-65.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-61.ogg" #Leona (Dot)
     le happy2 a1 "Hey, stay here, Raine. I'll get you something that'll make you feel better instantly!"
     na "She returns with gauze and a strange paste."
 
-    voice "voice/2-scene_2-66.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-62.ogg" #Leona (Dot)
     le "Okay, hold still…"
     na "She takes the paste and applies it to my scraped knee."
 
-    voice "voice/2-scene_2-67.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-63.ogg" #Raine (Nat)
     mc "Ow!"
 
-    voice "voice/2-scene_2-68.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-64.ogg" #Leona (Dot)
     le kind a2 "Easy there, just give it a bit."
     na "It stings a lot, but it's quickly replaced by a soothing sensation."
     na "She carefully places the gauze on top and massages it, letting the paste underneath stick to it."
     na "She's clearly done this before."
 
-    voice "voice/2-scene_2-69.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-65.ogg" #Leona (Dot)
     le "Feeling better? You okay?"
     na "She gives me a tender look, like a mother looking after her kid."
     na "All for someone she just met."
     na "It's… really sweet."
 
-    voice "voice/2-scene_2-70.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-66.ogg" #Raine (Nat)
     mc "Yeah, the pain's pretty much gone now."
 
-    voice "voice/2-scene_2-71.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-67.ogg" #Leona (Dot)
     le speakingsurprised a1 "Great! So, I was thinking... you'll need a place to stay, right?"
 
-    voice "voice/2-scene_2-72.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-68.ogg" #Raine (Nat)
     mc "You're not wrong. I don't know where my ship is, so I can't exactly leave just yet."
 
-    voice "voice/2-scene_2-73.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-69.ogg" #Leona (Dot)
     le speaking a2 "Well, why don't you rest at my place, then? We can try to find your ship tomorrow."
     na "After the various traumas of today, I think I deserve a break."
 
-    voice "voice/2-scene_2-74.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-70.ogg" #Raine (Nat)
     mc "Sure. I could use the rest."
 
-    voice "voice/2-scene_2-75.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-71.ogg" #Leona (Dot)
     le smug a1 "Right, then! Hop on and I'll take you home!"
     hide le
     scene black with fade
@@ -352,12 +352,12 @@ label scene_2:
 
     show le happy2 a1 at le_side with dissolve
 
-    voice "voice/2-scene_2-76.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-72.ogg" #Leona (Dot)
     le "Ta-dahhh! Welcome to my little plot of land."
     na "While it looks like one of those old prefabricated shelters, the inside is surprisingly cozy."
     na "There's a shelf of knick-knacks, a messy pile of papers on a desk, and a small kitchenette in the corner."
 
-    voice "voice/2-scene_2-77.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-73.ogg" #Leona (Dot)
     le explaining "Oh, you'll probably --"
     na "I immediately target the bed, or what I assume to be the bed -- a pile of cushions and blankets seems to be where Leona sleeps."
 
@@ -366,10 +366,10 @@ label scene_2:
     show le surprised with vpunch
     na "Without another word, I flop down onto the 'bed' and turn to Leona."
 
-    voice "voice/2-scene_2-78.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-74.ogg" #Raine (Nat)
     mc "I'm going to sleep for a bit. Sorry."
 
-    voice "voice/2-scene_2-79.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-75.ogg" #Leona (Dot)
     le relaxed "No problem! Sleep well!"
     stop sound3 fadeout 2.0
     na "It doesn't take much effort before I pass out completely."
@@ -381,7 +381,7 @@ label scene_2:
 
     na "But before I do, I hear something."
 
-    voice "voice/2-scene_2-80.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-76.ogg" #Leona (Dot)
     le "Logdate 2301: Today was interesting. I found an alien! She -- or at least, I think it's a she -- crash-landed..."
     na "How funny. Guess she isn't that much different from the girls on my home planet if she keeps a diary."
     scene black with fade

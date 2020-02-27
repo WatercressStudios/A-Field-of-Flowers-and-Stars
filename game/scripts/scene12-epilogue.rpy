@@ -2,42 +2,61 @@
 
     #ART Sky BG
 
+    #voice "voice/12-default-1.ogg" #Leona (Dot)
     le "Hurry up! Daylight's burnin'!"
 
+    #voice "voice/12-default-2.ogg" #Raine (Nat)
     mc "Uugh, can't you just let me sleep for once?"
 
+    #voice "voice/12-default-3.ogg" #Raine (Nat)
     mc "{i}Especially{/i} after last night."
 
+    #voice "voice/12-default-4.ogg" #Leona (Dot)
     le "Oh, don't be like that."
 
+    #voice "voice/12-default-5.ogg" #Leona (Dot)
     le "Besides, weren't you the one that begged me to keep you up?"
 
+    #voice "voice/12-default-6.ogg" #Raine (Nat)
     mc "You know that's not what I meant!"
 
+    #voice "voice/12-default-7.ogg" #Leona (Dot)
     le "Don't care. You reap what you sow."
 
+    #voice "voice/12-default-8.ogg" #Leona (Dot)
     le "Now, up! Up!"
 
+    #voice "voice/12-default-9.ogg" #Leona (Dot)
     le "We've got a lot of ground to cover today!"
 
+    #voice "voice/12-default-10.ogg" #Leona (Dot)
     le "Just think! We're this close to the end!"
 
+    #voice "voice/12-default-11.ogg" #Raine (Nat)
     mc "Yeah, right! What about the trip back? We've been out here for months!"
 
+    #voice "voice/12-default-12.ogg" #Leona (Dot)
     le "Blame Juneau. She's the one that keeps sending us new maps."
 
+    #voice "voice/12-default-13.ogg" #Raine (Nat)
     mc "So much for a slow roll. She's really been making progress back in Aster."
 
+    #voice "voice/12-default-14.ogg" #Raine (Nat)
     mc "I mean, actually launching satellites this quickly?"
 
+    #voice "voice/12-default-15.ogg" #Raine (Nat)
     mc "I'm starting to think we should have stayed in Aster. We could have a new ship by now if I were there."
 
+    #voice "voice/12-default-16.ogg" #Leona (Dot)
     le "That's true, but then I wouldn't have you all to myself, now would I?"
 
+    #voice "voice/12-default-17.ogg" #Raine (Nat)
     mc "Just be careful. With Juneau's eye in the sky, she could be watching our every move..."
 
+    #voice "voice/12-default-18.ogg" #Leona (Dot)
     le "Didn't stop you last night."
 
+    #voice "voice/12-default-19.ogg" #Raine (Nat)
     mc "S-Shut up!"
 
     na "Even with Leona's constant flirting…"
@@ -53,18 +72,25 @@
 
     #ART Sky BG 2
 
+    #voice "voice/12-default-20.ogg" #Leona (Dot)
     le "Raine, you see that? In the sky?"
 
+    #voice "voice/12-default-21.ogg" #Raine (Nat)
     mc "Huh. Looks like a shooting star."
 
+    #voice "voice/12-default-22.ogg" #Leona (Dot)
     le "It seems... familiar."
 
+    #voice "voice/12-default-23.ogg" #Raine (Nat)
     mc "It's not burning up."
 
+    #voice "voice/12-default-24.ogg" #Raine (Nat)
     mc "I think it's crashing."
 
+    #voice "voice/12-default-25.ogg" #Leona (Dot)
     le "Let's go check it out!"
 
+    #voice "voice/12-default-26.ogg" #Raine (Nat)
     mc "Right behind ya!"
 
     #VFX Fade to black

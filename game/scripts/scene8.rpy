@@ -3,8 +3,10 @@
     #ART Leona's House
     #Color swap for UI????
 
+    #voice "voice/8-default-1.ogg" #Leona (Dot)
     le "I am so-!"
 
+    #voice "voice/8-default-2.ogg" #Leona (Dot)
     le "STUPID!"
 
     #VFX POMF
@@ -14,6 +16,7 @@
     na "I wanted to help! I was helping her!"
     na "How could I do that to her? She trusted me!"
 
+    #voice "voice/8-default-3.ogg" #Leona (Dot)
     le "Stupid!"
 
     na "If I had just told her the truth. If only I weren't so damn afraid!"
@@ -27,6 +30,7 @@
     na "But, then, she's not family."
     na "She's not even one of us."
 
+    #voice "voice/8-default-4.ogg" #Leona (Dot)
     le "So why does it hurt so much?"
 
     na "Nobody said it would be like this."
@@ -52,14 +56,18 @@
     na "If I hadn't gone out to the caves with Raine, we all wouldn't be in this mess."
     na "That's on me. 100%"
 
+    #voice "voice/8-default-5.ogg" #Leona (Dot)
     le "...I'm gonna lose my job, aren't I?"
 
+    #voice "voice/8-default-6.ogg" #Leona (Dot)
     le "...Idiot. That isn't important at all right now."
 
     na "Stop moping around!"
 
+    #voice "voice/8-default-7.ogg" #Leona (Dot)
     le "{b}Get.{/b}"
 
+    #voice "voice/8-default-8.ogg" #Leona (Dot)
     le "{b}Up!{/b}"
 
     #VFX Journal Backups Loaded

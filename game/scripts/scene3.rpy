@@ -56,8 +56,8 @@ label scene_3:
     voice "voice/3-scene_3-10.ogg" #Raine (Nat)
     mc questioning "What's this?"
 
-    voice "voice/3-scene_3-11.ogg" #Leona (Dot)
     show le happy speaking at stage_right with easeinright
+    voice "voice/3-scene_3-11.ogg" #Leona (Dot)
     le "Let's see... sliced inop root, some o'eke'ke, and fresh iwaiwa eggs!"
     na "Huh… those didn't translate. I don't know what these could actually be."
     show le kind a2 with dissolve
@@ -70,12 +70,12 @@ label scene_3:
     voice "voice/3-scene_3-13.ogg" #Raine (Nat)
     mc "..."
 
-    voice "voice/3-scene_3-14.ogg" #Raine (Nat)
     show le surprised
+    voice "voice/3-scene_3-14.ogg" #Raine (Nat)
     mc blech "Blech!" (what_size = 48) with vpunch
 
-    voice "voice/3-scene_3-15.ogg" #Raine (Nat)
 
+    voice "voice/3-scene_3-15.ogg" #Raine (Nat)
     mc shocked m2 "This inop root... it's so spicy!"
     na "I can't even chew it without an intense wave of heat burning my tongue. "
 
@@ -85,7 +85,6 @@ label scene_3:
     voice "voice/3-scene_3-17.ogg" #Raine (Nat)
     mc onfire "Mouth... on f-fire..."
 
-    voice "voice/3-scene_3-18.ogg" #Leona (Dot)\
 
     show le concerned onlayer master:
         subpixel True xpos 0.75 xanchor 0.5 yanchor 1 zoom 1.21 rotate None
@@ -99,6 +98,7 @@ label scene_3:
         parallel:
             zoom 1.21
             ease_back .5 zoom 1.76
+    voice "voice/3-scene_3-18.ogg" #Leona (Dot)
     le "Oh no!"
     hide le with easeoutright
     na "She runs to the sink for a glass of water and— "
@@ -112,8 +112,8 @@ label scene_3:
     voice "voice/3-scene_3-20.ogg" #Raine (Nat)
     mc blech "My eyes are watering and my tongue feels like it's swelling up."
 
-    voice "voice/3-scene_3-21.ogg" #Leona (Dot)
     show le crying2 at stage_right with dissolve
+    voice "voice/3-scene_3-21.ogg" #Leona (Dot)
     le crying2 "I don't know! I don't know what you mean by 'spicy'! Inop root is just a..."
     show le concerned with dissolve
     na "Her eyes widen."
@@ -211,12 +211,12 @@ label scene_3:
     hide le
     #timeskip
 
-    voice "voice/3-scene_3-45.ogg" #Raine (Nat)
     scene house with Dissolve(2.0)
+    voice "voice/3-scene_3-45.ogg" #Raine (Nat)
     mc satisfied "Ahh, that was really good. Thanks for breakfast, Leona."
 
-    voice "voice/3-scene_3-46.ogg" #Leona (Dot)
     show le relaxed at stage_right with dissolve
+    voice "voice/3-scene_3-46.ogg" #Leona (Dot)
     le "I'm glad your fast was broken!"
 
     voice "voice/3-scene_3-47.ogg" #Raine (Nat)
@@ -254,9 +254,9 @@ label scene_3:
     hide le with dissolve
     na "I need to get Juneau back as soon as possible. Wormholes aren't exactly the most stable things in the universe - who knows when this one will close."
 
-    voice "voice/3-scene_3-58.ogg" #Leona (Dot)
     show le curious at stage_right with dissolve
 
+    voice "voice/3-scene_3-58.ogg" #Leona (Dot)
     le "Woah, wormholes? Those super-unstable gravity wells?"
 
     voice "voice/3-scene_3-59.ogg" #Leona (Dot)
@@ -366,9 +366,9 @@ label scene_3:
 
     #Voice lines are not implimented yet
 
-    #voice "voice/3-scene_3-82.ogg" #Leona (Dot)
     show le explaining at le_side with dissolve
 
+    #voice "voice/3-scene_3-82.ogg" #Leona (Dot)
     le "And there is Xennia's place, who has the best vegetables this time of year, and over there's my mechanic's house..."
     na "Meanwhile, Leona is dragging me around, pointing at various buildings and landmarks without a care in the world."
 
