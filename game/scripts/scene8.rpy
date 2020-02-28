@@ -3,19 +3,27 @@
     #ART Leona's House
     #Color swap for UI????
 
+    scene house with Dissolve(2.0)
+
+    show le frustrated a1:
+        stage_left
+        xzoom -1
+        xpos 1
+        zoom 1
     le "I am so-!"
 
-    le "STUPID!"
+    le frustrated a2 "STUPID!"
 
-    #VFX POMF
-
+    scene house with hpunch
+    play sound "sfx/bed fall.ogg"
+    show vignette with fade
     na "Why did I do that?"
     na "All this time I knew she wanted to leave!"
     na "I wanted to help! I was helping her!"
     na "How could I do that to her? She trusted me!"
-
-    le "Stupid!"
-
+    hide vignette with fade
+    le frustrated a2 "Stupid!"
+    show vignette with fade
     na "If I had just told her the truth. If only I weren't so damn afraid!"
     na "Maybe she would have the ship fixed by now."
     na "Maybe she would have stopped the explosion too."
@@ -26,9 +34,9 @@
     na "You're supposed to look out for each other, you're supposed to support them in whatever they choose."
     na "But, then, she's not family."
     na "She's not even one of us."
-
-    le "So why does it hurt so much?"
-
+    hide vignette with fade
+    le crying2 "So why does it hurt so much?"
+    show vignette with fade
     na "Nobody said it would be like this."
     na "You're supposed to find someone really great."
     na "And if they felt the same way, you'd want to spend the rest of your lives with them."
@@ -51,16 +59,16 @@
     na "I'll have to make the disaster report to the city council."
     na "If I hadn't gone out to the caves with Raine, we all wouldn't be in this mess."
     na "That's on me. 100%"
+    hide vignette with fade
+    le crying "...I'm gonna lose my job, aren't I?"
 
-    le "...I'm gonna lose my job, aren't I?"
-
-    le "...Idiot. That isn't important at all right now."
-
+    le frustrated a2 "...Idiot. That isn't important at all right now."
+    show house with hpunch
     na "Stop moping around!"
 
-    le "{b}Get.{/b}"
+    le crazy "{b}Get.{/b}"
 
-    le "{b}Up!{/b}"
+    le frustrated a1 "{b}Up!{/b}"
 
     #VFX Journal Backups Loaded
 
