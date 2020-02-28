@@ -1,48 +1,50 @@
-﻿label scene_9:
+﻿FHlabel scene_9:
 
     #ART Inside ship, Garage BG
     #VFX We're at red alert status
     #SFX Sirens going off
+    scene cockpit_ground with dissolve
+    scene cockpit_ground with hpunch
 
-    ju "Get up! You {i}absolute{/i} child!"
+    ju snarky a2 "Get up! You {i}absolute{/i} child!"
 
-    mc "Hell no! Leave me alone and turn off that thing off! It's too damn loud!!"
+    mc annoyed "Hell no! Leave me alone and turn off that thing off! It's too damn loud!!"
 
-    ju "Then get your act together already!"
+    ju annoyed a2 "Then get your act together already!"
 
-    ju "All you've done since you got back yesterday is shovel ice cream into your face and whine about your alien goat girl!"
+    ju annoyed a1 "All you've done since you got back yesterday is shovel ice cream into your face and whine about your alien goat girl!"
 
-    ju "I'm sick of it! I have things to do, so get out of my way! Who cares if she lied!?"
+    ju snarky a2 "I'm sick of it! I have things to do, so get out of my way! Who cares if she lied!?"
 
-    mc "I do!"
+    mc upset "I do!"
 
-    ju "If she hadn't, you woulda been blown to bits in that cave and then ground into a fine paste by 100 billion tons of rock!"
+    ju annoyed a2"If she hadn't, you woulda been blown to bits in that cave and then ground into a fine paste by 100 billion tons of rock!"
 
     ju "Zapped 'n slapped while drooling over a light bulb, you moth!"
 
-    mc "I am a beautiful butterfly and I deserve respect!"
+    mc annoyed "I am a beautiful butterfly and I deserve respect!"
 
-    ju "Are you really going to spend the rest of your life complaining about not being obliterated?!"
+    ju snarky a1 "Are you really going to spend the rest of your life complaining about not being obliterated?!"
 
-    mc "{b}Yes!{/b}"
+    mc upset "{b}Yes!{/b}"
 
-    mc "It's my life and my choices!"
+    mc annoyed "It's my life and my choices!"
 
-    mc "She'd still have betrayed me regardless of the circumstances! I wouldn't be here if I wanted people making my mistakes for me."
+    mc unimpressed "She'd still have betrayed me regardless of the circumstances! I wouldn't be here if I wanted people making my mistakes for me."
 
-    ju "And I'm telling you, you're full of shit. Who the hell cares about {i}whatever{/i} she did?"
+    ju snarky a2 "And I'm telling you, you're full of shit. Who the hell cares about {i}whatever{/i} she did?"
 
-    ju "You could be doing {b}literally anything else!{/b} What she did doesn't matter!"
+    ju snarky a1 "You could be doing {b}literally anything else!{/b} What she did doesn't matter!"
 
-    ju "If you want to make your own choices then get up and {i}do{/i} something with your life!"
+    ju annoyed a2 "If you want to make your own choices then get up and {i}do{/i} something with your life!"
 
-    ju "So rather than moping into a bucket of ice cream, either suck it up and make amends with her or get shit done on your own!"
+    ju speaking eclosed "So rather than moping into a bucket of ice cream, either suck it up and make amends with her or get shit done on your own!"
 
-    mc "And I'm telling you, I don't want to!"
+    mc annoyed "And I'm telling you, I don't want to!"
 
-    ju "Idiot! Buffoon! Moron!"
+    ju annoyed a2 "Idiot! Buffoon! Moron!"
 
-    ju "I'm done!"
+    ju snarky a1 "I'm done!"
 
     ju "You made me do this!"
 
@@ -50,9 +52,9 @@
 
     mc "When the hell did you fix the hard light projector?!"
 
-    ju "Out!"
+    ju annoyed a2 "Out!"
 
-    mc "Actually, {i}how{/i} did y-!?"
+    mc shocked armraised "Actually, {i}how{/i} did y-!?"
 
     ju "{b}Ouuuuuut!{/b}"
 
@@ -60,21 +62,25 @@
     #SFX Raine gets tossed from the ship
     #VFX BG Shakes as she lands
 
-    ju "And don't come back until you're done moping over every little thing that goes wrong!"
+    scene street_open_garage with hpunch
 
-    ju "'Beautiful butterfly' my ass, Raine!"
+    ju annoyed a1 "And don't come back until you're done moping over every little thing that goes wrong!"
+
+    ju snarky a2 "'Beautiful butterfly' my ass, Raine!"
 
     #SFX Door slamming
+    play sound "sfx/door.ogg"
 
     na "Well."
     na "The nerve of some people."
     na "I peel my butt off the floor and march back to the door of {i}my{/i} ship."
 
-    mc "Never should have brought you back!"
+    mc annoyed "Never should have brought you back!"
 
     mc "You're the one who told Leona and I to go rooting around in that dark ass cave, you damn-"
 
     #SFX Kicking metal
+    play sound "sfx/Kicking panel.ogg"
 
     mc "Ow! Juneau!"
 
@@ -88,41 +94,44 @@
 
     na "As I turn to see where my boots were chucked, I see a lone figure peering around the corner."
 
-    mc "Oh. And what are you looking at?"
+    mc unimpressed "Oh. And what are you looking at?"
+
+    show le concerned with fade:
+        xalign 0.5
 
     le "...Nothin'."
 
-    mc "Good. 'Cause there's nothin' to see."
+    mc sighing "Good. 'Cause there's nothin' to see."
 
     na "Leona says nothing, putting some things into a bag instead."
 
-    mc "...What are you doing?"
+    mc unimpressed "...What are you doing?"
 
-    le "...Packing my things."
+    le crying "...Packing my things."
 
-    le "I won't be coming back. So don't worry about it."
+    le concerned "I won't be coming back. So don't worry about it."
 
-    mc "Leona? What do you mean?"
+    mc surprised "Leona? What do you mean?"
 
-    le "It means I was fired."
+    le crying "It means I was fired."
 
-    le "So I'm packing my things up."
+    le concerned "So I'm packing my things up."
 
-    mc "Fired? They can't fire you, can they?"
+    mc questioning "Fired? They can't fire you, can they?"
 
-    mc "Aren't you the Captain? Isn't this your garage?"
+    mc questioning2 "Aren't you the Captain? Isn't this your garage?"
 
-    le "We're funded by the city. It was either I go, or the expedition team goes."
+    le questioning a2 "We're funded by the city. It was either I go, or the expedition team goes."
 
     le "We blew up a mountain, ya know?."
 
-    le "Just saying 'it was an accident' doesn't cut it for something like that."
+    le crying "Just saying 'it was an accident' doesn't cut it for something like that."
 
-    mc "That's bullshit! I lit the fuse! Why didn't anybody talk to me about it?"
+    mc annoyed "That's bullshit! I lit the fuse! Why didn't anybody talk to me about it?"
 
-    le "You were my responsibility."
+    le concerned "You were my responsibility."
 
-    le "Did you really think anyone would just let an alien set up shop without some sort of oversight?"
+    le concerned "Did you really think anyone would just let an alien set up shop without some sort of oversight?"
 
     mc "It's still bullshit!"
 
@@ -130,14 +139,15 @@
 
     le "Whatever. As long as something like that doesn't happen again, nobody will bother you here."
 
-    le "You'll have to put up with the crew coming and going, but they'll leave you be if that's what you want."
+    le crying "You'll have to put up with the crew coming and going, but they'll leave you be if that's what you want."
 
     na "Leona closes up her bag and walks for the door."
 
+    show le concerned with move_slide #figure out tomorrow. have her slowly move other side of screen and stop. 
     le "Take care, Raine. I hope you get home safe."
 
-    le "...I'm sorry for all the trouble."
-
+    le crying "...I'm sorry for all the trouble."
+    hide le concerned with fade
     na "She vanishes from sight around the corner, heading off to god knows where."
     na "I should feel good about it, but I don't."
     na "Of all the people to take a dump on my feelings throughout my life, that stinging feeling is strongest here most of all."
@@ -147,69 +157,71 @@
 
     #SFX Door opening
 
-    ju "Get your butt back in here, pronto!"
+    ju annoyed a1 "Get your butt back in here, pronto!"
 
-    mc "The hell is it now? I need some rest!"
+    mc annoyed "The hell is it now? I need some rest!"
 
-    ju "Apparently not. We got rads, emo kid. Haul ass and get in here!"
+    ju snarky a2  "Apparently not. We got rads, emo kid. Haul ass and get in here!"
 
-    mc "Rads?!"
+    mc shocked armraised "Rads?!"
 
-    ju "Radiation, Raine! Radiation!"
+    ju concered a2 "Radiation, Raine! Radiation!"
 
-    mc "Clear the door, I'm coming in!"
+    mc unimpressed "Clear the door, I'm coming in!"
 
     na "I leap up from the floor and dash for the ship."
 
     #ART Inside ship, Garage BG
 
-    ju "Take a look at these readings."
+    show cockpit_ground with dissolve
 
-    ju "I tapped into the city's information grid through the power lines, but the interference was making a mess of just about everything."
+    ju concerned a1 "Take a look at these readings."
 
-    ju "Interference that looked a lot like-"
+    ju speaking enclosed "I tapped into the city's information grid through the power lines, but the interference was making a mess of just about everything."
 
-    mc "-Nuclear radiation. But if the bomb was atomic, we would have known instantly. We'd all be dead, right?"
+    ju concerned a2 "Interference that looked a lot like-"
 
-    ju "No shit, Sherlock. Look closer."
+    mc questioning2 "-Nuclear radiation. But if the bomb was atomic, we would have known instantly. We'd all be dead, right?"
+
+    ju snarky a2 "No shit, Sherlock. Look closer."
 
     ju "It's not from the blast site."
 
-    mc "They're from… the center of town?"
+    mc questioning "They're from… the center of town?"
 
-    ju "And there's two other readings I can't identify."
+    ju concerned a1 "And there's two other readings I can't identify."
 
     ju "One of which is coming from this ship."
 
-    mc "Let me take a look at that. There are a few things I know of that might not be in your databanks."
+    mc neutral "Let me take a look at that. There are a few things I know of that might not be in your databanks."
 
     na "I scroll through the data Juneau has up on the screen, running through the reams of information as quickly as I can."
 
-    mc "Well, shit."
+    mc unimpressed "Well, shit."
 
     mc "I think this is a unique form of radiation. How the hell does that end up here?"
 
-    ju "Where does something like that come from?"
+    ju concerned a2 "Where does something like that come from?"
 
     mc "We don't even know. Last I heard it's only existed once or twice in a locked down test chamber."
 
-    mc "I read those textbooks a dozen times, but it only came up once in a section about mutated radioisotopes."
+    mc questioning2 "I read those textbooks a dozen times, but it only came up once in a section about mutated radioisotopes."
 
-    ju "Can we assume this has something to do with the unknown readings from where the bomb went off?"
+    ju snarky a2 "Can we assume this has something to do with the unknown readings from where the bomb went off?"
 
-    mc "You're sure they're coming from the southwest?"
+    mc unimpressed "You're sure they're coming from the southwest?"
 
     ju "Yeah."
 
     mc "Then there's our answer. I believe something with the bomb may have forced an unstable interaction between our ship and the ship at the center of this city."
 
-    mc "Next question: what do we do?"
+    mc questioning2 "Next question: what do we do?"
 
-    ju "Well, we can't just leave it alone. People will get sick."
+    ju snarky a1 "Well, we can't just leave it alone. People will get sick."
 
-    ju "Or, more likely, it'll get exponentially stronger and we could all be dead, rotting husks within a couple of days. Myself included."
+    ju snarky a2 "Or, more likely, it'll get exponentially stronger and we could all be dead, rotting husks within a couple of days. Myself included."
 
-    mc "That's a lovely thought, but it doesn't answer the question."
+    mc unimpressed "That's a lovely thought, but it doesn't answer the question."
 
     mc "There are a ton of isolated subsystems the radiation could be coming from. We don't have the equipment to check even half of them!"
 
@@ -217,51 +229,51 @@
 
     ju "But I'm willing to bet the only thing that's gonna stop this is getting one of these ships very far from here. Say, half the planet-"
 
-    ju "-Or destroying one before it can destroy us all."
+    ju snarky a1 "-Or destroying one before it can destroy us all."
 
     ju "None of which, I might add, we can do right now."
 
-    mc "Well that's just great!"
+    mc upset "Well that's just great!"
 
     mc "I really am stuck here now!"
 
-    mc "What the hell did I do for the universe to shit on me so badly!?"
+    mc annoyed "What the hell did I do for the universe to shit on me so badly!?"
 
-    ju "Maybe if you stopped being such a self-pitying, cynical jerk for two minutes you'd realize it is your own damn fault!"
+    ju annoyed a1 "Maybe if you stopped being such a self-pitying, cynical jerk for two minutes you'd realize it is your own damn fault!"
 
-    ju "Oh, look at me, I'm Raine! I'm socially inept! My girlfriend loved me too much and I have a fear of rejection, so I shit on everybody who cares about me even a little bit so they never get the chance to be as disappointed in me as I am of myself!"
+    ju snarky a2 "Oh, look at me, I'm Raine! I'm socially inept! My girlfriend loved me too much and I have a fear of rejection, so I shit on everybody who cares about me even a little bit so they never get the chance to be as disappointed in me as I am of myself!"
 
-    ju "Especially my girlfriend who has been {i}nothing{/i} but amazing to me and I'd be lucky to find another person in the entire fuckin' universe who can put up with my selfish {b}bullshit{/b}!"
+    ju annoyed a1 "Especially my girlfriend who has been {i}nothing{/i} but amazing to me and I'd be lucky to find another person in the entire fuckin' universe who can put up with my selfish {b}bullshit{/b}!"
 
     ju "Pull the tree out of your ass already and make it right with that poor girl, or so help me I will put you out of your misery {i}long{/i} before a little radiation can!"
 
-    mc "...Fine."
+    mc unimpressed "...Fine."
 
     ju "'Fine' what?"
 
-    mc "Fine, I will, yes."
+    mc annoyed "Fine, I will, yes."
 
-    ju "'Yes' who?"
+    ju snarky a2 "'Yes' who?"
 
-    mc "You?"
+    mc questioning2 "You?"
 
-    ju "Say. My. Name."
+    ju annoyed a1 "Say. My. Name."
 
-    mc "Yes, Juneau! I will apologise to Leona, beg for her help and get us out of this disaster!"
+    mc upset "Yes, Juneau! I will apologise to Leona, beg for her help and get us out of this disaster!"
 
-    ju "About time."
+    ju annoyed a1 "About time."
 
-    mc "Remind me to look at your subroutines when I get back, you've got a hell of an attitude today."
+    mc questioning "Remind me to look at your subroutines when I get back, you've got a hell of an attitude today."
 
-    ju "I'm blaming it on the rads, roll with it."
+    ju annoyed a2 "I'm blaming it on the rads, roll with it."
 
-    ju "Now get going!"
+    ju annoyed a1 "Now get going!"
 
-    mc "Yes, Juneau. Thank you, Juneau."
+    mc annoyed "Yes, Juneau. Thank you, Juneau."
 
-    mc "Blah blah blah..."
+    mc upset "Blah blah blah..."
 
-    #ART Garage BG
+    scene street_open_garage with fade
 
     na "All the vitriol aside, Juneau is right."
     na "I've been such an asshole to Leona. Even if I'm upset, I was too hard on her."
