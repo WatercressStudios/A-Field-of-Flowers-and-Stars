@@ -103,25 +103,31 @@
 
     le crying "I let myself get scared and believe things I shouldn't have. I let myself think it was right because it was easier than saying goodbye."
 
-    le "I thought if you never found a way to power your ship, you wouldn't bother trying to repair it anymore. That you'd give up and stay with me."
+    le concernedspeaking "I thought if you never found a way to power your ship, you wouldn't bother trying to repair it anymore. That you'd give up and stay with me."
 
-    mc "...I understand, and I-"
+    mc thankful "...I understand, and I-"
 
     le "There's more."
 
     mc "What else could there be? Weren't you just trying to protect me?"
 
-    le "...I had another selfish reason..."
+    le tired "...I had another selfish reason..."
 
     mc "Okay."
 
-    mc "What was it?"
+    mc shyspeak "What was it?"
 
-    le "When I first realized how much more advanced you are compared to us, I had a bad thought."
+    le concernedspeaking "When I first realized how much more advanced you are compared to us, I had a bad thought."
 
-    le "I thought that if we became friends, maybe you'd give us some of your technology."
+    le cryingtalk "I thought that if we became friends, maybe you'd give us some of your technology."
 
-    mc "...That's-"
+    mc gentlehandtalk "...That's-"
+
+
+    $camera_move(0, 0, 0, 0, duration=0)
+
+    show le frustrated a1 onlayer master:
+        xpos 0.55 ypos -100 xanchor 0.5 zoom 2.0
 
     le "I'm not done!"
 
