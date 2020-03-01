@@ -53,8 +53,8 @@ init:
 
     transform bounce:
     ##Makes a character slightly bounce when they pop into the scene. Gives them a bit of pep.
-        easein .10 yoffset 0
-        easeout .175 yoffset 15
+        easein .10 yoffset -15
+        easeout .175 yoffset +15
 
     transform xflip:
     ##Used to flip a character to face the other direction.
@@ -199,8 +199,20 @@ init:
     image spaceship_crashed = "backgrounds/spaceship_crashed.png"
     image house = "backgrounds/house.png"
     image cafe = "backgrounds/cafe.png"
+    image forest = "backgrounds/forest.png"
+    image sky = "backgrounds/sky.png"
+    image sky_shootingstar = "backgrounds/sky_shootingstar.png"
+    image space = "backgrounds/space.png"
+    image wormhole = "backgrounds/wormhole.png"
+    image wormhole_darker = "backgrounds/wormhole_darker.png"
+    image asteroidfield = "backgrounds/asteroidfield.png"
+    image asteroidfield_red = "backgrounds/asteroidfield_red.png"
     ##computer-graphics images, stored in images/cgs
     image cgTree = "cgs/cgtree.png"
+    image cgKiss1 = "cgs/kiss1.png"
+    image cgKiss2 = "cgs/kiss2.png"
+    image cgKiss3 = "cgs/kiss3.png"
+    image cgKiss4 = "cgs/kiss4.png"
     ##Sagi's stuff . Remove when it's no longer needed.
     image logo = "gui/Star Filled-48.png"
     image testbg = "gui/sagi/test/bg.jpg"
