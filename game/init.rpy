@@ -53,8 +53,8 @@ init:
 
     transform bounce:
     ##Makes a character slightly bounce when they pop into the scene. Gives them a bit of pep.
-        easein .10 yoffset 0
-        easeout .175 yoffset 15
+        easein .10 yoffset -15
+        easeout .175 yoffset +15
 
     transform xflip:
     ##Used to flip a character to face the other direction.
@@ -184,6 +184,7 @@ init:
     image spaceship_crashed = "backgrounds/spaceship_crashed.png"
     image house = "backgrounds/house.png"
     image cafe = "backgrounds/cafe.png"
+    image sky = "backgrounds/sky.png"
     ##computer-graphics images, stored in images/cgs
     image cgTree = "cgs/cgtree.png"
     ##Sagi's stuff . Remove when it's no longer needed.
