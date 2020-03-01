@@ -64,15 +64,18 @@
     #ART Garage
     #SFX Raine gets tossed from the ship
     #VFX BG Shakes as she lands
+    scene street with hpunch
+    pause 2
+    show ju snarky a2 with dissolve:
+            xalign 0.5
+    ju "And don't come back until you're done moping over every little thing that goes wrong!"
+    ju "'Beautiful butterfly' my ass, Raine!"
+    scene street onlayer master:
+        subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
+        parallel:
+            xpos 0.5
+            ease 10 xpos 0.01
     hide ju snarky a2 with dissolve
-    scene street_open_garage with dissolve
-
-
-    ju annoyed a1 "And don't come back until you're done moping over every little thing that goes wrong!"
-
-    ju snarky a2 "'Beautiful butterfly' my ass, Raine!"
-
-    scene street_open_garage with hpunch
     #SFX Door slamming
     play sound "sfx/door.ogg"
 
@@ -102,7 +105,7 @@
     mc unimpressed "Oh. And what are you looking at?"
 
     show le concerned with Dissolve(2.0):
-        xalign 0.5
+        xalign 0.75
 
     le "...Nothin'."
 
@@ -149,15 +152,15 @@
     na "Leona closes up her bag and walks for the door."
 
     show le concerned with move:
-        xalign 0.6
+        xalign 0.77
         xzoom -1
     le "Take care, Raine. I hope you get home safe."
 
     show le crying with move:
-        xalign 0.7
+        xalign 0.79
     le "...I'm sorry for all the trouble."
     show le crying with move:
-        xalign 0.8
+        xalign 0.82
     hide le concerned with easeoutright
     na "She vanishes from sight around the corner, heading off to god knows where."
     na "I should feel good about it, but I don't."
@@ -179,14 +182,14 @@
 
     mc shocked armraised "Rads?!"
 
-    ju concered a2 "Radiation, Raine! Radiation!"
+    ju concerned a2 "Radiation, Raine! Radiation!"
 
     mc unimpressed "Clear the door, I'm coming in!"
 
     na "I leap up from the floor and dash for the ship."
 
     #ART Inside ship, Garage BG
-    hide ju annoyed a1 with dissolve 
+    hide ju concerned a2 with dissolve 
 
     scene cockpit_ground with dissolve
 
@@ -195,7 +198,7 @@
 
     ju "Take a look at these readings."
 
-    ju speaking enclosed "I tapped into the city's information grid through the power lines, but the interference was making a mess of just about everything."
+    ju "I tapped into the city's information grid through the power lines, but the interference was making a mess of just about everything."
 
     ju concerned a2 "Interference that looked a lot like-"
 
@@ -259,7 +262,7 @@
 
     ju annoyed a1 "Maybe if you stopped being such a self-pitying, cynical jerk for two minutes you'd realize it is your own damn fault!"
 
-    ju snarky a2 "Oh, look at me, I'm Raine! I'm socially inept! My girlfriend loved me too much and I have a fear of rejection, so I shit on everybody who cares about me even a little bit so they never get the chance to be as disappointed in me as I am of myself!"
+    ju sarcastic a1 e1 b4 "Oh, look at me, I'm Raine! I'm socially inept! My girlfriend loved me too much and I have a fear of rejection, so I shit on everybody who cares about me even a little bit so they never get the chance to be as disappointed in me as I am of myself!"
 
     ju annoyed a1 "Especially my girlfriend who has been {i}nothing{/i} but amazing to me and I'd be lucky to find another person in the entire fuckin' universe who can put up with my selfish {b}bullshit{/b}!"
 
