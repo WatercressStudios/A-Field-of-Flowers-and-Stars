@@ -125,7 +125,7 @@ screen say(who, what):
         if who == 'Raine':
             add SideImage() xalign -0.05 yalign 1.0
         elif not who in hide_sides:
-            add SideImage() xalign 1.26 yalign -1.8
+            add SideImage() xalign 1.26 yalign -1.75
 
 transform change_transform(old, new):
     contains:

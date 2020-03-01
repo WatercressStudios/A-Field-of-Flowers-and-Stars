@@ -274,8 +274,8 @@ label scene_2:
     scene street onlayer master with None:
             subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
             parallel:
-                xpos 0.85
-                ease 15 xpos 0.59
+                xpos 1.00
+                ease 15 xpos 0.56
 
     $ hide_sides = []
 
