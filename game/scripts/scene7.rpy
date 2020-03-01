@@ -3,14 +3,14 @@ label scene7:
     #ART - FOREST BG (NO SHIP)
     #VFX - BG Should be super zoomed in too. See end of this scene for clarity.
     ###
-    scene forest with dissolve 
+    scene forest with dissolve:
+        zoom 1
     mc sighing "Lovely. I was sort of hoping I'd never see this neck of the woods again."
     mc "Why are we here again?"
-    #tbh im kind of confused on whether to add leona here. i will probably figure that out loud
-    le explaining "Remember the alien tech we found while bringing in your ship?"
     show le explaining with dissolve:
         xalign 0.5
-    le "Remember the alien tech we found while bringing in your ship?"
+        zoom 2
+    le explaining "Remember the alien tech we found while bringing in your ship?"
     le "I was thinking the crash uncovered some supplies that got left behind by the previous inhabitants, but then we found all that crate inside the cave."
     le questioning a3 "Why is there stuff all the way out here when the cave base would suffice?"
     le "Think about it; a hidden base inside a cave, things buried underground-"
@@ -41,6 +41,7 @@ label scene7:
     na "Leona quickly shuffles through the hoverbike's storage compartment, coming out with one of the dusty books we'd brought back with us."
     show le concerned with moveinbottom:
         xalign 0.5
+        zoom 2
     le "Careful, it might fall apart if you're too rough with them."
     mc satisfied "If it can survive in a cave for a thousand years and then make it through your deathtrap of a bike in one piece, I doubt my delicate hands will be enough to leave a scratch."
     #SFX - PAGE TURNING
@@ -126,23 +127,23 @@ label scene7:
     na "And in the distance, visible through the treetops…"
     na "Was a large chunk of a mountain torn right from the earth."
     mc shocked armraised "Oh my god."
-    show le surprised with Dissolve(2):
+    show le crying2 with Dissolve(2):
         xalign 0.5
     na "Leona stands there, stunned in place with a terrified look."
     mc unimpressed "Leona, the radio! Quick!"
     na "A gust of wind barrels through the forest, thrusting into my face as it batters the trees in its wake."
     mc annoyed "Aah!"
     na "By the time the wind dies down, Leona rushes to the radio on her bike, sweat dripping from her face."
-    le explaining "This is Captain Leona broadcasting on all emergency channels!"
+    le catching "This is Captain Leona broadcasting on all emergency channels!"
     le "I need reports from all units detailing locations and status on frequency 88.9, prioritizing vicinity to Southwest Mountain range!"
-    hide le explaining with dissolve
+    hide le catching with dissolve
     na "One by one the reports roll in."
     na "Minor injuries, a number of scrapes and bruises."
     na "A single man knocked unconscious. Fortunately, everyone is still alive."
     na "Those closest to the explosion said it sounded like a storm was coming in before they saw rocks flying everywhere."
     na "The mountain just sort of caved in on itself, followed by a huge amount of smoke."
     na "Beyond that and what will eventually be a better view of the horizon, Aster only had minor damage from the shockwave."
-    show le explaining with fade:
+    show le catching with fade:
         xalign 0.5
     le "I need people out there keeping an eye on it. I'll be making a stop in Aster then I'll be out to assess the situation."
     le "All other units report to base and await our return. Captain Leona signing off."
@@ -154,11 +155,11 @@ label scene7:
     na "She opens her mouth to speak."
     na "But then turns her face away from me."
     na "..."
-    mc "If you're not going to talk, then listen."
+    mc sighing "If you're not going to talk, then listen."
     mc "Everyone makes mistakes. There isn't a person in the universe who goes through life flawlessly."
-    le concerned "...I'm sorry."
+    le crying "...I'm sorry."
     mc upset "But you lied to me. I trusted you, and you lied to me."
-    le "...I'm sorry…"
+    le crying2 "...I'm sorry…"
     mc unimpressed "I want to know why."
     na "Head still hung low, she turned her head to me, unable to look me in the eye."
     mc "Why?"
@@ -198,7 +199,7 @@ label scene7:
     le "R-Raine, what is this about?"
     na "I don't give her an answer. I simply take aim and fire."
     #SFX - Rock hitting wood
-    scene spaceship_crashed with vpunch
+    scene forest with vpunch
     na "It sails straight like a bullet, and the bark explodes at the center of impact.."
     le speakingsurprised a1 "Oh my god-!"
     le "What was that?!"
@@ -217,12 +218,28 @@ label scene7:
     #VFX - BG and Leona sprite zooms out a step with every following line until end of scene.
     #
     ###
-    le crying "Raine?"
+    scene forest with dissolve:
+        zoominout 1
+    show le crying with dissolve:
+        zoominout 1
+    le "Raine?"
     na "Just walking."
+    scene forest with dissolve:
+        zoominout 1
+    show le crying with dissolve:
+        zoominout 0.1
     le concerned "R-Raine...?"
     na "Back to my ship."
+    scene forest with dissolve:
+        zoominout 0
+    show le crying with dissolve:
+        zoominout 0.2
     le crying "{b}Raine{/b}?!"
     na "Back to Aster."
+    scene forest with dissolve:
+        zoominout 0
+    show le crying with dissolve:
+        zoominout 0.3
     le crying2 "{b}Raaaine{/b}!"
     na "Back to a prison."
     hide le crying2 with dissolve
