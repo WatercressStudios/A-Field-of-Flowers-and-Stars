@@ -123,6 +123,10 @@
 
     mc gentlehandtalk "...That's-"
 
+    ##Some sort of impact to go along with Leona's next line - Camera zooms back out to normal while Leona gets closer at the same time.
+    ##Flash of white as well as some sound effect of Leona hitting the couch
+    ##Angry Shouting Sprite
+
 
     $camera_move(0, 0, 0, 0, duration=0)
 
