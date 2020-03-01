@@ -122,7 +122,10 @@ screen say(who, what):
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
     if not renpy.variant("small"):
-        add SideImage() xalign -0.035 yalign 1.0
+        if who == 'Raine':
+            add SideImage() xalign -0.05 yalign 1.0
+        elif not who in hide_sides:
+            add SideImage() xalign 1.26 yalign -1.8
 
 transform change_transform(old, new):
     contains:
@@ -794,7 +797,7 @@ style navigation_button_text:
 
 init python:
     time = 0.0
-    speed = 1.0
+    speed = 3.0
 
     def UpdateRotation(trans, st, at):
         global time, speed
@@ -803,22 +806,22 @@ init python:
 
 transform main_menu_bg_transform:
     anchor (0.5, 0.5)
-    zoom 3.0
-    align (0.40, 0.40)
+    zoom 2.2
+    align (0.45, 0.45)
     function UpdateRotation
     pause 0.03
     repeat
 
 transform main_menu_bg_restore_transform:
     anchor (0.5, 0.5)
-    zoom 3.0
-    align (0.40, 0.40)
+    zoom 2.2
+    align (0.45, 0.45)
     rotate time
     parallel:
         ease 3 rotate 0.0 align (0.5, 0.5)
     parallel:
-        pause 1.5
-        ease 4.5 zoom 1.0
+        pause 1.0
+        ease 2.0 zoom 1.5
 
 screen main_menu():
 
@@ -828,7 +831,7 @@ screen main_menu():
     style_prefix "main_menu"
 
     #add gui.main_menu_background at fade_transform
-    add "backgrounds/stars.png" at main_menu_bg_transform
+    add "backgrounds/space.png" at main_menu_bg_transform
 
     # # This empty frame darkens the main menu.
     # frame:

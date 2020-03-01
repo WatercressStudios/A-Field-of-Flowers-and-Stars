@@ -98,7 +98,8 @@ init:
     ##Sprite Definitions: The ones that are commented out are ones that don't look right.
     init python:
         layerorder = ['hair', 'base', 'arms', 'tail','mouth','eyes','brow',]
-        DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder, offsets=(0, 100), zooms={'mc':0.5, 'le': 1.3, 'ju':1.3}, sides=['mc'])
+        DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder, offsets=(0, 100), zooms={'mc':0.5, 'le': 1.3, 'ju':1.3}, sides=['mc', 'le', 'ju'])
+        hide_sides = []
 
         #Leona
         MapEmote('le curious', 'le think base tail_default mdo_default ed_default brow_default')
@@ -191,6 +192,7 @@ init:
     image white = "backgrounds/white.png"
     image stars = "backgrounds/stars.png"
     image cockpitoverlay = "overlays/cockpitoverlay.png"
+    image cockpitoverlay2 = "overlays/cockpitoverlay2.png"
     image cockpit_space = "backgrounds/cockpit_space.png"
     image cockpit_ground = "backgrounds/cockpit_ground.png"
     image cave = "backgrounds/cave.png"
@@ -281,7 +283,7 @@ label splashscreen:
     $ renpy.music.play(config.main_menu_music)
 
     #scene starfield
-    scene stars at main_menu_bg_transform with Dissolve(2.0)
+    scene space at main_menu_bg_transform with Dissolve(2.0)
     show afofaslogo:
         alpha 0
         zoom 0.4
