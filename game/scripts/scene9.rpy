@@ -64,14 +64,15 @@
     #ART Garage
     #SFX Raine gets tossed from the ship
     #VFX BG Shakes as she lands
-
+    hide ju snarky a2 with dissolve
     scene street_open_garage with hpunch
+    
 
     ju annoyed a1 "And don't come back until you're done moping over every little thing that goes wrong!"
 
     ju snarky a2 "'Beautiful butterfly' my ass, Raine!"
 
-    hide ju snarky a2 with fade 
+    
 
     #SFX Door slamming
     play sound "sfx/door.ogg"
