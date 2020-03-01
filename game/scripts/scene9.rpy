@@ -65,15 +65,14 @@
     #SFX Raine gets tossed from the ship
     #VFX BG Shakes as she lands
     hide ju snarky a2 with dissolve
-    scene street_open_garage with hpunch
-    
+    scene street_open_garage with dissolve
+
 
     ju annoyed a1 "And don't come back until you're done moping over every little thing that goes wrong!"
 
     ju snarky a2 "'Beautiful butterfly' my ass, Raine!"
 
-    
-
+    scene street_open_garage with hpunch
     #SFX Door slamming
     play sound "sfx/door.ogg"
 
@@ -102,7 +101,7 @@
 
     mc unimpressed "Oh. And what are you looking at?"
 
-    show le concerned with fade:
+    show le concerned with Dissolve(2.0):
         xalign 0.5
 
     le "...Nothin'."
@@ -137,7 +136,7 @@
 
     le concerned "You were my responsibility."
 
-    le concerned "Did you really think anyone would just let an alien set up shop without some sort of oversight?"
+    le "Did you really think anyone would just let an alien set up shop without some sort of oversight?"
 
     mc upset "It's still bullshit!"
 
@@ -149,11 +148,17 @@
 
     na "Leona closes up her bag and walks for the door."
 
-    show le concerned with move_slide #figure out tomorrow. have her slowly move other side of screen and stop. 
+    show le concerned with move:
+        xalign 0.6
+        xzoom -1
     le "Take care, Raine. I hope you get home safe."
 
-    le crying "...I'm sorry for all the trouble."
-    hide le concerned with fade
+    show le crying with move:
+        xalign 0.7
+    le "...I'm sorry for all the trouble."
+    show le crying with move:
+        xalign 0.8
+    hide le concerned with easeoutright
     na "She vanishes from sight around the corner, heading off to god knows where."
     na "I should feel good about it, but I don't."
     na "Of all the people to take a dump on my feelings throughout my life, that stinging feeling is strongest here most of all."
@@ -162,8 +167,11 @@
     na "What a hell of a week this has been. I need a nap..."
 
     #SFX Door opening
+    show ju annoyed a1 with dissolve:
+        xalign 0.5
 
-    ju annoyed a1 "Get your butt back in here, pronto!"
+    
+    ju "Get your butt back in here, pronto!"
 
     mc annoyed "The hell is it now? I need some rest!"
 
@@ -178,10 +186,14 @@
     na "I leap up from the floor and dash for the ship."
 
     #ART Inside ship, Garage BG
+    hide ju annoyed a1 with dissolve 
 
-    show cockpit_ground with dissolve
+    scene cockpit_ground with dissolve
 
-    ju concerned a1 "Take a look at these readings."
+    show ju concerned a1 with dissolve:
+        xalign 0.5
+
+    ju "Take a look at these readings."
 
     ju speaking enclosed "I tapped into the city's information grid through the power lines, but the interference was making a mess of just about everything."
 
