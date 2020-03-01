@@ -1,4 +1,4 @@
-﻿FHlabel scene_9:
+﻿label scene_9:
 
     #ART Inside ship, Garage BG
     #VFX We're at red alert status
@@ -6,55 +6,58 @@
     scene cockpit_ground with dissolve
     scene cockpit_ground with hpunch
 
-    ju snarky a2 "Get up! You {i}absolute{/i} child!"
+    show ju annoyed a1 with dissolve:
+        xalign 0.5
+
+    ju "Get up! You {i}absolute{/i} child!"
 
     mc annoyed "Hell no! Leave me alone and turn off that thing off! It's too damn loud!!"
 
-    ju annoyed a2 "Then get your act together already!"
+    ju "Then get your act together already!"
 
-    ju annoyed a1 "All you've done since you got back yesterday is shovel ice cream into your face and whine about your alien goat girl!"
+    ju "All you've done since you got back yesterday is shovel ice cream into your face and whine about your alien goat girl!"
 
-    ju snarky a2 "I'm sick of it! I have things to do, so get out of my way! Who cares if she lied!?"
+    ju annoyed a2 "I'm sick of it! I have things to do, so get out of my way! Who cares if she lied!?"
 
     mc upset "I do!"
 
-    ju annoyed a2"If she hadn't, you woulda been blown to bits in that cave and then ground into a fine paste by 100 billion tons of rock!"
+    ju annoyed a1 "If she hadn't, you woulda been blown to bits in that cave and then ground into a fine paste by 100 billion tons of rock!"
 
     ju "Zapped 'n slapped while drooling over a light bulb, you moth!"
 
-    mc annoyed "I am a beautiful butterfly and I deserve respect!"
+    mc onfire "I am a beautiful butterfly and I deserve respect!"
 
-    ju snarky a1 "Are you really going to spend the rest of your life complaining about not being obliterated?!"
+    ju annoyed a2 "Are you really going to spend the rest of your life complaining about not being obliterated?!"
 
     mc upset "{b}Yes!{/b}"
 
-    mc annoyed "It's my life and my choices!"
+    mc "It's my life and my choices!"
 
-    mc unimpressed "She'd still have betrayed me regardless of the circumstances! I wouldn't be here if I wanted people making my mistakes for me."
+    mc "She'd still have betrayed me regardless of the circumstances! I wouldn't be here if I wanted people making my mistakes for me."
 
-    ju snarky a2 "And I'm telling you, you're full of shit. Who the hell cares about {i}whatever{/i} she did?"
+    ju annoyed a1 "And I'm telling you, you're full of shit. Who the hell cares about {i}whatever{/i} she did?"
 
     ju snarky a1 "You could be doing {b}literally anything else!{/b} What she did doesn't matter!"
 
-    ju annoyed a2 "If you want to make your own choices then get up and {i}do{/i} something with your life!"
+    ju annoyed a1 "If you want to make your own choices then get up and {i}do{/i} something with your life!"
 
-    ju speaking eclosed "So rather than moping into a bucket of ice cream, either suck it up and make amends with her or get shit done on your own!"
+    ju "So rather than moping into a bucket of ice cream, either suck it up and make amends with her or get shit done on your own!"
 
     mc annoyed "And I'm telling you, I don't want to!"
 
-    ju annoyed a2 "Idiot! Buffoon! Moron!"
+    ju "Idiot! Buffoon! Moron!"
 
-    ju snarky a1 "I'm done!"
+    ju snarky a2 "I'm done!"
 
-    ju "You made me do this!"
+    ju annoyed a1 "You made me do this!"
 
-    mc "What are you doing? Get your hands off of me!"
+    mc shocked armraised  "What are you doing? Get your hands off of me!"
 
-    mc "When the hell did you fix the hard light projector?!"
+    mc shocked m2 "When the hell did you fix the hard light projector?!"
 
-    ju annoyed a2 "Out!"
+    ju annoyed a1 "Out!"
 
-    mc shocked armraised "Actually, {i}how{/i} did y-!?"
+    mc shocked m2 "Actually, {i}how{/i} did y-!?"
 
     ju "{b}Ouuuuuut!{/b}"
 
@@ -67,6 +70,8 @@
     ju annoyed a1 "And don't come back until you're done moping over every little thing that goes wrong!"
 
     ju snarky a2 "'Beautiful butterfly' my ass, Raine!"
+
+    hide ju snarky a2 with fade 
 
     #SFX Door slamming
     play sound "sfx/door.ogg"
@@ -133,7 +138,7 @@
 
     le concerned "Did you really think anyone would just let an alien set up shop without some sort of oversight?"
 
-    mc "It's still bullshit!"
+    mc upset "It's still bullshit!"
 
     na "Leona sighs as she continues putting items into her bag."
 
