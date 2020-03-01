@@ -3,7 +3,7 @@ label scene7:
     #ART - FOREST BG (NO SHIP)
     #VFX - BG Should be super zoomed in too. See end of this scene for clarity.
     ###
-    scene forest with zoomin 
+    scene forest with dissolve 
     mc sighing "Lovely. I was sort of hoping I'd never see this neck of the woods again."
     mc "Why are we here again?"
     #tbh im kind of confused on whether to add leona here. i will probably figure that out loud
