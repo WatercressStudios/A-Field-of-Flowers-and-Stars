@@ -10,19 +10,16 @@ label scene_7:
 
     scene forest with  Dissolve(1.5):
         anchor (0.5, 0.5) align (0.5, 0.5) zoom 0.75
-        linear 180 zoom 2.0
 
     #voice "voice/7-scene7-1.ogg" #Raine (Nat)
     mc sighing "Lovely. I was sort of hoping I'd never see this neck of the woods again."
     #voice "voice/7-scene7-2.ogg" #Raine (Nat)
     mc "Why are we here again?"
-    #tbh im kind of confused on whether to add leona here. i will probably figure that out loud
+
+    $ hide_sides = ['Leona']
+    show le explaining at stage_right with dissolve
     #voice "voice/7-scene7-3.ogg" #Leona (Dot)
     le explaining "Remember the alien tech we found while bringing in your ship?"
-    show le explaining with dissolve:
-        xalign 0.5
-    #voice "voice/7-scene7-4.ogg" #Leona (Dot)
-    le "Remember the alien tech we found while bringing in your ship?"
     #voice "voice/7-scene7-5.ogg" #Leona (Dot)
     le "I was thinking the crash uncovered some supplies that got left behind by the previous inhabitants, but then we found all that crate inside the cave."
     #voice "voice/7-scene7-6.ogg" #Leona (Dot)
@@ -38,7 +35,7 @@ label scene_7:
     #voice "voice/7-scene7-11.ogg" #Leona (Dot)
     le "What's more, why haven't we found anything out in the open?"
     #voice "voice/7-scene7-12.ogg" #Leona (Dot)
-    le questioning2 "Was this place really colonized at some point if there are no other structures?"
+    le questioning a1 "Was this place really colonized at some point if there are no other structures?"
     #voice "voice/7-scene7-13.ogg" #Raine (Nat)
     mc "Assume it wasn't a populated planet then."
     #voice "voice/7-scene7-14.ogg" #Raine (Nat)
@@ -50,7 +47,7 @@ label scene_7:
     #voice "voice/7-scene7-17.ogg" #Leona (Dot)
     le "That's just it, isn't it?"
     #voice "voice/7-scene7-18.ogg" #Leona (Dot)
-    le questioning2 "We didn't find much of anything in the cave, except some old books."
+    le questioning a1 "We didn't find much of anything in the cave, except some old books."
     #voice "voice/7-scene7-19.ogg" #Leona (Dot)
     le "And it's not like we can read them anyway."
     #voice "voice/7-scene7-20.ogg" #Raine (Nat)
@@ -61,18 +58,6 @@ label scene_7:
     mc "I can't actually speak your language, remember?"
     #voice "voice/7-scene7-23.ogg" #Leona (Dot)
     le happy a2 "Oooh, your translator! I didn't think about it, but that must be why you can use the mediapad I gave you."
-    #voice "voice/7-scene7-24.ogg" #Leona (Dot)
-    le questioning a2 "We didn't find much of anything in the cave, except some old books."
-    #voice "voice/7-scene7-25.ogg" #Leona (Dot)
-    le "And it's not like we can read them anyway."
-    #voice "voice/7-scene7-26.ogg" #Raine (Nat)
-    mc satisfied "Actually, I might be able to help with that!"
-    #voice "voice/7-scene7-27.ogg" #Leona (Dot)
-    le speakingsurprised a1 "You can? How?"
-    #voice "voice/7-scene7-28.ogg" #Raine (Nat)
-    mc "I can't actually speak your language, remember?"
-    #voice "voice/7-scene7-29.ogg" #Leona (Dot)
-    le happy speaking a3 "Oooh, your translator! I didn't think about it, but that must be why you can use the mediapad I gave you."
     #voice "voice/7-scene7-30.ogg" #Raine (Nat)
     mc neutral "Yeah, works just as well for the written word. Gimme one of the books and I'll take a look-see."
     na "Leona quickly shuffles through the hoverbike's storage compartment, coming out with one of the dusty books we'd brought back with us."
@@ -180,7 +165,7 @@ label scene_7:
     #voice "voice/7-scene7-80.ogg" #Raine (Nat)
     mc "Why set up traps to kill people before they can even get to the door, if opening it is just going to kill everyone anyway?"
     #voice "voice/7-scene7-81.ogg" #Leona (Dot)
-    le sad "...Uh, R-Raine?"
+    le concerned "...Uh, R-Raine?"
     #voice "voice/7-scene7-82.ogg" #Raine (Nat)
     mc neutral "Yeah?"
     #voice "voice/7-scene7-83.ogg" #Leona (Dot)
@@ -229,21 +214,24 @@ label scene_7:
     #voice "voice/7-scene7-104.ogg" #Raine (Nat)
     mc upset "Get on the horn, warn everyone to get away from those mountains!"
     #SFX - Faint explosion
+    show forest with vpunch
     na "Leona and I look to the horizon as we feel the ground shake beneath our feet, a burst of sound echoing through the air."
     na "And in the distance, visible through the treetops…"
     na "Was a large chunk of a mountain torn right from the earth."
     #voice "voice/7-scene7-105.ogg" #Raine (Nat)
     mc shocked armraised "Oh my god."
-    show le surprised with dissolve(0.2)
+    le surprised "{nw}"
     na "Leona stands there, stunned in place with a terrified look."
     #voice "voice/7-scene7-106.ogg" #Raine (Nat)
     mc unimpressed "Leona, the radio! Quick!"
     na "A gust of wind barrels through the forest, thrusting into my face as it batters the trees in its wake."
     #voice "voice/7-scene7-107.ogg" #Raine (Nat)
     mc annoyed "Aah!"
+    hide le with moveoutright
     na "By the time the wind dies down, Leona rushes to the radio on her bike, sweat dripping from her face."
+    $ hide_sides = []
     #voice "voice/7-scene7-108.ogg" #Leona (Dot)
-    le explaining "This is Captain Leona broadcasting on all emergency channels!"
+    le frustrated a2 "This is Captain Leona broadcasting on all emergency channels!"
     #voice "voice/7-scene7-109.ogg" #Leona (Dot)
     le "I need reports from all units detailing locations and status on frequency 88.9, prioritizing vicinity to Southwest Mountain range!"
     na "One by one the reports roll in."
@@ -253,16 +241,19 @@ label scene_7:
     na "The mountain just sort of caved in on itself, followed by a huge amount of smoke."
     na "Beyond that and what will eventually be a better view of the horizon, Aster only had minor damage from the shockwave."
     #voice "voice/7-scene7-110.ogg" #Leona (Dot)
-    le "I need people out there keeping an eye on it. I'll be making a stop in Aster then I'll be out to assess the situation."
+    le concernedspeaking "I need people out there keeping an eye on it. I'll be making a stop in Aster then I'll be out to assess the situation."
     #voice "voice/7-scene7-111.ogg" #Leona (Dot)
     le "All other units report to base and await our return. Captain Leona signing off."
     na "Leona stands there a moment, staring into the radio."
     #voice "voice/7-scene7-112.ogg" #Raine (Nat)
     mc neutral "Can we talk about this?"
+
+    $ hide_sides = ['Leona']
+    show le crying2 at stage_right with easeinright
+
     #voice "voice/7-scene7-113.ogg" #Leona (Dot)
-    le sad_lee "Um…"
-    show le crying2 with dissolve:
-        xalign 0.5
+    le concerned "Um…"
+
     na "She opens her mouth to speak."
     na "But then turns her face away from me."
     na "..."
@@ -271,7 +262,7 @@ label scene_7:
     #voice "voice/7-scene7-115.ogg" #Raine (Nat)
     mc "Everyone makes mistakes. There isn't a person in the universe who goes through life flawlessly."
     #voice "voice/7-scene7-116.ogg" #Leona (Dot)
-    le sad "...I'm sorry."
+    le concernedspeaking "...I'm sorry."
     #voice "voice/7-scene7-117.ogg" #Raine (Nat)
     mc upset "But you lied to me. I trusted you, and you lied to me."
     #voice "voice/7-scene7-118.ogg" #Leona (Dot)
@@ -282,7 +273,7 @@ label scene_7:
     #voice "voice/7-scene7-120.ogg" #Raine (Nat)
     mc "Why?"
     #voice "voice/7-scene7-121.ogg" #Leona (Dot)
-    le sad_lee "I-I was afraid."
+    le concerned "I-I was afraid."
     #voice "voice/7-scene7-122.ogg" #Leona (Dot)
     le "I only wanted to keep you safe."
     #voice "voice/7-scene7-123.ogg" #Leona (Dot)
@@ -321,20 +312,30 @@ label scene_7:
     #voice "voice/7-scene7-139.ogg" #Raine (Nat)
     mc unimpressed "Get the rocks."
     #voice "voice/7-scene7-140.ogg" #Leona (Dot)
-    le speakingsurprised "R-Raine, what are you-"
+    le speakingsurprised a1 "R-Raine, what are you-"
     #voice "voice/7-scene7-141.ogg" #Leona (Dot)
     le "The ones I told you to hold on to. Right now."
+
+    hide le with dissolve
     na "Looking more than a little sheepish, Leona fishes the rocks out of her bag."
     na "They're decently sized, a handful even. Much bigger than the pebbles around here."
+
+    show forest:
+        anchor (0.5, 0.5) align (0.0, 0.5)
+        ease 2.0 zoom 1.2
+
     na "I grab one out of her hand, then point towards a big tree in the distance."
     #voice "voice/7-scene7-142.ogg" #Raine (Nat)
     mc "I want you to hit it."
+
+    $ hide_sides = []
+
     #voice "voice/7-scene7-143.ogg" #Leona (Dot)
     le "Hit? Like, go up and-?"
     #voice "voice/7-scene7-144.ogg" #Raine (Nat)
     mc "No, I mean throw it. As hard as you can. Hit that tree."
     #voice "voice/7-scene7-145.ogg" #Leona (Dot)
-    le sad_lee "I-I don't think I can-"
+    le concerned "I-I don't think I can-"
     #voice "voice/7-scene7-146.ogg" #Raine (Nat)
     mc annoyed "I don't care. Throw the rock."
     na "Still looking nervous, she reels back and lets it fly."
@@ -364,11 +365,15 @@ label scene_7:
     #voice "voice/7-scene7-156.ogg" #Raine (Nat)
     mc "I had Juneau translate the interface and attach lyrics to all the songs."
     #voice "voice/7-scene7-157.ogg" #Leona (Dot)
-    le sad "Raine..."
+    le concernedspeaking "Raine..."
     #voice "voice/7-scene7-158.ogg" #Raine (Nat)
     mc unimpressed "But, as you know, I won't be needing any more help from now on."
     #voice "voice/7-scene7-159.ogg" #Raine (Nat)
     mc "I'll see you around, Leona."
+
+    show forest:
+        linear 40 zoom 3.0 align (0.8, 0.5)
+
     na "I turn away from her and start walking."
     #VFX - BG and Leona sprite zooms out a step with every following line until end of scene.
     #
@@ -377,7 +382,7 @@ label scene_7:
     le "Raine?"
     na "Just walking."
     #voice "voice/7-scene7-161.ogg" #Leona (Dot)
-    le sad "R-Raine...?"
+    le concerned "R-Raine...?"
     na "Back to my ship."
     #voice "voice/7-scene7-162.ogg" #Leona (Dot)
     le crying "{b}Raine{/b}?!"
