@@ -391,7 +391,7 @@
     mc "Oh, to hell with it!"
     scene KissCG3 with dissolve
     scene black with fade
-        pause 6
+    pause 6
     #ART KissCG3, followed by a fade to black
     #ART Black BG, sticks around for 5-8 seconds
     #SFX Ringing/Beeping from radio
@@ -446,12 +446,12 @@
             zoom 1.48
             ease 1.0 zoom 1.0
 
-    show le happy a1 with dissolve
+    show le happy a1 with dissolve:
         xalign 0.75
 
     le "Juneau! We did it!"
 
-    show ju snarky a1 with dissolve
+    show ju snarky a1 with dissolve:
         xalign 0.5
 
     ju "Didn't I {b}just{/b} tell you that?"
@@ -498,7 +498,7 @@
 
     #VFX Fade to black
 
-    scene black with fade 
+    scene black with fade
 
     na "Leona and Juneau continue making a fuss. Shortly thereafter, the crew shows up, looking pleased now that the whole ordeal was behind the City."
     na "Eventually, Leona brings up her plans to feast and the mood further improves."
