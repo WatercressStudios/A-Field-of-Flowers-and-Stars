@@ -64,7 +64,7 @@ label scene_3:
     mc questioning "What's this?"
 
     voice "voice/3-scene_3-11.ogg" #Leona (Dot)
-    show le happy s2 at stage_right with easeinright
+    show le happy a2 at stage_right with easeinright
     le "Let's see... sliced inop root, some o'eke'ke, and fresh iwaiwa eggs!"
     na "Huh… those didn't translate. I don't know what these could actually be."
     show le kind a2 with dissolve
@@ -386,7 +386,7 @@ label scene_3:
 
     #return
 
-    scene street onlayer master with wipeleft:
+    scene street_open onlayer master with wipeleft:
         subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
         parallel:
             xpos 1.00
@@ -400,6 +400,7 @@ label scene_3:
 
     #Voice lines are not implimented yet
 
+    $ hide_sides = []
     #voice "voice/3-scene_3-82.ogg" #Leona (Dot)
     le explaining "There's Lua's place, she has the best vegetables this time of year, and over there's my mechanic's house..."
     na "Meanwhile, Leona is dragging me around, pointing at various buildings and landmarks without a care in the world."

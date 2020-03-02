@@ -264,19 +264,17 @@ label scene_2:
     na "As we ride towards the ship, a cluster of small buildings come into view at the base of the tower."
 
     scene street onlayer master with dissolve:
-        subpixel True xpos 0.85 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
+        subpixel True xpos 0.56 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
 
     $ hide_sides = ['Leona']
 
     show le happy a1 at stage_right with dissolve
     voice "voice/2-scene_2-55.ogg" #Leona (Dot)
     le happy a2 "We're here! Welcome to the city of Aster!"
-    scene street onlayer master with None:
-            subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
-            parallel:
-                xpos 1.00
-                ease 15 xpos 0.56
+    show street:
+        ease 15 xpos 1.0
 
+    hide le with dissolve
     $ hide_sides = []
 
     play env "amb/City Day.ogg" fadein 1.0
