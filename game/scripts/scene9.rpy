@@ -3,12 +3,13 @@
     #ART Inside ship, Garage BG
     #VFX We're at red alert status
     #SFX Sirens going off
-    scene cockpit_ground with dissolve
-    scene cockpit_ground with hpunch
+    scene cockpit_ground with dissolve:
+        zoom 0.75
+    scene cockpit_ground with hpunch:
+        zoom 0.75
 
-    show ju annoyed a1 with dissolve:
-        xalign 0.5
-
+    show ju annoyed a1 at stage_right with dissolve
+       
     ju "Get up! You {i}absolute{/i} child!"
 
     mc annoyed "Hell no! Leave me alone and turn off that thing off! It's too damn loud!!"
@@ -70,12 +71,13 @@
             xalign 0.5
     ju "And don't come back until you're done moping over every little thing that goes wrong!"
     ju "'Beautiful butterfly' my ass, Raine!"
-    scene street onlayer master:
-        subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
-        parallel:
-            xpos 0.5
-            ease 10 xpos 0.01
     hide ju snarky a2 with dissolve
+    scene street with dissolve:
+        xpos 0.5 
+        ypos 1.0 
+        xanchor 0.5 
+        yanchor 1.0 
+    
     #SFX Door slamming
     play sound "sfx/door.ogg"
 
