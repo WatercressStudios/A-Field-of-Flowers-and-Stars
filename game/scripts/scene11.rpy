@@ -446,53 +446,59 @@
             zoom 1.48
             ease 1.0 zoom 1.0
 
+    show le happy a1 with dissolve
+        xalign 0.75
+
     le "Juneau! We did it!"
 
-    show ju snarky a2  
+    show ju snarky a1 with dissolve
+        xalign 0.5
 
     ju "Didn't I {b}just{/b} tell you that?"
 
-    mc "Give her a minute, she's a little high on life."
+    mc happy "Give her a minute, she's a little high on life."
 
-    le "Hey, you should be just as happy!"
+    le happy speaking a2 "Hey, you should be just as happy!"
 
-    le "Afterall, we got big days ahead of us, don't we, Rainey?"
+    le happy speaking a3 "Afterall, we got big days ahead of us, don't we, Rainey?"
 
-    mc "Excuse me?"
+    mc surprised "Excuse me?"
 
     ju "Rainey?"
 
-    ju "Girl, I don't know what you did, but keep it up."
+    ju snarky a2 "Girl, I don't know what you did, but keep it up."
 
     ju "You might not die alone at this rate."
 
-    mc "You, shut face!"
+    mc upset "You, shut face!"
 
-    le "Tehehe, you're not embarrassed now, are you?"
+    le happy speaking a2 "Tehehe, you're not embarrassed now, are you?"
 
-    mc "What? No. No!"
+    mc shocked armraised "What? No. No!"
 
-    le "Oh ho? You should tell her then."
+    le happy speaking a3 "Oh ho? You should tell her then."
 
-    mc "Yeah, yeah."
+    mc surprised "Yeah, yeah."
 
-    ju "This oughta be good."
+    ju snarky a1 "This oughta be good."
 
     mc "Well, for starters. We made up."
 
-    le "You mean 'out'."
+    le happy2 a1 "You mean 'out'."
 
-    mc "Shhh!"
+    mc upset "Shhh!"
 
-    ju "Raine, you didn't actually {i}share{/i} your {i}feelings{/i} did you?!"
+    ju concerned a1 "Raine, you didn't actually {i}share{/i} your {i}feelings{/i} did you?!"
 
-    mc "I hate you. So much."
+    mc upset "I hate you. So much."
 
     ju "This {b}is{/b} cause to celebrate...!"
 
-    le "That's what I said!"
+    le happy speaking a2"That's what I said!"
 
     #VFX Fade to black
+
+    scene black with fade 
 
     na "Leona and Juneau continue making a fuss. Shortly thereafter, the crew shows up, looking pleased now that the whole ordeal was behind the City."
     na "Eventually, Leona brings up her plans to feast and the mood further improves."
