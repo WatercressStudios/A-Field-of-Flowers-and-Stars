@@ -142,113 +142,138 @@ label scene_4:
     #voice "voice/4-scene_4-53.ogg" #Raine (Nat)
     mc "You've got a deal."
 
-    scene black with dissolve
+    scene sky with dissolve
 
     na "..."
     na "After a couple of hours listening to Leona's stories while working on the ship, I decide to take a break. Juneau won't be online for a little bit anyways, so I have some time to kill."
     na "And I'm hungry."
 
+    #ART - LEONA'S HOUSE
+    scene house with dissolve:
+        zoom 1.25 xalign 1.0
 
-        #ART - LEONA'S HOUSE
 
-    scene house with fade
     na "After a short trip to a nearby convenience store in search of eggs, we return to Leona's abode."
     na "It's already mid-afternoon."
     na "If I go back to the base to work on my ship now, I'll be there all night."
     na "Juneau..."
     #voice "voice/4-scene_4-54.ogg" #Leona (Dot)
-    le "Did you hear me? Helloooo?"
+    le happy a2 "Did you hear me? Helloooo?"
+
     #voice "voice/4-scene_4-55.ogg" #Raine (Nat)
-    mc "Oh! Ah, what?"
+    mc shocked armraised "Oh! Ah, what?"
+
+    show house:
+        ease 0.5 zoom 0.75 xalign 0.5
+    pause 0.5
+    show le happy a2 at stage_right with dissolve
+
+    $ hide_sides = ['Leona']
+
     #voice "voice/4-scene_4-56.ogg" #Leona (Dot)
     le "I asked if you wanted dinner. Are you okay?"
     #voice "voice/4-scene_4-57.ogg" #Raine (Nat)
-    mc "Yeah, just thinking about the ship."
+    mc onfire "Yeah, just thinking about the ship."
     #voice "voice/4-scene_4-58.ogg" #Leona (Dot)
-    le "You said you'd have trouble if the software was busted. I thought you'd know how to simply redo it."
+    le concerned "You said you'd have trouble if the software was busted. I thought you'd know how to simply redo it."
     #voice "voice/4-scene_4-59.ogg" #Raine (Nat)
-    mc "It's not recreating the software I can't do. It's getting back the programs I had."
+    mc blech "It's not recreating the software I can't do. It's getting back the programs I had."
+
+    hide le with dissolve
+    show house:
+        ease 0.5 zoom 1.0 xalign 0.0 yalign 1.0
     na "Leona sets food down in front of me. I'm not entirely sure what it's supposed to be, but it seems she used ingredients based on what she knew I could eat."
     na "As expected, it's delicious."
+
+    $ hide_sides = []
+
     #voice "voice/4-scene_4-60.ogg" #Leona (Dot)
-    le "So what's so important about the program?"
+    le questioning a2 "So what's so important about the program?"
     #voice "voice/4-scene_4-61.ogg" #Raine (Nat)
-    mc "She's an AI companion. She's way more than just a program."
+    mc gentlehandtalk "She's an AI companion. She's way more than just a program."
     #voice "voice/4-scene_4-62.ogg" #Raine (Nat)
-    mc "As far as I'm concerned she's a real person."
+    mc happy "As far as I'm concerned she's a real person."
     na "I can't help but show pain on my face."
     #voice "voice/4-scene_4-63.ogg" #Leona (Dot)
-    le "...She must be very important to you."
+    le concerned "...She must be very important to you."
     na "Leona seems upset for me. Perhaps she feels the sadness herself as well."
     #voice "voice/4-scene_4-64.ogg" #Raine (Nat)
-    mc "Well, we had our fights, but she's the closest I have to family."
+    mc unimpressed "Well, we had our fights, but she's the closest I have to family."
     #voice "voice/4-scene_4-65.ogg" #Raine (Nat)
-    mc "Like an annoying little sister."
+    mc happy "Like an annoying little sister."
     na "Leona's long ears seem to perk up, but she covers her expression by taking another bite of food."
     #voice "voice/4-scene_4-66.ogg" #Raine (Nat)
-    mc "This sucks."
+    mc grumpy "This sucks."
     #voice "voice/4-scene_4-67.ogg" #Leona (Dot)
-    le "Yeah..."
+    le tired "Yeah..."
     #voice "voice/4-scene_4-68.ogg" #Leona (Dot)
-    le "But!"
+    le crazy "But!" with hpunch
     na "Leona's sudden change of tone catches me off guard."
     #voice "voice/4-scene_4-69.ogg" #Leona (Dot)
-    le "You're gonna need rest if you'll be spending tomorrow fixing your ship!"
+    le "You're gonna need rest if you'll be spending tomorrow fixing your ship!" with hpunch
     #voice "voice/4-scene_4-70.ogg" #Leona (Dot)
-    le "I've got a change of clothes for you! I put them on the bed you used yesterday."
+    le "I've got a change of clothes for you! I put them on the bed you used yesterday." with hpunch
     #voice "voice/4-scene_4-71.ogg" #Leona (Dot)
-    le "Consider that bed and those clothes yours, at least for as long as you're here."
+    le happy a2 "Consider that bed and those clothes yours, at least for as long as you're here."
     na "Her bright exterior seems a bit forced, but I simply smile. Her honest, blatant empathy is… refreshing."
     #voice "voice/4-scene_4-72.ogg" #Raine (Nat)
-    mc "Thanks, Leona. I really appreciate it. You've been amazing, I really don't deserve your help."
+    mc happy "Thanks, Leona. I really appreciate it. You've been amazing, I really don't deserve your help."
     na "Leona turns from me."
     #voice "voice/4-scene_4-73.ogg" #Leona (Dot)
-    le "Just doing what anyone would do. Now, make sure you get some rest! Ya need a strong and healthy mind to get her back!"
+    le kind a2 "Just doing what anyone would do. Now, make sure you get some rest! Ya need a strong and healthy mind to get her back!"
+
     na "I want to say something more, but I know there's nothing I can say. My thoughts return to the repair of my ship."
     na "But there's nothing I can do until I have Juneau back, and that has to wait till tomorrow."
     na "The wormhole that brought me here is more likely than not long gone."
     na "Would it really be so bad to slow my pace here?"
+
+    show house:
+        ease 1.5 zoom 1.3 xalign 0.5 yalign 1.0
+
     na "Resigned to the facts, I follow Leona's advice and head to bed."
     na "As I lay in bed, I remember the stories Leona told me earlier."
     na "If I'm going to be here for a while, I guess it wouldn't hurt to document some things."
     #voice "voice/4-scene_4-74.ogg" #Raine (Nat)
-    mc "Hey, Leona?"
+    mc speaking "Hey, Leona?"
     na "Leona, who is now cleaning up after our meal, pokes her head out from the kitchen."
     #voice "voice/4-scene_4-75.ogg" #Leona (Dot)
-    le "Yes?"
+    le happy a1 "Yes?"
     #voice "voice/4-scene_4-76.ogg" #Raine (Nat)
-    mc "Do you have anything I can write on?"
+    mc shyspeak "Do you have anything I can write on?"
     #voice "voice/4-scene_4-77.ogg" #Leona (Dot)
-    le "Is digital alright?"
+    le curious "Is digital alright?"
     #voice "voice/4-scene_4-78.ogg" #Raine (Nat)
-    mc "That would be wonderful."
+    mc happy "That would be wonderful."
     #voice "voice/4-scene_4-79.ogg" #Leona (Dot)
-    le "Check the shelf on the back wall. There are a bunch of mediapads I bought a while ago for next to nothing, so you can keep one if you want."
+    le happy a2 "Check the shelf on the back wall. There are a bunch of mediapads I bought a while ago for next to nothing, so you can keep one if you want."
     #voice "voice/4-scene_4-80.ogg" #Raine (Nat)
     mc "Whoa, thanks!"
     #voice "voice/4-scene_4-81.ogg" #Raine (Nat)
-    mc "I'd feel a little guilty taking something else from you for nothing in return, so I'll make you a trade."
+    mc satisfied "I'd feel a little guilty taking something else from you for nothing in return, so I'll make you a trade."
     #voice "voice/4-scene_4-82.ogg" #Raine (Nat)
-    mc "How does a copy of my music collection sound?"
+    mc shyspeak "How does a copy of my music collection sound?"
     #voice "voice/4-scene_4-83.ogg" #Leona (Dot)
-    le "Alien music? That sounds exciting!"
+    le happy2 a1 "Alien music? That sounds exciting!"
     #voice "voice/4-scene_4-84.ogg" #Raine (Nat)
     mc "I thought that might interest you. I'll get you hooked up tomorrow."
     #voice "voice/4-scene_4-85.ogg" #Leona (Dot)
     le "You know how to drive a hard bargain!"
     #voice "voice/4-scene_4-86.ogg" #Leona (Dot)
-    le "Oh, and I'm done with dishes here but I need to go check on something at the base. I'll be back in a little while."
+    le happy a1 "Oh, and I'm done with dishes here but I need to go check on something at the base. I'll be back in a little while."
     #voice "voice/4-scene_4-87.ogg" #Leona (Dot)
     le "Will you be okay on your own for a bit?"
     #voice "voice/4-scene_4-88.ogg" #Raine (Nat)
-    mc "Sure, I just want to write some things down before I go to sleep. See you in the morning?"
+    mc happy "Sure, I just want to write some things down before I go to sleep. See you in the morning?"
     #voice "voice/4-scene_4-89.ogg" #Leona (Dot)
-    le "Alrighty, g'night Raine."
+    le kind a2 "Alrighty, g'night Raine."
     #voice "voice/4-scene_4-90.ogg" #Raine (Nat)
-    mc "Night night~"
+    mc satisfied "Night night~"
     na "Leona takes her leave and I set about making notes of what I've seen and heard so far."
     na "When we were talking in the garage earlier she told me an interesting story about their homeworld; Dawne."
     na "I figure that's as good a place as any to start before I decide to nod off."
     #VFX - JOURNAL ENTRY ADDED - 1
+
+    scene black with Dissolve(2.0)
+    pause 0.5
 
     jump scene_5
