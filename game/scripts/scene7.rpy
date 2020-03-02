@@ -1,9 +1,17 @@
 
-label scene7: 
+label scene_7:
     #ART - FOREST BG (NO SHIP)
     #VFX - BG Should be super zoomed in too. See end of this scene for clarity.
     ###
-    scene forest with zoomin 
+
+    scene sky with Dissolve(1.5)
+
+    pause 0.5
+
+    scene forest with  Dissolve(1.5):
+        anchor (0.5, 0.5) align (0.5, 0.5) zoom 0.75
+        linear 180 zoom 2.0
+
     #voice "voice/7-scene7-1.ogg" #Raine (Nat)
     mc sighing "Lovely. I was sort of hoping I'd never see this neck of the woods again."
     #voice "voice/7-scene7-2.ogg" #Raine (Nat)
@@ -378,12 +386,10 @@ label scene7:
     le crying2 "{b}Raaaine{/b}!"
     na "Back to a prison."
     hide le crying2 with dissolve
-    jump scene8
+    jump scene_8
 
 
 
     #VFX - Quickly cut to black
     #Timing - add an extra couple seconds of nothing but black before next line
     #VFX - Journal entry added - 4
-
-

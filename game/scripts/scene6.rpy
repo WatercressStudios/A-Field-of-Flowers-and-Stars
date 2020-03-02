@@ -1,9 +1,9 @@
-label scene6:
-
-    scene black with dissolve #return to this later regarding coding in blackness or whater
+label scene_6:
+    scene cave with dissolve:
+        zoom 1.78 anchor (0.5, 0.5) align (1.0, 0.5)
     play sound "sfx/footsteps 2.ogg"
-    show le happy a1 with dissolve:
-        xalign 0.5
+    $ hide_sides = ['Leona']
+    show le happy a1 at stage_right with dissolve
     #voice "voice/6-scene6-1.ogg" #Leona (Dot)
     le "See? It's not {i}that{/i} hot."
     #voice "voice/6-scene6-2.ogg" #Raine (Nat)
@@ -18,23 +18,26 @@ label scene6:
     mc "Besides, if you think it's freezing outside, you'd hate Lumin."
     #voice "voice/6-scene6-6.ogg" #Leona (Dot)
     le questioning a3 "The sun and exercise is good for you! You're so pale... and thin? What's a good word for it...?"
-    show le happy speaking a2 with hpunch:
-        xalign 0.5
+    show le happy speaking a2 with hpunch
     na "Leona pokes at my arms through the shroud of darkness." #later program some kind of screenshake or vpunch maybe
     #voice "voice/6-scene6-7.ogg" #Raine (Nat)
     mc blech "NYuUugH, no touchy. I can already feel my skin crawling, it's so humid in here."
     #voice "voice/6-scene6-8.ogg" #Raine (Nat)
     mc blech "Please, PLEASE tell me there’s no blood-sucking bugs in here, eyuckh..."
     hide le questioning a3 with dissolve
+
+    show cave:
+        linear 180.0 zoom 3.0
+
     na "Leona and I make our way through the deep, deep cave."
     play sound "sfx/footsteps.ogg"
     na "The floor is rocky and uneven, slippery with some sort of slimy mess. I can barely keep my footing, not to mention the awful smell."
     #voice "voice/6-scene6-9.ogg" #Raine (Nat)
     mc questioning2 "How does a species from a bright desert planet even get off having such good night vision anyway?"
-    show le explaining with dissolve:
-        xalign 0.5
+
+    $ hide_sides = []
     #voice "voice/6-scene6-10.ogg" #Leona (Dot)
-    le "I dunno. I've always liked small, dark corners, but so does everyone else I know."
+    le explaining "I dunno. I've always liked small, dark corners, but so does everyone else I know."
     #voice "voice/6-scene6-11.ogg" #Leona (Dot)
     le explaining "Mom always said Dad loved these sorts of places when the colony arrived."
     #voice "voice/6-scene6-12.ogg" #Raine (Nat)
@@ -49,7 +52,7 @@ label scene6:
     #voice "voice/6-scene6-16.ogg" #Leona (Dot)
     le questioning a2 "Hmm... Oh!"
     #voice "voice/6-scene6-17.ogg" #Leona (Dot)
-    le happy speaking a3 "I found the word I was looking for. You’re scrawny!"
+    le happy a2 "I found the word I was looking for. You’re scrawny!"
     #voice "voice/6-scene6-18.ogg" #Raine (Nat)
     mc annoyed "I'll show you scrawny, ya dingbat."
     #voice "voice/6-scene6-19.ogg" #Leona (Dot)
@@ -81,26 +84,25 @@ label scene6:
     mc "Once we get out of here, remind me to show you how good my throwing arm is."
     #voice "voice/6-scene6-32.ogg" #Leona (Dot)
     le curious "Weird, but alright."
-    hide le curious with dissolve
+
+    show cave:
+        linear 30.0 zoom 3.0 align (1.0, 0.5)
+
     na "We continue our trek into the caves, the air growing ever more humid."
     na "As we navigate the caves, the temperature slowly drops and damp water settles on my skin."
     na "Great, first it was hot and now I'm nearly shivering."
     na "Leona continues forward, ahead of me. I walk quietly and carefully behind her, trusting her as the expert here."
     na "I may be able to navigate an asteroid belt and maneuver around a pulsar, but down here, she's queen."
     na "She's a little airheaded, but… she knows what she's doing. I have more faith in her than I do myself in a place like this."
-    show le suspicious a2:
-        xpos -0.5
-        easein 1.0 xpos 0.3
+
     #voice "voice/6-scene6-33.ogg" #Leona (Dot)
-    le "Smell that?"
+    le suspicious a2 "Smell that?"
     #voice "voice/6-scene6-34.ogg" #Raine (Nat)
     mc questioning2 "What?"
-    show le happy a2:
-        xalign 0.5
-        bounce
-    "Rust! We're getting close to something." #i wanted to put a bounce but couldnt figure out the right format since i keep getting errors
+
+    le happy a2 "Rust! We're getting close to something." #i wanted to put a bounce but couldnt figure out the right format since i keep getting errors
     #voice "voice/6-scene6-35.ogg" #Raine (Nat)
-    mc neutral "I can't smell anything. Maybe a little bit of sulphur from the caves, but that's it." 
+    mc neutral "I can't smell anything. Maybe a little bit of sulphur from the caves, but that's it."
     hide le with easeoutright
     na "But, if she's right about the rust, then we're getting close to something man made."
     na "Er, well. Not {i}man{/i} made. Alien made?"
@@ -114,10 +116,10 @@ label scene6:
     mc "Hey, I think I found something--"
 
 
-
     ###
    # BG goes completely dark, just a black screen. Maybe a spooky cave sound effect?
     ###
+    scene black with Dissolve(0.1)
 
     na "And then, the light fades from sight."
     na "..."
@@ -163,18 +165,23 @@ label scene6:
     #ART - Load Cave1 BG but really dark (Cave1 BG just cave, not the same as Cave2BG which has the door and panel and whatnot.)
     #VFX - slowly increase the light
     ###
+    scene cave:
+        anchor (0.5, 0.5) align (1.0, 0.5) zoom 3
+    show black:
+        alpha 1
+        linear 8 alpha 0
+    pause 1.5
 
     na "Slowly, the cave begins to light up. A figure enters the tunnel to my right, its radiance blinding me."
     #voice "voice/6-scene6-40.ogg" #Raine (Nat)
     mc shocked m2  "Leona!?"
-    show le concerned:
-        xpos -0.5
-        easein 1.0 xpos 0.3
+    $ hide_sides = ['Leona']
+    show le concerned at stage_right with moveinright
     #voice "voice/6-scene6-41.ogg" #Leona (Dot)
     le "RAINE!"
     na "She dashes over to me and pulls me into her arms, squeezing me tightly with all of her strength."
     #voice "voice/6-scene6-42.ogg" #Leona (Dot)
-    le sad "Are you okay? Are you hurt? I'm so sorry! I should have been paying more attention, I'm sorry, I'm sorry, I'm so sorry!"
+    le concerned "Are you okay? Are you hurt? I'm so sorry! I should have been paying more attention, I'm sorry, I'm sorry, I'm so sorry!"
     #voice "voice/6-scene6-43.ogg" #Leona (Dot)
     le concerned "Need something to drink? Something to eat? Need a break? You're not hurt, right?"
     #voice "voice/6-scene6-44.ogg" #Raine (Nat)
@@ -183,7 +190,7 @@ label scene6:
     na "Maybe I should follow her advice and bulk up a bit..."
     na "Leona produces a blanket from her pack, wiping me down and wrapping it gently around my shoulders."
     #voice "voice/6-scene6-45.ogg" #Leona (Dot)
-    le sad_lee "I was so worried…"
+    le concerned "I was so worried…"
     show le crying with dissolve
     na "She looks at me with a pained expression, her breathing erratic and her heart beating fast. I think she's about to cry."
     na "Crap, now I feel bad."
@@ -213,15 +220,18 @@ label scene6:
     mc "R-Right."
     hide le kind a2 with easeoutright
 
+    scene black with Dissolve(2.0)
+    pause 0.5
     ###
     #ART - CaveBG2 (the one with the door and panel)
     ###
-    scene cave with Dissolve(2.0) 
+    scene cave with Dissolve(2.0):
+        zoom 3.0 align (0.46, 0.5)
+
     na "After about half an hour of walking, we finally reach our destination; a large alcove with a door and panel at the very back of the cave. "
     na "Everything here looks to be scaled up compared to human or dawnese standards."
     na "Whoever built this must have been pretty tall."
-    show le happy a2 with dissolve:
-        xalign 0.5
+    show le happy a2 at stage_right with dissolve
     "Here we go!"
     #voice "voice/6-scene6-55.ogg" #Raine (Nat)
     mc questioning2 "Yeah, this is a biggun. Why would anyone build something like that inside a cave though?"
@@ -242,11 +252,11 @@ label scene6:
     na "It's a digital lock alright. I'd be surprised if it still had any juice left in it."
     #voice "voice/6-scene6-62.ogg" #Raine (Nat)
     mc "One thing's for sure, this control panel's as old as dirt. Wanna take a guess at how long it's been here?"
-    show le happy a2 with dissolve:
-        align 0.5
+    show le:
+        xalign 1.0 yalign 0.0
         bounce
     #voice "voice/6-scene6-63.ogg" #Leona (Dot)
-    le "Books? Lemme see!"#vary it up a bit here
+    le happy a2 "Books? Lemme see!"#vary it up a bit here
     #voice "voice/6-scene6-64.ogg" #Raine (Nat)
     mc "Yeah, you have fun with that. I'll take a crack at this big ol' door I guess."
     hide le happy a2 with dissolve
@@ -286,7 +296,11 @@ label scene6:
     mc "Not a good sign."
     #voice "voice/6-scene6-79.ogg" #Raine (Nat)
     mc "If that generator's unstable this is going to be a lot harder than I'd hoped."
-    hide le speakingsurprised a1 with dissolve
+    hide le with easeoutright
+
+    show cave:
+        ease 2.0 align (0.32, 0.5)
+
     na "If it'll even fit in our ship to begin with. The door's massive, so whatever's inside might be as well."
     na "I move forward to investigate, working through the details in my mind."
     na "There are some bolts bulging out of the door's frame. Giving one a yank proves fruitless."
@@ -297,6 +311,9 @@ label scene6:
     na "But there's no way to tell exactly how much pressure there is."
     #voice "voice/6-scene6-80.ogg" #Raine (Nat)
     mc questioning "Leona, do you have any sort of lubricant I can use here?"
+
+    show le curious at stage_right with easeinright
+
     #voice "voice/6-scene6-81.ogg" #Leona (Dot)
     le curious "Lube? How much do you need? I have a little bit of moisturizer that might work. "
     #voice "voice/6-scene6-82.ogg" #Raine (Nat)
@@ -319,15 +336,24 @@ label scene6:
     mc "Start gathering up whatever you want to keep from that crate, we'll get out of here in a minute."
     #voice "voice/6-scene6-91.ogg" #Leona (Dot)
     le happy a2 "Okey-doke."
-    hide le happy a2 with dissolve
+
+    hide le with easeoutright
+
     na "Leona returns to her books, and I to my bolt."
     na "I lean in and blow on it a bit, hoping the lubricant will seep in enough to gain leeway."
     na "Then, I grab and pull. When that doesn't work, I try twisting."
     na "With a pop, the bolt comes free and a gentle whistle can be heard coming from the hole."
     na "Just as I'm about to lean back in to see what might be on the other side-"
+
+    show cave:
+        ease 2.0 align (0.5, 0.2)
+
     play sound "sfx/rustle.ogg"
     na "My ears shoot up at a sound from higher up in the cave."
     na "Something heavy. Stone scrawling against stone, echoing against the walls."
+
+    $ hide_sides = []
+
     #voice "voice/6-scene6-92.ogg" #Leona (Dot)
     le surprised "Hey, did you hear that?"
     #voice "voice/6-scene6-93.ogg" #Raine (Nat)
@@ -358,8 +384,10 @@ label scene6:
     #voice "voice/6-scene6-105.ogg" #Leona (Dot)
     le "Good idea."
     na "Leona and I quickly gather up the old books she'd set aside and head out."
-    hide le concerned with fade 
-    scene cave with dissolve
+
+    scene cave with dissolve:
+        anchor (0.5, 0.5) align (0.9, 0.5) zoom 3
+
     na "Walking back the way we came, Leona and I got to talking about something she said earlier."
     na "About how everyone she knows including herself likes small, dark corners."
     na "Looking at the city of Aster, and even Leona's home, I can see it. Their architecture is downright utilitarian, edging on brutalist."
@@ -368,24 +396,20 @@ label scene6:
     #voice "voice/6-scene6-106.ogg" #Raine (Nat)
     mc questioning "Everything alright up there?"
     #voice "voice/6-scene6-107.ogg" #Leona (Dot)
-    le happy speaking a3 "Yeah! Just need to check something out, won't take me long!"
-    show le happy a2:
-        xalign 0.5
-        bounce
+    le happy a2 "Yeah! Just need to check something out, won't take me long!"
     #voice "voice/6-scene6-108.ogg" #Leona (Dot)
     le "H-Hey, Raine! Can you stay there for a second?"
     #voice "voice/6-scene6-109.ogg" #Raine (Nat)
     mc questioning "Everything alright up there?"
     #voice "voice/6-scene6-110.ogg" #Leona (Dot)
-    le happy speaking a3 "Yeah! Just need to check something out, won't take me long!"
-    hide le happy speaking a3 with easeoutright
+    le happy a2 "Yeah! Just need to check something out, won't take me long!"
     na "I look ahead into the darkness."
     na "In the distance… lies a hallway that wasn't there before. With sharp, edged corners, and a green glow illuminating its form."
     #voice "voice/6-scene6-111.ogg" #Raine (Nat)
     mc questioning2 "You'll be alright, right!?"
     #voice "voice/6-scene6-112.ogg" #Leona (Dot)
     le "I'll be fine! Just stay there!"
-    play sound "sfx/door.ogg" 
+    play sound "sfx/door.ogg"
     na "A sudden loud, mechanical grinding forces an audible wince out of me."
     na "About as bad as nails on a chalkboard."
     #voice "voice/6-scene6-113.ogg" #Leona (Dot)
@@ -432,7 +456,8 @@ label scene6:
     #voice "voice/6-scene6-133.ogg" #Raine (Nat)
     mc questioning2 "Detour? To where?"
     #voice "voice/6-scene6-134.ogg" #Leona (Dot)
-    le speaking a1 "There's something I want to check out. These books gave me an idea."
+    le concerned "There's something I want to check out. These books gave me an idea."
+
     na "I quickly catch up to Leona, my nerves calming down now that she's beside me once again."
     #voice "voice/6-scene6-135.ogg" #Raine (Nat)
     mc happy "Well, alright. We have daylight to burn anyway. Besides, I have a little present I've been meaning to give you."
@@ -444,11 +469,9 @@ label scene6:
     mc "Now, what were we talking about before? Architecture?"
     #voice "voice/6-scene6-139.ogg" #Leona (Dot)
     le happy a1 "Right, as I was saying, the family and the home are equally important-"
-    hide le happy a1 with dissolve
 
-    jump scene7
+    jump scene_7
 
 ###
 #VFX - JOURNAL ENTRY ADDED - 3
 ###
-
