@@ -1,7 +1,8 @@
 label scene_3:
 
     #iris open
-    scene house with wipeup
+    scene house with wipeup:
+        zoom 0.75
     play env "amb/Leonas house.ogg"
 
     na "As I wake, I feel a mountain of pillows and blankets all around me."
@@ -119,7 +120,8 @@ label scene_3:
     scene black with vpunch
     play sound "sfx/water splash.ogg"
     na "-splashes my mouth — and the rest of my face — with it."
-    scene house with Dissolve(2.0)
+    scene house with Dissolve(2.0):
+        zoom 0.75
     voice "voice/3-scene_3-23.ogg" #Raine (Nat)
     mc annoyed "Ack! How can you eat that?!?"
 
@@ -257,7 +259,8 @@ label scene_3:
     hide le
     #timeskip
 
-    scene house with Dissolve(2.0)
+    scene house with Dissolve(2.0):
+        zoom 0.75
     voice "voice/3-scene_3-64.ogg" #Raine (Nat)
     mc satisfied "Ahh, that was really good. Thanks for breakfast, Leona."
 

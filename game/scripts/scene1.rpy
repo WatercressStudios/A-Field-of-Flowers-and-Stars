@@ -34,9 +34,12 @@ label scene1:
     na "So…"
 
     voice "voice/1-scene1-1.ogg" #Raine (Nat)
-    mc grumpy "I want to get back to exploring!"
+    mc grumpy "So why won't you finish these damn calibrations already?!"
 
     voice "voice/1-scene1-2.ogg" #Raine (Nat)
+    mc grumpy "I want to get back to exploring!"
+
+    voice "voice/1-scene1-3.ogg" #Raine (Nat)
     mc upset "Finish! Come! Ooon!"
 
     # SFX - ONE SOLID KICK TO SOMETHING METAL.
@@ -66,39 +69,39 @@ label scene1:
 
     #show ju snarky a1 at ju_side
 
-    voice "voice/1-scene1-3.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-4.ogg" #Juneau (Lily)
     ju snarky a1 "Hey! Stop kicking shit!"
 
-    voice "voice/1-scene1-4.ogg" #Raine (Nat)
+    voice "voice/1-scene1-5.ogg" #Raine (Nat)
     mc questioning "Oh, Juneau."
 
-    voice "voice/1-scene1-5.ogg" #Raine (Nat)
+    voice "voice/1-scene1-6.ogg" #Raine (Nat)
     mc questioning2 "About time you woke up. Gonna make yourself useful now or what?"
 
     #ART Juneau pouting
 
-    voice "voice/1-scene1-6.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-7.ogg" #Juneau (Lily)
     ju @ a2 "I've been hard at work, I'll have you know. I'm just… having a little trouble with the procedure is all."
 
-    voice "voice/1-scene1-7.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-8.ogg" #Juneau (Lily)
     ju @ concerned "The results keep coming back all screwy. It's been a real head scratcher."
 
-    voice "voice/1-scene1-8.ogg" #Raine (Nat)
+    voice "voice/1-scene1-9.ogg" #Raine (Nat)
     mc "You must have a fried processor or something."
 
-    voice "voice/1-scene1-9.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-10.ogg" #Juneau (Lily)
     ju snarky "Big talk coming from someone with a haywire personality routine."
 
-    voice "voice/1-scene1-10.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-11.ogg" #Juneau (Lily)
     ju sarcastic a1 e1 b4 "Oh I'm Raine! I'm so impatient. The universe didn't love me enough as a baby so I’ll just take out all my frustrations on my poor, defenseless starship."
 
-    voice "voice/1-scene1-11.ogg" #Raine (Nat)
+    voice "voice/1-scene1-12.ogg" #Raine (Nat)
     mc blech "I do {b}not{/b} sound like that."
 
-    voice "voice/1-scene1-12.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-13.ogg" #Juneau (Lily)
     ju snarky "You do too!"
 
-    voice "voice/1-scene1-13.ogg" #Raine (Nat)
+    voice "voice/1-scene1-14.ogg" #Raine (Nat)
     mc blech "*sigh* I need a breather. Take over for a bit."
     play sound "sfx/power up.ogg"
 
@@ -111,49 +114,49 @@ label scene1:
     na "With a press of a button, the machine materializes a toasty warm cup of coffee, french vanilla cream and extra sugar already included."
 
     show ju concerned a2 with dissolve
-    voice "voice/1-scene1-14.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-15.ogg" #Juneau (Lily)
     ju "The sensors are picking up some strange gravimetric readings coming from somewhere within this asteroid field."
 
     show ju speaking eclosed with dissolve
-    voice "voice/1-scene1-15.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-16.ogg" #Juneau (Lily)
     ju "Running a comprehensive scan just to be sure. If we hit something and get stranded out here, I'll be stuck with you 'til you're dead and my batteries run out."
 
-    voice "voice/1-scene1-16.ogg" #Raine (Nat)
+    voice "voice/1-scene1-17.ogg" #Raine (Nat)
     mc amused "Oh, don't be a worrywart. Your batteries will die long before the food synthesizer's will."
 
     show ju annoyed a1 with vpunch
-    voice "voice/1-scene1-17.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-18.ogg" #Juneau (Lily)
     ju "I have full authority to eject you whenever I desire, space or no space. You realize that, right?"
 
-    voice "voice/1-scene1-18.ogg" #Raine (Nat)
+    voice "voice/1-scene1-19.ogg" #Raine (Nat)
     mc happy "Yeah, but your moral circuitry won't let you. I know it should, I installed it."
 
     #VA: Make a pout sound. Have fun with it! Whatever "pouting" sounds like LOL
-    voice "voice/1-scene1-19.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-20.ogg" #Juneau (Lily)
     ju annoyed a1 "Tch!"
 
-    voice "voice/1-scene1-20.ogg" #Raine (Nat)
+    voice "voice/1-scene1-21.ogg" #Raine (Nat)
     mc "Besides, if I get lonely I can just tweak those silly little subroutines you call a personality, reroute power, and reboot you as an adorable girlfriend to comfort me as we drift eternally into open space."
 
-    voice "voice/1-scene1-21.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-22.ogg" #Juneau (Lily)
     ju snarky a1 "And then I can wait to die while cuddling your perfectly preserved corpse."
 
-    voice "voice/1-scene1-22.ogg" #Raine (Nat)
+    voice "voice/1-scene1-23.ogg" #Raine (Nat)
     mc amused "Well, when you put it like that..."
 
-    voice "voice/1-scene1-23.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-24.ogg" #Juneau (Lily)
     ju snarky a2 "Or I lock you out of the system right now and save myself all that trouble."
 
-    voice "voice/1-scene1-24.ogg" #Raine (Nat)
+    voice "voice/1-scene1-25.ogg" #Raine (Nat)
     mc happy "Relax, I'm only kidding. I like you just the way you are — annoyingly useful."
 
-    voice "voice/1-scene1-25.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-26.ogg" #Juneau (Lily)
     ju speaking eclosed "...Yeah yeah, keep begging for your life. See if I care..."
 
-    voice "voice/1-scene1-26.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-27.ogg" #Juneau (Lily)
     ju annoyed a2 "I've set the computer to run a full scan of the belt. I estimate it'll take four hours to complete."
 
-    voice "voice/1-scene1-27.ogg" #Raine (Nat)
+    voice "voice/1-scene1-28.ogg" #Raine (Nat)
     mc weary "Fine."
 
     na "I retrieve my coffee from the receptacle and turn back towards the console."
@@ -173,17 +176,17 @@ label scene1:
         align (0.5, 0.0)
         easein 0.5 zoom 0.75 yalign 0.5 alpha 1
 
-    voice "voice/1-scene1-28.ogg" #Raine (Nat)
+    voice "voice/1-scene1-29.ogg" #Raine (Nat)
     mc happy "Hahaha."
 
     play sound "sfx/power up.ogg"
     show ju snarky a2 onlayer master:
         stage_right
         hologram
-    voice "voice/1-scene1-29.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-30.ogg" #Juneau (Lily)
     ju "What?"
 
-    voice "voice/1-scene1-30.ogg" #Raine (Nat)
+    voice "voice/1-scene1-31.ogg" #Raine (Nat)
     mc "Nothing. Just thinking about some of the things we could buy when we get back to port."
 
     hide ju with Dissolve(1.0)
@@ -195,7 +198,7 @@ label scene1:
     na "Though, as much of a brat as she can be at times, you really have to appreciate how good she is at her job."
     na "I'll have to give the developer a good review after we get back home."
 
-    voice "voice/1-scene1-31.ogg" #Raine (Nat)
+    voice "voice/1-scene1-32.ogg" #Raine (Nat)
     mc "Hey Juneau. When we get back to Lumi-"
 
     scene asteroidfield_red at main_menu_bg_restore_transform
@@ -224,57 +227,57 @@ label scene1:
 
     $ hide_sides = []
 
-    voice "voice/1-scene1-32.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-33.ogg" #Juneau (Lily)
     ju red concerned a1 "Woah!" with vpunch
 
-    voice "voice/1-scene1-33.ogg" #Raine (Nat)
+    voice "voice/1-scene1-34.ogg" #Raine (Nat)
     mc shocked armraised "Juneau, report!"
 
     show asteroidfield_red:
         linear 60.0 align (0.2, 0.43)
 
-    voice "voice/1-scene1-34.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-35.ogg" #Juneau (Lily)
     ju red concerned a1 "We ran right into some kind of gravity well. Gravimetric readings are off the charts."
 
-    voice "voice/1-scene1-35.ogg" #Raine (Nat)
+    voice "voice/1-scene1-36.ogg" #Raine (Nat)
     mc "Show me."
 
     na "I slide my cup back into the synthesizer before returning to the console and bringing up the local sensor interface."
 
-    voice "voice/1-scene1-36.ogg" #Raine (Nat)
+    voice "voice/1-scene1-37.ogg" #Raine (Nat)
     mc "It's a wormhole! We got caught in the gravity well!"
 
     na "Damn. I should have known. That explains the sensor readings."
 
-    voice "voice/1-scene1-37.ogg" #Raine (Nat)
+    voice "voice/1-scene1-38.ogg" #Raine (Nat)
     mc annoyed "Forward full thrust! Give me manual control!"
 
 
-    voice "voice/1-scene1-38.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-39.ogg" #Juneau (Lily)
     ju red worried a1 "Huh? Okay! Forward thrust increased to full. What are you doing?"
 
     #layer 2 spaceship
     stop env fadeout 2.0
     play sound4 "sfx/SSL1V2.ogg" fadein 2.0
 
-    voice "voice/1-scene1-39.ogg" #Raine (Nat)
+    voice "voice/1-scene1-40.ogg" #Raine (Nat)
     mc "I told you, we're caught in its gravity well. The shear will tear the ship apart before we ever break free."
 
-    voice "voice/1-scene1-40.ogg" #Raine (Nat)
+    voice "voice/1-scene1-41.ogg" #Raine (Nat)
     mc upset "The only way out is straight through!"
 
-    voice "voice/1-scene1-41.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-42.ogg" #Juneau (Lily)
     ju worried speaking "That's dangerous! Are you sure?"
 
     na "I recognize Juneau's safety protocols kicking in. Though her personality subroutines may pretend otherwise, as the ship's navigator AI, Juneau has a responsibility to protect me."
 
-    voice "voice/1-scene1-42.ogg" #Raine (Nat)
+    voice "voice/1-scene1-43.ogg" #Raine (Nat)
     mc happy "Disengage safety. It's the only way we get out of this."
 
-    voice "voice/1-scene1-43.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-44.ogg" #Juneau (Lily)
     ju @ red sassy "If you kill me, it'll be on your conscience."
 
-    voice "voice/1-scene1-44.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-45.ogg" #Juneau (Lily)
     ju "Handing you full navigational control."
 
     #SFX acceleration
@@ -298,16 +301,16 @@ label scene1:
 
     na "Juneau clings to her seat, pulling her knees up to her chest."
 
-    voice "voice/1-scene1-45.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-46.ogg" #Juneau (Lily)
     ju "How can you be so calm at a time like this? We don't even know where it goes!"
 
-    voice "voice/1-scene1-46.ogg" #Raine (Nat)
+    voice "voice/1-scene1-47.ogg" #Raine (Nat)
     mc "We're about to find out!"
 
-    voice "voice/1-scene1-47.ogg" #Raine (Nat)
+    voice "voice/1-scene1-48.ogg" #Raine (Nat)
     mc annoyed "I built this ship to fly, so let's fly straight down its throat!"
 
-    voice "voice/1-scene1-48.ogg" #Juneau (Lily)
+    #voice "voice/1-scene1-49.ogg" #Juneau (Lily)
     ju "Ah!"
 
     # ###
@@ -347,14 +350,14 @@ label scene1:
     # ART - PLANET BG REPLACEES WORMHOLE BG
     # ###
 
-    #voice "voice/1-scene1-49.ogg" #Raine (Nat)
+    #voice "voice/1-scene1-50.ogg" #Raine (Nat)
     mc shocked armraised "SHIT!"
 
     #Juneau glitches out
     stop sound4 fadeout 2.0
     play sound5 "sfx/SSL2.ogg" fadein 2.0
 
-    #voice "voice/1-scene1-50.ogg" #Juneau (Lily)
+    #voice "voice/1-scene1-51.ogg" #Juneau (Lily)
     ju red worried a1 "IMPACT - HULL BREACH DET--"
 
     play sound2 "sfx/astroid impact.ogg"
@@ -375,7 +378,7 @@ label scene1:
                 repeat
     show stars with hpunch
 
-    #voice "voice/1-scene1-51.ogg" #Raine (Nat)
+    #voice "voice/1-scene1-52.ogg" #Raine (Nat)
     mc upset "WHAT THE HELL WAS THAT?!"
 
     ###
@@ -399,13 +402,13 @@ label scene1:
     na "And the current course happens to be...."
     na "...pulling us straight into a planet."
 
-    #voice "voice/1-scene1-52.ogg" #Raine (Nat)
+    #voice "voice/1-scene1-53.ogg" #Raine (Nat)
     mc shocked armraised "Shit. Don't wanna go there."
 
-    #voice "voice/1-scene1-53.ogg" #Raine (Nat)
+    #voice "voice/1-scene1-54.ogg" #Raine (Nat)
     mc annoyed "Out of the frying pan and into the fire."
 
-    #voice "voice/1-scene1-54.ogg" #Raine (Nat)
+    #voice "voice/1-scene1-55.ogg" #Raine (Nat)
     mc upset "Juneau, I need you! Like, right now!"
 
     #SFX alarm starts going off. Cockpit is flashing red.
@@ -416,7 +419,7 @@ label scene1:
     na "My console flickers, just for a second. A notification from Juneau. Text only."
 
     $ hide_sides = ['Juneau']
-    #voice "voice/1-scene1-55.ogg" #Juneau (Lily)
+    #voice "voice/1-scene1-56.ogg" #Juneau (Lily)
     ju "You might want to put your helmet on now."
 
     scene white with Dissolve(3)
