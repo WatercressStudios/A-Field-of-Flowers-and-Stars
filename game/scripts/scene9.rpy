@@ -65,18 +65,19 @@
     #ART Garage
     #SFX Raine gets tossed from the ship
     #VFX BG Shakes as she lands
-    scene street with hpunch
-    pause 2
+    scene street onlayer master with hpunch:
+        subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
+        parallel:
+            xpos -0.22
+            ease 1.0 xpos 0.09
+        parallel:
+            zoom 1.48
+            ease 1.0 zoom 1.0
     show ju snarky a2 with dissolve:
             xalign 0.5
     ju "And don't come back until you're done moping over every little thing that goes wrong!"
     ju "'Beautiful butterfly' my ass, Raine!"
     hide ju snarky a2 with dissolve
-    scene street with dissolve:
-        xpos 0.5 
-        ypos 1.0 
-        xanchor 0.5 
-        yanchor 1.0 
     
     #SFX Door slamming
     play sound "sfx/door.ogg"
@@ -163,6 +164,12 @@
     le "...I'm sorry for all the trouble."
     show le crying with move:
         xalign 0.82
+    show le crying with move:
+        xalign 0.84
+    show le crying with move:
+        xalign 0.86
+    show le crying with move:
+        xalign 0.88
     hide le concerned with easeoutright
     na "She vanishes from sight around the corner, heading off to god knows where."
     na "I should feel good about it, but I don't."
@@ -193,11 +200,10 @@
     #ART Inside ship, Garage BG
     hide ju concerned a2 with dissolve 
 
-    scene cockpit_ground with dissolve
+    scene cockpit_ground with dissolve:
+        zoom 0.75
 
-    show ju concerned a1 with dissolve:
-        xalign 0.5
-
+    show ju annoyed a1 at stage_right with dissolve
     ju "Take a look at these readings."
 
     ju "I tapped into the city's information grid through the power lines, but the interference was making a mess of just about everything."
@@ -296,7 +302,14 @@
 
     mc upset "Blah blah blah..."
 
-    scene street_open_garage with fade
+    scene street onlayer master with fade:
+        subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
+        parallel:
+            xpos -0.22
+            ease 1.0 xpos 0.09
+        parallel:
+            zoom 1.48
+            ease 1.0 zoom 1.0
 
     na "All the vitriol aside, Juneau is right."
     na "I've been such an asshole to Leona. Even if I'm upset, I was too hard on her."
