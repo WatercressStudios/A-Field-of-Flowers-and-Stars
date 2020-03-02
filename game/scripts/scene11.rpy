@@ -165,7 +165,7 @@
 
     le "You have no idea how sorry I am."
 
-    mc "...Are you done?"
+    mc surprised "...Are you done?"
 
     le "...Y-Yeah."
 
@@ -173,17 +173,17 @@
 
     le "Sorry..."
 
-    mc "I forgive you, Leona."
+    mc shyspeak "I forgive you, Leona."
 
-    le "You... do...?"
+    le crying2 "You... do...?"
 
     mc "Yeah. For all of it."
 
-    mc "Even for reading my journal, which you neglected to mention."
+    mc concernedspeak "Even for reading my journal, which you neglected to mention."
 
     le "...But?"
 
-    mc "But nothin'. You understand that?"
+    mc gentlehandtalk "But nothin'. You understand that?"
 
     na "I sigh and lightly pat her shoulder."
 
@@ -191,7 +191,7 @@
 
     na "Leona looks shocked for a bit, glancing in my direction before turning back to the floor."
 
-    le "But it hurt you. Didn't it?"
+    le crying "But it hurt you. Didn't it?"
 
     na "Several seconds pass as I try to pull the words out of my head."
 
@@ -199,25 +199,25 @@
 
     mc "But it wasn't because I was stranded here. It wasn't because I couldn't go home."
 
-    mc "I've had too many people try and tell me what they thought was best for me."
+    mc shyspeak "I've had too many people try and tell me what they thought was best for me."
 
     mc "People who thought they could make my decisions for me and walk all over me without a care in the world."
 
     mc "Who made me think I wasn't worth anything if I didn't live up to what they thought I should be."
 
-    mc "And I wanted to think you were different than that. You were better than them!"
+    mc gentlehandtalk "And I wanted to think you were different than that. You were better than them!"
 
     mc "You did so much for a girl you'd just met. I don't even know how I could repay someone like you."
 
     mc "I wanted to trust you so badly. I did everything I could to push those feelings out of my heart."
 
-    mc "But…"
+    mc weary "But…"
 
     mc "When you confessed to me that you lied…"
 
     mc "I let myself believe you were just the same as everyone else."
 
-    mc "It hurt because all I could see was the things I'd been fighting all my life."
+    mc wearyspeak "It hurt because all I could see was the things I'd been fighting all my life."
 
     mc "It hurt because I've been lied to so much, it makes me sick just thinking about it."
 
@@ -225,7 +225,7 @@
 
     mc "And I let that fear break me and make everything worse."
 
-    mc "All those times when I should have been scared, I wasn't because I was with you."
+    mc gentlehandtalk "All those times when I should have been scared, I wasn't because I was with you."
 
     mc "I had a feeling I could trust you. I wanted it to be different this time."
 
@@ -235,7 +235,7 @@
 
     mc "Even something like an explosion, I'd accepted as possible when I took off to space."
 
-    mc "It was when you weren't there that got me."
+    mc wearyspeak "It was when you weren't there that got me."
 
     mc "I was this close to crying when I lost you in that cave."
 
@@ -243,9 +243,9 @@
 
     mc "Even if I survived, I'd be alone and totally lost."
 
-    mc "...And when you lied to me, I let myself believe I was all alone to begin with."
+    mc upset "...And when you lied to me, I let myself believe I was all alone to begin with."
 
-    mc "And I let myself get ruined by that fear."
+    mc wearyspeak "And I let myself get ruined by that fear."
 
     mc "And I let myself do stupid, shitty things like hurt the people important to me."
 
@@ -253,11 +253,11 @@
 
     mc "Even if she curses me out and makes me feel like the universe's biggest bitch, I know it's because she's hardwired to care."
 
-    mc "She's like the Mom I never had."
+    mc upset "She's like the Mom I never had."
 
     mc "And I felt, for awhile, that we're the same."
 
-    mc "People are different, though."
+    mc gentlehandtalk "People are different, though."
 
     mc "I took you for granted, Leona. And I paid the consequences for that."
 
@@ -269,9 +269,11 @@
 
     mc "And for that... I'm sorry."
 
-    mc "I'm sorry I wasn't a better friend."
+    mc upset "I'm sorry I wasn't a better friend."
 
-    le "Raine?"
+    le concerned "Raine?"
+
+    scene KissCG1 with Dissolve(2.0)
 
     #ART KissCG1 - Getting Closer
 
@@ -288,6 +290,7 @@
     le "And I'd like to try again, Raine, if you'd let me."
 
     #ART KissCG2
+    scene KissCG2 with dissolve
 
     na "Leona leans in closer."
     na "As she does, my heart just about leaps out of my mouth."
@@ -381,27 +384,32 @@
     mc "For... You."
 
     #ART KissCG3, followed by KissCG4
-
+    scene KissCG3 with dissolve
+    scene KissCG4 with dissolve
     le "I know."
 
     mc "Oh, to hell with it!"
-
+    scene KissCG3 with dissolve
+    scene black with fade
+        pause 6
     #ART KissCG3, followed by a fade to black
     #ART Black BG, sticks around for 5-8 seconds
     #SFX Ringing/Beeping from radio
     #ART Leona's room BG
 
-    le "Oh my god, I almost forgot!"
+    scene house with Dissolve(2.0)
 
-    mc "L-Leona!?"
+    le surprised "Oh my god, I almost forgot!"
 
-    le "Focus! Ship, radiation, explosion!"
+    mc shocked m2 "L-Leona!?"
+
+    le speakingsurprised a1 "Focus! Ship, radiation, explosion!"
 
     mc "Oh crap, what's happening out there?"
 
     na "Leona scrambles off the couch, and me, and books it to the radio on the table."
 
-    le "This is Leona! {i}Please{/i} tell me something good!"
+    le catching "This is Leona! {i}Please{/i} tell me something good!"
 
     na "Putting myself back together, I make note of how furious Leona's tail is wagging."
     na "I never really paid attention to it before, but it's pretty cute."
@@ -409,27 +417,38 @@
 
     le "Raine! We're in the clear!"
 
-    mc "Hmm, what? It worked? How do you know if we haven't talked to Juneau?"
+    mc surprised "Hmm, what? It worked? How do you know if we haven't talked to Juneau?"
 
     le "That was her! She said the radiation is subsiding!"
 
-    mc "Really? She must have tied herself into communications through the Ark..."
+    mc shocked m2 "Really? She must have tied herself into communications through the Ark..."
 
-    le "Who cares?! We're saved!"
+    le happy speaking a1 "Who cares?! We're saved!"
 
     le "Get up, we gotta go celebrate!"
 
     le "I can go buy a bunch of meat and eggs and we can grill it and Lua can get us some of her special veggie brew and we'll-"
 
     #ART Black BG
-
+    scene black with Dissolve(2.0)
     na "She goes on and on, completely over the moon."
     na "After awhile she drags me out of the house, still psyched out and rambling about a party."
     na "It takes no small amount of effort to convince her to go see Juneau with me first, but she eventually yields."
 
     #ART Garage BG
 
+    scene street onlayer master with dissolve:
+        subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
+        parallel:
+            xpos -0.22
+            ease 1.0 xpos 0.09
+        parallel:
+            zoom 1.48
+            ease 1.0 zoom 1.0
+
     le "Juneau! We did it!"
+
+    show ju snarky a2  
 
     ju "Didn't I {b}just{/b} tell you that?"
 
