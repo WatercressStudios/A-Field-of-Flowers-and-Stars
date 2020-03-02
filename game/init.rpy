@@ -53,8 +53,8 @@ init:
 
     transform bounce:
     ##Makes a character slightly bounce when they pop into the scene. Gives them a bit of pep.
-        easein .10 yoffset 0
-        easeout .175 yoffset 15
+        easein .10 yoffset -15
+        easeout .175 yoffset +15
 
     transform xflip:
     ##Used to flip a character to face the other direction.
@@ -98,7 +98,8 @@ init:
     ##Sprite Definitions: The ones that are commented out are ones that don't look right.
     init python:
         layerorder = ['hair', 'base', 'arms', 'tail','mouth','eyes','brow',]
-        DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder, offsets=(0, 100), zooms={'mc':0.5, 'le': 1.3, 'ju':1.3}, sides=['mc'])
+        DefineImages('images/sprites', composite=True, overrideLayerOrder=layerorder, offsets=(0, 100), zooms={'mc':0.5, 'le': 1.3, 'ju':1.3}, sides=['mc', 'le', 'ju'])
+        hide_sides = []
 
         #Leona
         MapEmote('le curious', 'le think base tail_default mdo_default ed_default brow_default')
@@ -191,6 +192,7 @@ init:
     image white = "backgrounds/white.png"
     image stars = "backgrounds/stars.png"
     image cockpitoverlay = "overlays/cockpitoverlay.png"
+    image cockpitoverlay2 = "overlays/cockpitoverlay2.png"
     image cockpit_space = "backgrounds/cockpit_space.png"
     image cockpit_ground = "backgrounds/cockpit_ground.png"
     image cave = "backgrounds/cave.png"
@@ -199,8 +201,20 @@ init:
     image spaceship_crashed = "backgrounds/spaceship_crashed.png"
     image house = "backgrounds/house.png"
     image cafe = "backgrounds/cafe.png"
+    image forest = "backgrounds/forest.png"
+    image sky = "backgrounds/sky.png"
+    image sky_shootingstar = "backgrounds/sky_shootingstar.png"
+    image space = "backgrounds/space.png"
+    image wormhole = "backgrounds/wormhole.png"
+    image wormhole_darker = "backgrounds/wormhole_darker.png"
+    image asteroidfield = "backgrounds/asteroidfield.png"
+    image asteroidfield_red = "backgrounds/asteroidfield_red.png"
     ##computer-graphics images, stored in images/cgs
     image cgTree = "cgs/cgtree.png"
+    image cgKiss1 = "cgs/kiss1.png"
+    image cgKiss2 = "cgs/kiss2.png"
+    image cgKiss3 = "cgs/kiss3.png"
+    image cgKiss4 = "cgs/kiss4.png"
     ##Sagi's stuff . Remove when it's no longer needed.
     image logo = "gui/Star Filled-48.png"
     image testbg = "gui/sagi/test/bg.jpg"
@@ -269,7 +283,7 @@ label splashscreen:
     $ renpy.music.play(config.main_menu_music)
 
     #scene starfield
-    scene stars at main_menu_bg_transform with Dissolve(2.0)
+    scene space at main_menu_bg_transform with Dissolve(2.0)
     show afofaslogo:
         alpha 0
         zoom 0.4
