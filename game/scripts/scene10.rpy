@@ -1,6 +1,8 @@
 ﻿label scene_10:
 
     #ART Aster BG
+    show street_open_garage:
+        ease 4.0 xpos 1.0
 
     na "I run through Aster's streets, my feet clattering against the ground."
     na "What do I even say to her?"
@@ -13,12 +15,14 @@
 
     #ART Leona sprite appears, she is not amused
 
+    show le concerned at stage_right with Dissolve(1.5)
     na "As I approach her home, Leona comes out the front door."
     na "And with that I'm out of preptime."
 
     #voice "voice/10-default-1.ogg" #Raine (Nat)
-    mc "H-Hey, Leona.."
+    mc sighing "H-Hey, Leona.."
 
+    $ hide_sides = ['Leona']
     #voice "voice/10-default-2.ogg" #Leona (Dot)
     le "Hey. Did you leave something behind?"
 
