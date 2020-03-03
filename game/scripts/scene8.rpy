@@ -2,12 +2,14 @@
 
     #ART Leona's House
     #Color swap for UI????
+    scene house with Dissolve(2.0):
+        anchor (0.5, 0.5) align (0.5, 0.5) zoom 0.75
 
     #voice "voice/8-default-1.ogg" #Leona (Dot)
-    le "I am so-!"
+    le cryingtalk "I am so-!"
 
     #voice "voice/8-default-2.ogg" #Leona (Dot)
-    le "STUPID!"
+    le frustratedshout "STUPID!" with hpunch
 
     #VFX POMF
 
@@ -17,7 +19,7 @@
     na "How could I do that to her? She trusted me!"
 
     #voice "voice/8-default-3.ogg" #Leona (Dot)
-    le "Stupid!"
+    le "Stupid!" with hpunch
 
     na "If I had just told her the truth. If only I weren't so damn afraid!"
     na "Maybe she would have the ship fixed by now."
@@ -31,7 +33,7 @@
     na "She's not even one of us."
 
     #voice "voice/8-default-4.ogg" #Leona (Dot)
-    le "So why does it hurt so much?"
+    le crying "So why does it hurt so much?"
 
     na "Nobody said it would be like this."
     na "You're supposed to find someone really great."
@@ -54,21 +56,21 @@
     na "And once the situation is contained..."
     na "I'll have to make the disaster report to the city council."
     na "If I hadn't gone out to the caves with Raine, we all wouldn't be in this mess."
-    na "That's on me. 100%"
+    na "That's on me. 100%%"
 
     #voice "voice/8-default-5.ogg" #Leona (Dot)
-    le "...I'm gonna lose my job, aren't I?"
+    le concerned "...I'm gonna lose my job, aren't I?"
 
     #voice "voice/8-default-6.ogg" #Leona (Dot)
-    le "...Idiot. That isn't important at all right now."
+    le tired "...Idiot. That isn't important at all right now."
 
     na "Stop moping around!"
 
     #voice "voice/8-default-7.ogg" #Leona (Dot)
-    le "{b}Get.{/b}"
+    le concerned "{b}Get.{/b}"
 
     #voice "voice/8-default-8.ogg" #Leona (Dot)
-    le "{b}Up!{/b}"
+    le frustratedshout "{b}Up!{/b}" with hpunch
 
     #VFX Journal Backups Loaded
 

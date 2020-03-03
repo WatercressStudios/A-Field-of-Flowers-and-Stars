@@ -3,15 +3,16 @@
     #ART Inside ship, Garage BG
     #VFX We're at red alert status
     #SFX Sirens going off
-    scene cockpit_ground with dissolve:
-        zoom 0.75
-    scene cockpit_ground with hpunch:
+    scene street_open_garage with dissolve:
+        zoom 3.8 anchor (0.5, 0.5) align (0.86, 0.81)
+    show cockpitoverlay2 with dissolve:
         zoom 0.75
 
+    $ hide_sides = ['Juneau']
     show ju annoyed a1 at stage_right with dissolve
-       
+
     #voice "voice/9-default-1.ogg" #Juneau (Lily)
-    ju "Get up! You {i}absolute{/i} child!"
+    ju "Get up! You {i}absolute{/i} child!" with hpunch
 
     #voice "voice/9-default-2.ogg" #Raine (Nat)
     mc annoyed "Hell no! Leave me alone and turn off that thing off! It's too damn loud!!"
@@ -91,22 +92,24 @@
     #ART Garage
     #SFX Raine gets tossed from the ship
     #VFX BG Shakes as she lands
-    scene street onlayer master with hpunch:
-        subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
+    scene street_open_garage onlayer master with hpunch:
+        subpixel True xpos 0.5 ypos 1.1 xanchor 0.5 yanchor 1.0 rotate None
         parallel:
             xpos -0.22
-            ease 1.0 xpos 0.09
+            ease 0.2 xpos 0.09
         parallel:
             zoom 1.48
-            ease 1.0 zoom 1.0
-    show ju snarky a2 with dissolve:
-            xalign 0.5
+            ease 0.2 zoom 0.95
+            ease 0.1 zoom 1.0
+    pause 0.5
+
+    $ hide_sides = []
     #voice "voice/9-default-27.ogg" #Juneau (Lily)
-    ju "And don't come back until you're done moping over every little thing that goes wrong!"
+    ju snarky a2 "And don't come back until you're done moping over every little thing that goes wrong!"
     #voice "voice/9-default-28.ogg" #Juneau (Lily)
     ju "'Beautiful butterfly' my ass, Raine!"
     hide ju snarky a2 with dissolve
-    
+
     #SFX Door slamming
     play sound "sfx/door.ogg"
 
@@ -138,9 +141,14 @@
 
     na "As I turn to see where my boots were chucked, I see a lone figure peering around the corner."
 
+    show street_open_garage:
+        ease 1.0 ypos 1.0 xpos 0.25 zoom 0.75
+    pause 1.0
+
     #voice "voice/9-default-34.ogg" #Raine (Nat)
     mc unimpressed "Oh. And what are you looking at?"
 
+    $ hide_sides = ['Leona']
     show le concerned with Dissolve(2.0):
         xalign 0.75
 
@@ -230,16 +238,15 @@
     na "I should feel good about it, but I don't."
     na "Of all the people to take a dump on my feelings throughout my life, that stinging feeling is strongest here most of all."
     na "At least when dad sold off my first ship, I knew he was a piece of shit to begin with."
+
+    $ hide_sides = []
+    scene sky with dissolve
     na "A sigh escapes my lips, as I lay down aimlessly on the ground."
     na "What a hell of a week this has been. I need a nap..."
 
-    #SFX Door opening
-    show ju annoyed a1 with dissolve:
-        xalign 0.5
 
-    
     #voice "voice/9-default-56.ogg" #Juneau (Lily)
-    ju "Get your butt back in here, pronto!"
+    ju annoyed a1 "Get your butt back in here, pronto!"
 
     #voice "voice/9-default-57.ogg" #Raine (Nat)
     mc annoyed "The hell is it now? I need some rest!"
@@ -256,13 +263,20 @@
     #voice "voice/9-default-61.ogg" #Raine (Nat)
     mc unimpressed "Clear the door, I'm coming in!"
 
+    scene street_open_garage with dissolve:
+        zoom 0.75 anchor (0.5, 0.2) xalign 0.9 yalign 0.8
+        pause 0.5
+        parallel:
+            ease 2.0 zoom 3.8 xalign 0.86
+
     na "I leap up from the floor and dash for the ship."
 
-    #ART Inside ship, Garage BG
-    hide ju concerned a2 with dissolve 
-
-    scene cockpit_ground with dissolve:
+    scene street_open_garage with Dissolve(0.1):
+        zoom 3.8 anchor (0.5, 0.2) xalign 0.86 yalign 0.8
+    show cockpitoverlay2 with dissolve:
         zoom 0.75
+
+    $ hide_sides = ['Juneau']
 
     show ju annoyed a1 at stage_right with dissolve
     #voice "voice/9-default-62.ogg" #Juneau (Lily)
@@ -411,15 +425,15 @@
     #voice "voice/9-default-109.ogg" #Raine (Nat)
     mc upset "Blah blah blah..."
 
-    scene street onlayer master with fade:
-        subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
+    scene street_open_garage:
+        subpixel True xpos 0.5 ypos 1.1 xanchor 0.5 yanchor 1.0 rotate None
         parallel:
             xpos -0.22
-            ease 1.0 xpos 0.09
+            ease 0.5 xpos 0.09
         parallel:
             zoom 1.48
-            ease 1.0 zoom 1.0
-
+            ease 0.5 zoom 1.0
+    pause 0.5
     na "All the vitriol aside, Juneau is right."
     na "I've been such an asshole to Leona. Even if I'm upset, I was too hard on her."
     na "God, what was I thinking?"
