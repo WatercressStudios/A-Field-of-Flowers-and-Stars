@@ -390,7 +390,7 @@ label scene_7:
     #voice "voice/7-scene7-163.ogg" #Leona (Dot)
     le crying2 "{b}Raaaine{/b}!"
     na "Back to a prison."
-    hide le crying2 with dissolve
+    scene black with Dissolve(2.0)
     jump scene_8
 
 
