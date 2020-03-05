@@ -2303,7 +2303,7 @@ screen demo_letter():
 
 init python:
     credits_duration = 30.0
-    credits_height = 3400
+    credits_height = 3500
     credits_content = [
         ( "Developed for Yurijam 2019.",
             [
@@ -2322,7 +2322,7 @@ init python:
                     "Tristan 'Wolf' Barber",
                     "Kevin Bomer",
                     "Hamadyne",
-                    "Hoa",
+                    "A.D. 'Hoa' Hemingway",
                     "Monochrome",
                 ),
                 (
@@ -2340,6 +2340,7 @@ init python:
             [
                 "Tristan 'Wolf' Barber",
                 "Wei Yuan Lee",
+                "Zodai",
             ]
         ),
         ( "Audio",
@@ -2412,8 +2413,8 @@ init python:
                     "Kevin Bomer",
                     "Gabriel (Ebagigi)",
                     "Sagittaeri",
-                    "Lee",
-                    "Hoa",
+                    "Wei Yuan Lee",
+                    "A.D. 'Hoa' Hemingway",
                     "Zodai",
                     "Meyvol",
                 ),
