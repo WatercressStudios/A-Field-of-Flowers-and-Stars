@@ -2401,7 +2401,10 @@ init python:
         ),
 
         ( "Code",
-            [
+            [   (
+                    "Director of Programming Department",
+                    "Happiness+",
+                ),
                 (
                     "Development Director",
                     "Steve/DreadLindwyrm",
