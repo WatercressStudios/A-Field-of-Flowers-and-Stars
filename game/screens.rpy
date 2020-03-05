@@ -2376,6 +2376,12 @@ init python:
                     "Concept Art",
                     "Voiderling",
                     "Liah",
+                    "Kart Prowler",
+                ),
+                (
+                    "CG Art",
+                    "Voiderling",
+                    "Kart Prowler",
                 ),
                 (
                     "BG Art",
