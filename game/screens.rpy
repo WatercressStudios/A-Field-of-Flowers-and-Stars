@@ -2303,7 +2303,7 @@ screen demo_letter():
 
 init python:
     credits_duration = 30.0
-    credits_height = 3500
+    credits_height = 3550
     credits_content = [
         ( "Developed for Yurijam 2019.",
             [
@@ -2347,12 +2347,12 @@ init python:
             [
                 (
                     "Music Directing",
-                    "Kierious",
+                    "Paul Robins",
                 ),
                 (
                     "Music",
+                    "Kierious",
                     "Noah 'Speedy' Aman",
-                    "JamieD",
                     "Jae",
                 ),
                 (
@@ -2360,7 +2360,8 @@ init python:
                     "Paul Robins",
                 ),
                 (
-                    "Audio Production",
+                    "Sound Editing",
+                    "Paul Robins",
                     "Tristan 'Wolf' Barber",
                 ),
             ]
@@ -2380,13 +2381,13 @@ init python:
                 ),
                 (
                     "CG Art",
-                    "Voiderling",
                     "Kart Prowler",
                 ),
                 (
                     "BG Art",
                     "Erezu",
                     "Alison 'Draz' Huang",
+                    "Voiderling",
                 ),
                 (
                     "UI Design and Art",
