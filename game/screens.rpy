@@ -1152,7 +1152,7 @@ screen custom_file_slots(title):
     style_prefix "journal"
 
     if main_menu:
-        add "backgrounds/stars.png" at main_menu_bg_transform
+        add "backgrounds/space.png" at main_menu_bg_transform
 
     if main_menu:
         $ close_action = [
@@ -1370,7 +1370,7 @@ screen custom_preferences():
             Return(),
         ]
     if main_menu:
-        add "backgrounds/stars.png" at main_menu_bg_transform
+        add "backgrounds/space.png" at main_menu_bg_transform
     button at fade_transform:
         background "#000000CC"
         xysize (1.0, 1.0)
@@ -1853,7 +1853,7 @@ screen confirm(message, yes_action, no_action):
     style_prefix "confirm"
 
     if main_menu:
-        add "backgrounds/stars.png" at main_menu_bg_transform
+        add "backgrounds/space.png" at main_menu_bg_transform
     add "#000000CC" at fade_transform
 
     frame at fade_transform:
@@ -2303,7 +2303,7 @@ screen demo_letter():
 
 init python:
     credits_duration = 30.0
-    credits_height = 3300
+    credits_height = 3400
     credits_content = [
         ( "Developed for Yurijam 2019.",
             [
@@ -2412,6 +2412,10 @@ init python:
                     "Kevin Bomer",
                     "Gabriel (Ebagigi)",
                     "Sagittaeri",
+                    "Lee",
+                    "Hoa",
+                    "Zodai",
+                    "Meyvol",
                 ),
                 (
                     "Audio",
