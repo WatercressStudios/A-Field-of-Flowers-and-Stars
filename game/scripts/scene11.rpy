@@ -2,7 +2,7 @@
 
     #ART Aster BG
 
-    scene street onlayer master with dissolve:
+    scene street_open_garage onlayer master with dissolve:
         subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
         parallel:
             xpos -0.22
@@ -11,6 +11,7 @@
             zoom 1.48
             ease 1.0 zoom 1.0
 
+    $ hide_sides = ['Leona']
     show le tired at stage_right with dissolve
 
     na "I head outside after my talk with Juneau to see Leona idling by herself, leaning on the wall of a building across the street."
@@ -107,7 +108,7 @@
     pause(0.5)
     na "By the time I walk through the door, Leona is already sitting herself down on the couch."
     show le crying with Dissolve(1.5):
-        subpixel True xpos 0.55 ypos 0 xanchor 0.5 yanchor 0.0 zoom 2.5 rotate None
+        subpixel True xpos 0.55 ypos 0 xanchor 0.5 yanchor 0.0 zoom 1.5 rotate None
     na "She crunches up her body, huddling her knees to her chest and wrapping them in her arms."
     $all_moves(camera_check_points={u'z': [(0, 0, None), (350, 30.0, 'ease')]})
     na "Careful not to disturb the quiet peace of this place, I slowly close the door behind me and walk over to her.."
@@ -160,13 +161,12 @@
     ##Angry Shouting Sprite
 
 
-    $camera_move(0, 0, 0, 0, duration=0)
+    $camera_move(0, 0, 0, 0, duration=0.5)
 
-    show le frustrated a1 onlayer master:
-        xpos 0.55 ypos -100 xanchor 0.5 zoom 2.0
+    show le frustrated a1
 
     #voice "voice/11-default-33.ogg" #Leona (Dot)
-    le "I'm not done!"
+    le "I'm not done!" with hpunch
 
     #voice "voice/11-default-34.ogg" #Leona (Dot)
     le "...I was in awe of you, ever since you arrived. It was amazing to actually have someone like you arrive."
@@ -196,13 +196,13 @@
     le "I felt the need to help you. To keep you safe."
 
     #voice "voice/11-default-43.ogg" #Leona (Dot)
-    le "I thought... I thought that I should be the one responsible for you."
+    le frustratedshout "I thought... I thought that I should be the one responsible for you."
 
     #voice "voice/11-default-44.ogg" #Leona (Dot)
     le "That, in a world like ours, it'd be easier if you just left everything to someone like me... So you wouldn't have to worry."
 
     #voice "voice/11-default-45.ogg" #Leona (Dot)
-    le "That I could be someone you trusted-if I could be that for you. That I could be someone important to you, if I could be that for you."
+    le frustrated a1 "That I could be someone you trusted-if I could be that for you. That I could be someone important to you, if I could be that for you."
 
     #voice "voice/11-default-46.ogg" #Leona (Dot)
     le "That was my first mistake, thinking you needed my protection. And because of that, I hurt you."
@@ -217,7 +217,7 @@
     mc surprised "...Are you done?"
 
     #voice "voice/11-default-50.ogg" #Leona (Dot)
-    le "...Y-Yeah."
+    le cryingtalk "...Y-Yeah."
 
     #voice "voice/11-default-51.ogg" #Raine (Nat)
     mc "That's a lot to digest."
@@ -259,7 +259,7 @@
     mc "...Of course it did. It was one of the most painful things I've felt."
 
     #voice "voice/11-default-62.ogg" #Raine (Nat)
-    mc "But it wasn't because I was stranded here. It wasn't because I couldn't go home."
+    mc speaking "But it wasn't because I was stranded here. It wasn't because I couldn't go home."
 
     #voice "voice/11-default-63.ogg" #Raine (Nat)
     mc shyspeak "I've had too many people try and tell me what they thought was best for me."
@@ -271,7 +271,7 @@
     mc "Who made me think I wasn't worth anything if I didn't live up to what they thought I should be."
 
     #voice "voice/11-default-66.ogg" #Raine (Nat)
-    mc gentlehandtalk "And I wanted to think you were different than that. You were better than them!"
+    mc weary "And I wanted to think you were different than that. You were better than them!"
 
     #voice "voice/11-default-67.ogg" #Raine (Nat)
     mc "You did so much for a girl you'd just met. I don't even know how I could repay someone like you."
@@ -301,7 +301,7 @@
     mc "And I let that fear break me and make everything worse."
 
     #voice "voice/11-default-76.ogg" #Raine (Nat)
-    mc gentlehandtalk "All those times when I should have been scared, I wasn't because I was with you."
+    mc sighing "All those times when I should have been scared, I wasn't because I was with you."
 
     #voice "voice/11-default-77.ogg" #Raine (Nat)
     mc "I had a feeling I could trust you. I wanted it to be different this time."
@@ -352,7 +352,7 @@
     mc gentlehandtalk "People are different, though."
 
     #voice "voice/11-default-93.ogg" #Raine (Nat)
-    mc "I took you for granted, Leona. And I paid the consequences for that."
+    mc speaking "I took you for granted, Leona. And I paid the consequences for that."
 
     #voice "voice/11-default-94.ogg" #Raine (Nat)
     mc "I decided it was better to run away and hide. Instead, I should have thought about what you were feeling."
@@ -372,7 +372,12 @@
     #voice "voice/11-default-99.ogg" #Leona (Dot)
     le concerned "Raine?"
 
-    scene KissCG1 with Dissolve(2.0)
+    show le:
+        subpixel True xpos 0.55 ypos 0 xanchor 0.5 yanchor 0.0 zoom 1.5 rotate None
+        ease 2.5 zoom 3.0
+    pause 2.0
+    scene cgKiss1 with Dissolve(0.5):
+        zoom 0.75
 
     #ART KissCG1 - Getting Closer
 
@@ -395,7 +400,8 @@
     le "And I'd like to try again, Raine, if you'd let me."
 
     #ART KissCG2
-    scene KissCG2 with dissolve
+    scene cgKiss2 with dissolve:
+        zoom 0.75
 
     na "Leona leans in closer."
     na "As she does, my heart just about leaps out of my mouth."
@@ -533,16 +539,20 @@
     mc "For... You."
 
     #ART KissCG3, followed by KissCG4
-    scene KissCG3 with dissolve
-    scene KissCG4 with dissolve
+    scene cgKiss3 with Dissolve(1.5):
+        zoom 0.75
+    scene cgKiss4 with Dissolve(0.5):
+        zoom 0.75
     #voice "voice/11-default-150.ogg" #Leona (Dot)
     le "I know."
 
     #voice "voice/11-default-151.ogg" #Raine (Nat)
     mc "Oh, to hell with it!"
-    scene KissCG3 with dissolve
-    scene black with fade
-    pause 6
+    scene cgKiss3 with Dissolve(0.5):
+        zoom 0.75 anchor (0.5, 0.5) align (0.5, 0.5)
+    pause 0.5
+    scene black with Dissolve(1.5)
+    pause 4
     #ART KissCG3, followed by a fade to black
     #ART Black BG, sticks around for 5-8 seconds
     #SFX Ringing/Beeping from radio
@@ -550,6 +560,7 @@
 
     scene house with Dissolve(2.0)
 
+    $ hide_sides = []
     #voice "voice/11-default-152.ogg" #Leona (Dot)
     le surprised "Oh my god, I almost forgot!"
 
@@ -584,7 +595,7 @@
     mc shocked m2 "Really? She must have tied herself into communications through the Ark..."
 
     #voice "voice/11-default-161.ogg" #Leona (Dot)
-    le happy speaking a1 "Who cares?! We're saved!"
+    le happy a2 "Who cares?! We're saved!"
 
     #voice "voice/11-default-162.ogg" #Leona (Dot)
     le "Get up, we gotta go celebrate!"
@@ -600,23 +611,15 @@
 
     #ART Garage BG
 
+    $ hide_sides = ['Juneau', 'Leona']
     scene street onlayer master with dissolve:
-        subpixel True xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
-        parallel:
-            xpos -0.22
-            ease 1.0 xpos 0.09
-        parallel:
-            zoom 1.48
-            ease 1.0 zoom 1.0
-
-    show le happy a1 with dissolve:
-        xalign 0.75
+        subpixel True xpos 0.09 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None zoom 1.0
+    show le happy a1 at stage_right with dissolve
 
     #voice "voice/11-default-164.ogg" #Leona (Dot)
     le "Juneau! We did it!"
 
-    show ju snarky a1 with dissolve:
-        xalign 0.5
+    show ju snarky a1 at stage_center with dissolve
 
     #voice "voice/11-default-165.ogg" #Juneau (Lily)
     ju "Didn't I {b}just{/b} tell you that?"
@@ -683,7 +686,8 @@
 
     #VFX Fade to black
 
-    scene black with fade
+    scene sky with dissolve:
+        zoom 0.75
 
     na "Leona and Juneau continue making a fuss. Shortly thereafter, the crew shows up, looking pleased now that the whole ordeal was behind the City."
     na "Eventually, Leona brings up her plans to feast and the mood further improves."
@@ -695,10 +699,16 @@
     na "It'll still be awhile before it can happen, but there will be more than enough time to make backups of Juneau's database."
     na "Even if it takes a few years for Leona and I to scour the planet in search of alien technology, chances are we three will be able to leave Fireside long before the influx of Dawnese immigrants."
     na "And with Juneau now connected to the communications network, I doubt we'll ever be out of touch for too long."
+
+    scene space with dissolve:
+        zoom 0.75
+
     na "With all this in mind, we cut loose and celebrate together long into the night."
     na "By the time everyone had tuckered out, half the crew had gotten so drunk they passed out on the garage floor."
     na "They're not much for words, but it's nice to know that no matter what species you are, there's a party animal in all of us."
     na "As Leona and I decided to go back to her house for the night, Juneau began conjuring up hard light blankets for the strung out crewmen."
-    na "We waved goodnight and left, our spirits raised and optimistic for what may lay before us  tomorrow."
+    na "We waved goodnight and left, our spirits raised and optimistic for what may lay before us tomorrow."
+
+    scene black with Dissolve(1.5)
 
     jump epilogue

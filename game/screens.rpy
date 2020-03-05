@@ -2236,7 +2236,7 @@ screen tobecontinued_announce():
     frame align (0.5, 0.4) at announce_inout:
         background None
         padding (100,100,100,100)
-        text 'To be continued...':
+        text 'The End':
             align (0.5, 0.5)
             text_align 0.5
             size 100
