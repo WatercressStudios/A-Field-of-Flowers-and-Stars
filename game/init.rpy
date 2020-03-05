@@ -44,6 +44,13 @@ init:
         ypos 0
         xpos .75
 
+    transform stage_center:
+        xanchor .5
+        yanchor 1
+        zoom 1.21
+        ypos 0
+        xpos .5
+
     transform stage_left:
         xanchor .5
         yanchor 1
