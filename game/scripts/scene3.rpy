@@ -449,28 +449,6 @@ label scene_3:
     le explaining "There's Lua's place, she has the best vegetables this time of year, and over there's my mechanic's house..."
     na "Meanwhile, Leona is dragging me around, pointing at various buildings and landmarks without a care in the world."
 
-    #voice "voice/3-scene_3-111.ogg" #Raine (Nat)
-    mc "Just how far away is this base of yours?"
-
-    #voice "voice/3-scene_3-112.ogg" #Leona (Dot)
-    le speakingsurprised a1 "Oh, right around the corner from my house!"
-
-    #voice "voice/3-scene_3-113.ogg" #Raine (Nat)
-    mc "...Aren't we walking away from it, then?"
-
-    #voice "voice/3-scene_3-114.ogg" #Leona (Dot)
-    le happy a2 "Yep!"
-
-    na "..."
-
-    na "...?"
-
-    #voice "voice/3-scene_3-115.ogg" #Raine (Nat)
-    mc "Can I see my ship?"
-
-    #voice "voice/3-scene_3-116.ogg" #Leona (Dot)
-    le questioning p2 "Oh! Right, just this way!"
-
     stop sound3 fadeout 2.0
     stop music fadeout 2.0
     #scene black with fade
