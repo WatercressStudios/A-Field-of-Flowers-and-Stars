@@ -317,31 +317,31 @@ label scene_3:
     voice "voice/3-scene_3-81.ogg" #Raine (Nat)
     mc sighing "Y-Yeah..."
 
-    #voice "voice/3-scene_3-82.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-82.ogg" #Leona (Dot)
     le questioning a3 "Ah, sorry! What I meant to say is that you're extremely lucky. None of our tests with wormholes have been fruitful."
 
-    #voice "voice/3-scene_3-83.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-83.ogg" #Leona (Dot)
     le "I'm surprised you took a ship through one to begin with."
 
-    #voice "voice/3-scene_3-84.ogg" #Raine (Nat)
+    voice "voice/3-scene_3-84.ogg" #Raine (Nat)
     mc "I didn't really have a choice. I ran into one while I was flying."
 
-    #voice "voice/3-scene_3-85.ogg" #Raine (Nat)
+    voice "voice/3-scene_3-85.ogg" #Raine (Nat)
     mc "When I exited the wormhole, I was close to Fireside. My ship was damaged and I…"
 
-    #voice "voice/3-scene_3-86.ogg" #Raine (Nat)
+    voice "voice/3-scene_3-86.ogg" #Raine (Nat)
     mc blech "...had a really rough day."
 
-    #voice "voice/3-scene_3-87.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-87.ogg" #Leona (Dot)
     le surprised "Sounds like it."
 
-    #voice "voice/3-scene_3-88.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-88.ogg" #Leona (Dot)
     le kind a2 "I'm just glad you're okay after all of that."
 
-    #voice "voice/3-scene_3-89.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-89.ogg" #Leona (Dot)
     le concerned "You even went through a wormhole! I never thought that would be possible."
 
-    #voice "voice/3-scene_3-90.ogg" #Raine (Nat)
+    voice "voice/3-scene_3-90.ogg" #Raine (Nat)
     mc "Yeah... I guess so."
     play sound "sfx/get up.ogg"
 
@@ -356,23 +356,23 @@ label scene_3:
 
     na "Leona suddenly stands up."
 
-    #voice "voice/3-scene_3-91.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-91.ogg" #Leona (Dot)
     le happy speaking a3 "So, I think it's high time I took you on a short tour of Aster!"
 
-    #voice "voice/3-scene_3-92.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-92.ogg" #Leona (Dot)
     le "If you're going to be stuck with us for awhile, you might as well get the lay of the land."
 
-    #voice "voice/3-scene_3-93.ogg" #Raine (Nat)
+    voice "voice/3-scene_3-93.ogg" #Raine (Nat)
     mc "Umm..."
     na "I honestly don't want to stay any longer than I have to. Leona's a wonderful host, but planetary life just isn't for me."
 
-    #voice "voice/3-scene_3-94.ogg" #Raine (Nat)
+    voice "voice/3-scene_3-94.ogg" #Raine (Nat)
     mc "Maybe later."
 
-    #voice "voice/3-scene_3-95.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-95.ogg" #Leona (Dot)
     le sassyquestioning "Don't you want to go outside? You can't stay cooped up in here forever..."
 
-    #voice "voice/3-scene_3-96.ogg" #Raine (Nat)
+    voice "voice/3-scene_3-96.ogg" #Raine (Nat)
     mc happy "Once I fix my ship, I'll be fine."
 
     show le surprised at stage_right:
@@ -380,41 +380,41 @@ label scene_3:
 
     na "Leona perks up at the mention of my ship."
 
-    #voice "voice/3-scene_3-97.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-97.ogg" #Leona (Dot)
     le "Oh, that's right! While you were out, my crew rushed over to your ship and spent the night hauling it back to the base."
 
-    #voice "voice/3-scene_3-98.ogg" #Raine (Nat)
+    voice "voice/3-scene_3-98.ogg" #Raine (Nat)
     mc shocked armraised "R-Really? What about the creatures you told me about?"
 
-    #voice "voice/3-scene_3-99.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-99.ogg" #Leona (Dot)
     le happy a1 "We have ways of dealing with them, so no worries."
 
-    #voice "voice/3-scene_3-100.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-100.ogg" #Leona (Dot)
     le  "Anyway, it was surprisingly light, so they hooked it up to a squad of bikes and brought it in."
 
-    #voice "voice/3-scene_3-101.ogg" #Raine (Nat)
+    voice "voice/3-scene_3-101.ogg" #Raine (Nat)
     mc happy "Well then, what are we waiting for?"
 
-    #voice "voice/3-scene_3-102.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-102.ogg" #Leona (Dot)
     le smug a3 "Oh? Didn't you just say you could wait until later?"
     na "Leona's giving off the cheekiest grin. She knew I'd jump at this opportunity."
-    #voice "voice/3-scene_3-103.ogg" #Raine (Nat)
+    voice "voice/3-scene_3-103.ogg" #Raine (Nat)
     mc unimpressed "I've... changed my mind. Let's go."
-    #voice "voice/3-scene_3-104.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-104.ogg" #Leona (Dot)
     le kind a2 "All righty, but first, let me take a look at your leg."
-    #voice "voice/3-scene_3-105.ogg" #Raine (Nat)
+    voice "voice/3-scene_3-105.ogg" #Raine (Nat)
     mc blech "Oh, I had completely forgotten about that."
     na "I stamp my foot a couple times to determine if there are any problems."
-    #voice "voice/3-scene_3-106.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-106.ogg" #Leona (Dot)
     le smug a2 "Calm down there, killer. I just wanna take a peek!"
     na "Leona scoots a chair up beside me and sets about unwrapping the gauze."
     na "Shockingly, the green paste peels off cleanly."
     na "Better still, the skin is completely healed."
-    #voice "voice/3-scene_3-107.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-107.ogg" #Leona (Dot)
     le happy a2 "Lookin' good! With that, you're cleared to return to duty."
-    #voice "voice/3-scene_3-108.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-108.ogg" #Leona (Dot)
     le "Let's go take a look at that ship of yours now. It'll only take a couple minutes to get there, so don't worry about gearing up."
-    #voice "voice/3-scene_3-109.ogg" #Raine (Nat)
+    voice "voice/3-scene_3-109.ogg" #Raine (Nat)
     mc happy "Lead the way, Captain."
 
 
@@ -445,7 +445,7 @@ label scene_3:
     #Voice lines are not implimented yet
 
     $ hide_sides = []
-    #voice "voice/3-scene_3-110.ogg" #Leona (Dot)
+    voice "voice/3-scene_3-110.ogg" #Leona (Dot)
     le explaining "There's Lua's place, she has the best vegetables this time of year, and over there's my mechanic's house..."
     na "Meanwhile, Leona is dragging me around, pointing at various buildings and landmarks without a care in the world."
 

@@ -310,7 +310,7 @@ label scene1:
     voice "voice/1-scene1-48.ogg" #Raine (Nat)
     mc annoyed "I built this ship to fly, so let's fly straight down its throat!"
 
-    #voice "voice/1-scene1-49.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-49.ogg" #Juneau (Lily)
     ju "Ah!"
 
     # ###
@@ -350,14 +350,14 @@ label scene1:
     # ART - PLANET BG REPLACEES WORMHOLE BG
     # ###
 
-    #voice "voice/1-scene1-50.ogg" #Raine (Nat)
+    voice "voice/1-scene1-50.ogg" #Raine (Nat)
     mc shocked armraised "SHIT!"
 
     #Juneau glitches out
     stop sound4 fadeout 2.0
     play sound5 "sfx/SSL2.ogg" fadein 2.0
 
-    #voice "voice/1-scene1-51.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-51.ogg" #Juneau (Lily)
     ju red worried a1 "IMPACT - HULL BREACH DET--"
 
     play sound2 "sfx/astroid impact.ogg"
@@ -378,7 +378,7 @@ label scene1:
                 repeat
     show stars with hpunch
 
-    #voice "voice/1-scene1-52.ogg" #Raine (Nat)
+    voice "voice/1-scene1-52.ogg" #Raine (Nat)
     mc upset "WHAT THE HELL WAS THAT?!"
 
     ###
@@ -402,13 +402,13 @@ label scene1:
     na "And the current course happens to be...."
     na "...pulling us straight into a planet."
 
-    #voice "voice/1-scene1-53.ogg" #Raine (Nat)
+    voice "voice/1-scene1-53.ogg" #Raine (Nat)
     mc shocked armraised "Shit. Don't wanna go there."
 
-    #voice "voice/1-scene1-54.ogg" #Raine (Nat)
+    voice "voice/1-scene1-54.ogg" #Raine (Nat)
     mc annoyed "Out of the frying pan and into the fire."
 
-    #voice "voice/1-scene1-55.ogg" #Raine (Nat)
+    voice "voice/1-scene1-55.ogg" #Raine (Nat)
     mc upset "Juneau, I need you! Like, right now!"
 
     #SFX alarm starts going off. Cockpit is flashing red.
@@ -419,7 +419,7 @@ label scene1:
     na "My console flickers, just for a second. A notification from Juneau. Text only."
 
     $ hide_sides = ['Juneau']
-    #voice "voice/1-scene1-56.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-56.ogg" #Juneau (Lily)
     ju "You might want to put your helmet on now."
 
     scene white with Dissolve(3)
