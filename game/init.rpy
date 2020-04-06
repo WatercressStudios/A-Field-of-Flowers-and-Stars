@@ -282,9 +282,9 @@ label splashscreen:
     python:
             if not persistent.set_volumes:
                 persistent.set_volumes = True
-                _preferences.volumes['music'] *= .3
-                _preferences.volumes['voice'] *= .8
-                _preferences.volumes['sfx'] *= .75
+                _preferences.volumes['music'] *= 1
+                _preferences.volumes['voice'] *= 1
+                _preferences.volumes['sfx'] *= 1
 
     ##Play the music configured in options so that the music begins as soon as the splash screen shows
     $ renpy.music.play(config.main_menu_music)

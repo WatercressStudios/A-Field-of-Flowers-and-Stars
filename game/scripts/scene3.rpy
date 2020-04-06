@@ -404,6 +404,7 @@ label scene_3:
     le kind a2 "All righty, but first, let me take a look at your leg."
     voice "voice/3-scene_3-105.ogg" #Raine (Nat)
     mc blech "Oh, I had completely forgotten about that."
+    play sound "sfx/stomp.ogg"
     na "I stamp my foot a couple times to determine if there are any problems."
     voice "voice/3-scene_3-106.ogg" #Leona (Dot)
     le smug a2 "Calm down there, killer. I just wanna take a peek!"

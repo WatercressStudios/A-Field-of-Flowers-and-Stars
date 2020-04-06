@@ -1,5 +1,5 @@
 label scene_4:
-
+    play env "amb/workshop.ogg" fadein 2.0
     #ART - GARAGE BG
     show street_open:
         ease 3.0 xalign 1.0 zoom 1.3
@@ -37,6 +37,7 @@ label scene_4:
     le "I'm sure you'll get it fixed! You're a high-tech alien, I'm sure this is nothing for you!"
     voice "voice/4-scene_4-10.ogg" #Raine (Nat)
     mc happy "Heh. While your baseless confidence is flattering, I think you might be overestimating me."
+    play sound "sfx/Metal fix.ogg"
     na "I push together two pieces of metal, one of which was mildly bent. Holding them in place, I grab a nearby tool and try to turn the screw that originally held them together."
     voice "voice/4-scene_4-11.ogg" #Leona (Dot)
     le questioning a3 "Regardless, you'll be staying with me until you've got your ship back together."
@@ -85,6 +86,7 @@ label scene_4:
     le curious "...or that this shape would make for a good space ship..."
     voice "voice/4-scene_4-28.ogg" #Leona (Dot)
     le "...or that, or..."
+    play sound "sfx/metal break.ogg"
     na "..."
 
         #SFX - METALLIC POP
@@ -141,14 +143,16 @@ label scene_4:
     le smug a3 "And while you work, I'll give you a rundown!"
     voice "voice/4-scene_4-53.ogg" #Raine (Nat)
     mc "You've got a deal."
-
+    stop env fadeout 2.0
     scene sky with dissolve
+
 
     na "..."
     na "After a couple of hours listening to Leona's stories while working on the ship, I decide to take a break. Juneau won't be online for a little bit anyways, so I have some time to kill."
     na "And I'm hungry."
 
     #ART - LEONA'S HOUSE
+    play sound2 "amb/Leonas house.ogg"
     scene house with dissolve:
         zoom 1.25 xalign 1.0
 
@@ -172,6 +176,7 @@ label scene_4:
 
     voice "voice/4-scene_4-56.ogg" #Leona (Dot)
     le "I asked if you wanted dinner. Are you okay?"
+    play music "music/Missing Juaneau.ogg" fadein 3.0
     voice "voice/4-scene_4-57.ogg" #Raine (Nat)
     mc onfire "Yeah, just thinking about the ship."
     voice "voice/4-scene_4-58.ogg" #Leona (Dot)
@@ -272,7 +277,8 @@ label scene_4:
     na "When we were talking in the garage earlier she told me an interesting story about their homeworld; Dawne."
     na "I figure that's as good a place as any to start before I decide to nod off."
     #VFX - JOURNAL ENTRY ADDED - 1
-
+    stop music fadeout 2.0
+    stop env fadeout 2.0
     scene black with Dissolve(2.0)
     pause 0.5
 

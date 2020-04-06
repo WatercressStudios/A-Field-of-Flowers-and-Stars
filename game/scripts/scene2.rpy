@@ -32,6 +32,7 @@ label scene_2:
         ease 0.5 yoffset -20
         ease 0.5 yoffset 0
     na "At least I can wiggle around, so I won't be bored as I slowly die of exposure."
+    play sound "sfx/tree2.ogg"
     na "Could be worse, though. The wormhole itself could have popped the ship like a giant metal pimple."
 
     voice "voice/2-scene_2-2.ogg" #Raine (Nat)
@@ -101,7 +102,7 @@ label scene_2:
 
     na "The cables fall away..."
 
-    play sound "sfx/falling.ogg"
+
 
     show spaceship_crashed:
         linear 0.6 yalign 0.0
@@ -119,10 +120,9 @@ label scene_2:
     na "The girl leaps down from the branch and grabs me midair."
     na "Perhaps it's because of the planet's reduced gravity, but we seem to float down, rather than fall."
     na "Or maybe the adrenaline is slowing my perception of time?"
-
+    play sound "sfx/falling.ogg"
     scene spaceship_crashed with vpunch
     pause 0.5
-
     voice "voice/2-scene_2-11.ogg" #Raine (Nat)
     mc blech "AuUuoghhh..."
     na "I'm gonna go with the latter. If I wasn't sore before, I am now."
@@ -280,6 +280,7 @@ label scene_2:
     $ hide_sides = ['Leona']
 
     show le happy a1 at stage_right with dissolve
+    play env "amb/City Day.ogg" fadein 5.0
     voice "voice/2-scene_2-54.ogg" #Leona (Dot)
     le happy a2 "We're here! Welcome to the city of Aster!"
     show street:
@@ -288,7 +289,7 @@ label scene_2:
     hide le with dissolve
     $ hide_sides = []
 
-    play env "amb/City Day.ogg" fadein 1.0
+
     na "Leona disembarks, helping me down from the bike."
 
     voice "voice/2-scene_2-55.ogg" #Leona (Dot)
@@ -442,14 +443,15 @@ label scene_2:
     mc amused "Yes, please."
     voice "voice/2-scene_2-105.ogg" #Leona (Dot)
     le happy2 a1 "Right, scootch over and we'll head in!"
-
+    stop music fadeout 2.0
+    stop env fadeout 3.0
     scene sky with dissolve
     pause 0.5
     ###
     # ART - BG bg_leonahouse
     ###
     scene house with wipeleft
-
+    play env "Amb/Leonas house.ogg" fadein 3.0
     $ hide_sides = ["Leona"]
     show le happy a2 with dissolve:
         stage_right
@@ -466,6 +468,7 @@ label scene_2:
     ###
     # SFX - POMF
     ###
+    play sound "sfx/bed fall.ogg"
     show house with vpunch
     voice "voice/2-scene_2-109.ogg" #Leona (Dot)
     le "-want to sleep off the medicine."
@@ -473,6 +476,7 @@ label scene_2:
     le kind a2 "I figured this would happen."
     voice "voice/2-scene_2-111.ogg" #Raine (Nat)
     mc yawn2 "Sorry... "
+    play music "music/First Night.ogg" fadein 2.0
     voice "voice/2-scene_2-112.ogg" #Leona (Dot)
     le "Rest up, we can talk later."
     voice "voice/2-scene_2-113.ogg" #Raine (Nat)
@@ -480,6 +484,7 @@ label scene_2:
     na "It doesn't take much time before the day's trauma catches up to me and the urge to pass right the hell out envelops me completely."
 
     scene black with wipedown
+    stop env fadeout 2.0
     ###
     # VFX - EYES CLOSE
     ###
@@ -488,6 +493,7 @@ label scene_2:
     voice "voice/2-scene_2-114.ogg" #Leona (Dot)
     le "Logdate 2301: Today was interesting. I found an alien! She -- or at least, I think it's a she -- crash-landed..."
     na "Huh... She has... a diary..."
+    stop music fadeout 2.0
     na "I guess... we're not... that... diff..."
 
     jump scene_3
