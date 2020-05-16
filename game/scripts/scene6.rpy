@@ -478,7 +478,7 @@ label scene_6:
     mc satisfied "Then I'm sure you'll love it."
     voice "voice/6-scene_6-137.ogg" #Raine (Nat)
     mc "Now, what were we talking about before? Architecture?"
-    #voice "voice/6-scene_6-138.ogg" #Leona (Dot)
+    voice "voice/6-scene_6-138.ogg" #Leona (Dot)
     le happy a1 "Right, as I was saying, the family and the home are equally important-"
     stop env fadeout 2.0
     jump scene_7
