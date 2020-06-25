@@ -32,6 +32,7 @@ label scene_2:
         ease 0.5 yoffset -20
         ease 0.5 yoffset 0
     na "At least I can wiggle around, so I won't be bored as I slowly die of exposure."
+    play sound "sfx/tree2.ogg"
     na "Could be worse, though. The wormhole itself could have popped the ship like a giant metal pimple."
 
     voice "voice/2-scene_2-2.ogg" #Raine (Nat)
@@ -101,7 +102,7 @@ label scene_2:
 
     na "The cables fall away..."
 
-    play sound "sfx/falling.ogg"
+
 
     show spaceship_crashed:
         linear 0.6 yalign 0.0
@@ -119,10 +120,9 @@ label scene_2:
     na "The girl leaps down from the branch and grabs me midair."
     na "Perhaps it's because of the planet's reduced gravity, but we seem to float down, rather than fall."
     na "Or maybe the adrenaline is slowing my perception of time?"
-
+    play sound "sfx/falling.ogg"
     scene spaceship_crashed with vpunch
     pause 0.5
-
     voice "voice/2-scene_2-11.ogg" #Raine (Nat)
     mc blech "AuUuoghhh..."
     na "I'm gonna go with the latter. If I wasn't sore before, I am now."
@@ -187,7 +187,7 @@ label scene_2:
     voice "voice/2-scene_2-27.ogg" #Leona (Dot)
     le speakingthink "You're... an alien?"
 
-    #voice "voice/2-scene_2-28.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-28.ogg" #Raine (Nat)
     mc amused "No, I'm --"
 
     na "Wait, yeah. She's right. I'm technically the alien here."
@@ -198,10 +198,10 @@ label scene_2:
     voice "voice/2-scene_2-30.ogg" #Leona (Dot)
     le surprised "That's not a planet I've heard of... Is it close?"
 
-    #voice "voice/2-scene_2-31.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-31.ogg" #Raine (Nat)
     mc speaking "I don't really know. My ship has all the info, but it's uh, not exactly in good shape right now."
 
-    #voice "voice/2-scene_2-32.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-32.ogg" #Leona (Dot)
     le happy a2 "Well whatever, it's nice to meet you. I'm Leona!"
 
     voice "voice/2-scene_2-33.ogg" #Leona (Dot)
@@ -231,7 +231,7 @@ label scene_2:
     voice "voice/2-scene_2-41.ogg" #Leona (Dot)
     le "We call ourselves Dawnese. We're from Dawne, a few light years away from here. This is our first colony world."
 
-    #voice "voice/2-scene_2-42.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-42.ogg" #Leona (Dot)
     le speaking a2 "I gotta say, I was more than a little surprised to see a ship come down here."
 
     voice "voice/2-scene_2-43.ogg" #Leona (Dot)
@@ -280,6 +280,7 @@ label scene_2:
     $ hide_sides = ['Leona']
 
     show le happy a1 at stage_right with dissolve
+    play env "amb/City Day.ogg" fadein 5.0
     voice "voice/2-scene_2-54.ogg" #Leona (Dot)
     le happy a2 "We're here! Welcome to the city of Aster!"
     show street:
@@ -288,7 +289,7 @@ label scene_2:
     hide le with dissolve
     $ hide_sides = []
 
-    play env "amb/City Day.ogg" fadein 1.0
+
     na "Leona disembarks, helping me down from the bike."
 
     voice "voice/2-scene_2-55.ogg" #Leona (Dot)
@@ -391,103 +392,108 @@ label scene_2:
     voice "voice/2-scene_2-80.ogg" #Raine (Nat)
     mc upset "God, that tastes terrible!!"
 
-    #voice "voice/2-scene_2-81.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-81.ogg" #Leona (Dot)
     le happy2 a1 "I know, right?"
-    #voice "voice/2-scene_2-82.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-82.ogg" #Leona (Dot)
     le happy a2 "Once, when I was a kid, I had a really bad toothache and tried rubbing some onto it."
-    #voice "voice/2-scene_2-83.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-83.ogg" #Leona (Dot)
     le happy a1 "The pain went away, but I couldn't get the taste out for days."
-    #voice "voice/2-scene_2-84.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-84.ogg" #Leona (Dot)
     le smug a2 "And then the tummy problems began..."
-    #voice "voice/2-scene_2-85.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-85.ogg" #Raine (Nat)
     mc speaking "Isn't youth wonderful?"
-    #voice "voice/2-scene_2-86.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-86.ogg" #Leona (Dot)
     le happy a2 "Hehe!"
-    #voice "voice/2-scene_2-87.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-87.ogg" #Leona (Dot)
     le kind a2 "So, how's your head?"
-    #voice "voice/2-scene_2-88.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-88.ogg" #Raine (Nat)
     mc "Feels better. My shoulders aren't as sore either."
-    #voice "voice/2-scene_2-89.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-89.ogg" #Leona (Dot)
     le "I'm glad I was able to help!"
-    #voice "voice/2-scene_2-90.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-90.ogg" #Raine (Nat)
     mc "Yeah, you really saved me. First Juneau, then-"
-    #voice "voice/2-scene_2-91.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-91.ogg" #Leona (Dot)
     le speakingthink "Juneau?"
-    #voice "voice/2-scene_2-92.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-92.ogg" #Raine (Nat)
     mc shocked armraised "Oh! Juneau!"
-    #voice "voice/2-scene_2-93.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-93.ogg" #Raine (Nat)
     mc "Shit! I hope she survived the crash!"
-    #voice "voice/2-scene_2-94.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-94.ogg" #Leona (Dot)
     le concernedspeaking "...There was someone else on your ship?"
-    #voice "voice/2-scene_2-95.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-95.ogg" #Raine (Nat)
     mc thankful "Yes - well, no. Not exactly. She's part of my ship. My AI navigator. I need to see if she made it. Can you take me there? Back to the crash site?"
-    #voice "voice/2-scene_2-96.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-96.ogg" #Leona (Dot)
     le happy a2 "Sure, I can take you back."
-    #voice "voice/2-scene_2-97.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-97.ogg" #Leona (Dot)
     le "But not right now."
-    #voice "voice/2-scene_2-98.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-98.ogg" #Raine (Nat)
     mc "Huh?"
-    #voice "voice/2-scene_2-99.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-99.ogg" #Leona (Dot)
     le "I don't think we should go back to your ship just yet."
-    #voice "voice/2-scene_2-100.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-100.ogg" #Leona (Dot)
     le shylook "Those woods aren't exactly safe after the sun goes down."
-    #voice "voice/2-scene_2-101.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-101.ogg" #Leona (Dot)
     le "And in your condition…"
-    #voice "voice/2-scene_2-102.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-102.ogg" #Raine (Nat)
     mc sighing "Without my ship, I uh...don't really have anywhere else to go."
-    #voice "voice/2-scene_2-103.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-103.ogg" #Leona (Dot)
     le happy a2 "Well, why don't you rest at my place, then? We can look into your ship tomorrow."
     na "I guess I don't really have much of a choice."
-    #voice "voice/2-scene_2-104.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-104.ogg" #Raine (Nat)
     mc amused "Yes, please."
-    #voice "voice/2-scene_2-105.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-105.ogg" #Leona (Dot)
     le happy2 a1 "Right, scootch over and we'll head in!"
-
+    stop music fadeout 2.0
+    stop env fadeout 3.0
     scene sky with dissolve
     pause 0.5
     ###
     # ART - BG bg_leonahouse
     ###
     scene house with wipeleft
-
+    play env "Amb/Leonas house.ogg" fadein 3.0
     $ hide_sides = ["Leona"]
     show le happy a2 with dissolve:
         stage_right
 
-    #voice "voice/2-scene_2-106.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-106.ogg" #Leona (Dot)
     le "Ta-dahhh! Welcome to my little house."
-    #voice "voice/2-scene_2-107.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-107.ogg" #Raine (Nat)
     mc happy "Ah, I feel cozy already."
     na "There's a shelf of knick-knacks, a messy pile of papers on a desk, and a small kitchenette in the corner."
     na "But none of those things are even remotely as interesting as the centerpiece of the room."
     na "I immediately target the bed, or what I assume to be the bed -- a huge pile of cushions and blankets lining the back wall beneath more rows of shelving."
-    #voice "voice/2-scene_2-108.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-108.ogg" #Leona (Dot)
     le questioning a3 "Oh, you'll probably --"
     ###
     # SFX - POMF
     ###
+    play sound "sfx/bed fall.ogg"
     show house with vpunch
-    #voice "voice/2-scene_2-109.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-109.ogg" #Leona (Dot)
     le "-want to sleep off the medicine."
-    #voice "voice/2-scene_2-110.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-110.ogg" #Leona (Dot)
     le kind a2 "I figured this would happen."
-    #voice "voice/2-scene_2-111.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-111.ogg" #Raine (Nat)
     mc yawn2 "Sorry... "
-    #voice "voice/2-scene_2-112.ogg" #Leona (Dot)
+    play music "music/First Night.ogg" fadein 2.0
+    voice "voice/2-scene_2-112.ogg" #Leona (Dot)
     le "Rest up, we can talk later."
-    #voice "voice/2-scene_2-113.ogg" #Raine (Nat)
+    voice "voice/2-scene_2-113.ogg" #Raine (Nat)
     mc satisfied "Thanks, you're the best~"
     na "It doesn't take much time before the day's trauma catches up to me and the urge to pass right the hell out envelops me completely."
 
     scene black with wipedown
+    stop env fadeout 2.0
     ###
     # VFX - EYES CLOSE
     ###
 
     na "But before I conk out, I hear something."
-    #voice "voice/2-scene_2-114.ogg" #Leona (Dot)
+    voice "voice/2-scene_2-114.ogg" #Leona (Dot)
     le "Logdate 2301: Today was interesting. I found an alien! She -- or at least, I think it's a she -- crash-landed..."
     na "Huh... She has... a diary..."
+    stop music fadeout 2.0
     na "I guess... we're not... that... diff..."
 
     jump scene_3

@@ -257,6 +257,7 @@ label scene1:
     ju red worried a1 "Huh? Okay! Forward thrust increased to full. What are you doing?"
 
     #layer 2 spaceship
+    stop sound3 fadeout 2.0
     stop env fadeout 2.0
     play sound4 "sfx/SSL1V2.ogg" fadein 2.0
 
@@ -295,7 +296,6 @@ label scene1:
     #laayer 2 spaceship v2
     na "Faster and faster we go as I fly the ship straight into the  well."
 
-    play sound4 "sfx/wormhole loop.ogg" fadein 1.0
 
     na "The ship begins to shake as we pick up speed."
 
@@ -310,14 +310,16 @@ label scene1:
     voice "voice/1-scene1-48.ogg" #Raine (Nat)
     mc annoyed "I built this ship to fly, so let's fly straight down its throat!"
 
-    #voice "voice/1-scene1-49.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-49.ogg" #Juneau (Lily)
     ju "Ah!"
+    play sound3 "sfx/wormhole loop.ogg"
 
     # ###
     # VFX - SCREEN SHAKING BECOMES EVER MORE VIOLENT
     # ART/VFX - INSIDE THE WORMHOLE BG (LIKE A VORTEX, DOESN'T NEED TO BE FANCY SINCE IT DOESN'T LAST LONG. MAYBE JUST DISTORT/SPIN THE WORMHOLE BG?)
 
     play sound2 "sfx/astroid impact.ogg"
+    play sound5 "sfx/SSL2.ogg"
     scene wormhole:
         parallel:
             anchor (0.5, 0.5)
@@ -350,14 +352,14 @@ label scene1:
     # ART - PLANET BG REPLACEES WORMHOLE BG
     # ###
 
-    #voice "voice/1-scene1-50.ogg" #Raine (Nat)
+    voice "voice/1-scene1-50.ogg" #Raine (Nat)
     mc shocked armraised "SHIT!"
 
     #Juneau glitches out
-    stop sound4 fadeout 2.0
-    play sound5 "sfx/SSL2.ogg" fadein 2.0
 
-    #voice "voice/1-scene1-51.ogg" #Juneau (Lily)
+
+
+    voice "voice/1-scene1-51.ogg" #Juneau (Lily)
     ju red worried a1 "IMPACT - HULL BREACH DET--"
 
     play sound2 "sfx/astroid impact.ogg"
@@ -378,12 +380,13 @@ label scene1:
                 repeat
     show stars with hpunch
 
-    #voice "voice/1-scene1-52.ogg" #Raine (Nat)
+    voice "voice/1-scene1-52.ogg" #Raine (Nat)
     mc upset "WHAT THE HELL WAS THAT?!"
 
     ###
     # SFX - START RAMPING UP THE SOUND OF ATMOSPHERE AROUND THE SHIP. BUILD IT UP ON TOP OF THEIR CONVERSATION UNTIL WE FADE OUT OF THIS SCENE.
     ###
+    play sound4 "sfx/SSL3.ogg" fadein 1.0
     na "I turn to Juneau . She's gone."
     na "One by one, the displays power down."
 
@@ -402,26 +405,26 @@ label scene1:
     na "And the current course happens to be...."
     na "...pulling us straight into a planet."
 
-    #voice "voice/1-scene1-53.ogg" #Raine (Nat)
+    voice "voice/1-scene1-53.ogg" #Raine (Nat)
     mc shocked armraised "Shit. Don't wanna go there."
 
-    #voice "voice/1-scene1-54.ogg" #Raine (Nat)
+    voice "voice/1-scene1-54.ogg" #Raine (Nat)
     mc annoyed "Out of the frying pan and into the fire."
 
-    #voice "voice/1-scene1-55.ogg" #Raine (Nat)
+    voice "voice/1-scene1-55.ogg" #Raine (Nat)
     mc upset "Juneau, I need you! Like, right now!"
 
     #SFX alarm starts going off. Cockpit is flashing red.
-    play sound "sfx/entry_intro.ogg"
+
     pause 0.5
-    play sound4 "sfx/SSL3.ogg" fadein 1.0
+    
 
     na "My console flickers, just for a second. A notification from Juneau. Text only."
 
     $ hide_sides = ['Juneau']
-    #voice "voice/1-scene1-56.ogg" #Juneau (Lily)
+    voice "voice/1-scene1-56.ogg" #Juneau (Lily)
     ju "You might want to put your helmet on now."
-
+    play sound "sfx/entry_intro.ogg"
     scene white with Dissolve(3)
     #SFX roaring and crash sound effect.
 
