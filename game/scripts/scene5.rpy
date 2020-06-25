@@ -2,18 +2,18 @@
 
  # ART GARAGE BG (with added boxes of junk)
 
-
+ 
     scene street_open with dissolve:
         subpixel True xpos -0.94 ypos -0.33 xanchor -0.04 yanchor None rotate None
 
-    show le happy speaking a2 at stage_left with dissolve:
-        xflip
+    $ hide_sides = ['Leona']
+
+    show le happy speaking a2 at stage_center with dissolve
+
     #voice "voice/5-default-1.ogg" #Leona (Dot)
     le "Tada!"
-
-
     #voice "voice/5-default-2.ogg" #Raine (Nat)
-    mc side "Oooh! Someone did some cleanup."
+    mc happy "Oooh! Someone did some cleanup."
 
 
     #voice "voice/5-default-3.ogg" #Leona (Dot)
@@ -33,11 +33,11 @@
 
 
     #voice "voice/5-default-7.ogg" #Raine (Nat)
-    mc "What have I done to deserve you, Leona?"
+    mc amused  "What have I done to deserve you, Leona?"
 
 
     #voice "voice/5-default-8.ogg" #Raine (Nat)
-    mc "Give my thanks to your crew too."
+    mc thankful "Give my thanks to your crew too."
 
 
     #voice "voice/5-default-9.ogg" #Leona (Dot)
@@ -49,7 +49,7 @@
 
 
     #voice "voice/5-default-11.ogg" #Raine (Nat)
-    mc "...I think it's time we found the other survivor."
+    mc stern "...I think it's time we found the other survivor."
 
 
     #voice "voice/5-default-12.ogg" #Leona (Dot)
@@ -65,15 +65,15 @@
 
 
     #voice "voice/5-default-15.ogg" #Raine (Nat)
-    mc "That's the one. I'll introduce you once we get her back online."
+    mc shyspeak "That's the one. I'll introduce you once we get her back online."
 
 
     #voice "voice/5-default-16.ogg" #Leona (Dot)
-    le "How do we do that?"
+    le questioning p2 "How do we do that?"
 
 
     #voice "voice/5-default-17.ogg" #Raine (Nat)
-    mc "Not sure. Yesterday I touched up the hull and engine, but there's no power to release the hatch."
+    mc concernspeak "Not sure. Yesterday I touched up the hull and engine, but there's no power to release the hatch."
 
 
     #voice "voice/5-default-18.ogg" #Raine (Nat)
@@ -81,7 +81,7 @@
 
 
     #voice "voice/5-default-19.ogg" #Raine (Nat)
-    mc "Did you find any of my tools earlier?"
+    mc unimpressed "Did you find any of my tools earlier?"
 
 
     #voice "voice/5-default-20.ogg" #Leona (Dot)
@@ -89,7 +89,7 @@
 
 
     #voice "voice/5-default-21.ogg" #Raine (Nat)
-    mc "Can you grab that for me? We're going to force the door."
+    mc stern  "Can you grab that for me? We're going to force the door."
 
 
     #voice "voice/5-default-22.ogg" #Leona (Dot)
@@ -97,7 +97,7 @@
 
 
     #voice "voice/5-default-23.ogg" #Raine (Nat)
-    mc "You could tell?"
+    mc surprised "You could tell?"
 
 
     #voice "voice/5-default-24.ogg" #Leona (Dot)
@@ -105,16 +105,16 @@
 
 
     #voice "voice/5-default-25.ogg" #Raine (Nat)
-    mc "Then you should know the electromagnetic lock is fail secure."
+    mc questioning2 "Then you should know the electromagnetic lock is fail secure."
 
 
     #voice "voice/5-default-26.ogg" #Raine (Nat)
-    mc "That way, even if all power is drained, the hatch doesn't pop open in the vacuum of space."
+    mc speaking "That way, even if all power is drained, the hatch doesn't pop open in the vacuum of space."
     hide le with dissolve
     na "With a screwdriver fitted with a rubber tip, I jam the tool under the panel, thus revealing an electric port."
 
     #voice "voice/5-default-27.ogg" #Raine (Nat)
-    mc "I'm a bit lazy when it comes to design, so the access panel is in the hatch itself. Watch."
+    mc stern "I'm a bit lazy when it comes to design, so the access panel is in the hatch itself. Watch."
 
     show le suspicious a2 at stage_left with dissolve:
         xflip
