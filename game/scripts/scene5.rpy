@@ -122,14 +122,14 @@
     na "Plugging the door into the hangar's power, the lock lights up."
 
     #voice "voice/5-default-28.ogg" #Raine (Nat)
-    mc "Open Sesame!"
+    mc onfire "Open Sesame!"
 
     na "Powered up and ready to go, I turn a safety lever. The hatch hisses and slowly swings open."
 
     show le surprised with Dissolve(.25)
 
     #voice "voice/5-default-29.ogg" #Raine (Nat)
-    mc "Hold your applause, please!"
+    mc satisfied "Hold your applause, please!"
 
 
     #voice "voice/5-default-30.ogg" #Leona (Dot)
@@ -137,7 +137,7 @@
 
 
     #voice "voice/5-default-31.ogg" #Raine (Nat)
-    mc "Now, let's bring the tool box inside and get to work on the central power."
+    mc happy "Now, let's bring the tool box inside and get to work on the central power."
     hide le with dissolve
 # ART SHIP FOREGROUND, GARAGE BACKGROUND
 
@@ -155,7 +155,7 @@
 
 
     #voice "voice/5-default-32.ogg" #Raine (Nat)
-    mc "Leona, hook the battery to the transformer you found, and that to your hanger's power source. We should be set once you're done."
+    mc stern "Leona, hook the battery to the transformer you found, and that to your hanger's power source. We should be set once you're done."
 
     na "These past few days without Juneau have been agonizing. Even if her hardware appears to be good to go, I won't know until I boot her up."
     na " And while I've examined the ship pretty thoroughly, I haven't looked into the availability of the parts needed to get this bird off the ground again."
@@ -164,9 +164,10 @@
 
 
     #voice "voice/5-default-33.ogg" #Raine (Nat)
-    mc "How're we doing, Leona?"
+    mc concernspeak "How're we doing, Leona?"
 
-    "Almost got it!"
+    
+    le "Almost got it!"
 
     na "She's surprisingly adept at the mechanical side of things, despite her clumsy nature."
     na "To be fair to her, she's been trying very hard to learn as much as she can. She wants to help me, bless her heart."
