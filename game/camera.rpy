@@ -741,7 +741,7 @@ init -1098 python:
     config.underlay.append(renpy.Keymap(
         self_voicing = Preference("self voicing", "toggle"),
         action_editor = _viewers.action_editor,
-        image_viewer = _open_image_viewer,
+        #image_viewer = _open_image_viewer,
         ))
 
 
