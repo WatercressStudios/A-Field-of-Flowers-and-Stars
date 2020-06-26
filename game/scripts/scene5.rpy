@@ -166,13 +166,14 @@
     #voice "voice/5-default-33.ogg" #Raine (Nat)
     mc concernspeak "How're we doing, Leona?"
 
-    
+    show le crazy a2 at stage_left with dissolve:
+        xflip
+
     le "Almost got it!"
 
     na "She's surprisingly adept at the mechanical side of things, despite her clumsy nature."
     na "To be fair to her, she's been trying very hard to learn as much as she can. She wants to help me, bless her heart."
     na "While I could do all of this on my own, it feels good to have someone who isn't a collection of ones and zeros on my side for once."
-
 
     #voice "voice/5-default-34.ogg" #Leona (Dot)
     le "Ready!"
@@ -197,7 +198,7 @@
     ju concerned a2 "I-Is t-that you? Raine? You’re okay?!"
 
     #voice "voice/5-default-37.ogg" #Raine (Nat)
-    mc "Yeah, yeah! Leona here pulled my butt out of a tree and helped get you back online."
+    mc happy "Yeah, yeah! Leona here pulled my butt out of a tree and helped get you back online."
     show le happy a1 at stage_left with dissolve:
         xflip
     #voice "voice/5-default-38.ogg" #Leona (Dot)
@@ -224,7 +225,7 @@
     ju annoyed a1 "My clock says I was out for an entire day, Raine! You left me alone, you jerk!"
 
     #voice "voice/5-default-44.ogg" #Raine (Nat)
-    mc "I-wait. You were the one that ejected me! {i}I'm{/i} the one that fell a couple thousand meters in nothing but a chair and fabric."
+    mc upset "I-wait. You were the one that ejected me! {i}I'm{/i} the one that fell a couple thousand meters in nothing but a chair and fabric."
 
 
     #voice "voice/5-default-45.ogg" #Juneau (Lily)
@@ -236,7 +237,7 @@
 
 
     #voice "voice/5-default-47.ogg" #Raine (Nat)
-    mc "Bah, you drama queen."
+    mc blech "Bah, you drama queen."
 
     na "This is good. This is {i}really{/i} good."
     na "She's acting just like herself. It appears things went right for once."
@@ -252,7 +253,7 @@
 
 
     #voice "voice/5-default-50.ogg" #Raine (Nat)
-    mc "Juneau, if you start spilling personal details to her I will downgrade you to a food processor."
+    mc upset "Juneau, if you start spilling personal details to her I will downgrade you to a food processor."
 
 
     #voice "voice/5-default-51.ogg" #Juneau (Lily)
@@ -271,7 +272,7 @@
 
 
     #voice "voice/5-default-53.ogg" #Raine (Nat)
-    mc "Is that you volunteering for something?"
+    mc questioning "Is that you volunteering for something?"
 
 
     #voice "voice/5-default-54.ogg" #Juneau (Lily)
@@ -281,7 +282,7 @@
     ju "The bin of parts is to your right if you want to start fixing me up. It's about time too, since you've been off playing house with your special friend here-"
 
     #voice "voice/5-default-56.ogg" #Raine (Nat)
-    mc "Pffffft-"
+    mc satisfied "Pffffft-"
 
     na "As always, Juneau caught me off guard."
 
@@ -296,7 +297,7 @@
 
 
     #voice "voice/5-default-59.ogg" #Raine (Nat)
-    mc "It means there are some bugs to work out."
+    mc happy "It means there are some bugs to work out."
     show le suspicious a2 with dissolve
     pause (.3)
     hide le with moveoutleft
@@ -324,14 +325,14 @@
     na "I think Juneau got the message, though Leona is looking a little lost."
 
     #voice "voice/5-default-62.ogg" #Raine (Nat)
-    mc "Settle down already, we got shit to do."
+    mc stern "Settle down already, we got shit to do."
 
     #voice "voice/5-default-63.ogg" #Juneau (Lily)
     ju "You can start by fixing my hard light converters!"
 
 
     #voice "voice/5-default-64.ogg" #Raine (Nat)
-    mc "Chill out, we're getting to it."
+    mc annoyed "Chill out, we're getting to it."
 
     scene sky with dissolve
 
