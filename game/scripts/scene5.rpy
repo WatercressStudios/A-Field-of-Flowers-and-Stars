@@ -347,31 +347,31 @@
 
 
     #voice "voice/5-default-67.ogg" #Raine (Nat)
-    mc concernspeaking "Hmm?"
+    mc concernspeak "Hmm?"
 
 
     #voice "voice/5-default-68.ogg" #Raine (Nat)
-    mc "Are you sure this is the right box? I don't recognize any of this."
+    mc questioning "Are you sure this is the right box? I don't recognize any of this."
 
 
     #voice "voice/5-default-69.ogg" #Leona (Dot)
-    le "It's got all the stuff we found at the crash site..."
+    le suspicious a2 "It's got all the stuff we found at the crash site..."
 
 
     #voice "voice/5-default-70.ogg" #Raine (Nat)
-    mc "This... this isn't from my ship."
+    mc shocked armraised  "This... this isn't from my ship."
 
 
     #voice "voice/5-default-71.ogg" #Raine (Nat)
-    mc "Look, it's all rusty and caked in dirt too."
+    mc questioning "Look, it's all rusty and caked in dirt too."
 
 
     #voice "voice/5-default-72.ogg" #Leona (Dot)
-    le "So it's not human? I don't get it."
+    le questioning a3 "So it's not human? I don't get it."
 
 
     #voice "voice/5-default-73.ogg" #Raine (Nat)
-    mc "No, not a chance. It's not yours either."
+    mc stern "No, not a chance. It's not yours either."
 
     na "It’s like… some old drone equipment, and what looks like lifepod parts. A bunch of mini thrusters and some eye modules here and there, busted and grimy circuitry shattered in a dozen pieces."
     na "This looks absolutely ancient, but it's easily more advanced than whatever the locals have."
@@ -380,31 +380,31 @@
 
 
     #voice "voice/5-default-74.ogg" #Raine (Nat)
-    mc "It might even be better than what I've got myself. You say you found it at the crash site?"
+    mc questioning2 "It might even be better than what I've got myself. You say you found it at the crash site?"
 
 
     #voice "voice/5-default-75.ogg" #Leona (Dot)
-    le "According to my top lieutenant, yeah. Everything here came from that area."
+    le suspicious a2 "According to my top lieutenant, yeah. Everything here came from that area."
 
     na "Hell, there's stuff here I can probably use to streamline my ship. Maybe the poor thing won't get torn apart next time I happen upon a wormhole."
 
 
     #voice "voice/5-default-76.ogg" #Raine (Nat)
-    mc "Oh, that'll be a bit of a problem, Juneau. Engine's gone."
+    mc surprised "Oh, that'll be a bit of a problem, Juneau. Engine's gone."
 
 
     #voice "voice/5-default-77.ogg" #Juneau (Lily)
-    ju "Whaddya mean 'gone?'"
+    ju concerned a2 "Whaddya mean 'gone?'"
 
 
     #voice "voice/5-default-78.ogg" #Raine (Nat)
-    mc "I mean it's trashed. Nothing salvageable."
+    mc stern "I mean it's trashed. Nothing salvageable."
 
     na "With only the stuff on hand, I won't be able to get the ship to hover in atmosphere, let alone leave it."
 
 
     #voice "voice/5-default-79.ogg" #Raine (Nat)
-    mc "Let's put a pin in this for now. I'll figure out how to fabricate a new one later."
+    mc unamused "Let's put a pin in this for now. I'll figure out how to fabricate a new one later."
 
 
     #voice "voice/5-default-80.ogg" #Raine (Nat)
@@ -412,11 +412,11 @@
 
 
     #voice "voice/5-default-81.ogg" #Juneau (Lily)
-    ju "Sure, what do you need?"
+    ju concerned a1  "Sure, what do you need?"
 
 
     #voice "voice/5-default-82.ogg" #Raine (Nat)
-    mc "For starters, two plasma injectors and three I.O.S.C chips. All destroyed on impact and needing replacements."
+    mc stern "For starters, two plasma injectors and three I.O.S.C chips. All destroyed on impact and needing replacements."
 
 
     #voice "voice/5-default-83.ogg" #Raine (Nat)
@@ -428,99 +428,100 @@
 
 
     #voice "voice/5-default-84.ogg" #Juneau (Lily)
-    ju "Do you have any idea what it feels like seeing you poke through my carcass like a vulture?"
+    ju annoyed a2 "Do you have any idea what it feels like seeing you poke through my carcass like a vulture?"
 
 
     #voice "voice/5-default-85.ogg" #Raine (Nat)
-    mc "I could just plug you in now and letcha sort out the internals for me."
+    mc satisfied "I could just plug you in now and letcha sort out the internals for me."
 
 
     #voice "voice/5-default-86.ogg" #Juneau (Lily)
-    ju "You would condemn a ghost to it's rotting corpse?!"
+    ju concerned a2 "You would condemn a ghost to it's rotting corpse?!"
 
 
     #voice "voice/5-default-87.ogg" #Raine (Nat)
-    mc "Only if it keeps complaining."
+    mc upset "Only if it keeps complaining."
 
 
     #voice "voice/5-default-88.ogg" #Juneau (Lily)
-    ju "I should have just formatted myself the moment you tried to upload me into this junker back on Lumin..."
+    ju annoyed a1 "I should have just formatted myself the moment you tried to upload me into this junker back on Lumin..."
 
 
     #voice "voice/5-default-89.ogg" #Raine (Nat)
-    mc "Just be thankful I decided to revive your sorry butt."
+    mc satisfied "Just be thankful I decided to revive your sorry butt."
 
 
     #voice "voice/5-default-90.ogg" #Raine (Nat)
-    mc "But if you'd rather return to the void until I get some parts in here, I might be accomodating."
+    mc happy "But if you'd rather return to the void until I get some parts in here, I might be accomodating."
 
 
     #voice "voice/5-default-91.ogg" #Juneau (Lily)
-    ju "Not a bad idea, honestly. The reactor here’s some of the worst nuclear engineering I’ve seen. I don’t know how I’m not blinking out of existence."
+    ju snarky a2 "Not a bad idea, honestly. The reactor here’s some of the worst nuclear engineering I’ve seen. I don’t know how I’m not blinking out of existence."
 
 
     #voice "voice/5-default-92.ogg" #Leona (Dot)
-    le "I'm not surprised. To be honest, I didn't think it'd be enough juice for something so high tech."
+    le neutral "I'm not surprised. To be honest, I didn't think it'd be enough juice for something so high tech."
 
 
     #voice "voice/5-default-93.ogg" #Leona (Dot)
-    le "We're trying to switch over to solar right now since we can't find much radioactive material to fuel the reactor."
+    le speaking a2 "We're trying to switch over to solar right now since we can't find much radioactive material to fuel the reactor."
 
 
     #voice "voice/5-default-94.ogg" #Raine (Nat)
-    mc "Sorry Juneau, looks like you're going back to sleep for a bit."
+    mc satisfied "Sorry Juneau, looks like you're going back to sleep for a bit."
 
 
     #voice "voice/5-default-95.ogg" #Juneau (Lily)
-    ju "Well, before I go you should know the ship sensors are partially online and I'm detecting a large power source about 10 kilometers southwest."
+    ju concerned a1 "Well, before I go you should know the ship sensors are partially online and I'm detecting a large power source about 10 kilometers southwest."
 
 
     #voice "voice/5-default-96.ogg" #Leona (Dot)
-    le "That doesn't sound right... There's nothing out there but mountains and some old cave systems."
+    le concernedspeaking "That doesn't sound right... There's nothing out there but mountains and some old cave systems."
 
 
     #voice "voice/5-default-97.ogg" #Juneau (Lily)
-    ju "Apparently not. Seeing the data, I'd say it's about three hundred meters under the surface. Maybe one of those caves leads down to something?"
+    ju concerned a2 "Apparently not. Seeing the data, I'd say it's about three hundred meters under the surface. Maybe one of those caves leads down to something?"
 
 
     #voice "voice/5-default-98.ogg" #Raine (Nat)
-    mc "Do you have the coordinates?"
+    mc stern "Do you have the coordinates?"
 
 
     #voice "voice/5-default-99.ogg" #Juneau (Lily)
-    ju "I'll leave them up on the display. Wake me up if anything happens, alright?"
+    ju concerned a1 "I'll leave them up on the display. Wake me up if anything happens, alright?"
 
 
     #voice "voice/5-default-100.ogg" #Raine (Nat)
-    mc "Will do. Thanks Juneau, you've been a huge help."
+    mc concernspeak "Will do. Thanks Juneau, you've been a huge help."
 
 
     #voice "voice/5-default-101.ogg" #Juneau (Lily)
-    ju "Entering Hibernation Mode. Night night."
+    ju speaking eclosed "Entering Hibernation Mode. Night night."
 
 # SFX POWERING DOWN
     play sound "sfx/power down.ogg"
+    hide ju speaking eclosed with hologram
 # ART JUNEAU SPRITE VANISHES
 
 
     #voice "voice/5-default-102.ogg" #Raine (Nat)
-    mc "Maybe I'll buy her a present when we get home to make up for all this."
+    mc thankful "Maybe I'll buy her a present when we get home to make up for all this."
 
 
     #voice "voice/5-default-103.ogg" #Leona (Dot)
-    le "By 'home' you mean Lumin?" #Changed "home" to 'home' to avoid issues
+    le questioning a2 "By 'home' you mean Lumin?" #Changed "home" to 'home' to avoid issues
 
 
     #voice "voice/5-default-104.ogg" #Raine (Nat)
-    mc "Yeah."
+    mc neutral "Yeah."
 
 
     #voice "voice/5-default-105.ogg" #Leona (Dot)
-    le "Is that your species homeworld?"
+    le questioning a3 "Is that your species homeworld?"
 
 
     #voice "voice/5-default-106.ogg" #Raine (Nat)
-    mc "Nah, Lumin is one planet in the empire."
+    mc speaking "Nah, Lumin is one planet in the empire."
 
 
     #voice "voice/5-default-107.ogg" #Raine (Nat)
@@ -528,35 +529,35 @@
 
 
     #voice "voice/5-default-108.ogg" #Leona (Dot)
-    le "What was it called?"
+    le questioning a2 "What was it called?"
 
 
     #voice "voice/5-default-109.ogg" #Raine (Nat)
-    mc "There are a few words for it. Terra, Earth, Gaea and so on."
+    mc gentlehandtalk "There are a few words for it. Terra, Earth, Gaea and so on."
 
 
     #voice "voice/5-default-110.ogg" #Leona (Dot)
-    le "I wonder what it was like..."
+    le questioning a3 "I wonder what it was like..."
 
 
     #voice "voice/5-default-111.ogg" #Raine (Nat)
-    mc "I heard it was beautiful once. Humans don't have much reason to go there anymore."
+    mc neutral "I heard it was beautiful once. Humans don't have much reason to go there anymore."
 
 
     #voice "voice/5-default-112.ogg" #Leona (Dot)
-    le "I think I'd still want to go see Dawne someday, even if it takes a while to get there."
+    le curious "I think I'd still want to go see Dawne someday, even if it takes a while to get there."
 
 
     #voice "voice/5-default-113.ogg" #Leona (Dot)
-    le "I'm happy I was born here on Fireside though. Something about all the nature feels, I dunno, right?"
+    le speaking a1 "I'm happy I was born here on Fireside though. Something about all the nature feels, I dunno, right?"
 
 
     #voice "voice/5-default-114.ogg" #Raine (Nat)
-    mc "Hmm, you've lost me. I prefer being up there, in space."
+    mc questioning2 "Hmm, you've lost me. I prefer being up there, in space."
 
 
     #voice "voice/5-default-115.ogg" #Raine (Nat)
-    mc "It's cozy living on such a small ship, and freeing to be able to just go anywhere in the galaxy."
+    mc gentlehandtalk "It's cozy living on such a small ship, and freeing to be able to just go anywhere in the galaxy."
 
 
     #voice "voice/5-default-116.ogg" #Raine (Nat)
@@ -564,11 +565,11 @@
 
 
     #voice "voice/5-default-117.ogg" #Raine (Nat)
-    mc "Well, asteroids and wormholes aside."
+    mc concernspeak "Well, asteroids and wormholes aside."
 
 
     #voice "voice/5-default-118.ogg" #Leona (Dot)
-    le "Wish I could go."
+    le curious "Wish I could go."
 
 
     #voice "voice/5-default-119.ogg" #Leona (Dot)
@@ -580,11 +581,11 @@
 
 
     #voice "voice/5-default-121.ogg" #Raine (Nat)
-    mc "Maybe you will. I mean, your people have managed to travel lightyears just to get here."
+    mc questioning2 "Maybe you will. I mean, your people have managed to travel lightyears just to get here."
 
 
     #voice "voice/5-default-122.ogg" #Raine (Nat)
-    mc "Regular space travel can't be too far behind."
+    mc gentlehandtalk "Regular space travel can't be too far behind."
 
 
     #voice "voice/5-default-123.ogg" #Raine (Nat)
@@ -592,7 +593,7 @@
 
 
     #voice "voice/5-default-124.ogg" #Leona (Dot)
-    le "But it'll still be awhile, won't it?"
+    le questioning a3 "But it'll still be awhile, won't it?"
 
 
     #voice "voice/5-default-125.ogg" #Raine (Nat)
@@ -600,47 +601,47 @@
 
 
     #voice "voice/5-default-126.ogg" #Leona (Dot)
-    le "So what can we do right now? Maybe go check out those caves Juneau told us about?"
+    le curious "So what can we do right now? Maybe go check out those caves Juneau told us about?"
 
 
     #voice "voice/5-default-127.ogg" #Raine (Nat)
-    mc "Worth a shot, I guess. Unless you have any better ideas?"
+    mc questioning2 "Worth a shot, I guess. Unless you have any better ideas?"
 
 
     #voice "voice/5-default-128.ogg" #Leona (Dot)
-    le "Nope!"
+    le happy a2 "Nope!"
 
 
     #voice "voice/5-default-129.ogg" #Raine (Nat)
-    mc "Looks like we're going exploring then."
+    mc happy "Looks like we're going exploring then."
 
 
     #voice "voice/5-default-130.ogg" #Leona (Dot)
-    le "Hell yeah!"
+    le happy2 a1 "Hell yeah!"
 
 
     #voice "voice/5-default-131.ogg" #Raine (Nat)
-    mc "...Hell?"
+    mc questioning2 "...Hell?"
 
 
     #voice "voice/5-default-132.ogg" #Leona (Dot)
-    le "Oh, do you not know that expression?"
+    le questioning p2 "Oh, do you not know that expression?"
 
 
     #voice "voice/5-default-133.ogg" #Raine (Nat)
-    mc "No, I do. I'm just surprised you know it."
+    mc surprised "No, I do. I'm just surprised you know it."
 
 
     #voice "voice/5-default-134.ogg" #Leona (Dot)
-    le "Interesting. Does that mean we have similar concepts about religion?"
+    le curious "Interesting. Does that mean we have similar concepts about religion?"
 
 
     #voice "voice/5-default-135.ogg" #Raine (Nat)
-    mc "Maybe. We can talk about that on the trip."
+    mc gentlehandtalk "Maybe. We can talk about that on the trip."
 
 
     #voice "voice/5-default-136.ogg" #Leona (Dot)
-    le "Ooh, good idea. We can swap stories."
+    le happy speaking a3 "Ooh, good idea. We can swap stories."
 
 #VFX JOURNAL ENTRY ADDED 2
 
