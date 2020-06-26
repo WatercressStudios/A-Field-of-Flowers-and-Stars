@@ -6,7 +6,7 @@
     scene street_open with dissolve:
         subpixel True xpos -0.94 ypos -0.33 xanchor -0.04 yanchor None rotate None
 
-    $ hide_sides = ['Leona']
+    $ hide_sides = ['Leona', 'Juneau']
 
     show le happy speaking a2 at stage_center with dissolve
 
@@ -138,7 +138,7 @@
 
     #voice "voice/5-default-31.ogg" #Raine (Nat)
     mc happy "Now, let's bring the tool box inside and get to work on the central power."
-    hide le with dissolve
+    hide le happy a1 with dissolve
 # ART SHIP FOREGROUND, GARAGE BACKGROUND
 
     show street_open onlayer master:
@@ -177,6 +177,7 @@
 
     #voice "voice/5-default-34.ogg" #Leona (Dot)
     le "Ready!"
+    hide le crazy with moveoutright
 
     na "Giving the relays one final checkup, I give Leona the word."
     na "She flips the breaker."
@@ -337,15 +338,16 @@
     scene sky with dissolve
 
     #voice "voice/5-default-65.ogg" #Raine (Nat)
-    mc "Leona, can you grab that other box of parts? I can't find the bit I need in this one."
-
+    mc stern "Leona, can you grab that other box of parts? I can't find the bit I need in this one."
+    
+    show le happy a2 at le_side 
 
     #voice "voice/5-default-66.ogg" #Leona (Dot)
     le "Here ya go!"
 
 
     #voice "voice/5-default-67.ogg" #Raine (Nat)
-    mc "Hmm?"
+    mc concernspeaking "Hmm?"
 
 
     #voice "voice/5-default-68.ogg" #Raine (Nat)
