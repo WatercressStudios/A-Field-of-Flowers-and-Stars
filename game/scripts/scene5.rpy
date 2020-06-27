@@ -337,13 +337,13 @@
 
     scene sky with dissolve
 
+    $ hide_sides = ['', '']
+
     #voice "voice/5-default-65.ogg" #Raine (Nat)
     mc stern "Leona, can you grab that other box of parts? I can't find the bit I need in this one."
-    
-    show le happy a2 at le_side 
 
     #voice "voice/5-default-66.ogg" #Leona (Dot)
-    le "Here ya go!"
+    le happy a2 "Here ya go!"
 
 
     #voice "voice/5-default-67.ogg" #Raine (Nat)
@@ -363,7 +363,7 @@
 
 
     #voice "voice/5-default-71.ogg" #Raine (Nat)
-    mc questioning "Look, it's all rusty and caked in dirt too."
+    mc shocked m2 "Look, it's all rusty and caked in dirt too."
 
 
     #voice "voice/5-default-72.ogg" #Leona (Dot)
@@ -404,7 +404,7 @@
 
 
     #voice "voice/5-default-79.ogg" #Raine (Nat)
-    mc unamused "Let's put a pin in this for now. I'll figure out how to fabricate a new one later."
+    mc speaking  "Let's put a pin in this for now. I'll figure out how to fabricate a new one later."
 
 
     #voice "voice/5-default-80.ogg" #Raine (Nat)
@@ -500,7 +500,7 @@
 
 # SFX POWERING DOWN
     play sound "sfx/power down.ogg"
-    hide ju speaking eclosed with hologram
+    hide ju speaking eclosed with dissolve
 # ART JUNEAU SPRITE VANISHES
 
 
@@ -549,7 +549,7 @@
 
 
     #voice "voice/5-default-113.ogg" #Leona (Dot)
-    le speaking a1 "I'm happy I was born here on Fireside though. Something about all the nature feels, I dunno, right?"
+    le  "I'm happy I was born here on Fireside though. Something about all the nature feels, I dunno, right?"
 
 
     #voice "voice/5-default-114.ogg" #Raine (Nat)
