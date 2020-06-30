@@ -228,7 +228,7 @@ label scene_7:
     voice "voice/7-scene_7-98.ogg" #Raine (Nat)
     mc shocked armraised "Oh my god."
     #voice "voice/7-scene_7-99.ogg" #Leona (Dot)
-    le surprised "{nw}"
+    show le surprised
     na "Leona stands there, stunned in place with a terrified look."
     voice "voice/7-scene_7-100.ogg" #Raine (Nat)
     mc unimpressed "Leona, the radio! Quick!"
@@ -243,7 +243,7 @@ label scene_7:
     voice "voice/7-scene_7-102.ogg" #Leona (Dot)
     le frustrated a2 "This is Captain Leona broadcasting on all emergency channels!"
     voice "voice/7-scene_7-103.ogg" #Leona (Dot)
-    le "I need reports from all units detailing locations and status on frequency 88.9, prioritizing vicinity to Southwest Mountain range!"
+    le "Prioritizing vicinity to Southwest Mountain range!"
     na "One by one the reports roll in."
     na "Minor injuries, a number of scrapes and bruises."
     na "A single man knocked unconscious. Fortunately, everyone is still alive."
@@ -297,7 +297,7 @@ label scene_7:
     voice "voice/7-scene_7-120.ogg" #Leona (Dot)
     le "Not this one though. Not Fireside."
     voice "voice/7-scene_7-121.ogg" #Leona (Dot)
-    le "Some random, lifeless rock somewhere a million miles away from any another person."
+    le "Some random, lifeless rock somewhere a million miles away from any other person."
     voice "voice/7-scene_7-122.ogg" #Leona (Dot)
     le crying "I didn't..."
     na "She takes a step back into the bike, setting herself down on the seat."
