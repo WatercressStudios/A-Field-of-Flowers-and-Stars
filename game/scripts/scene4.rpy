@@ -1,8 +1,12 @@
 label scene_4:
     play env "amb/workshop.ogg" fadein 2.0
     #ART - GARAGE BG
-    show street_open:
-        ease 3.0 xalign 1.0 zoom 1.3
+    show street_open onlayer master:
+        subpixel True xpos 1.0 ypos .5 xanchor 0.5 yanchor 0.5 zoom 1.3 rotate None
+        parallel:
+            easeout2 3.0 xpos -.2
+        parallel:
+            easein_back 3.0 ypos 0.2
 
     na "After heading back towards Leona's house, we turn the corner and reach the base my poor ship had been taken to."
     na "I hope Juneau is okay. She's annoying, but she's all I have now."
@@ -81,18 +85,18 @@ label scene_4:
     voice "voice/4-scene_4-25.ogg" #Leona (Dot)
     le speakingthink "This is really amazing stuff, even when it's in shambles."
     voice "voice/4-scene_4-26.ogg" #Leona (Dot)
-    le "I never could have imagined this type of metal could be used like this..."
+    le "I never could have imagined this type of metal could be used like this."
     voice "voice/4-scene_4-27.ogg" #Leona (Dot)
-    le curious "...or that this shape would make for a good space ship..."
+    le curious "Or that this shape would make for a good space ship."
     voice "voice/4-scene_4-28.ogg" #Leona (Dot)
-    le "...or that, or..."
+    le "Or that, or..."
     play sound "sfx/metal break.ogg"
     na "..."
 
         #SFX - METALLIC POP
 
     voice "voice/4-scene_4-29.ogg" #Leona (Dot)
-    le surprised "...oops."
+    le surprised "Oops."
     voice "voice/4-scene_4-30.ogg" #Leona (Dot)
     le shylook "And she just fixed that too..."
     voice "voice/4-scene_4-31.ogg" #Leona (Dot)
@@ -108,7 +112,7 @@ label scene_4:
     voice "voice/4-scene_4-35.ogg" #Leona (Dot)
     le "Well, I, uh..."
     voice "voice/4-scene_4-36.ogg" #Leona (Dot)
-    le smirk a2 "...Maybe I shouldn't try to help. I'm all thumbs."
+    le smirk a2 "Maybe I shouldn't try to help. I'm all thumbs."
     voice "voice/4-scene_4-37.ogg" #Raine (Nat)
     mc happy "No use fussing over it. It was gonna do that anyway."
     voice "voice/4-scene_4-38.ogg" #Leona (Dot)
@@ -118,7 +122,7 @@ label scene_4:
     voice "voice/4-scene_4-40.ogg" #Leona (Dot)
     le concerned "Was there nobody there to help you?"
     voice "voice/4-scene_4-41.ogg" #Raine (Nat)
-    mc speaking "Someone was working, but I don't think they could help...."
+    mc speaking "Someone was working, but I don't think they could help..."
     voice "voice/4-scene_4-42.ogg" #Raine (Nat)
     mc questioning2 "No offense, but the stuff you have here is more than a little bit out of date."
     voice "voice/4-scene_4-43.ogg" #Leona (Dot)
@@ -198,10 +202,8 @@ label scene_4:
     mc gentlehandtalk "She's an AI companion. She's way more than just a program."
     voice "voice/4-scene_4-62.ogg" #Raine (Nat)
     mc happy "As far as I'm concerned she's a real person."
-    na "I can't help but show pain on my face."
     voice "voice/4-scene_4-63.ogg" #Leona (Dot)
     le concerned "...She must be very important to you."
-    na "Leona seems upset for me. Perhaps she feels the sadness herself as well."
     voice "voice/4-scene_4-64.ogg" #Raine (Nat)
     mc unimpressed "Well, we had our fights, but she's the closest I have to family."
     voice "voice/4-scene_4-65.ogg" #Raine (Nat)
@@ -215,12 +217,11 @@ label scene_4:
     le crazy "But!" with hpunch
     na "Leona's sudden change of tone catches me off guard."
     voice "voice/4-scene_4-69.ogg" #Leona (Dot)
-    le "You're gonna need rest if you'll be spending tomorrow fixing your ship!" with hpunch
+    le "You're gonna need rest if you'll be spending tomorrow fixing your ship!"
     voice "voice/4-scene_4-70.ogg" #Leona (Dot)
-    le "I've got a change of clothes for you! I put them on the bed you used yesterday." with hpunch
+    le "I've got a change of clothes for you! I put them on the bed you used yesterday."
     voice "voice/4-scene_4-71.ogg" #Leona (Dot)
     le happy a2 "Consider that bed and those clothes yours, at least for as long as you're here."
-    na "Her bright exterior seems a bit forced, but I simply smile. Her honest, blatant empathy is… refreshing."
     voice "voice/4-scene_4-72.ogg" #Raine (Nat)
     mc happy "Thanks, Leona. I really appreciate it. You've been amazing, I really don't deserve your help."
     na "Leona turns from me."
