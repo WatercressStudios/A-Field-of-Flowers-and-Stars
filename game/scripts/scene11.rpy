@@ -148,15 +148,6 @@
     voice "voice/11-default-29.ogg" #Raine (Nat)
     mc shyspeak "What was it?"
 
-    voice "voice/11-default-30.ogg" #Leona (Dot)
-    le concernedspeaking "When I first realized how much more advanced you are compared to us, I had a bad thought."
-
-    voice "voice/11-default-31.ogg" #Leona (Dot)
-    le cryingtalk "I thought that if we became friends, maybe you'd give us some of your technology."
-
-    voice "voice/11-default-32.ogg" #Raine (Nat)
-    mc gentlehandtalk "...That's-"
-
     ##Some sort of impact to go along with Leona's next line - Camera zooms back out to normal while Leona gets closer at the same time.
     ##Flash of white as well as some sound effect of Leona hitting the couch
     ##Angry Shouting Sprite
@@ -165,9 +156,6 @@
     $camera_move(0, 0, 0, 0, duration=0.5)
 
     show le frustrated a1
-
-    voice "voice/11-default-33.ogg" #Leona (Dot)
-    le "I'm not done!" with hpunch
 
     voice "voice/11-default-34.ogg" #Leona (Dot)
     le "...I was in awe of you, ever since you arrived. It was amazing to actually have someone like you arrive."
@@ -403,9 +391,6 @@
     #ART KissCG2
     scene cgKiss2 with dissolve:
         zoom 0.75
-
-    na "Leona leans in closer."
-    na "As she does, my heart just about leaps out of my mouth."
 
     voice "voice/11-default-106.ogg" #Raine (Nat)
     mc "Do... Do you have something in mind?"
