@@ -27,7 +27,7 @@
 
 
     voice "voice/5-default-6.ogg" #Leona (Dot)
-    le happy speaking a2 "Anyway, the big boxes have scrap metal and the little ones have all the gadgets we found."
+    le happyspeaking a2 "Anyway, the big boxes have scrap metal and the little ones have all the gadgets we found."
 
 
     voice "voice/5-default-7.ogg" #Raine (Nat)
@@ -71,7 +71,7 @@
 
 
     voice "voice/5-default-17.ogg" #Raine (Nat)
-    mc "Not sure. Yesterday I touched up the hull and engine, but there's no power to release the hatch."
+    mc "Yesterday I touched up the hull and engine, but there's no power to release the hatch."
 
 
     voice "voice/5-default-18.ogg" #Raine (Nat)
@@ -125,15 +125,13 @@
 
     na "Powered up and ready to go, I turn a safety lever. The hatch hisses and slowly swings open."
 
-    show le surprised with Dissolve(.25)
-
     voice "voice/5-default-29.ogg" #Raine (Nat)
     mc "Hold your applause, please!"
 
-
+    $ hide_sides = ['Leona']
+    show le happy2 a1 onlayer master
     voice "voice/5-default-30.ogg" #Leona (Dot)
-    le happy2 a1 "Encore!"
-
+    le "Encore!"
 
     voice "voice/5-default-31.ogg" #Raine (Nat)
     mc "Now, let's bring the tool box inside and get to work on the central power."
@@ -189,7 +187,7 @@
     na "She won't be able to form hard light just yet, but at least she'll be on display."
     na "The light blinks slowly, then quickly, eventually becoming a solid green."
     stop sound3 fadeout 1.0
-
+    $ hide_sides = ['Juneau']
     play sound "sfx/power up.ogg"
     show ju concerned a1 at hologram:
         stage_right
@@ -205,11 +203,11 @@
 
     voice "voice/5-default-38.ogg" #Raine (Nat)
     mc "Yeah, yeah! Leona here pulled my butt out of a tree and helped get you back online."
+    $ hide_sides = ['Leona']
     show le happy a1 at stage_left with dissolve:
         xflip
     voice "voice/5-default-39.ogg" #Leona (Dot)
     le "Hellooo~"
-
     voice "voice/5-default-40.ogg" #Juneau (Lily)
     ju snarky a1 "Hi! Thanks a bundle for the save. Those horns real?"
 
@@ -621,30 +619,6 @@
 
     voice "voice/5-default-131.ogg" #Leona (Dot)
     le "Hell yeah!"
-
-
-    voice "voice/5-default-132.ogg" #Raine (Nat)
-    mc "...Hell?"
-
-
-    voice "voice/5-default-133.ogg" #Leona (Dot)
-    le "Oh, do you not know that expression?"
-
-
-    voice "voice/5-default-134.ogg" #Raine (Nat)
-    mc "No, I do. I'm just surprised you know it."
-
-
-    voice "voice/5-default-135.ogg" #Leona (Dot)
-    le "Interesting. Does that mean we have similar concepts about religion?"
-
-
-    voice "voice/5-default-136.ogg" #Raine (Nat)
-    mc "Maybe. We can talk about that on the trip."
-
-
-    voice "voice/5-default-137.ogg" #Leona (Dot)
-    le "Ooh, good idea. We can swap stories."
 
 #VFX JOURNAL ENTRY ADDED 2
 
