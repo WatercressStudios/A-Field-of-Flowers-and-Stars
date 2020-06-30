@@ -6,8 +6,8 @@
     scene street_open with dissolve:
         subpixel True xpos -0.94 ypos -0.33 xanchor -0.04 yanchor None rotate None
 
-    #voice "voice/5-default-1.ogg" #Leona (Dot)
-    le speaking a2 "Tada!"
+    voice "voice/5-default-1.ogg" #Leona (Dot)
+    le happyspeaking a2 "Tada!"
 
 
     voice "voice/5-default-2.ogg" #Raine (Nat)
