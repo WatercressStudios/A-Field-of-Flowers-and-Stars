@@ -292,6 +292,7 @@ label splashscreen:
     #scene starfield
     scene space at main_menu_bg_transform with Dissolve(2.0)
     show afofaslogo:
+        subpixel True
         alpha 0
         zoom 0.4
         anchor (0.5, 0.5)
