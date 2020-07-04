@@ -169,16 +169,14 @@ label scene1:
     na "Maybe I’ll buy some new drink recipes for the synthesizer. Or a new outfit for Juneau."
     na "I wonder how she'd react if I installed a maid costume on her software kit."
 
+    voice "voice/1-scene1-29.ogg" #Raine (Nat)
+    mc happy "Hahaha."
     show cockpitoverlay2:
         alpha 0
         zoom 0.78
         anchor (0.5, 0.5)
         align (0.5, 0.0)
         easein 0.5 zoom 0.75 yalign 0.5 alpha 1
-
-    voice "voice/1-scene1-29.ogg" #Raine (Nat)
-    mc happy "Hahaha."
-
     play sound "sfx/power up.ogg"
     show ju snarky a2 onlayer master:
         stage_right
@@ -417,7 +415,7 @@ label scene1:
     #SFX alarm starts going off. Cockpit is flashing red.
 
     pause 0.5
-    
+
 
     na "My console flickers, just for a second. A notification from Juneau. Text only."
 

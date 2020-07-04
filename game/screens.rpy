@@ -757,6 +757,9 @@ screen navigation():
 
         textbutton _("Credits") action ShowMenu("credits")
 
+        textbutton _("About") action ShowMenu("about")
+
+
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
@@ -1021,7 +1024,7 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("About"), scroll="viewport"):
+    use game_menu(_(""), scroll="viewport"):
 
         style_prefix "about"
 

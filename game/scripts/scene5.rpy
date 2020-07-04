@@ -1,4 +1,4 @@
-﻿label scene_5:
+label scene_5:
 
  # ART GARAGE BG (with added boxes of junk)
 
