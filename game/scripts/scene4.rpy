@@ -167,6 +167,7 @@ label scene_4:
     na "Juneau..."
     voice "voice/4-scene_4-54.ogg" #Leona (Dot)
     le happy a2 "Did you hear me? Helloooo?"
+    play music "music/Missing Juneau.ogg" fadein 3.0
 
     voice "voice/4-scene_4-55.ogg" #Raine (Nat)
     mc shocked armraised "Oh! Ah, what?"
@@ -180,7 +181,7 @@ label scene_4:
 
     voice "voice/4-scene_4-56.ogg" #Leona (Dot)
     le "I asked if you wanted dinner. Are you okay?"
-    play music "music/Missing Juaneau.ogg" fadein 3.0
+
     voice "voice/4-scene_4-57.ogg" #Raine (Nat)
     mc onfire "Yeah, just thinking about the ship."
     voice "voice/4-scene_4-58.ogg" #Leona (Dot)
