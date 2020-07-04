@@ -127,6 +127,7 @@
 
     voice "voice/5-default-29.ogg" #Raine (Nat)
     mc "Hold your applause, please!"
+    play sound "sfx/clap.ogg"
 
     $ hide_sides = ['Leona']
     show le happy2 a1 onlayer master
@@ -187,13 +188,14 @@
     na "She won't be able to form hard light just yet, but at least she'll be on display."
     na "The light blinks slowly, then quickly, eventually becoming a solid green."
     stop sound3 fadeout 1.0
+    play music "Music/Juneau.ogg" fadein 3.0
     $ hide_sides = ['Juneau']
     play sound "sfx/power up.ogg"
     show ju concerned a1 at hologram:
         stage_right
     voice "voice/5-default-36.ogg" #Juneau (Lily)
     ju "...Huh?"
-    play music "Music/Raine and Juneau.ogg" fadein 3.0
+
 
     na "Juneau materializes."
 
