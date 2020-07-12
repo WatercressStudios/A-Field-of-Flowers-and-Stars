@@ -1,5 +1,6 @@
 label scene1:
     scene space at main_menu_bg_transform
+    show screen quick_menu
     show screen flower_menu_button with easeinright
     #This is the start of the game.
     #ART We begin in space. Nothing else is on the screen. "Warp drive particles" move slowly from left to right to imply motion. The stars in the background are still.
