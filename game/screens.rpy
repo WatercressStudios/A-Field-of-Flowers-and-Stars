@@ -804,6 +804,7 @@ init python:
         trans.rotate = time
 
 transform main_menu_bg_transform:
+    subpixel True
     anchor (0.5, 0.5)
     zoom 2.2
     align (0.45, 0.45)
@@ -812,6 +813,7 @@ transform main_menu_bg_transform:
     repeat
 
 transform main_menu_bg_restore_transform:
+    subpixel True
     anchor (0.5, 0.5)
     zoom 2.2
     align (0.45, 0.45)

@@ -283,6 +283,7 @@ label scene1:
     #SFX acceleration
     play env "sfx/engines2.ogg" fadein 2.0
     show asteroidfield_red:
+        subpixel True
         parallel:
             ease 5.0 align (0.2, 0.43)
         parallel:
@@ -320,6 +321,7 @@ label scene1:
     play sound2 "sfx/astroid impact.ogg"
     play sound5 "sfx/SSL2.ogg"
     scene wormhole:
+        subpixel True
         parallel:
             anchor (0.5, 0.5)
             zoom 1.55
