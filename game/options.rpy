@@ -29,7 +29,7 @@ define config.version = "0.6"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
+define gui.about = _p("""Thanks for playing! You're an awesome person! <3
 """)
 
 
