@@ -13,12 +13,12 @@ init:
 
     ##Style Properties
     ##Text Outlines: They take a value, a color, an x offset, and a y offset. The offsets are used if you want a drop shadow effect. Add more as needed.
-    $ style.say_thought.outlines = [(0.2, "000000", 0, 0), (1, "#CCCCCC", 0, 0)]
-    $ style.say_dialogue.outlines = [(0.2, "FFFFFF", 0, 0), (1, "#CCCCCC", 0, 0)]
-    $ style.pref_label_text.outlines = [(0.2, "000000", 0, 0), (1, "#CCCCCC", 0, 0)]
+    $ style.say_thought.outlines = [(.2, "000000", 0, 0)]
+    $ style.say_dialogue.outlines = [(.2, "000", 0, 0)]
+    $ style.pref_label_text.outlines = [(.2, "000000", 0, 0)]
 
     #This is the default transition used when changing from one expression to the next while the character is on screen. Doesn't affect when they enter or leave.
-    define config.say_attribute_transition = dissolve
+    define config.say_attribute_transition = Dissolve(.3)
 
     ##Sprite offsets: Extra positions you can give to a sprite. Right now they are only xpos offsets but you can modify any part of the transform.
     ##You can use these to place a sprite "at leftoffset2"

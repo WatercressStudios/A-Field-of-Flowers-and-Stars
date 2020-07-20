@@ -304,44 +304,44 @@ transform flower_button_transform:
 
 screen flower_menu_button():
     if quick_menu:
-        frame at flower_menu_transform:
-            background None
-            align (1.0, 0.0)
-            offset (-110, 220)
-            imagebutton at flower_button_transform:
-                align (0.5, 0.5)
-                idle 'gui/sagi/roundbutton-idle.png'
-                hover 'gui/sagi/roundbutton-hover.png'
-                action [
-                    Hide('flower_menu_button'),
-                    Show('journal'),
-                ]
-            text "j":
-                align (0.5, 0.5)
-                text_align 0.5
-        frame at flower_menu_transform:
-            background None
-            align (1.0, 0.0)
-            offset (-110, 100)
-            imagebutton at flower_button_transform:
-                align (0.5, 0.5)
-                idle 'gui/sagi/roundbutton-idle.png'
-                hover 'gui/sagi/roundbutton-hover.png'
-                hovered [
-                    HoverFlowerButton(),
-                    Hide('flower_menu_button'),
-                    Show('flower_menu'),
-                    Show('flower_menu_moon'),
-                ]
-                action [
-                    TapFlowerButton(),
-                    Hide('flower_menu_button'),
-                    Show('flower_menu'),
-                    Show('flower_menu_moon'),
-                ]
-            text "i":
-                align (0.5, 0.5)
-                text_align 0.5
+#        frame at flower_menu_transform:
+#            background None
+#            align (1.0, 0.0)
+#            offset (-110, 220)
+#            imagebutton at flower_button_transform:
+#                align (0.5, 0.5)
+#                idle 'gui/sagi/roundbutton-idle.png'
+#                hover 'gui/sagi/roundbutton-hover.png'
+#                action [
+#                    Hide('flower_menu_button'),
+#                    Show('journal'),
+#                ]
+#            text "j":
+#                align (0.5, 0.5)
+#                text_align 0.5
+#        frame at flower_menu_transform:
+#            background None
+#            align (1.0, 0.0)
+#            offset (-110, 100)
+#            imagebutton at flower_button_transform:
+#                align (0.5, 0.5)
+#                idle 'gui/sagi/roundbutton-idle.png'
+#                hover 'gui/sagi/roundbutton-hover.png'
+#                hovered [
+#                    HoverFlowerButton(),
+#                    Hide('flower_menu_button'),
+#                    Show('flower_menu'),
+#                    Show('flower_menu_moon'),
+#                ]
+#                action [
+#                    TapFlowerButton(),
+#                    Hide('flower_menu_button'),
+#                    Show('flower_menu'),
+#                    Show('flower_menu_moon'),
+#                ]
+#            text "i":
+#                align (0.5, 0.5)
+#                text_align 0.5
         key "mouseup_3" action [
             RightClickFlower(),
             Hide('flower_menu_button'),
@@ -360,11 +360,9 @@ init python:
         ('save', ShowMenu('save')),
         ('load', ShowMenu('load')),
         ('pref', ShowMenu('custom_preferences')),
-        ('quit', MainMenu()),
-        ('auto', Preference("auto-forward", "toggle")),
-        ('skip', Skip()),
+        ('quit', Quit(confirm=not main_menu)),
+        ('menu', MainMenu()),
         ### DEBUG BUTTONS
-        ('back', Rollback()),
         ('sprite', Show('dynamicspritespreview')),
     ]
 
@@ -694,17 +692,15 @@ screen quick_menu():
         hbox:
             style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
-
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            xalign 0.75
+            yalign .95
+            textbutton _("<") action Rollback()
+            textbutton _(">") action Preference("auto-forward", "toggle")
+            textbutton _(">>") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("LOG") action [
+                Hide('flower_menu_button'),
+                Show('journal'),
+            ]
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
@@ -808,6 +804,7 @@ init python:
         trans.rotate = time
 
 transform main_menu_bg_transform:
+    subpixel True
     anchor (0.5, 0.5)
     zoom 2.2
     align (0.45, 0.45)
@@ -816,6 +813,7 @@ transform main_menu_bg_transform:
     repeat
 
 transform main_menu_bg_restore_transform:
+    subpixel True
     anchor (0.5, 0.5)
     zoom 2.2
     align (0.45, 0.45)

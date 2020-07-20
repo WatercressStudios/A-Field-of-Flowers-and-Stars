@@ -1,5 +1,6 @@
 label scene1:
     scene space at main_menu_bg_transform
+    show screen quick_menu
     show screen flower_menu_button with easeinright
     #This is the start of the game.
     #ART We begin in space. Nothing else is on the screen. "Warp drive particles" move slowly from left to right to imply motion. The stars in the background are still.
@@ -282,6 +283,7 @@ label scene1:
     #SFX acceleration
     play env "sfx/engines2.ogg" fadein 2.0
     show asteroidfield_red:
+        subpixel True
         parallel:
             ease 5.0 align (0.2, 0.43)
         parallel:
@@ -319,6 +321,7 @@ label scene1:
     play sound2 "sfx/astroid impact.ogg"
     play sound5 "sfx/SSL2.ogg"
     scene wormhole:
+        subpixel True
         parallel:
             anchor (0.5, 0.5)
             zoom 1.55

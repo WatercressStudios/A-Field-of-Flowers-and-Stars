@@ -20,7 +20,8 @@ init python:
 ## Custom colours
 define colors.base = '#FFF0E7'
 define colors.neutral = '#44484F'
-define colors.selected = '#FFD770'
+define colors.selected = '#9465B5CD'
+define colors.hovered = '#88ABDFCD'
 define colors.namebox = {
     'Default': '#44484FCD',
     'Raine': '#88ABDFCD',
@@ -46,11 +47,11 @@ define gui.idle_color = colors.neutral
 define gui.idle_small_color = colors.neutral
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = colors.neutral
+define gui.hover_color = colors.hovered
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = colors.neutral
+define gui.selected_color = colors.selected
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = colors.neutral
@@ -202,9 +203,10 @@ define gui.confirm_button_text_xalign = 0.5
 define gui.page_button_borders = Borders(15, 6, 15, 6)
 
 define gui.quick_button_borders = Borders(15, 6, 15, 0)
-define gui.quick_button_text_size = 21
+define gui.quick_button_text_size = 24
 define gui.quick_button_text_idle_color = gui.idle_small_color
-define gui.quick_button_text_selected_color = gui.accent_color
+define gui.quick_button_text_selected_color = colors.selected
+define gui.quick_button_text_hover_color = colors.hovered
 
 ## You can also add your own customizations, by adding properly-named variables.
 ## For example, you can uncomment the following line to set the width of a
