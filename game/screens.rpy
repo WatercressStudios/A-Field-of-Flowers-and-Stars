@@ -1041,9 +1041,9 @@ screen about():
 
             #text _("If you loved this game, check out our {a=https://watercressstudios.com/}official website{/a}, {a=http://somnovastudios.org/}Somnova Studios{/a}, and {a=https://sarchalen.itch.io/}Sarchalen Visual Media{/a} or go straight to our {a=https://watercress.itch.io/}itch.io page{/a} for more of our projects.\n") 
 
-            text _("Also, we have a {a=https://store.steampowered.com/developer/Watercress/}Steam page{/a} where you can download and play several of our previously published visual novels.\n")
+            #text _("Also, we have a {a=https://store.steampowered.com/developer/Watercress/}Steam page{/a} where you can download and play several of our previously published visual novels.\n")
 
-            text _("You can also follow the team members on twitter to keep up to date with new studio releases and experience their artwork and other talents.\n")
+            text _("You can follow the team members on twitter to keep up to date with new studio releases and experience their artwork and other talents.\n")
 
             text _("{a=https://twitter.com/Wolf_GameDev}Tristan 'Wolf' Barber{/a} (Director, Story Writer, Editor, Sound Editor)\n")
 
@@ -1103,6 +1103,14 @@ screen about():
 
             text _ ("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
+            add "images/logos/watercresslogo.png"  zoom 0.2 xalign 0.5
+            add "images/logos/somnovalogo.jpg"  xalign 0.5
+            add "images/logos/sarchalenlogo.png" zoom 0.2 xalign 0.5
+
+            #imagebutton auto "images/logos/watercresslogo.png" zoom 0.2 xalign 0.5 action OpenURL("https://watercressstudios.com/") 
+            #imagebutton auto "images/logos/somnovalogo.jpg" xalign 0.5 action OpenURL("http://somnovastudios.org/")  
+            #imagebutton auto "images/logos/sarchalenlogo.png"  zoom 0.2 xalign 0.5  action OpenURL(" https://sarchalen.itch.io/")
+
 
 ## This is redefined in options.rpy to add text to the about screen.
 define gui.about = ""
@@ -1111,9 +1119,19 @@ define gui.about = ""
 style about_label is gui_label
 style about_label_text is gui_label_text
 style about_text is gui_text
+#style about_hyperlink_text is hyperlink_text
+style about_button_text is gui_button_text
+style about_text:
+      size 30
+      color "#fff"
 
 style about_label_text:
     size gui.label_text_size
+    color "#7ECBDD"
+style hyperlink_text:
+    color "#7ECBDD"
+    hover_underline "#7ECBDD"
+
 
 
 ## Load and Save screens #######################################################
