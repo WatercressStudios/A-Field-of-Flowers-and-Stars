@@ -23,7 +23,7 @@ transform gallery_thumbnail:
     yzoom 0.2
 
 screen gallery_item(item):
-    fixed at fade_inout:
+    fixed at fade_transform:
         add "bg black"
     fixed align(0.5,0.5):
         xfit True
@@ -32,8 +32,8 @@ screen gallery_item(item):
     key "dismiss" action Hide("gallery_item")
 
 screen gallery():
-    frame at fade_inout:
-        background "megan_ui/gui-gallery-background.png"
+    frame at fade_transform:
+        background "images/backgrounds/space.png"
         xsize 1840
         ysize 1000
         align (0.5, 0.5)
@@ -59,7 +59,7 @@ screen gallery():
                         background None
                         xsize 414
                         ysize 246
-                        padding (0,15,30,15)
+                        padding (0,15,20,15)
 
                         frame:
                             background At("bg black", gallery_thumbnail)
@@ -75,13 +75,13 @@ screen gallery():
                             button action Show("gallery_item", item=pic)
         fixed pos (1565,918):
             imagebutton offset (-40, -5):
-                idle "megan_ui/gui-back-idle.png"
-                hover "megan_ui/gui-back-select.png"
-                if in_main_menu:
-                    action [ Play("sound", uisound()), Hide("custom_title_extras"), Show("custom_title_center2right") ]
-                else:
-                    action [ Play("sound", uisound()), Return() ]
-            # text "Back":
+                idle "gui/sagi/button-idle.png"
+                hover "gui/sagi/button-highlighted.png"
+                #if in_main_menu:
+                  #  action [ Play("sound", uisound()), Hide("custom_title_extras"), Show("custom_title_center2right") ]
+                #else:
+                   # action [ Play("sound", uisound()), Return() ]
+            text "Back":
             #     font "BebasNeue-Regular.otf"
             #     size 60
             #     color "#36428A"

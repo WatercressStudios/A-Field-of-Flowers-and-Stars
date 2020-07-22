@@ -755,6 +755,8 @@ screen navigation():
 
         textbutton _("About") action ShowMenu("about")
 
+        textbutton _ ("Gallery") action ShowMenu("gallery")
+
 
         if _in_replay:
 
