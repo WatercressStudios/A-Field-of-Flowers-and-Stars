@@ -81,7 +81,7 @@ screen gallery():
                   #  action [ Play("sound", uisound()), Hide("custom_title_extras"), Show("custom_title_center2right") ]
                 #else:
                    # action [ Play("sound", uisound()), Return() ]
-            text "Back":
+            # text "Back":
             #     font "BebasNeue-Regular.otf"
             #     size 60
             #     color "#36428A"

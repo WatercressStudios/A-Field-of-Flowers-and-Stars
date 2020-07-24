@@ -826,6 +826,21 @@ transform main_menu_bg_restore_transform:
         pause 1.0
         ease 2.0 zoom 1.5
 
+screen extras():
+    tag menu
+    
+    #use game_menu(_("")):
+    style_prefix "extras"
+
+    add "backgrounds/space.png" at main_menu_bg_transform
+
+    use navigation2
+
+    textbutton _("Return"):
+        # style "return_button"
+        
+        action Return()
+
 screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
