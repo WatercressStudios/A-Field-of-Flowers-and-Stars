@@ -755,6 +755,9 @@ screen navigation():
 
         textbutton _("About") action ShowMenu("about")
 
+        if persistent.ending == "Complete":
+            textbutton _("Jukebox") action ShowMenu("Jukebox")
+
 
         if _in_replay:
 
