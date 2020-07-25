@@ -776,9 +776,9 @@ screen navigation():
 
         textbutton _("About") action ShowMenu("about")
 
-        textbutton _ ("Gallery") action ShowMenu("gallery")
-
         if persistent.ending == "Complete":
+            textbutton _ ("Gallery") action ShowMenu("gallery")
+
             textbutton _("Jukebox") action ShowMenu("Jukebox")
 
         if _in_replay:
