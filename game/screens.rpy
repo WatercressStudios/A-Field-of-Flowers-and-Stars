@@ -304,44 +304,53 @@ transform flower_button_transform:
 
 screen flower_menu_button():
     if quick_menu:
-#        frame at flower_menu_transform:
-#            background None
-#            align (1.0, 0.0)
-#            offset (-110, 220)
-#            imagebutton at flower_button_transform:
-#                align (0.5, 0.5)
-#                idle 'gui/sagi/roundbutton-idle.png'
-#                hover 'gui/sagi/roundbutton-hover.png'
-#                action [
-#                    Hide('flower_menu_button'),
-#                    Show('journal'),
-#                ]
-#            text "j":
-#                align (0.5, 0.5)
-#                text_align 0.5
-#        frame at flower_menu_transform:
-#            background None
-#            align (1.0, 0.0)
-#            offset (-110, 100)
-#            imagebutton at flower_button_transform:
-#                align (0.5, 0.5)
-#                idle 'gui/sagi/roundbutton-idle.png'
-#                hover 'gui/sagi/roundbutton-hover.png'
-#                hovered [
-#                    HoverFlowerButton(),
-#                    Hide('flower_menu_button'),
-#                    Show('flower_menu'),
-#                    Show('flower_menu_moon'),
-#                ]
-#                action [
-#                    TapFlowerButton(),
-#                    Hide('flower_menu_button'),
-#                    Show('flower_menu'),
-#                    Show('flower_menu_moon'),
-#                ]
-#            text "i":
-#                align (0.5, 0.5)
-#                text_align 0.5
+        # frame at flower_menu_transform:
+        #     background None
+        #     align (1.0, 0.0)
+        #     offset (-110, 220)
+        #     imagebutton at flower_button_transform:
+        #         align (0.5, 0.5)
+        #         idle 'gui/sagi/roundbutton-idle.png'
+        #         hover 'gui/sagi/roundbutton-hover.png'
+        #         action [
+        #             Hide('flower_menu_button'),
+        #             Show('journal'),
+        #         ]
+        #     text "j":
+        #         align (0.5, 0.5)
+        #         text_align 0.5
+
+        # frame at flower_menu_transform:
+        #     background None
+        #     align (1.0, 0.0)
+        #     offset (-110, 100)
+        #     imagebutton at flower_button_transform:
+        #         align (0.5, 0.5)
+        #         idle 'gui/sagi/roundbutton-idle.png'
+        #         hover 'gui/sagi/roundbutton-hover.png'
+        #         hovered [
+        #             HoverFlowerButton(),
+        #             Hide('flower_menu_button'),
+        #             Show('flower_menu'),
+        #             Show('flower_menu_moon'),
+        #         ]
+        #         action [
+        #             TapFlowerButton(),
+        #             Hide('flower_menu_button'),
+        #             Show('flower_menu'),
+        #             Show('flower_menu_moon'),
+        #         ]
+        #     text "i":
+        #         align (0.5, 0.5)
+        #         text_align 0.5
+
+        key "K_ESCAPE" action [
+            CenterFlower(),
+            Hide('flower_menu_button'),
+            Show('flower_menu'),
+            Show('flower_menu_moon'),
+        ]
+
         key "mouseup_3" action [
             RightClickFlower(),
             Hide('flower_menu_button'),
@@ -360,10 +369,11 @@ init python:
         ('save', ShowMenu('save')),
         ('load', ShowMenu('load')),
         ('pref', ShowMenu('custom_preferences')),
+        # ('log', Show('journal')),
         ('quit', Quit(confirm=not main_menu)),
         ('menu', MainMenu()),
         ### DEBUG BUTTONS
-        ('sprite', Show('dynamicspritespreview')),
+        # ('sprite', Show('dynamicspritespreview')),
     ]
 
     def polygon_point_offset(ind, distance=75, points=5):
@@ -404,6 +414,12 @@ init python:
             elif config.screen_height - right_click_pos[1] < dim[1]:
                 right_click_pos[1] = config.screen_height - dim[1]
             right_click_pos = tuple(right_click_pos)
+            tap_mode = False
+
+    class CenterFlower:
+        def __call__(self):
+            global right_click_pos, tap_mode
+            right_click_pos = (0.5, 0.5)
             tap_mode = False
 
 transform flower_moon_transform:
@@ -491,6 +507,11 @@ screen flower_menu():
                         Show('flower_menu_button'),
                         Hide('flower_menu_moon'),
                     ]
+        key "K_ESCAPE" action [
+                Hide('flower_menu'),
+                Show('flower_menu_button'),
+                Hide('flower_menu_moon'),
+        ]
 
 transform fade_transform:
     on show:
@@ -550,54 +571,54 @@ screen journal():
             xysize (255, 55)
             align (0, 0)
             offset (50, -105)
-            label "Journal":
+            label "Log":
                 xysize (255, 55)
                 align (0.5, 0.5)
                 text_xalign 0.5
                 text_color colors.base
 
-        frame:
-            background None
-            padding (0, 0)
-            margin (0, 0)
-            xysize (300, 700)
-            align (0.0, 0.5)
-            # LEFT
-            vbox:
-                xalign 0.5
-                xsize 300
-                button:
-                    style_prefix 'list'
-                    align (0.5, 0.5)
-                    selected journal_selected_entry == 0
-                    text 'Chat log':
-                        style_prefix 'list_button'
-                    action JournalSelected(0)
-
-                text '.    .    .':
-                    xysize (300, 700)
-                    align (0.5, 0.5)
-                # null height 15
-                # button:
-                #     style_prefix 'list'
-                #     align (0.5, 0.5)
-                #     selected journal_selected_entry == 1
-                #     text 'Day 26':
-                #         style_prefix 'list_button'
-                #     action JournalSelected(1)
-        # DIVIDER
+        # frame:
+        #     background None
+        #     padding (0, 0)
+        #     margin (0, 0)
+        #     xysize (300, 700)
+        #     align (0.0, 0.5)
+        #     # LEFT
+        #     vbox:
+        #         xalign 0.5
+        #         xsize 300
+        #         button:
+        #             style_prefix 'list'
+        #             align (0.5, 0.5)
+        #             selected journal_selected_entry == 0
+        #             text 'Chat log':
+        #                 style_prefix 'list_button'
+        #             action JournalSelected(0)
+        #
+        #         text '.    .    .':
+        #             xysize (300, 700)
+        #             align (0.5, 0.5)
+        #         # null height 15
+        #         # button:
+        #         #     style_prefix 'list'
+        #         #     align (0.5, 0.5)
+        #         #     selected journal_selected_entry == 1
+        #         #     text 'Day 26':
+        #         #         style_prefix 'list_button'
+        #         #     action JournalSelected(1)
+        # # DIVIDER
         frame:
             background colors.neutral
             padding (0, 0)
             margin (0, 0)
             xysize (3, 700)
-            align (0.35, 0.5)
+            align (0.01, 0.5)
 
         frame:
             background None
             padding (0, 0)
             margin (0, 0)
-            xysize (590, 700)
+            xysize (890, 700)
             align (1.0, 0.5)
             xoffset 5
             # RIGHT
@@ -607,13 +628,13 @@ screen journal():
                     viewport id "history_list":
                         draggable True mousewheel True
                         vbox:
-                            xsize 590
+                            xsize 890
                             spacing 5
                             for h in _history_list:
                                 if h.who:
                                     hbox:
                                         spacing 10
-                                        xsize 590
+                                        xsize 890
                                         if h.who:
                                             label h.who:
                                                 substitute False
@@ -640,7 +661,7 @@ screen journal():
                                     $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                                     label what:
                                         substitute False
-                                        xsize 550
+                                        xsize 850
                                         text_xalign 0.5
                                         text_size 30
                     vbar value YScrollValue("history_list"):
@@ -1444,11 +1465,13 @@ screen custom_preferences():
                                     xsize 250
                                     text_xalign 0.0
                                     text_xpos 12
+                                    text_yoffset -15
                                     yoffset 1
                                 textbutton _("Fullscreen") action Preference("display", "fullscreen"):
                                     xsize 250
                                     text_xalign 0.0
                                     text_xpos 12
+                                    text_yoffset -15
                         vbox:
                             xsize 260
                             style_prefix "check"
@@ -1458,6 +1481,7 @@ screen custom_preferences():
                             textbutton _("Unseen Text") action Preference("skip", "toggle"):
                                 xsize 250
                                 text_xalign 0.0
+                                text_yoffset -15
                                 text_xpos 12
                             # textbutton _("After Choices") action Preference("after choices", "toggle"):
                             #     xsize 250
@@ -1466,6 +1490,7 @@ screen custom_preferences():
                             textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle")):
                                 xsize 250
                                 text_xalign 0.0
+                                text_yoffset -15
                                 text_xpos 12
 
                         ## Additional vboxes of type "radio_pref" or "check_pref" can be
@@ -1514,6 +1539,7 @@ screen custom_preferences():
                             null height gui.pref_spacing
                             textbutton _("Mute All"):
                                 action Preference("all mute", "toggle")
+                                text_yoffset -15
                                 style "mute_all_button"
 
         button:
