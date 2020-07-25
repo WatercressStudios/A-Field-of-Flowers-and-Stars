@@ -834,8 +834,6 @@ screen extras():
 
     add "backgrounds/space.png" at main_menu_bg_transform
 
-    use navigation2
-
     textbutton _("Return"):
         # style "return_button"
         

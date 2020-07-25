@@ -4,7 +4,7 @@
 
 init python:
     gallery_content = [
-        ( "cgtree", "Tree", "Kart Prowler"),
+        ( "cgtree", "Tree", "Voiderling"),
         ( "kiss1", "The Kiss", "Kart Prowler"),
         ( "kiss2", "Midst of Kiss", "Kart Prowler"),
         ( "kiss3", "Kiss Finally", "Kart Prowler"),
@@ -31,25 +31,26 @@ screen gallery_item(item):
         add item
     key "dismiss" action Hide("gallery_item")
 
+
 screen gallery():
     frame at fade_transform:
         background "images/backgrounds/space.png"
-        xsize 1840
-        ysize 1000
-        align (0.5, 0.5)
+        xsize 1920
+        ysize 1200
+        align (0.10, 0.10)
         padding (0,0,0,0)
         frame:
-            pos (30, 110)
+            pos (50, 210)
             background None
             padding (0,0,0,0)
-            xsize 1700
-            ysize 800
+            xsize 1850
+            ysize 1000
             vpgrid:
                 cols 4
                 mousewheel True
                 draggable True
                 scrollbars "vertical"
-                side_xalign 0.5
+                side_xalign 0.50
                 yinitial 0.0
                 xspacing 0
                 yspacing 0
@@ -63,14 +64,14 @@ screen gallery():
 
                         frame:
                             background At("bg black", gallery_thumbnail)
-                            xsize 384
-                            ysize 216
+                            xsize 184
+                            ysize 116
                             padding (0,0,0,0)
                             fixed align(0.5,0.5):
                                 xfit True
                                 yfit True
                                 add At(pic, gallery_thumbnail)
-                            label title pos (0, 110)
+                            label title pos (0, 10)
                             label "by " + artist pos (0, 150)
                             button action Show("gallery_item", item=pic)
         fixed pos (1565,918):
