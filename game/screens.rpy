@@ -757,6 +757,8 @@ screen navigation():
 
         textbutton _ ("Gallery") action ShowMenu("gallery")
 
+        if persistent.ending == "Complete":
+            textbutton _("Jukebox") action ShowMenu("Jukebox")
 
         if _in_replay:
 
@@ -828,7 +830,7 @@ transform main_menu_bg_restore_transform:
 
 screen extras():
     tag menu
-    
+
     #use game_menu(_("")):
     style_prefix "extras"
 
@@ -836,7 +838,7 @@ screen extras():
 
     textbutton _("Return"):
         # style "return_button"
-        
+
         action Return()
 
 screen main_menu():

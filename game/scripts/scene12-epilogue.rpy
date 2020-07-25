@@ -105,3 +105,4 @@
     call screen tobecontinued_announce
     call screen credits with dissolve
     pause 2.0
+    $ persistent.ending = "Complete"
