@@ -24,29 +24,65 @@ transform gallery_thumbnail:
 
 screen gallery_item(item):
     fixed at fade_transform:
-        add "bg black"
-    fixed align(0.5,0.5):
+        add "#000c"
+    fixed align(0.5,0.5) at fade_transform:
         xfit True
         yfit True
-        add item
+        add item:
+            zoom 0.75
     key "dismiss" action Hide("gallery_item")
 
 
 screen gallery():
+    tag menu
+    style_prefix "journal"
+
+    if main_menu:
+        add "backgrounds/space.png" at main_menu_bg_transform
+
+    if main_menu:
+        $ close_action = [
+            Hide('custom_file_slots'),
+            Return(),
+        ]
+    else:
+        $ close_action = [
+            Hide('custom_file_slots'),
+            Show('flower_menu_button'),
+            Return(),
+        ]
+    button at fade_transform:
+        background None
+        xysize (1.0, 1.0)
+        action close_action
     frame at fade_transform:
-        background "images/backgrounds/space.png"
-        xsize 1920
-        ysize 1200
-        align (0.10, 0.10)
-        padding (0,0,0,0)
-        frame:
-            pos (50, 210)
+        align (0.5, 0.5)
+        xysize (1600, 900)
+        margin (0, 0)
+        button:
             background None
-            padding (0,0,0,0)
-            xsize 1850
-            ysize 1000
+            xysize (1.0, 1.0)
+            action NullAction()
+        frame:
+            background colors.namebox['Default']
+            xysize (255, 55)
+            align (0, 0)
+            offset (50, -105)
+            label "Gallery":
+                xysize (255, 55)
+                align (0.5, 0.5)
+                text_xalign 0.5
+                text_color colors.base
+
+        frame:
+            background None
+            padding (0, 0)
+            margin (0, 0)
+            xysize (1400, 800)
+            align (0.5, 0.5)
+
             vpgrid:
-                cols 4
+                cols 3
                 mousewheel True
                 draggable True
                 scrollbars "vertical"
@@ -63,27 +99,39 @@ screen gallery():
                         padding (0,15,20,15)
 
                         frame:
-                            background At("bg black", gallery_thumbnail)
-                            xsize 184
-                            ysize 116
+                            background None
+                            xsize 394
+                            ysize 216
                             padding (0,0,0,0)
                             fixed align(0.5,0.5):
                                 xfit True
                                 yfit True
-                                add At(pic, gallery_thumbnail)
-                            label title pos (0, 10)
-                            label "by " + artist pos (0, 150)
-                            button action Show("gallery_item", item=pic)
-        fixed pos (1565,918):
-            imagebutton offset (-40, -5):
-                idle "gui/sagi/button-idle.png"
-                hover "gui/sagi/button-highlighted.png"
-                #if in_main_menu:
-                  #  action [ Play("sound", uisound()), Hide("custom_title_extras"), Show("custom_title_center2right") ]
-                #else:
-                   # action [ Play("sound", uisound()), Return() ]
-            # text "Back":
-            #     font "BebasNeue-Regular.otf"
-            #     size 60
-            #     color "#36428A"
-            #     outlines []
+                                add Crop((10, 15, 394, 216),At(pic, gallery_thumbnail))
+                            button action Show("gallery_item", item=pic):
+                                idle_background "#000a"
+                                hover_background None
+                                xsize 394
+                                ysize 216
+                            label title pos (10, 130):
+                                xsize 414
+                                text_color "000"
+                                text_size 30
+                                text_outlines [(2, 'fff'), ]
+                            label "by " + artist pos (10, 170):
+                                xsize 414
+                                text_color "000"
+                                text_size 24
+                                text_outlines [(2, 'fff'), ]
+
+        button:
+            xysize (70, 70)
+            align (1.0, 0.0)
+            offset (52, -85)
+            idle_background 'gui/sagi/roundbutton-idle.png'
+            hover_background 'gui/sagi/roundbutton-hover.png'
+            action close_action
+            text 'X':
+                align (0.5, 0.5)
+
+    ## Right-click and escape answer "no".
+    key "game_menu" action close_action
