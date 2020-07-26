@@ -50,7 +50,7 @@ screen Jukebox():
                         xalign 0
                         imagebutton:
                             idle Frame("gui\sagi\smallbutton-idle.png", Borders(30,30,30,30))
-                            hover Frame("gui\sagi\smallbutton-idle.png", Borders(30,30,30,30))
+                            hover Frame("gui\sagi\smallbutton-highlighted.png", Borders(30,30,30,30))
                             if i == musicbox_currently_playing:
                                 action [ SetVariable("musicbox_currently_playing", None), Play("music", "music/main menu.ogg") ]
                             else:
@@ -74,4 +74,18 @@ screen Jukebox():
                                 color "#36428A"
                                 outlines []
      
-    
+    fixed pos (40, 40):
+        text "Music Box":
+            size 60
+            # color "#36428A"
+            outlines []
+
+    fixed pos (650, 910):
+        imagebutton offset (-40, -5):
+            idle "gui\sagi\smallbutton-idle.png"
+            hover "gui\sagi\smallbutton-highlighted.png"
+            action Return()
+        text "Back":
+            size 30
+            # color "#36428A"
+            outlines []    
