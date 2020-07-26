@@ -64,7 +64,6 @@ screen Jukebox():
                             xalign 0
 
                             text title pos (0, 0):
-                                # font "BebasNeue-Regular.otf"
                                 size 50
                                 color "#36428A"
                                 outlines []
@@ -73,19 +72,12 @@ screen Jukebox():
                                 size 50
                                 color "#36428A"
                                 outlines []
-     
-    fixed pos (40, 40):
-        text "Music Box":
-            size 60
-            # color "#36428A"
-            outlines []
 
-    fixed pos (650, 910):
-        imagebutton offset (-40, -5):
+    fixed pos (700, 910):
+        imagebutton:
             idle "gui\sagi\smallbutton-idle.png"
             hover "gui\sagi\smallbutton-highlighted.png"
             action Return()
         text "Back":
             size 30
-            # color "#36428A"
             outlines []    
