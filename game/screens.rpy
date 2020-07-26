@@ -1073,7 +1073,79 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("{i}A Field of Flowers and Stars{/i} was developed for Yurijam 2019 by Watercress Studios in collaboration with Somnova Studios and Sarchalen Visual Media.\n") 
+
+            #text _("If you loved this game, check out our {a=https://watercressstudios.com/}official website{/a}, {a=http://somnovastudios.org/}Somnova Studios{/a}, and {a=https://sarchalen.itch.io/}Sarchalen Visual Media{/a} or go straight to our {a=https://watercress.itch.io/}itch.io page{/a} for more of our projects.\n") 
+
+            #text _("Also, we have a {a=https://store.steampowered.com/developer/Watercress/}Steam page{/a} where you can download and play several of our previously published visual novels.\n")
+
+            text _("You can follow the team members on twitter to keep up to date with new studio releases and experience their artwork and other talents.\n")
+
+            text _("{a=https://twitter.com/Wolf_GameDev}Tristan 'Wolf' Barber{/a} (Director, Story Writer, Editor, Sound Editor)\n")
+
+            text _("{a=https://m.imdb.com/name/nm7026286/}Kevin Bomer{/a} (Director, Story Writer, Scripting)\n")
+
+            text _("{a=https://twitter.com/Hamadyne}Hamadyne{/a} (Story Writer)\n")
+
+            text _ ("{a=https://twitter.com/Hoakkun}A.D. 'Hoa' Hemingway{/a} (Story Writer, Scripting)\n") 
+
+            text _ ("Monochrome (Story Writer)\n")
+
+            text _ ("{a=https://twitter.com/Zodai_Stryde}Zodai{/a} (Story Writer, Story Concept, Editor, Scripting)\n")
+
+            text _ ("{a=https://twitter.com/alchworks}TheAlchemyst{/a} (Editing Director, Cinematics Directing, Marketing Director, Logo Design)\n")
+
+            text _ ("{a=https://twitter.com/Paul__Robins}Paul Robbins{/a} (Music Director, Sound Design, Sound Editor, Audio)\n")
+
+            text _ ("{a=https://twitter.com/KartProwler}Kart Prowler{/a} (Sprite, CG, Concept Art)\n")
+
+            text _ ("{a=https://twitter.com/Drazillion}Alison 'Draz' Huang{/a} (BG Art)\n")
+
+            text _ ("{a=https://twitter.com/delete_wei}Wei Yuan Lee{/a} (Editor, Scripting)\n")
+
+            text _ ("{a=https://kp1n.bandcamp.com/}Kierious{/a} (Music)\n")
+
+            text _ ( "{a=https://speedyspcfan.bandcamp.com/releases}Noah 'Speedy' Aman{/a} (Music)\n")
+
+            text _ ("{a=https://twitter.com/JaeJaeAgogo}Jae{/a} (Music)\n")
+
+            text _ ("{a=https://twitter.com/TheVoiderling}Voiderling{/a} (Concept Art, BG art)\n")
+
+            text _ ("{a=https://twitter.com/liah0227}Liah{/a} (Concept Art)\n")
+
+            text _ ("{a=https://www.deviantart.com/erezu-kun}Erezu{/a} (BG Art)\n")
+
+            text _ ("{a=https://twitter.com/sagittaeri}Sagittaeri{/a} (UI Design, Scripting Tools)\n")
+
+            text _ ("{a=https://twitter.com/Happinessplus__}Happiness+{/a} (Programming Director)\n")
+
+            text _ ("{a=https://twitter.com/DreadLindwyrm}Steve/DreadLindwyrm{/a} (Development Director)\n")
+
+            text _ ("General (Scripting)\n")
+
+            text _ ("{a=https://www.deviantart.com/ebagigi}Gabriel 'Ebagigi'{/a} (Scripting)\n")
+
+            text _ ("{a=https://twitter.com/Meyvol}Meyvol{/a} (Scripting)\n") 
+            
+            text _ ("{a=https://twitter.com/SandraMJdev}Sandra 'SandraMJ' Molina{/a} (Voice Direction)\n")
+
+            text _ ("{a=https://twitter.com/Dottovuu}Dottovu{/a} (VA of Leona)\n")
+
+            text _ ("Natalie (VA of Raine)\n")
+
+            text _ ("{a=https://twitter.com/homulily}Lily Lammers{/a} (VA of Juneau)\n") 
+
+            text _ ("{a=https://twitter.com/Bodo1215}Bodo{/a} (Marketing)\n")
+
+            text _ ("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+
+            add "images/logos/watercresslogo.png"  zoom 0.2 xalign 0.5
+            add "images/logos/somnovalogo.jpg"  xalign 0.5
+            add "images/logos/sarchalenlogo.png" zoom 0.2 xalign 0.5
+
+            #imagebutton auto "images/logos/watercresslogo.png" zoom 0.2 xalign 0.5 action OpenURL("https://watercressstudios.com/") 
+            #imagebutton auto "images/logos/somnovalogo.jpg" xalign 0.5 action OpenURL("http://somnovastudios.org/")  
+            #imagebutton auto "images/logos/sarchalenlogo.png"  zoom 0.2 xalign 0.5  action OpenURL(" https://sarchalen.itch.io/")
 
 
 ## This is redefined in options.rpy to add text to the about screen.
@@ -1083,9 +1155,19 @@ define gui.about = ""
 style about_label is gui_label
 style about_label_text is gui_label_text
 style about_text is gui_text
+#style about_hyperlink_text is hyperlink_text
+style about_button_text is gui_button_text
+style about_text:
+      size 30
+      color "#fff"
 
 style about_label_text:
     size gui.label_text_size
+    color "#7ECBDD"
+style hyperlink_text:
+    color "#7ECBDD"
+    hover_underline "#7ECBDD"
+
 
 
 ## Load and Save screens #######################################################
