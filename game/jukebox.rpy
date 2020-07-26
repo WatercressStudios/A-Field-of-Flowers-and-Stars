@@ -2,20 +2,20 @@ init python:
     musicbox_content = [
         ( "Music/A Future Together.ogg", "A Future Together", "Paul Robins"),
         ( "Music/Aster.ogg", "Aster", "Paul Robins"),
-        ( "Music/Consequence.ogg", "Consequence", "Kieren 'Kierious' Eller"),
+        ( "Music/Consequence.ogg", "Consequence", "Jae"),
         ( "Music/Critical.ogg", "Critical", "Speedy"),
-        ( "Music/Fading Glow.ogg","Fading Glow", "Paul Robins"),
-        ( "Music/First Night.ogg", "First Night", "Speedy"),
-        ( "Music/Friends and Family.ogg", "Friends and Family", "Kieren 'Kierious' Eller"),
+        ( "Music/Fading Glow.ogg","Fading Glow", "Kieren 'Kierious' Eller"),
+        ( "Music/First Night.ogg", "First Night", "Paul Robins"),
+        ( "Music/Friends and Family.ogg", "Friends and Family", "Paul Robins"),
         ( "Music/Juneau.ogg", "Juneau", "Raymond Demers"),
-        ( "Music/main menu.ogg", "main menu", "Paul Robins"),
-        ( "Music/meeting leona.ogg", "meeting leona", "Paul Robins"),
+        ( "Music/main menu.ogg", "Main menu", "Speedy"),
+        ( "Music/meeting leona.ogg", "Meeting leona", "Speedy"),
         ( "Music/Missing Juneau.ogg", "Missing Juneau", "Paul Robins"),
-        ( "Music/Raine Gets Lost.ogg", "Raine Gets Lost", "Speedy"),
+        ( "Music/Raine Gets Lost.ogg", "Raine Gets Lost", "Paul Robins"),
         ( "Music/Smugglers and Bombs", "Smugglers and Bombs", "Speedy"),
-        ( "Music/There's No Time.ogg", "There's No Time", "Speedy"),
-        ( "Music/Trust In You.ogg", "Trust In You", "Speedy"),
-        ( "Music/wormhole.ogg", "Wormhole", "Speedy"),
+        ( "Music/There's No Time.ogg", "There's No Time", "Jae"),
+        ( "Music/Trust In You.ogg", "Trust In You", "Paul Robins"),
+        ( "Music/wormhole.ogg", "Entering Wormhole", "Speedy"),
     ]
 # I still don't know who did each of these songs
     musicbox_currently_playing = None
@@ -50,7 +50,7 @@ screen Jukebox():
                         xalign 0
                         imagebutton:
                             idle Frame("gui\sagi\smallbutton-idle.png", Borders(30,30,30,30))
-                            hover Frame("gui\sagi\smallbutton-idle.png", Borders(30,30,30,30))
+                            hover Frame("gui\sagi\smallbutton-highlighted.png", Borders(30,30,30,30))
                             if i == musicbox_currently_playing:
                                 action [ SetVariable("musicbox_currently_playing", None), Play("music", "music/main menu.ogg") ]
                             else:
@@ -64,7 +64,6 @@ screen Jukebox():
                             xalign 0
 
                             text title pos (0, 0):
-                                # font "BebasNeue-Regular.otf"
                                 size 50
                                 color "#36428A"
                                 outlines []
@@ -73,5 +72,12 @@ screen Jukebox():
                                 size 50
                                 color "#36428A"
                                 outlines []
-     
-    
+
+    fixed pos (700, 910):
+        imagebutton:
+            idle "gui\sagi\smallbutton-idle.png"
+            hover "gui\sagi\smallbutton-highlighted.png"
+            action Return()
+        text "Back":
+            size 30
+            outlines []    
