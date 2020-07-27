@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "0.6"
+define config.version = "0.7"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -186,6 +186,13 @@ init python:
 
     ## To archive files, classify them as 'archive'.
 
+    build.classify('game/**.png', 'archive')
+    build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.mp3', 'archive')
+    build.classify('game/**.ogg', 'archive')
+    build.classify('game/**.wav', 'archive')
+    build.classify('game/**.rpy', 'archive')
+    build.classify('game/**.rpt', 'archive')
     # build.classify('game/**.png', 'archive')
     # build.classify('game/**.jpg', 'archive')
 
@@ -194,6 +201,10 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
+
+    ## If True, Ren'Py will include update information into packages. This
+    ## allows the updater to run.
+    build.include_update = True
 
 ## Set this to a string containing your Apple Developer ID Application to enable
 ## codesigning on the Mac. Be sure to change it to your own Apple-issued ID.
