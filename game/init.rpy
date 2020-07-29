@@ -155,6 +155,7 @@ init:
         #juneau
         MapEmote('ju snarky a1', 'ju blue base arms_default mdo_O ed_slightlyclosed brow_raised')
         MapEmote('ju snarky a2', 'ju blue base arms_raised mdo_O ed_slightlyclosed brow_raised')
+        MapEmote('ju snarky a3', 'ju blue base arms_raised_tea mdo_O ed_slightlyclosed brow_raised')
         MapEmote('ju concerned a1', 'ju blue base arms_default mdo_O ed_default brow_uparrow')
         MapEmote('ju concerned a2', 'ju blue base arms_raised mdo_O ed_default brow_uparrow')
         MapEmote('ju speaking eclosed', 'ju blue base arms_default mdo_O ec_default brow_raised')

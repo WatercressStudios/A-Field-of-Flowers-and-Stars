@@ -161,7 +161,6 @@ label scene1:
     mc weary "Fine."
     hide ju with dissolve
     na "I retrieve my coffee from the receptacle and turn back towards the console."
-    na "A cup of holographic tea materializes into Juneau's hand. She sips it gingerly."
 
     scene asteroidfield at main_menu_bg_transform with dissolve
 
@@ -179,7 +178,7 @@ label scene1:
     #play sound "sfx/power up.ogg"
     voice "voice/1-scene1-29.ogg" #Raine (Nat)
     mc happy "Hahaha."
-    show ju snarky a2 onlayer master:
+    show ju snarky a3 onlayer master:
         stage_right
         hologram
     voice "voice/1-scene1-30.ogg" #Juneau (Lily)
@@ -191,13 +190,13 @@ label scene1:
     hide ju with Dissolve(1.0)
 
     na "Juneau guides us through the belt with the graceful touch that only an AI navigator could..."
-    na "...gingerly sipping her tea, eyes closed, having a simulated good time while the bulk of her processing power pilots the ship."
+    na "...gingerly sipping her own holographic tea, eyes closed, having a simulated good time while the bulk of her processing power pilots the ship."
     na "What a show off."
     na "As much of a brat as she can be at times, she was literally made for this role."
     na "I'd rate her a full three-and-a-half stars."
 
     voice "voice/1-scene1-32.ogg" #Raine (Nat)
-    mc "Hey Juneau. When we get back to Lumi-"
+    mc "Hey Juneau. When we get back to Lum-"
 
     scene asteroidfield_red at main_menu_bg_restore_transform
     show cockpitoverlay2:
@@ -423,7 +422,8 @@ label scene1:
     voice "voice/1-scene1-56.ogg" #Juneau (Lily)
     ju "You might want to put your helmet on now."
     play sound "sfx/entry_intro.ogg"
-    scene white with Dissolve(3)
+    na " "
+    scene black with fade (4.0)
     #SFX roaring and crash sound effect.
 
     #ART fade to white, show the crash however you like.
@@ -435,4 +435,5 @@ label scene1:
     stop music fadeout 2.0
     play sound2 "sfx/Crash.ogg"
 
+    na " "
     jump scene_2
