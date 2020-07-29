@@ -373,7 +373,7 @@ init python:
         ('quit', Quit(confirm=not main_menu)),
         ('menu', MainMenu()),
         ### DEBUG BUTTONS
-        # ('sprite', Show('dynamicspritespreview')),
+        ('sprite', Show('dynamicspritespreview')),
     ]
 
     def polygon_point_offset(ind, distance=75, points=5):
@@ -450,7 +450,6 @@ screen flower_menu_moon():
             add im.FactorScale('gui/sagi/roundbutton-hover.png', 0.15):
                 align (0.5, 0.5)
                 xoffset 25
-
 screen flower_menu():
     if quick_menu:
         button:
@@ -629,7 +628,7 @@ screen journal():
                         draggable True mousewheel True
                         vbox:
                             xsize 890
-                            spacing 5
+                            spacing 15
                             for h in _history_list:
                                 if h.who:
                                     hbox:
@@ -652,7 +651,7 @@ screen journal():
                                         $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                                         label what:
                                             substitute False
-                                            xsize 480
+                                            xsize 700
                                             text_align (0.0, 0.0)
                                             text_size 30
                                             if "color" in h.what_args:
@@ -662,7 +661,7 @@ screen journal():
                                     label what:
                                         substitute False
                                         xsize 850
-                                        text_xalign 0.5
+                                        text_xalign 0.0
                                         text_size 30
                     vbar value YScrollValue("history_list"):
                         xalign -0.063
@@ -771,8 +770,6 @@ screen navigation():
         textbutton _("Load") action ShowMenu("load")
 
         textbutton _("Preferences") action ShowMenu("custom_preferences")
-
-        textbutton _("Credits") action ShowMenu("credits")
 
         textbutton _("About") action ShowMenu("about")
 
@@ -1009,7 +1006,7 @@ style return_button_text is navigation_button_text
 
 style game_menu_outer_frame:
     bottom_padding 45
-    top_padding 180
+    top_padding 45
 
     #background "gui/overlay/game_menu.png"
 
@@ -1018,7 +1015,7 @@ style game_menu_navigation_frame:
     yfill True
 
 style game_menu_content_frame:
-    left_margin 160
+    left_margin 130
     right_margin 130
     top_margin 15
 
@@ -1063,7 +1060,6 @@ screen about():
     use game_menu(_(""), scroll="viewport"):
 
         style_prefix "about"
-
         vbox:
 
             label "[config.name!t]"
@@ -1073,9 +1069,9 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("{i}A Field of Flowers and Stars{/i} was developed for Yurijam 2019 by Watercress Studios in collaboration with Somnova Studios and Sarchalen Visual Media.\n") 
+            text _("{i}A Field of Flowers and Stars{/i} was developed for Yurijam 2019 by Watercress Studios in collaboration with Somnova Studios and Sarchalen Visual Media.\n")
 
-            #text _("If you loved this game, check out our {a=https://watercressstudios.com/}official website{/a}, {a=http://somnovastudios.org/}Somnova Studios{/a}, and {a=https://sarchalen.itch.io/}Sarchalen Visual Media{/a} or go straight to our {a=https://watercress.itch.io/}itch.io page{/a} for more of our projects.\n") 
+            #text _("If you loved this game, check out our {a=https://watercressstudios.com/}official website{/a}, {a=http://somnovastudios.org/}Somnova Studios{/a}, and {a=https://sarchalen.itch.io/}Sarchalen Visual Media{/a} or go straight to our {a=https://watercress.itch.io/}itch.io page{/a} for more of our projects.\n")
 
             #text _("Also, we have a {a=https://store.steampowered.com/developer/Watercress/}Steam page{/a} where you can download and play several of our previously published visual novels.\n")
 
@@ -1087,7 +1083,7 @@ screen about():
 
             text _("{a=https://twitter.com/Hamadyne}Hamadyne{/a} (Story Writer)\n")
 
-            text _ ("{a=https://twitter.com/Hoakkun}A.D. 'Hoa' Hemingway{/a} (Story Writer, Scripting)\n") 
+            text _ ("{a=https://twitter.com/Hoakkun}A.D. 'Hoa' Hemingway{/a} (Story Writer, Scripting)\n")
 
             text _ ("Monochrome (Story Writer)\n")
 
@@ -1125,27 +1121,25 @@ screen about():
 
             text _ ("{a=https://www.deviantart.com/ebagigi}Gabriel 'Ebagigi'{/a} (Scripting)\n")
 
-            text _ ("{a=https://twitter.com/Meyvol}Meyvol{/a} (Scripting)\n") 
-            
+            text _ ("{a=https://twitter.com/Meyvol}Meyvol{/a} (Scripting)\n")
+
             text _ ("{a=https://twitter.com/SandraMJdev}Sandra 'SandraMJ' Molina{/a} (Voice Direction)\n")
 
             text _ ("{a=https://twitter.com/Dottovuu}Dottovu{/a} (VA of Leona)\n")
 
             text _ ("Natalie (VA of Raine)\n")
 
-            text _ ("{a=https://twitter.com/homulily}Lily Lammers{/a} (VA of Juneau)\n") 
+            text _ ("{a=https://twitter.com/homulily}Lily Lammers{/a} (VA of Juneau)\n")
 
             text _ ("{a=https://twitter.com/Bodo1215}Bodo{/a} (Marketing)\n")
 
             text _ ("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
-
-            add "images/logos/watercresslogo.png"  zoom 0.2 xalign 0.5
-            add "images/logos/somnovalogo.jpg"  xalign 0.5
-            add "images/logos/sarchalenlogo.png" zoom 0.2 xalign 0.5
-
-            #imagebutton auto "images/logos/watercresslogo.png" zoom 0.2 xalign 0.5 action OpenURL("https://watercressstudios.com/") 
-            #imagebutton auto "images/logos/somnovalogo.jpg" xalign 0.5 action OpenURL("http://somnovastudios.org/")  
-            #imagebutton auto "images/logos/sarchalenlogo.png"  zoom 0.2 xalign 0.5  action OpenURL(" https://sarchalen.itch.io/")
+            hbox:
+                xalign .5
+                #add "images/logos/watercresslogo.png"  zoom 0.13 yalign 0.5 xalign .25
+                imagebutton idle "images/logos/watercresslogo.png" action OpenURL("https://watercressstudios.com/")
+                imagebutton idle "images/logos/somnovalogo.png" action OpenURL("http://somnovastudios.org/")
+                imagebutton idle "images/logos/sarchalenlogo.png" action OpenURL("http://sarchalen.com/")
 
 
 ## This is redefined in options.rpy to add text to the about screen.

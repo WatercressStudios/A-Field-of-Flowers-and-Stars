@@ -282,9 +282,9 @@ label splashscreen:
     python:
             if not persistent.set_volumes:
                 persistent.set_volumes = True
-                _preferences.volumes['music'] *= 1
-                _preferences.volumes['voice'] *= 1
-                _preferences.volumes['sfx'] *= 1
+                _preferences.volumes['music'] *= .7
+                _preferences.volumes['voice'] *= .7
+                _preferences.volumes['sfx'] *= .7
 
     ##Play the music configured in options so that the music begins as soon as the splash screen shows
     $ renpy.music.play(config.main_menu_music)
@@ -295,16 +295,18 @@ label splashscreen:
         subpixel True
         alpha 0
         zoom 0.4
-        anchor (0.5, 0.5)
+        anchor (0.5, 0.45)
         align (0.5, 0.5)
         parallel:
-            linear 2 alpha 1
+            ease 2 alpha 1
         parallel:
-            linear 6 zoom 0.3
+            easein2 6 zoom 0.3
     $ renpy.pause(3, hard=False)
-    hide afofaslogo with Dissolve(1.0)
-    #scene black with Dissolve(2.0)
+    hide afofaslogo with Dissolve(2)
 
+
+    #scene black with Dissolve(2.0)
+    jump update
     ##When the splash screen ends, we jump to the updater script. If theres no updates, it will go to the menu screen and be invisible to the player.
     #jump update
 
@@ -316,12 +318,14 @@ label splashscreen:
 #     # show screen main_menu
 #     $ renpy.call_in_new_context("main_menu")
 
-label update:
     ##If a new update exists, run the updater script located in the engine files at renpy/common/00updater.rpy
     ##**Note: Sarchalen uses a modified version of 00updater.rpy which integrates our GUI to create a seamless user experience.**##
     ##**If renpy is not using our game's GUI when the updater is run, you need to add this file to the renpy SDK before you create a build.**##
     ##**If anyone knows how to do this without modifying engine files please let us know :) **##
 
+label update:
+    $ UPDATE_URL = "http://sarchalen.com/afieldofflowersandstars/update/updates.json"
+    $ new_version = updater.UpdateVersion(url=UPDATE_URL, simulate=None)
     if new_version != None:
         $ updater.update(url=UPDATE_URL, base=None, force=False, public_key=None, simulate=None, add=[], restart=True)
     else:
