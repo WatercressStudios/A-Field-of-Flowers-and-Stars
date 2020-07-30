@@ -170,7 +170,7 @@ label scene_2:
     le surprised "That's not a planet I've heard of... Is it close?"
 
     voice "voice/2-scene_2-31.ogg" #Raine (Nat)
-    mc speaking "I don't really know. My ship has all the info, but it's uh, not exactly in good shape right now."
+    mc onfire "I don't really know. My ship has all the info, but it's uh, not exactly in good shape right now."
 
     voice "voice/2-scene_2-32.ogg" #Leona (Dot)
     le happy a2 "Well whatever, it's nice to meet you. I'm Leona!"
@@ -179,7 +179,7 @@ label scene_2:
     le concerned "You're injured, so we should get you to the city and patch you up."
 
     voice "voice/2-scene_2-34.ogg" #Raine (Nat)
-    mc "City? Where are we anyway?"
+    mc questioning "City? Where are we anyway?"
 
     voice "voice/2-scene_2-35.ogg" #Leona (Dot)
     le explaining "Hmm? A forest just south of Aster."
@@ -197,19 +197,19 @@ label scene_2:
     mc speaking "Fireside? Strange name for a rock."
 
     voice "voice/2-scene_2-40.ogg" #Leona (Dot)
-    le happy a2 "Really? Seems normal to me, but then again, I live here."
+    le curious "Really? Seems normal to me, but then again, I live here."
 
     voice "voice/2-scene_2-41.ogg" #Leona (Dot)
-    le "We call ourselves Dawnese. We're from Dawne, a few light years away from here. This is our first colony world."
+    le thinky "We call ourselves Dawnese. We're from Dawne, a few lightyears away from here. This is our first colony world."
 
     voice "voice/2-scene_2-42.ogg" #Leona (Dot)
-    le speaking a2 "I gotta say, I was more than a little surprised to see a ship come down here."
+    le hmm "I gotta say, I was more than a little surprised to see a ship come down here."
 
     voice "voice/2-scene_2-43.ogg" #Leona (Dot)
-    le speaking a1 "We don't know how to make space ships that small yet."
+    le "We don't know how to make space ships that small yet."
 
     voice "voice/2-scene_2-44.ogg" #Leona (Dot)
-    le explaining "I thought it was just a shooting star at first, but I saw something else trailing behind it."
+    le "I thought it was just a shooting star at first, but I saw something else trailing behind it."
 
     voice "voice/2-scene_2-45.ogg" #Leona (Dot)
     le happy a2 "I came to have a peek and look what I found! An honest-to-goodness alien!"
@@ -218,10 +218,10 @@ label scene_2:
     le speakingthink "Though, I've never seen an alien look so much like me before..."
 
     voice "voice/2-scene_2-47.ogg" #Raine (Nat)
-    mc questioning "Likewise, actually."
+    mc shocked armraised "Likewise, actually."
 
     voice "voice/2-scene_2-48.ogg" #Leona (Dot)
-    le happy a2 "Well, let's get you somewhere safe. We should really make sure you're okay too."
+    le happy a1 "Well, let's get you somewhere safe. We should really make sure you're okay too."
 
     scene sky with dissolve
 
@@ -235,7 +235,7 @@ label scene_2:
     voice "voice/2-scene_2-49.ogg" #Raine (Nat)
     mc speaking "What's that tower?"
     voice "voice/2-scene_2-50.ogg" #Leona (Dot)
-    le happy a2 "That's the ark ship that brought us here! We're still dependent on it for it's atmosphere processors and power systems."
+    le happy a2 "That's the Ark ship that brought us here! We're still dependent on it for it's atmosphere processors and power systems."
     voice "voice/2-scene_2-51.ogg" #Raine (Nat)
     mc "Ark ship? Didn't you say your homeworld was only a few lightyears from here?"
     voice "voice/2-scene_2-52.ogg" #Leona (Dot)
