@@ -7,7 +7,7 @@ label scene_2:
     pause 2.0
 
     voice "voice/2-scene_2-1.ogg" #Raine (Nat)
-    mc satisfied "Ugh..."
+    mc ugh "Ugh..."
     na "What the hell happened?"
     na "There was a wormhole and then I saw a planet and..."
 
@@ -81,7 +81,7 @@ label scene_2:
     voice "voice/2-scene_2-5.ogg" #Raine (Nat)
     mc shyspeak "Hey! You!"
     voice "voice/2-scene_2-6.ogg" #Raine (Nat)
-    mc upset "H-help!"
+    mc upset "H-Help!"
 
     voice "voice/2-scene_2-7.ogg" #Leona (Dot)
     le "Olal i ohi e u'ai eo' ea' e, a'ap e!"
@@ -130,14 +130,14 @@ label scene_2:
     voice "voice/2-scene_2-12.ogg" #Raine (Nat)
     mc thankful "Thanks. Thought I was done for..."
 
-    show le sassyquestioning with dissolve:
+    show le concerned with dissolve:
         stage_right
 
     voice "voice/2-scene_2-13.ogg" #Leona (Dot)
     le "Ikah iwi uam eh? Anomom eli?"
-    na "A thought occurs to me. This girl isn't speaking anything resembling Galactic Standard."
+    na "A thought occurs to me; This girl isn't speaking anything resembling English."
     na "Did my translation chip break during the crash?"
-    na "My head definitely feels like it got banged into something."
+    na "My head definitely feels like it got banged on something."
 
     voice "voice/2-scene_2-14.ogg" #Leona (Dot)
     le " Uo said iwi aum okay?"
@@ -147,7 +147,7 @@ label scene_2:
     mc thankful "S-Sorry, can you say that again?"
 
     voice "voice/2-scene_2-16.ogg" #Leona (Dot)
-    le questioning a1 "Did you break anything? No broken bones, right?"
+    le hmm "Did you break anything? No broken bones, right?"
     play music "music/meeting leona.ogg" fadein 2.0
     na "I check myself over. Nothing broken, but I've got a nasty scrape on my leg and it feels like I was put through a wood chipper."
 
@@ -156,13 +156,13 @@ label scene_2:
     na "At least the ship is close. Hopefully there's still a usable medpack in there."
 
     voice "voice/2-scene_2-18.ogg" #Leona (Dot)
-    le smug a3 "Good! I'm glad you're okay."
+    le awk "Good! I'm glad you're okay."
 
     voice "voice/2-scene_2-19.ogg" #Raine (Nat)
-    mc questioning "I didn't realize there were other humans on this planet. What sector am I in?"
+    mc questioning "I didn't realize there were other Humans on this planet. What sector am I in?"
 
     voice "voice/2-scene_2-20.ogg" #Leona (Dot)
-    le questioning a2 "'Sector'? 'Human'? What are those?" with bounce
+    le thinky "'Sector'? 'Human'? What are those?" with bounce
 
     voice "voice/2-scene_2-21.ogg" #Raine (Nat)
     mc surprised "Uh..."

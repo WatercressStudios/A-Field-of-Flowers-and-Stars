@@ -109,6 +109,8 @@ init:
         hide_sides = []
 
         #Leona
+        MapEmote('le thinky', 'le think base tail_default2 md_default ed_look brow_default')
+        MapEmote('le awk', 'le neutral base arms_default md_default ed_default brow_uparrow')
         MapEmote('le curious', 'le think base tail_default mdo_default ed_default brow_default')
         MapEmote('le speaking a1', 'le neutral base arms_default mdo_default ed_default brow_default')
         MapEmote('le speaking a2', 'le neutral base arms_raised mdo_default ed_default brow_default')
@@ -169,6 +171,7 @@ init:
         MapEmote('ju red worried speaking', 'ju red hair_default base arms_default mdo_small ed_glitch brow_worried')
         MapEmote('ju red sassy', 'ju red hair_default base arms_default mdo_default ec_angry brow_default')
         #raine
+        MapEmote('mc ugh', 'mc angry base mdo_default ec_default brow_default')
         MapEmote('mc thankful', 'mc normal base mdo_default ed_default brow_sad')
         MapEmote('mc yawn', 'mc armraised base mdo_default ed_default')
         MapEmote('mc yawn2', 'mc armraised base mdo_default ed_squint')
