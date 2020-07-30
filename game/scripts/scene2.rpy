@@ -448,9 +448,10 @@ label scene_2:
     le "Rest up, we can talk later."
     voice "voice/2-scene_2-113.ogg" #Raine (Nat)
     mc satisfied "Thanks, you're the best~"
+    hide le with dissolve
     na "It doesn't take much time before the day's trauma catches up to me and the urge to pass right the hell out envelops me completely."
 
-    scene black with wipedown
+    scene black with Dissolve(3)
     stop env fadeout 2.0
     ###
     # VFX - EYES CLOSE
