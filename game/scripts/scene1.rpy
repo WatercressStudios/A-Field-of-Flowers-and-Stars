@@ -178,7 +178,7 @@ label scene1:
     #play sound "sfx/power up.ogg"
     voice "voice/1-scene1-29.ogg" #Raine (Nat)
     mc happy "Hahaha."
-    show ju snarky a3 onlayer master:
+    show ju snarky a2 onlayer master:
         stage_right
         hologram
     voice "voice/1-scene1-30.ogg" #Juneau (Lily)
@@ -186,7 +186,10 @@ label scene1:
 
     voice "voice/1-scene1-31.ogg" #Raine (Nat)
     mc "Nothing. Just thinking about some of the things we could buy when we get back to port."
-
+    play sound "sfx/power up.ogg"
+    show ju snarky a3 onlayer master with dissolve:
+        stage_right
+    pause(.5)
     hide ju with Dissolve(1.0)
 
     na "Juneau guides us through the belt with the graceful touch that only an AI navigator could..."
@@ -375,6 +378,8 @@ label scene1:
                 ease 0.17 pos (0.504, -0.006)
                 ease 0.12 pos (0.496, 0.006)
                 repeat
+    show white with Dissolve(.1)
+    hide white
     show stars with hpunch
 
     voice "voice/1-scene1-52.ogg" #Raine (Nat)
