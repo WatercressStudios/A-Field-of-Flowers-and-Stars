@@ -196,7 +196,7 @@ label scene1:
     na "I'd rate her a full three-and-a-half stars."
 
     voice "voice/1-scene1-32.ogg" #Raine (Nat)
-    mc "Hey Juneau. When we get back to Lum-"
+    mc "Hey Juneau. When we get back to Lum- {nw}"
 
     scene asteroidfield_red at main_menu_bg_restore_transform
     show cockpitoverlay2:
@@ -421,9 +421,9 @@ label scene1:
     $ hide_sides = ['Juneau']
     voice "voice/1-scene1-56.ogg" #Juneau (Lily)
     ju "You might want to put your helmet on now."
+    scene white with Dissolve(3)
     play sound "sfx/entry_intro.ogg"
-    na " "
-    scene black with fade (4.0)
+
     #SFX roaring and crash sound effect.
 
     #ART fade to white, show the crash however you like.
@@ -435,5 +435,4 @@ label scene1:
     stop music fadeout 2.0
     play sound2 "sfx/Crash.ogg"
 
-    na " "
     jump scene_2
