@@ -9,77 +9,60 @@ label scene_2:
     voice "voice/2-scene_2-1.ogg" #Raine (Nat)
     mc ugh "Ugh..."
     na "What the hell happened?"
-    na "There was a wormhole and then I saw a planet and..."
-
     scene spaceship_crashed with wipeup:
         yzoom -1
     #iris open
     #show BG_outdoors_upside_down
     play env "Amb/Outdoors.ogg" fadein 2.0
 
-    na "And now I'm upside down."
-    na "Feels like I'm hanging by the ankles, something is brushing up against my back and I'm definitely up off the ground."
-    na "It's a tree then. I'm stuck in a fuckin' tree."
-    na "Juneau must have ejected me right before I blacked out."
-    na "Then my parachute got snagged on the way down."
+    na "I feel a sharp pulsing in my head. And sharp pins in my feet."
+    na "And the world is upside down..."
+    na "...no wait, that's me. Right. I'm stuck in a tree."
     na "Ugh, something hurts."
     na "No, actually, everything hurts."
+    na "Juneau must have ejected me right before I blacked out."
     show spaceship_crashed:
         ease 0.5 yoffset -20
         ease 0.5 yoffset 0
-    na "I can't reach the buckle to free me from the harness, thanks to my arms being tied up by the parachute cables."
-    show spaceship_crashed:
-        ease 0.5 yoffset -20
-        ease 0.5 yoffset 0
-    na "At least I can wiggle around, so I won't be bored as I slowly die of exposure."
+    na "I try to move my arms. If I can just reach the buckle..."
     play sound "sfx/tree2.ogg"
-    na "Could be worse, though. The wormhole itself could have popped the ship like a giant metal pimple."
-
+    show spaceship_crashed:
+        ease 0.5 yoffset -20
+        ease 0.5 yoffset 0
+    na "..."
+    na "Damn."
+    na "At least I can wiggle around, so I won't be bored as I slowly die of exposure."
+    na "Could be worse, though."
+    na "Alright, Raine. Gotta get out of this somehow."
+    na "If I can wiggle around, maybe a line will fray and drop me out of the tree..."
+    na "...headfirst. Onto the ground. Thirty feet down."
     voice "voice/2-scene_2-2.ogg" #Raine (Nat)
     mc onfire "Well, this blows."
-
-    na "Alright, Raine. You gotta get out of this somehow."
-
-    scene black with wipedown
-    na "I close my eyes and meditate on the situation."
-    na "If I can wiggle around maybe a line will fray and drop me out of the tree?"
-    na "...Or drop me on my head, breaking my neck and squashing any chance of survival."
-
     ###
     # SFX - SOUND OF A MOTORCYCLE APPROACHING THEN STOPPING A LITTLE WAYS AWAY
     # SFX - FOOTSTEPS BEGIN AFTER 3 SECONDS, VERY FAINT BUT GRADUALLY GETTING LOUDER OVER THE COURSE OF ANOTHER 5 SECONDS. FOLLOWED BY ANOTHER PAUSE FOR A SECOND BEFORE LEONA SPEAKS
     ###
-
     play sound "sfx/footsteps.ogg"
-
     pause 3.0
-
     #pause for ten or so seconds
-
     $ hide_sides = ["Leona"]
-
     voice "voice/2-scene_2-3.ogg" #Leona (Dot)
     le "Eo'ahola! I'akiam eo'ahap?!?"
     #iris open, fast
     #show BG_outdoors_upside_down
-
-    scene spaceship_crashed with wipeup:
-        yzoom -1
-
-    na "What was that?"
-    na "That was definitely a voice I heard just now. Where is it?"
-    na "Straining my neck, I try to look around."
-
-    show cgTree with dissolve
-
-    na "There's someone at the base of the tree. A girl?"
-
+    na "I strain against the ropes and try to turn my head."
+    na "The rush makes it hard to find the source of the sound."
+    na "There's someone at the base of the tree, I think. A girl?"
+    show cgTree with dissolve:
+        zoom 1.1
     voice "voice/2-scene_2-4.ogg" #Leona (Dot)
     le "Ahola? U'ai ehol ek u'ai ikih?"
-    na "She's definitely there."
-
     voice "voice/2-scene_2-5.ogg" #Raine (Nat)
     mc shyspeak "Hey! You!"
+    play sound "sfx/tree2.ogg"
+    show cgTree:
+        ease 0.5 yoffset -20
+        ease 0.5 yoffset 0
     voice "voice/2-scene_2-6.ogg" #Raine (Nat)
     mc upset "H-Help!"
 
@@ -95,30 +78,18 @@ label scene_2:
     voice "voice/2-scene_2-8.ogg" #Leona (Dot)
     le "Ulo'ulo' e, uamo'oh e!"
 
-    na "She's messing with something. Is she cutting me down?"
-
+    na "Is she cutting me down?"
     #cable tearing SFX
     play sound "sfx/tree.ogg"
-
-    na "The cables fall away..."
-
-
-
+    na "The ropes begin to give..."
     show spaceship_crashed:
-        linear 0.6 yalign 0.0
-    pause 0.6
-    show black
-
+        easein 0.6 yalign 0.0
     voice "voice/2-scene_2-9.ogg" #Raine (Nat)
     mc "W-Woah!"
-
-    na "...as I fall to the ground."
-
     voice "voice/2-scene_2-10.ogg" #Leona (Dot)
     le @ catching "Ohaw i ānān!"
-
-    na "The girl leaps down from the branch and grabs me midair."
-    na "Perhaps it's because of the planet's reduced gravity, but we seem to float down, rather than fall."
+    na "The girl leaps up from the branch as I fall and catches me in her arms."
+    na "We seem to float down rather than plummet."
     na "Or maybe the adrenaline is slowing my perception of time?"
     play sound "sfx/falling.ogg"
     scene spaceship_crashed with vpunch
