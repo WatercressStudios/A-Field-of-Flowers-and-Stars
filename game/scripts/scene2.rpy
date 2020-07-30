@@ -96,7 +96,7 @@ label scene_2:
     pause 0.5
     voice "voice/2-scene_2-11.ogg" #Raine (Nat)
     mc blech "AuUuoghhh..."
-    na "I'm gonna go with the latter. If I wasn't sore before, I am now."
+    na "If I wasn't sore before, I am now."
 
     voice "voice/2-scene_2-12.ogg" #Raine (Nat)
     mc thankful "Thanks. Thought I was done for..."
