@@ -96,7 +96,7 @@ label scene_2:
     pause 0.5
     voice "voice/2-scene_2-11.ogg" #Raine (Nat)
     mc blech "AuUuoghhh..."
-    na "I'm gonna go with the latter. If I wasn't sore before, I am now."
+    na "If I wasn't sore before, I am now."
 
     voice "voice/2-scene_2-12.ogg" #Raine (Nat)
     mc thankful "Thanks. Thought I was done for..."
@@ -119,12 +119,13 @@ label scene_2:
 
     voice "voice/2-scene_2-16.ogg" #Leona (Dot)
     le hmm "Did you break anything? No broken bones, right?"
-    play music "music/meeting leona.ogg" fadein 2.0
-    na "I check myself over. Nothing broken, but I've got a nasty scrape on my leg and it feels like I was put through a wood chipper."
 
+    play music "music/meeting leona.ogg" fadein 2.0
     voice "voice/2-scene_2-17.ogg" #Raine (Nat)
     mc @ yawn "I'm okay. Mostly."
-    na "At least the ship is close. Hopefully there's still a usable medpack in there."
+    na "I check myself over."
+    na "I don't think anything's broken, but I've got a nasty scrape on my leg."
+    na "Aside from the general put-through-the-blender feeling, I think I'm alright."
 
     voice "voice/2-scene_2-18.ogg" #Leona (Dot)
     le awk "Good! I'm glad you're okay."
@@ -143,7 +144,7 @@ label scene_2:
 
     voice "voice/2-scene_2-23.ogg" #Leona (Dot)
     le questioning a1 "Hm?"
-    na "There's a pair of horns on this girl's head. Honest-to-goodness horns, like you'd see on a goat or a ram."
+    na "I notice the pair of horns on her head."
 
     voice "voice/2-scene_2-24.ogg" #Raine (Nat)
     mc "H-Horns..."
@@ -152,8 +153,6 @@ label scene_2:
     le concerned "Oh? Oh!"
     voice "voice/2-scene_2-26.ogg" #Leona (Dot)
     le "You don't have any horns?"
-
-    na "The girl thinks for a moment."
 
     voice "voice/2-scene_2-27.ogg" #Leona (Dot)
     le speakingthink "You're... an alien?"
@@ -224,13 +223,10 @@ label scene_2:
     le happy a1 "Well, let's get you somewhere safe. We should really make sure you're okay too."
 
     scene sky with dissolve
-
-    na "Leona walks us over to her ride, a primitive hoverbike with room for two."
-
     stop env fadeout 2.0
 
-    na "After a relatively short ride, the trees begin to thin and the terrain flows into a wide open plain, where the first sign of civilization on this planet comes into view."
-
+    na "After a relatively short ride on something resembling a primitive hoverbike, the trees start to thin out."
+    na "Soon, the first signs of civilization start coming into view. A tall, silver object in the distance catches my attention."
     $ hide_sides = []
     voice "voice/2-scene_2-49.ogg" #Raine (Nat)
     mc speaking "What's that tower?"
@@ -243,7 +239,7 @@ label scene_2:
     voice "voice/2-scene_2-53.ogg" #Leona (Dot)
     le happy a1 "I was born here, but there are people still alive here in Aster who came here from Dawne originally."
 
-    na "As we ride towards the ship, a cluster of small buildings come into view at the base of the tower."
+    na "As we get closer to the ark ship, clusters of short rectangular buildings start to appear along the packed-earth road."
 
     scene street onlayer master with dissolve:
         subpixel True xpos 0.56 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
@@ -266,7 +262,7 @@ label scene_2:
     voice "voice/2-scene_2-55.ogg" #Leona (Dot)
     le happy a2 "Whaddya think?"
 
-    na "If I didn't know any better, I'd say the town felt almost human in design."
+    na "I'd say the town felt almost like a human colony, at least one in it's very early stages."
 
     voice "voice/2-scene_2-56.ogg" #Raine (Nat)
     mc shocked armraised "Wow, you've built quite a little settlement here."
@@ -285,13 +281,14 @@ label scene_2:
     voice "voice/2-scene_2-61.ogg" #Leona (Dot)
     le happy a1 "I can tell you all about us later, let's get you healed up first."
 
-    na "Leona walks us and her bike over to a small metal box affixed to one of the buildings."
+    na "Leona walks me over to a small wooden bench affixed to one of the buildings."
+
+    na "She then retrieves a rolled bundle from a cart nearby."
+    na "She unrolls it to reveal a piece of gauze and a tube of something green."
+    na "I'm assuming this is their version of a first aid kit."
 
     voice "voice/2-scene_2-62.ogg" #Leona (Dot)
     le happy a2 "All right, take a seat and show me where it hurts."
-
-    na "She retrieves some gauze and a tube of green paste from the box on the wall."
-    na "I'm assuming this is their version of a first aid kit."
 
     voice "voice/2-scene_2-63.ogg" #Raine (Nat)
     mc thankful "My leg, firstly. Shoulders are pretty banged up too, and I've got a headache."
@@ -308,7 +305,7 @@ label scene_2:
     le kind a2 "Ouchie."
 
     voice "voice/2-scene_2-68.ogg" #Leona (Dot)
-    le happy a1 "Okay, hold still…"
+    le happy a1 "Okay, hold still..."
 
     na "She takes the paste and applies it to my scraped knee."
 
@@ -316,26 +313,25 @@ label scene_2:
     voice "voice/2-scene_2-69.ogg" #Raine (Nat)
     mc blech "Ow!"
 
-    na "It stings a lot. Instinctually I pull away."
+    na "It stings, a lot. Reflexively I pull away."
 
     voice "voice/2-scene_2-70.ogg" #Leona (Dot)
     le "Easy there, just give it a bit."
 
     na "She carefully places the gauze on top and wraps it up, letting the paste underneath stick and spread."
-    na "Sure enough, the pain is replaced by a cool, soothing sensation."
+    na "Sure enough, the pain slowly begins to subside, replaced by a cool, soothing sensation."
 
     voice "voice/2-scene_2-71.ogg" #Raine (Nat)
-    mc shocked m2 "Oh… Okay."
+    mc shocked m2 "Oh... Okay."
 
-    na "She's clearly done this before."
+    na "She has a tender look as she finishes wrapping my wound, like a mother looking after her kid."
+    na "She's done this before, I guess."
+    na "And now she's doing it for me. This and everything else."
+    na "All for someone she's only just met."
+    na "That's...really sweet."
 
     voice "voice/2-scene_2-72.ogg" #Leona (Dot)
     le kind a2 "Feeling better? You okay?"
-
-    na "She gives me a tender look, like a mother looking after her kid."
-    na "All for someone she just met."
-    na "For me."
-    na "It's… really sweet."
 
     voice "voice/2-scene_2-73.ogg" #Raine (Nat)
     mc thankful "Yeah, the pain's pretty much gone now."
@@ -343,7 +339,7 @@ label scene_2:
     voice "voice/2-scene_2-74.ogg" #Leona (Dot)
     le "As for your shoulders and head, hold out your hand."
 
-    na "Doing as instructed, she takes hold of my finger and squeezes out a drop of the green paste onto it."
+    na "Doing as instructed, she takes it, and squeezes a drop of the green paste onto my finger."
 
     voice "voice/2-scene_2-75.ogg" #Leona (Dot)
     le happy a2 "Lick it just enough to taste it. It does funny stuff to your stomach if you try to swallow."
@@ -404,7 +400,7 @@ label scene_2:
     voice "voice/2-scene_2-100.ogg" #Leona (Dot)
     le shylook "Those woods aren't exactly safe after the sun goes down."
     voice "voice/2-scene_2-101.ogg" #Leona (Dot)
-    le "And in your condition…"
+    le "And in your condition..."
     voice "voice/2-scene_2-102.ogg" #Raine (Nat)
     mc sighing "Without my ship, I uh...don't really have anywhere else to go."
     voice "voice/2-scene_2-103.ogg" #Leona (Dot)
@@ -431,9 +427,9 @@ label scene_2:
     le "Ta-dahhh! Welcome to my little house."
     voice "voice/2-scene_2-107.ogg" #Raine (Nat)
     mc happy "Ah, I feel cozy already."
-    na "There's a shelf of knick-knacks, a messy pile of papers on a desk, and a small kitchenette in the corner."
+    na "The house is small, made for one person. There's a shelf of knick-knacks, a messy pile of papers on a desk, and a small kitchenette in the corner."
     na "But none of those things are even remotely as interesting as the centerpiece of the room."
-    na "I immediately target the bed, or what I assume to be the bed -- a huge pile of cushions and blankets lining the back wall beneath more rows of shelving."
+    na "I immediately target the bed, or what I assume to be the bed-"
     voice "voice/2-scene_2-108.ogg" #Leona (Dot)
     le questioning a3 "Oh, you'll probably --"
     ###
