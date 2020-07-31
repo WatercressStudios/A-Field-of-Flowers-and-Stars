@@ -20,9 +20,7 @@ label scene_3:
 
     voice "voice/3-scene_3-2.ogg" #Leona (Dot)
     le "Hey Raine! Good morning!"
-
     show le happy a1 at stage_right with dissolve
-    na "Leona emerges from the kitchenette."
 
     voice "voice/3-scene_3-3.ogg" #Leona (Dot)
     le "You've been out for a long time, the sun just came up!"
