@@ -82,7 +82,7 @@ label scene1:
     #ART Juneau pouting
 
     voice "voice/1-scene1-7.ogg" #Juneau (Lily)
-    ju @ a2 "I've been hard at work, I'll have you know. I'm just… having a little trouble with the procedure is all."
+    ju @ a2 "I've been hard at work, I'll have you know. I'm just... having a little trouble with the procedure is all."
 
     voice "voice/1-scene1-8.ogg" #Juneau (Lily)
     ju @ concerned "The results keep coming back all screwy. It's been a real head scratcher."
@@ -103,12 +103,12 @@ label scene1:
     ju snarky "You do too!"
 
     voice "voice/1-scene1-14.ogg" #Raine (Nat)
-    mc blech "*sigh* I need a breather. Take over for a bit."
+    mc onfire "*sigh* I need a breather. Take over for a bit."
     play sound "sfx/power up.ogg"
 
     $ hide_sides = ['Juneau']
     #ART In a flash of light she disappears from the console and appears in hologram form in the passenger seat beside us. She's a full body human-like AI.
-    show ju snarky a1 onlayer master:
+    show ju blu neutral onlayer master:
         stage_right
         hologram
     na "The hologram projectors come online and Juneau appears at the controls. I spin my seat around and head for the food synthesizer at the rear of the cockpit."
@@ -134,7 +134,7 @@ label scene1:
 
     #VA: Make a pout sound. Have fun with it! Whatever "pouting" sounds like LOL
     voice "voice/1-scene1-20.ogg" #Juneau (Lily)
-    ju annoyed a1 "Tch!"
+    ju tch "Tch!"
 
     voice "voice/1-scene1-21.ogg" #Raine (Nat)
     mc "Besides, if I get lonely I can just tweak those silly little subroutines you call a personality, reroute power, and reboot you as an adorable girlfriend to comfort me as we drift eternally into open space."
@@ -149,7 +149,7 @@ label scene1:
     ju snarky a2 "Or I lock you out of the system right now and save myself all that trouble."
 
     voice "voice/1-scene1-25.ogg" #Raine (Nat)
-    mc happy "Don't worry, I'm only kidding. I like you just the way you are — annoyingly useful."
+    mc hmm "Don't worry, I'm only kidding. I like you just the way you are — annoyingly useful."
 
     voice "voice/1-scene1-26.ogg" #Juneau (Lily)
     ju speaking eclosed "...Yeah yeah, keep begging for your life. See if I care..."
@@ -177,12 +177,12 @@ label scene1:
         easein 0.5 zoom 0.75 yalign 0.5 alpha 1
     #play sound "sfx/power up.ogg"
     voice "voice/1-scene1-29.ogg" #Raine (Nat)
-    mc happy "Hahaha."
+    mc smug "Hahaha."
     show ju snarky a2 onlayer master:
         stage_right
         hologram
     voice "voice/1-scene1-30.ogg" #Juneau (Lily)
-    ju "What?"
+    ju loe "What?"
 
     voice "voice/1-scene1-31.ogg" #Raine (Nat)
     mc "Nothing. Just thinking about some of the things we could buy when we get back to port."
@@ -193,13 +193,13 @@ label scene1:
     hide ju with Dissolve(1.0)
 
     na "Juneau guides us through the belt with the graceful touch that only an AI navigator could..."
-    na "...gingerly sipping her own holographic tea, eyes closed, having a simulated good time while the bulk of her processing power pilots the ship."
+    na "...all while gingerly sipping her own holographic tea, eyes closed, having a simulated good time while the bulk of her processing power pilots the ship."
     na "What a show off."
-    na "As much of a brat as she can be at times, she was literally made for this role."
+    na "As much of a killjoy as she can be at times, she was literally made for this role."
     na "I'd rate her a full three-and-a-half stars."
 
     voice "voice/1-scene1-32.ogg" #Raine (Nat)
-    mc "Hey Juneau. When we get back to Lum- {nw}"
+    mc happy "Hey Juneau. When we get back to Lum- {nw}"
 
     scene asteroidfield_red at main_menu_bg_restore_transform
     show cockpitoverlay2:
@@ -222,15 +222,17 @@ label scene1:
                 ease 0.27 pos (0.502, -0.003)
                 ease 0.22 pos (0.498, 0.003)
                 repeat
-    ju red concerned a1 "Woah!" with vpunch
+
+    ju "Woah!"
     #ART Wormhole appears outside the cockpit. Screen shake."
     $ hide_sides = []
     show asteroidfield_red:
         linear 60.0 align (0.2, 0.43)
     voice "voice/1-scene1-34.ogg" #Raine (Nat)
     mc shocked armraised "Juneau, report!"
+
     voice "voice/1-scene1-35.ogg" #Juneau (Lily)
-    ju red concerned a1 "We ran right into some kind of gravity well. Gravimetric readings are off the charts."
+    ju whoa "We ran right into some kind of gravity well. Gravimetric readings are off the charts."
 
     voice "voice/1-scene1-36.ogg" #Raine (Nat)
     mc "Show me."
@@ -238,7 +240,7 @@ label scene1:
     na "I slide my cup back into the synthesizer before returning to the console and bringing up the local sensor interface."
 
     voice "voice/1-scene1-37.ogg" #Raine (Nat)
-    mc "It's a wormhole! We got caught in the gravity well!"
+    mc grr "It's a wormhole! We got caught in the gravity well!"
 
     na "Damn. I should have known. That explains the sensor readings."
 
@@ -264,10 +266,10 @@ label scene1:
     na "I recognize Juneau's safety protocols kicking in. Though her personality subroutines may pretend otherwise, as the ship's navigator AI, Juneau has a responsibility to protect me."
 
     voice "voice/1-scene1-43.ogg" #Raine (Nat)
-    mc happy "Disengage safety. It's the only way we get out of this."
+    mc grumpy "Disengage safety. It's the only way we get out of this."
 
     voice "voice/1-scene1-44.ogg" #Juneau (Lily)
-    ju @ red sassy "If you kill me, it'll be on your conscience."
+    ju det "If you kill me, it'll be on your conscience."
 
     voice "voice/1-scene1-45.ogg" #Juneau (Lily)
     ju "Handing you full navigational control."
@@ -294,13 +296,13 @@ label scene1:
     na "Juneau clings to her seat, pulling her knees up to her chest."
 
     voice "voice/1-scene1-46.ogg" #Juneau (Lily)
-    ju "How can you be so calm at a time like this? We don't even know where it goes!"
+    ju thriller "How can you be so calm at a time like this? We don't even know where it goes!"
 
     voice "voice/1-scene1-47.ogg" #Raine (Nat)
     mc "We're about to find out!"
 
     voice "voice/1-scene1-48.ogg" #Raine (Nat)
-    mc annoyed "I built this ship to fly, so let's fly straight down its throat!"
+    mc anger "I built this ship to fly, so let's fly straight down its throat!"
 
     # ###
     # VFX - SCREEN SHAKING BECOMES EVER MORE VIOLENT
@@ -349,14 +351,14 @@ label scene1:
     # ###
 
     voice "voice/1-scene1-50.ogg" #Raine (Nat)
-    mc shocked armraised "SHIT!"
+    mc grr "SHIT!"
 
     #Juneau glitches out
 
 
 
     voice "voice/1-scene1-51.ogg" #Juneau (Lily)
-    ju red worried a1 "IMPACT - HULL BREACH DET-"
+    ju aah "IMPACT - HULL BREACH DET-"
 
     play sound2 "sfx/astroid impact.ogg"
     scene stars:
@@ -383,7 +385,7 @@ label scene1:
     show stars with hpunch
 
     voice "voice/1-scene1-52.ogg" #Raine (Nat)
-    mc upset "WHAT THE HELL WAS THAT?!"
+    mc shocked armraised "WHAT THE HELL WAS THAT?!"
 
     ###
     # SFX - START RAMPING UP THE SOUND OF ATMOSPHERE AROUND THE SHIP. BUILD IT UP ON TOP OF THEIR CONVERSATION UNTIL WE FADE OUT OF THIS SCENE.
@@ -405,16 +407,16 @@ label scene1:
     na "I tug at the controls but the ship doesn't respond."
     na "With no steering, I've got no way to change course."
     na "And the current course happens to be...."
-    na "...pulling us straight into a planet."
+    na "...Pulling us straight into a planet."
 
     voice "voice/1-scene1-53.ogg" #Raine (Nat)
-    mc shocked armraised "Shit. Don't wanna go there."
+    mc onfire "Shit. Don't wanna go there."
 
     voice "voice/1-scene1-54.ogg" #Raine (Nat)
-    mc annoyed "Out of the frying pan and into the fire."
+    mc grumpy "Out of the frying pan and into the fire."
 
     voice "voice/1-scene1-55.ogg" #Raine (Nat)
-    mc upset "Juneau, I need you! Like, right now!"
+    mc anger "Juneau, I need you! Like, right now!"
 
     #SFX alarm starts going off. Cockpit is flashing red.
 

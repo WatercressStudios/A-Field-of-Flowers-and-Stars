@@ -156,6 +156,13 @@ init:
         #MapEmote('le pout p1 2', 'le neutral base arms_raised md_default ed_away brow_line')
 
         #juneau
+        MapEmote('ju aah', 'ju red hair_default2 base arms_angry mdo_small ed_glitch brow_raised')
+        MapEmote('ju thriller', 'ju red hair_default base arms_glitch md_small ed_glitch brow_worried')
+        MapEmote('ju det', 'ju red hair_default2 base arms_angry md_small ed_default brow_default')
+        MapEmote('ju whoa', 'ju red hair_default base arms_worried mdo_O ed_glitch brow_raised')
+        MapEmote('ju loe', 'ju blue base arms_default md_line ed_default brow_default')
+        MapEmote('ju tch', 'ju blue base arms_default md_O ed_slightlyclosed brow_downarrow')
+        MapEmote('ju blu neutral', 'ju blue base arms_default md_O ed_default brow_raised')
         MapEmote('ju snarky a1', 'ju blue base arms_default mdo_O ed_slightlyclosed brow_raised')
         MapEmote('ju snarky a2', 'ju blue base arms_raised mdo_O ed_slightlyclosed brow_raised')
         MapEmote('ju snarky a3', 'ju blue base arms_raised_tea mdo_O ed_slightlyclosed brow_raised')
@@ -172,6 +179,8 @@ init:
         MapEmote('ju red worried speaking', 'ju red hair_default base arms_default mdo_small ed_glitch brow_worried')
         MapEmote('ju red sassy', 'ju red hair_default base arms_default mdo_default ec_angry brow_default')
         #raine
+        MapEmote('mc grr', 'mc angry base md_default ed_default brow_angry')
+        MapEmote('mc smug', 'mc armraised base md_smug ed_squint')
         MapEmote('mc unamused', 'mc confident base md_stretch ed_default brow_sad')
         MapEmote('mc anger', 'mc angry base mdo_toothy ed_default brow_angry')
         MapEmote('mc ohno', 'mc angry hands md_default ed_default brow_angry')
