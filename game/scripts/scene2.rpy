@@ -143,27 +143,32 @@ label scene_2:
     mc shocked armraised "Ah! Y-You're..."
 
     voice "voice/2-scene_2-23.ogg" #Leona (Dot)
-    le questioning a1 "Hm?"
+    le "Hm?"
     na "I notice the pair of horns on her head."
 
     voice "voice/2-scene_2-24.ogg" #Raine (Nat)
     mc "H-Horns..."
 
     voice "voice/2-scene_2-25.ogg" #Leona (Dot)
-    le concerned "Oh? Oh!"
+    le thinky "Oh? {nw}"
+    show le curious
+    voice "voice/2-scene_2-25.2.ogg" #Leona (dot)
+    extend "Oh!"
+
+
     voice "voice/2-scene_2-26.ogg" #Leona (Dot)
-    le "You don't have any horns?"
+    le thinky "You don't have any horns?"
 
     voice "voice/2-scene_2-27.ogg" #Leona (Dot)
     le speakingthink "You're... an alien?"
 
     voice "voice/2-scene_2-28.ogg" #Raine (Nat)
-    mc amused "No, I'm --"
+    mc nono "No no no, I--"
 
-    na "Wait, yeah. She's right. I'm technically the alien here."
+    na "Wait, no. She's right. I'm technically the alien here."
 
     voice "voice/2-scene_2-29.ogg" #Raine (Nat)
-    mc "Yeah. I'm Raine. A human from a planet called Lumin. Ever heard of it?"
+    mc sighing "Yeah. I'm Raine. A Human from a planet called Lumin. Ever heard of it?"
 
     voice "voice/2-scene_2-30.ogg" #Leona (Dot)
     le surprised "That's not a planet I've heard of... Is it close?"
@@ -178,7 +183,7 @@ label scene_2:
     le concerned "You're injured, so we should get you to the city and patch you up."
 
     voice "voice/2-scene_2-34.ogg" #Raine (Nat)
-    mc questioning "City? Where are we anyway?"
+    mc dreamworks "City? Where are we anyway?"
 
     voice "voice/2-scene_2-35.ogg" #Leona (Dot)
     le explaining "Hmm? A forest just south of Aster."
@@ -229,17 +234,17 @@ label scene_2:
     na "Soon, the first signs of civilization start coming into view. A tall, silver object in the distance catches my attention."
     $ hide_sides = []
     voice "voice/2-scene_2-49.ogg" #Raine (Nat)
-    mc speaking "What's that tower?"
+    mc hmm "What's that tower?"
     voice "voice/2-scene_2-50.ogg" #Leona (Dot)
     le happy a2 "That's the Ark ship that brought us here! We're still dependent on it for it's atmosphere processors and power systems."
     voice "voice/2-scene_2-51.ogg" #Raine (Nat)
     mc "Ark ship? Didn't you say your homeworld was only a few lightyears from here?"
     voice "voice/2-scene_2-52.ogg" #Leona (Dot)
-    le "Yeah. Like I said, we're not that advanced yet."
+    le shylook "Yeah. Like I said, we're not that advanced yet."
     voice "voice/2-scene_2-53.ogg" #Leona (Dot)
-    le happy a1 "I was born here, but there are people still alive here in Aster who came here from Dawne originally."
+    le happy2 a1 "I was born here, but there are people still alive here in Aster who came here from Dawne originally."
 
-    na "As we get closer to the ark ship, clusters of short rectangular buildings start to appear along the packed-earth road."
+    na "As we get closer to the Ark ship, clusters of short rectangular buildings start to appear along the packed-earth road."
 
     scene street onlayer master with dissolve:
         subpixel True xpos 0.56 ypos 1.0 xanchor 0.5 yanchor 1.0 rotate None
