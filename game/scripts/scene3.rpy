@@ -12,7 +12,7 @@ label scene_3:
     na "Leona, was it? What a life saver."
     na "I don't know what I would have done if she didn't show up."
     na "Her and that green healing gunk."
-    na "Where is she, by the way?"
+    na "Where is she, anyway?"
 
     #movement SFX
     play sound "sfx/footsteps 2.ogg"
