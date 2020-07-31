@@ -286,7 +286,7 @@ label scene1:
             repeat
 
     #laayer 2 spaceship v2
-    na "Faster and faster we go as I fly the ship straight into the  well."
+    na "Faster and faster we go as I fly the ship straight into the well."
 
 
     na "The ship begins to shake as we pick up speed."
@@ -310,7 +310,8 @@ label scene1:
         parallel:
             linear .2 xanchor .27
             linear .2 yanchor .38
-    play sound2 "sfx/astroid impact.ogg"
+    #play sound2 "sfx/astroid impact.ogg"
+    play sound "sfx/wormhole.ogg"
     play sound5 "sfx/SSL2.ogg"
     scene wormhole:
         subpixel True
@@ -318,11 +319,6 @@ label scene1:
             anchor (0.5, 0.5)
             zoom 1.55
             align (0.5, 0.5)
-        parallel:
-            block:
-                rotate 0.0
-                linear 5 rotate 359.9
-                repeat
     show cockpitoverlay2:
         parallel:
             zoom 0.75
@@ -336,11 +332,18 @@ label scene1:
                 ease 0.17 pos (0.504, -0.006)
                 ease 0.12 pos (0.496, 0.006)
                 repeat
-    show wormhole with vpunch
+    pause 1.0
+    play sound2 "sfx/astroid impact.ogg"
+    pause (.1)
+    show wormhole with vpunch:
+        parallel:
+            block:
+                rotate 0.0
+                linear 7 rotate 359.9
+                repeat
     voice "voice/1-scene1-49.ogg" #Juneau (Lily)
     ju "Ah!"
     play sound3 "sfx/wormhole loop.ogg"
-    pause 1.0
 
     # SFX - BANGING (ASTEROIDS HITTING THE HULL)
     # VFX - ASTEROIDS FLY ACROSS THE SCREEN OUTSIDE THE SHIP
@@ -365,6 +368,12 @@ label scene1:
         easein_elastic .5 yzoom .9
         parallel:
             ease .5 alpha 1
+        parallel:
+            ease 0.15 offset (2, 2)
+            ease 0.13 offset (-2, -2)
+            ease 0.17 offset (-2, 2)
+            ease 0.12 offset (2, -2)
+            repeat
     show cockpitoverlay2:
         parallel:
             zoom 0.75
@@ -392,7 +401,8 @@ label scene1:
     na "I turn to Juneau. She's gone."
     na "One by one, the displays power down."
 
-    show stars:
+    show stars onlayer master:
+        subpixel True
         parallel:
             linear 15 zoom 1.5 align (0.0, 0.8)
         parallel:
@@ -401,7 +411,6 @@ label scene1:
             ease 0.17 offset (-2, 2)
             ease 0.12 offset (2, -2)
             repeat
-
     na "I tug at the controls but the ship doesn't respond."
     na "With no steering, I've got no way to change course."
     na "And the current course happens to be...."
