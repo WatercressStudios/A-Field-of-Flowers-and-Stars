@@ -617,7 +617,8 @@ init -1600:
     style action_editor_button idle_background None
     style action_editor_button insensitive_background None
     style action_editor_button_text color "#fff"
-    style action_editor_button_text size 24
+    style action_editor_button ysize 50
+    style action_editor_button_text size 20
     style action_editor_button_text selected_color "#5ff"
     style action_editor_button_text hover_color "#000"
     style action_editor_button_text insensitive_color "#777"
