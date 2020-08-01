@@ -436,7 +436,7 @@ label scene_2:
     na "But none of those things are even remotely as interesting as the centerpiece of the room."
     na "I immediately target the bed, or what I assume to be the bed-"
     voice "voice/2-scene_2-108.ogg" #Leona (Dot)
-    le questioning a3 "Oh, you'll probably --"
+    le questioning a3 "Oh, you'll probably -- {nw}"
     ###
     # SFX - POMF
     ###
@@ -468,5 +468,4 @@ label scene_2:
     na "Huh... She has... a diary..."
     stop music fadeout 2.0
     na "I guess... we're not... that... diff..."
-
     jump scene_3
