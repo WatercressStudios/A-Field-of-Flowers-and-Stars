@@ -158,6 +158,8 @@ init:
         #MapEmote('le pout p1 2', 'le neutral base arms_raised md_default ed_away brow_line')
 
         #juneau
+        MapEmote('ju noice', 'ju blue base arms_raised mdo_default ed_slightlyclosed brow_raised')
+        MapEmote('ju worry', 'ju red hair_default2 base arms_worried mdo_small ed_glitch brow_worried')
         MapEmote('ju aah', 'ju red hair_default2 base arms_angry mdo_small ed_glitch brow_raised')
         MapEmote('ju thriller', 'ju red hair_default base arms_glitch md_small ed_glitch brow_worried')
         MapEmote('ju det', 'ju red hair_default2 base arms_angry md_small ed_default brow_default')
