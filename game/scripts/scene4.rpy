@@ -109,7 +109,7 @@ label scene_4:
     voice "voice/4-scene_4-33.ogg" #Leona (Dot)
     le "Yeah! Totally! Um, actually no, it's not..."
     voice "voice/4-scene_4-34.ogg" #Raine (Nat)
-    mc "Leona?"
+    mc onfire "Leona?"
     voice "voice/4-scene_4-35.ogg" #Leona (Dot)
     le "Well, I, uh..."
     voice "voice/4-scene_4-36.ogg" #Leona (Dot)
