@@ -97,7 +97,7 @@ label scene_4:
         #SFX - METALLIC POP
 
     voice "voice/4-scene_4-29.ogg" #Leona (Dot)
-    le concerned "Oops."
+    le awk "Oops."
     voice "voice/4-scene_4-30.ogg" #Leona (Dot)
     le shylook "And she just fixed that too..."
     voice "voice/4-scene_4-31.ogg" #Leona (Dot)
