@@ -174,7 +174,7 @@ label scene_2:
     le surprised "That's not a planet I've heard of... Is it close?"
 
     voice "voice/2-scene_2-31.ogg" #Raine (Nat)
-    mc onfire "I don't really know. My ship has all the info, but it's uh, not exactly in good shape right now."
+    mc onfire "I don't really know. My ship has all the info, but it's, uh, not exactly in good shape right now."
 
     voice "voice/2-scene_2-32.ogg" #Leona (Dot)
     le happy a2 "Well whatever, it's nice to meet you. I'm Leona!"
