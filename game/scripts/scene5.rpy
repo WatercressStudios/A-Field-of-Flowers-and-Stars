@@ -33,19 +33,19 @@ label scene_5:
 
 
     voice "voice/5-default-7.ogg" #Raine (Nat)
-    mc amused  "What have I done to deserve you, Leona?"
+    mc oho  "What have I done to deserve you, Leona?"
 
 
     voice "voice/5-default-8.ogg" #Raine (Nat)
-    mc thankful "Give my thanks to your crew too."
+    mc "Give my thanks to your crew too."
 
 
     voice "voice/5-default-9.ogg" #Leona (Dot)
-    le  happy2 a1 "Hehe!"
+    le teehee "Hehe!"
 
 
     voice "voice/5-default-10.ogg" #Leona (Dot)
-    le "So, what's on the agenda today?"
+    le happy a2 "So, what's on the agenda today?"
 
 
     voice "voice/5-default-11.ogg" #Raine (Nat)
@@ -53,23 +53,23 @@ label scene_5:
 
 
     voice "voice/5-default-12.ogg" #Leona (Dot)
-    le questioning a3 "Other survivor?"
+    le curious "Other survivor?"
 
 
     voice "voice/5-default-13.ogg" #Leona (Dot)
-    le a2 "Do you mean your AI friend?"
+    le thinky "Do you mean your AI friend?"
 
 
     voice "voice/5-default-14.ogg" #Leona (Dot)
-    le speakingsurprised a1 "The one that's like a sister?"
+    le happy a2 "The one that's like a sister?"
 
 
     voice "voice/5-default-15.ogg" #Raine (Nat)
-    mc shyspeak "That's the one. I'll introduce you once we get her back online."
+    mc det "That's the one. I'll introduce you once we get her back online."
 
 
     voice "voice/5-default-16.ogg" #Leona (Dot)
-    le questioning p2 "How do we do that?"
+    le curious "How do we do that?"
 
 
     voice "voice/5-default-17.ogg" #Raine (Nat)
@@ -93,11 +93,11 @@ label scene_5:
 
 
     voice "voice/5-default-22.ogg" #Leona (Dot)
-    le questioning p2 "Force it? Isn't it magnetically sealed?"
+    le speakingthink "Force it? Isn't it magnetically sealed?"
 
 
     voice "voice/5-default-23.ogg" #Raine (Nat)
-    mc surprised "You could tell?"
+    mc hmm "You could tell?"
 
 
     voice "voice/5-default-24.ogg" #Leona (Dot)
@@ -105,7 +105,7 @@ label scene_5:
 
 
     voice "voice/5-default-25.ogg" #Raine (Nat)
-    mc questioning2 "Then you should know the electromagnetic lock is fail secure."
+    mc neutral "Then you should know the electromagnetic lock is fail secure."
 
 
     voice "voice/5-default-26.ogg" #Raine (Nat)
