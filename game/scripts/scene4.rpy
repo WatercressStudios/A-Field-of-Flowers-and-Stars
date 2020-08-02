@@ -97,7 +97,7 @@ label scene_4:
         #SFX - METALLIC POP
 
     voice "voice/4-scene_4-29.ogg" #Leona (Dot)
-    le surprised "Oops."
+    le concerned "Oops."
     voice "voice/4-scene_4-30.ogg" #Leona (Dot)
     le shylook "And she just fixed that too..."
     voice "voice/4-scene_4-31.ogg" #Leona (Dot)
@@ -113,7 +113,7 @@ label scene_4:
     voice "voice/4-scene_4-35.ogg" #Leona (Dot)
     le "Well, I, uh..."
     voice "voice/4-scene_4-36.ogg" #Leona (Dot)
-    le smirk a2 "Maybe I shouldn't try to help. I'm all thumbs."
+    le awk "Maybe I shouldn't try to help. I'm all thumbs."
     voice "voice/4-scene_4-37.ogg" #Raine (Nat)
     mc happy "No use fussing over it. It was gonna do that anyway."
     voice "voice/4-scene_4-38.ogg" #Leona (Dot)
@@ -127,7 +127,7 @@ label scene_4:
     voice "voice/4-scene_4-42.ogg" #Raine (Nat)
     mc questioning2 "No offense, but the stuff you have here is more than a little bit out of date."
     voice "voice/4-scene_4-43.ogg" #Leona (Dot)
-    le happy a1 "Hmmm, I suppose it might be for the best."
+    le curious "Hmmm, I suppose it might be for the best."
     voice "voice/4-scene_4-44.ogg" #Leona (Dot)
     le look "Everyone's a little nervous about having you here. It's not every day an alien crash-lands in your backyard."
     voice "voice/4-scene_4-45.ogg" #Raine (Nat)
@@ -135,7 +135,7 @@ label scene_4:
     voice "voice/4-scene_4-46.ogg" #Raine (Nat)
     mc questioning "As soon as everyone realized who I was, they cleared out of there right quick."
     voice "voice/4-scene_4-47.ogg" #Raine (Nat)
-    mc "I bet the one in the storage room is only still there because he feels a bit trapped."
+    mc "I bet the one in the storage room is only still there because he felt a bit trapped."
     voice "voice/4-scene_4-48.ogg" #Leona (Dot)
     le happy a2 "We do some of our best work when we feel like that though."
     voice "voice/4-scene_4-49.ogg" #Leona (Dot)
@@ -153,8 +153,8 @@ label scene_4:
 
 
     na "..."
-    na "After a couple of hours listening to Leona's stories while working on the ship, I decide to take a break. Juneau won't be online for a little bit anyways, so I have some time to kill."
-    na "And I'm hungry."
+    na "After a couple of hours listening to Leona's stories while working on the ship, I decide to take a break."
+    na "I won't be able to determine Juneau's condition for awhile yet, and I'm hungry."
 
     #ART - LEONA'S HOUSE
     play sound2 "amb/Leonas house.ogg"
@@ -167,7 +167,7 @@ label scene_4:
     na "If I go back to the base to work on my ship now, I'll be there all night."
     na "Juneau..."
     voice "voice/4-scene_4-54.ogg" #Leona (Dot)
-    le happy a2 "Did you hear me? Helloooo?"
+    le surprised "Did you hear me? Helloooo?"
     play music "music/Missing Juneau.ogg" fadein 3.0
 
     voice "voice/4-scene_4-55.ogg" #Raine (Nat)
@@ -181,12 +181,12 @@ label scene_4:
     $ hide_sides = ['Leona']
 
     voice "voice/4-scene_4-56.ogg" #Leona (Dot)
-    le "I asked if you wanted dinner. Are you okay?"
+    le concerned "I asked if you wanted dinner. Are you okay?"
 
     voice "voice/4-scene_4-57.ogg" #Raine (Nat)
     mc onfire "Yeah, just thinking about the ship."
     voice "voice/4-scene_4-58.ogg" #Leona (Dot)
-    le concerned "You said you'd have trouble if the software was busted. I thought you'd know how to simply redo it."
+    le thinky "You said you'd have trouble if the software was busted. I thought you'd know how to simply redo it."
     voice "voice/4-scene_4-59.ogg" #Raine (Nat)
     mc blech "It's not recreating the software I can't do. It's getting back the programs I had."
 
@@ -201,13 +201,13 @@ label scene_4:
     voice "voice/4-scene_4-60.ogg" #Leona (Dot)
     le questioning a2 "So what's so important about the program?"
     voice "voice/4-scene_4-61.ogg" #Raine (Nat)
-    mc gentlehandtalk "She's an AI companion. She's way more than just a program."
+    mc annoyed "She's an AI companion. She's way more than just a program."
     voice "voice/4-scene_4-62.ogg" #Raine (Nat)
-    mc happy "As far as I'm concerned she's a real person."
+    mc weary "As far as I'm concerned she's a real person."
     voice "voice/4-scene_4-63.ogg" #Leona (Dot)
     le concerned "...She must be very important to you."
     voice "voice/4-scene_4-64.ogg" #Raine (Nat)
-    mc unimpressed "Well, we had our fights, but she's the closest I have to family."
+    mc shyspeak "Well, we had our fights, but she's the closest I have to family."
     voice "voice/4-scene_4-65.ogg" #Raine (Nat)
     mc happy "Like an annoying little sister."
     na "Leona's long ears seem to perk up, but she covers her expression by taking another bite of food."
@@ -220,20 +220,21 @@ label scene_4:
     na "Leona's sudden change of tone catches me off guard."
     voice "voice/4-scene_4-69.ogg" #Leona (Dot)
     le "You're gonna need rest if you'll be spending tomorrow fixing your ship!"
-    voice "voice/4-scene_4-70.ogg" #Leona (Dot)
-    le "I've got a change of clothes for you! I put them on the bed you used yesterday."
-    voice "voice/4-scene_4-71.ogg" #Leona (Dot)
-    le happy a2 "Consider that bed and those clothes yours, at least for as long as you're here."
+    na "She gestures towards the bed excitedly."
+    na "Sitting on top of the bed pile, neatly folded, is one slightly singed blanket I recognize as part of my ship's bedding."
+    na "For a brief moment, I feel... sad."
+    na "Sad, but grateful?"
+    na "How strange."
     voice "voice/4-scene_4-72.ogg" #Raine (Nat)
     mc happy "Thanks, Leona. I really appreciate it. You've been amazing, I really don't deserve your help."
     na "Leona turns from me."
     voice "voice/4-scene_4-73.ogg" #Leona (Dot)
     le kind a2 "Just doing what anyone would do. Now, make sure you get some rest! Ya need a strong and healthy mind to get her back!"
 
-    na "I want to say something more, but I know there's nothing I can say. My thoughts return to the repair of my ship."
+    na "I want to say something more, but I can't put it into words. I abandon the notion and let my thoughts return to the repair of my ship."
     na "But there's nothing I can do until I have Juneau back, and that has to wait till tomorrow."
     na "The wormhole that brought me here is more likely than not long gone."
-    na "Would it really be so bad to slow my pace here?"
+    na "Would it really be so bad to slow down a bit? Take in the sights, get a feel for the place?"
 
     show house:
         ease 1.5 zoom 1.3 xalign 0.5 yalign 1.0
@@ -263,7 +264,7 @@ label scene_4:
     voice "voice/4-scene_4-83.ogg" #Leona (Dot)
     le happy2 a1 "Alien music? That sounds exciting!"
     voice "voice/4-scene_4-84.ogg" #Raine (Nat)
-    mc "I thought that might interest you. I'll get you hooked up tomorrow."
+    mc smug "I thought that might interest you. I'll get you hooked up tomorrow."
     voice "voice/4-scene_4-85.ogg" #Leona (Dot)
     le "You know how to drive a hard bargain!"
     voice "voice/4-scene_4-86.ogg" #Leona (Dot)
