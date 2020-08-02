@@ -97,7 +97,7 @@ label scene_4:
         #SFX - METALLIC POP
 
     voice "voice/4-scene_4-29.ogg" #Leona (Dot)
-    le concerned "Oops."
+    le awk "Oops."
     voice "voice/4-scene_4-30.ogg" #Leona (Dot)
     le shylook "And she just fixed that too..."
     voice "voice/4-scene_4-31.ogg" #Leona (Dot)
@@ -109,7 +109,7 @@ label scene_4:
     voice "voice/4-scene_4-33.ogg" #Leona (Dot)
     le "Yeah! Totally! Um, actually no, it's not..."
     voice "voice/4-scene_4-34.ogg" #Raine (Nat)
-    mc "Leona?"
+    mc onfire "Leona?"
     voice "voice/4-scene_4-35.ogg" #Leona (Dot)
     le "Well, I, uh..."
     voice "voice/4-scene_4-36.ogg" #Leona (Dot)
@@ -141,7 +141,7 @@ label scene_4:
     voice "voice/4-scene_4-49.ogg" #Leona (Dot)
     le "Did I tell you why we decided to found a colony to begin with?"
     voice "voice/4-scene_4-50.ogg" #Raine (Nat)
-    mc happy "No, but I'd love to hear more."
+    mc oho "No, but I'd love to hear more."
     voice "voice/4-scene_4-51.ogg" #Leona (Dot)
     le speaking a2 "Tell you what, you tell me what kind of tools you need and I'll get them for ya."
     voice "voice/4-scene_4-52.ogg" #Leona (Dot)
@@ -216,17 +216,17 @@ label scene_4:
     voice "voice/4-scene_4-67.ogg" #Leona (Dot)
     le tired "Yeah..."
     voice "voice/4-scene_4-68.ogg" #Leona (Dot)
-    le crazy "But!" with hpunch
+    le happyspeaking a3 "But!"
     na "Leona's sudden change of tone catches me off guard."
     voice "voice/4-scene_4-69.ogg" #Leona (Dot)
-    le "You're gonna need rest if you'll be spending tomorrow fixing your ship!"
+    le kindly "You're gonna need rest if you'll be spending tomorrow fixing your ship!"
     na "She gestures towards the bed excitedly."
     na "Sitting on top of the bed pile, neatly folded, is one slightly singed blanket I recognize as part of my ship's bedding."
     na "For a brief moment, I feel... sad."
     na "Sad, but grateful?"
     na "How strange."
     voice "voice/4-scene_4-72.ogg" #Raine (Nat)
-    mc happy "Thanks, Leona. I really appreciate it. You've been amazing, I really don't deserve your help."
+    mc shyspeak "Thanks, Leona. I really appreciate it. You've been amazing, I really don't deserve your help."
     na "Leona turns from me."
     voice "voice/4-scene_4-73.ogg" #Leona (Dot)
     le kind a2 "Just doing what anyone would do. Now, make sure you get some rest! Ya need a strong and healthy mind to get her back!"
@@ -252,7 +252,7 @@ label scene_4:
     voice "voice/4-scene_4-77.ogg" #Leona (Dot)
     le curious "Is digital alright?"
     voice "voice/4-scene_4-78.ogg" #Raine (Nat)
-    mc happy "That would be wonderful."
+    mc shyspeak "That would be wonderful."
     voice "voice/4-scene_4-79.ogg" #Leona (Dot)
     le happy a2 "Check the shelf on the back wall. There are a bunch of mediapads I bought a while ago for next to nothing, so you can keep one if you want."
     voice "voice/4-scene_4-80.ogg" #Raine (Nat)
