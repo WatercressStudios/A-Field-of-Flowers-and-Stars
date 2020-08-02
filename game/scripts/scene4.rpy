@@ -8,39 +8,40 @@ label scene_4:
         parallel:
             easein_back 3.0 ypos 0.2
 
-    na "After heading back towards Leona's house, we turn the corner and reach the base my poor ship had been taken to."
-    na "I hope Juneau is okay. She's annoying, but she's all I have now."
-    na "She's what I imagine a little sister would be like."
+    na "After a brief tour, we complete a loop around the neighborhood and approach a garage just around the corner from Leona's house."
+    na "I hope Juneau is okay..."
 
     $ hide_sides = ['Leona']
-    show le concerned at stage_right with dissolve:
+    show le kindly at stage_right with dissolve:
         xalign 1.3
     voice "voice/4-scene_4-1.ogg" #Leona (Dot)
-    le concerned "So, how's it look?"
+    le "So, how's it look?"
     na "Leona snaps me out of my thoughts as I rest my eyes on what's left of my ship."
+    show le concerned at stage_right with dissolve:
+        xalign 1.3
     voice "voice/4-scene_4-2.ogg" #Raine (Nat)
-    mc grumpy "Oh man, what a stinking mess!"
+    mc onfire "Oh man, what a stinking mess!"
 
     na "I run over, pushing aside some people investigating it. They shoot me dirty looks, but upon seeing Leona, they take the hint and leave."
 
     voice "voice/4-scene_4-3.ogg" #Leona (Dot)
-    le "So what's wrong with it? As I said when we met, we don't exactly have ships like yours."
+    le concerned "So what's wrong with it? As I said when we met, we don't exactly have ships like yours."
     voice "voice/4-scene_4-4.ogg" #Raine (Nat)
-    mc sighing "Well... first of all, it's upside down. It's going to be a pain to flip over."
+    mc grr "Well... first of all, it's upside down. It's going to be a pain to flip over."
     voice "voice/4-scene_4-5.ogg" #Leona (Dot)
     le look "But can you fix it?"
-    na "I lean down to look at the roof of the ship, now planted into the ground, pieces of scrap metal poking out in several ugly shapes and directions."
+    na "I lean down to look at the roof of the ship, now pressed firmly against the ground, metal jutting out every which way."
     voice "voice/4-scene_4-6.ogg" #Raine (Nat)
-    mc "Not sure. The hardware will be a real bitch to repair, but I can do it."
+    mc sighing "Not sure. The hardware will be a real bitch to repair, but I can do it."
     voice "voice/4-scene_4-7.ogg" #Raine (Nat)
-    mc shyspeak "The software is the issue. If it's trashed, I'm not sure if it can be fixed."
+    mc grumpy "The software is the issue. If it's trashed, I'm not sure if it can be fixed."
     na "Juneau... please be alright."
     voice "voice/4-scene_4-8.ogg" #Leona (Dot)
-    le kind a2 "Hey, don't look so down!"
+    le concerned "Hey, don't look so down!"
     voice "voice/4-scene_4-9.ogg" #Leona (Dot)
-    le "I'm sure you'll get it fixed! You're a high-tech alien, I'm sure this is nothing for you!"
+    le kind a2 "I'm sure you'll get it fixed! You're a high-tech alien, This must be nothing for you!"
     voice "voice/4-scene_4-10.ogg" #Raine (Nat)
-    mc happy "Heh. While your baseless confidence is flattering, I think you might be overestimating me."
+    mc hmm "Heh. While your baseless confidence is flattering, I think you might be overestimating me."
     play sound "sfx/Metal fix.ogg"
     na "I push together two pieces of metal, one of which was mildly bent. Holding them in place, I grab a nearby tool and try to turn the screw that originally held them together."
     voice "voice/4-scene_4-11.ogg" #Leona (Dot)
@@ -59,7 +60,7 @@ label scene_4:
     voice "voice/4-scene_4-17.ogg" #Leona (Dot)
     le happy2 a1 "I can pick some more up, if you'd like."
     voice "voice/4-scene_4-18.ogg" #Raine (Nat)
-    mc happy "Yeeesss."
+    mc smugly "...Yes."
     voice "voice/4-scene_4-19.ogg" #Leona (Dot)
     le happy a1 "We'll make a stop at the store later then."
     voice "voice/4-scene_4-20.ogg" #Leona (Dot)
@@ -71,7 +72,7 @@ label scene_4:
     voice "voice/4-scene_4-23.ogg" #Leona (Dot)
     le happy a2 "I kinda wanna look at your ship. It's alien technology! I've never seen anything like it."
     voice "voice/4-scene_4-24.ogg" #Raine (Nat)
-    mc questioning2 "Sure, just don't go pressing any random buttons."
+    mc hmm "Sure, just don't go pressing any random buttons."
 
     hide le with dissolve
     $ hide_sides = []
@@ -79,9 +80,9 @@ label scene_4:
     show street_open:
         ease 2.0 zoom 2.0 xalign 0.95 yalign 0.9
 
-    na "I smile at her as I turn towards the direction of a door with a sign that reads 'STORAGE ROOM'."
-    na "Behind me, I listen to Leona talk to herself as she prods about with my ship."
-    na "..."
+    na "I smile to myself as I turn and make towards the door in the corner with the sign above it that reads 'STORAGE'."
+    na "Behind me, Leona talks to herself as she prods about the ship."
+
     voice "voice/4-scene_4-25.ogg" #Leona (Dot)
     le speakingthink "This is really amazing stuff, even when it's in shambles."
     voice "voice/4-scene_4-26.ogg" #Leona (Dot)
