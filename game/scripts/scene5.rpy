@@ -208,65 +208,70 @@ label scene_5:
 
     voice "voice/5-default-38.ogg" #Raine (Nat)
     mc happy "Yeah, yeah! Leona here pulled my butt out of a tree and helped get you back online."
-    show le awk at stage_left with dissolve:
+    show le look at stage_left with dissolve:
         xflip
+    show ju wha at stage_right with dissolve
     voice "voice/5-default-39.ogg" #Leona (Dot)
-    le "Hellooo~"
+    le "...Uuh, Hellooo~"
 
     voice "voice/5-default-40.ogg" #Juneau (Lily)
     ju noice "Hi! Thanks a bundle for the save. Those horns real?"
 
     voice "voice/5-default-41.ogg" #Leona (Dot)
-    le questioning a1 "Uuh, yes?"
+    le curious "Uuh, yes?"
+    show le thinky  with dissolve
 
 
     voice "voice/5-default-42.ogg" #Juneau (Lily)
-    ju "Interesting. To think we'd find a planet with unknown aliens..."
+    ju detb "Interesting. To think we'd find a planet with unknown aliens..."
+    show le curious2 with dissolve
 
 
     voice "voice/5-default-43.ogg" #Juneau (Lily)
     ju snarky a2 "I can't believe you've been out here having all the fun while I was offline!"
-    show le speakingsurprised a1
-    show ju annoyed a1
-    with dissolve
+    show le look with dissolve
+    show ju annoyed a1 with dissolve
 
     voice "voice/5-default-44.ogg" #Juneau (Lily)
     ju annoyed a1 "My clock says I was out for an entire day, Raine! You left me alone, you jerk!"
-
+    show le awk
     voice "voice/5-default-45.ogg" #Raine (Nat)
-    mc upset "I-wait. You were the one that ejected me! {i}I'm{/i} the one that fell a couple thousand meters in nothing but a chair and fabric."
-
+    mc grr "I-wait. You were the one that ejected me! {i}I'm{/i} the one that fell a couple thousand meters in nothing but a chair and fabric."
+    show le look with dissolve
 
     voice "voice/5-default-46.ogg" #Juneau (Lily)
     ju sarcastic a1 e1 b4 "Oh boohoo, I'm Raine and I came out unscathed from my crash, oh woe is me!"
 
 
+
     voice "voice/5-default-47.ogg" #Juneau (Lily)
     ju annoyed a2 "{i}Your{/i} body wasn't torn to bits!"
 
-
+    show le awk with dissolve
     voice "voice/5-default-48.ogg" #Raine (Nat)
     mc blech "Bah, you drama queen."
+    show ju det with dissolve
 
     na "This is good. This is {i}really{/i} good."
     na "She's acting just like herself. It appears things went right for once."
     na "Like old times, I ignore Juneau, looking over to my pride and joy."
 
-
+    show le look with dissolve
     voice "voice/5-default-49.ogg" #Juneau (Lily)
-    ju snarky a1 "Pay attention to me, dammit!"
-
+    ju damn "Pay attention to me, dammit!"
+    show ju det with dissolve
 
     voice "voice/5-default-50.ogg" #Leona (Dot)
-    le happy a2 "Oh, I'll do it! I've never talked to a computer before."
+    le hype "Oh, I'll do it! I've never talked to a computer before."
 
-
+    show ju wha with dissolve
+    show le huh with dissolve
     voice "voice/5-default-51.ogg" #Raine (Nat)
     mc upset "Juneau, if you start spilling personal details to her I will downgrade you to a food processor."
 
 
     voice "voice/5-default-52.ogg" #Juneau (Lily)
-    ju "Spoil sport. Leona, let's chat~"
+    ju loe "Spoil sport. Leona, let's chat~"
     hide ju
     hide le
     with moveoutright
