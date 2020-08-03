@@ -267,7 +267,7 @@ label scene_2:
     voice "voice/2-scene_2-55.ogg" #Leona (Dot)
     le happy a2 "Whaddya think?"
 
-    na "I'd say the town felt almost like a human colony, at least one in it's very early stages."
+    na "I'd say the town felt almost like a Human colony, at least one in it's very early stages."
 
     voice "voice/2-scene_2-56.ogg" #Raine (Nat)
     mc shocked armraised "Wow, you've built quite a little settlement here."

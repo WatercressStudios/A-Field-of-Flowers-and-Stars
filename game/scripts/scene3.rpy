@@ -444,7 +444,7 @@ label scene_3:
     play sound3 "amb/City Day.ogg" fadein 2.0
 
     na "Leona's neighborhood is full of people just like her, with differently shaped horns and a variety of builds."
-    na "They're super similar to humans, minus the horns."
+    na "They're super similar to Humans, minus the horns."
     na "Were I more interested in xenobiology, I'd certainly be interested in how they grow. Are they part of the skull, or are they more like antlers?"
 
     #Voice lines are not implimented yet

@@ -383,7 +383,7 @@ label scene_5:
 
 
     voice "voice/5-default-73.ogg" #Leona (Dot)
-    le questioning a3 "So it's not human? I don't get it."
+    le questioning a3 "So it's not Human? I don't get it."
 
 
     voice "voice/5-default-74.ogg" #Raine (Nat)
@@ -593,7 +593,7 @@ label scene_5:
 
 
     voice "voice/5-default-121.ogg" #Leona (Dot)
-    le "I wanna meet them and the human ones too."
+    le "I wanna meet them and the Human ones too."
 
 
     voice "voice/5-default-122.ogg" #Raine (Nat)
