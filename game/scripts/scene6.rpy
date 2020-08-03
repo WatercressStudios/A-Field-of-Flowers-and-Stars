@@ -9,7 +9,7 @@ label scene_6:
     voice "voice/6-scene_6-1.ogg" #Leona (Dot)
     le "See? It's not {i}that{/i} hot."
     voice "voice/6-scene_6-2.ogg" #Raine (Nat)
-    mc surprised "It has to be at least 35c in here!"
+    mc upset "It has to be at least 35°C in here!"
     show le happy speaking a2 with dissolve
     voice "voice/6-scene_6-3.ogg" #Leona (Dot)
     le "Whatever that means. I think it's nice 'n' toasty."
@@ -94,7 +94,7 @@ label scene_6:
 
     na "We continue our trek into the caves, the air growing ever more humid."
     na "As we navigate the caves, the temperature slowly drops and damp water settles on my skin."
-    na "Great, first it was hot and now I'm nearly shivering."
+    na "Great, first it was hot, and now I'm nearly shivering."
     na "Leona continues forward, ahead of me. I walk quietly and carefully behind her, trusting her as the expert here."
     na "I may be able to navigate an asteroid belt and maneuver around a pulsar, but down here, she's queen."
     na "She's a little airheaded, but… she knows what she's doing. I have more faith in her than I do myself in a place like this."
@@ -120,7 +120,7 @@ label scene_6:
     play sound "sfx/cave switch.ogg"
     na "Putting my hand on it, I feel something give way, ever so slightly, and hear a small click from further inside."
     voice "voice/6-scene_6-38.ogg" #Raine (Nat)
-    mc "Hey, I think I found something--"
+    mc shocked m2 "Hey, I think I found something--"
 
 
     ###
@@ -136,10 +136,10 @@ label scene_6:
     na "Where'd Leona go?"
     na "Crap, I should have said something. Rule number one: Stay with the guide!"
     na "Okay, okay, okay, let's think about this."
-    na "When lost, those who wander are dead. If I sit still Leona will notice that I'm gone, and come and find me."
+    na "When lost, those who wander are dead. If I sit still, Leona will notice that I'm gone, and come and find me."
     na "She can probably smell me, too."
     na "I'm tempted to yell out, but maybe that'd confuse her? I'm sure my voice echoing through the cave would hurt her little goat ears."
-    na "But, then again, if I yell out, she'd know that I'm not with her."
+    na "But then again, if I yell out, she'd know that I'm not with her."
     na "Screw it."
     voice "voice/6-scene_6-40.ogg" #Raine (Nat)
     mc shocked m2 "...Leona? I, uhh, I think I'm lost."
@@ -240,7 +240,7 @@ label scene_6:
 
     stop music fadeout 3.0
     na "After about half an hour of walking, we finally reach our destination; a large alcove with a door and panel at the very back of the cave. "
-    na "Everything here looks to be scaled up compared to human or dawnese standards."
+    na "Everything here looks to be scaled up compared to Human or Dawnese standards."
     na "Whoever built this must have been pretty tall."
     show le happy a2 at stage_right with dissolve
 
