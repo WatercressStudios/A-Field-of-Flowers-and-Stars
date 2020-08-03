@@ -9,9 +9,11 @@ label scene_4:
             easein_back 3.0 ypos 0.2
 
     na "After a brief tour, we complete a loop around the neighborhood and approach a garage just around the corner from Leona's house."
+
     na "I hope Juneau is okay..."
 
     $ hide_sides = ['Leona']
+
     show le kindly at stage_right with dissolve:
         xalign 1.3
     voice "voice/4-scene_4-1.ogg" #Leona (Dot)
@@ -243,7 +245,7 @@ label scene_4:
     na "As I lay in bed, I remember the stories Leona told me earlier."
     na "If I'm going to be here for a while, I guess it wouldn't hurt to document some things."
     voice "voice/4-scene_4-74.ogg" #Raine (Nat)
-    mc speaking "Hey, Leona?"
+    mc questioning "Hey, Leona?"
     na "Leona, who is now cleaning up after our meal, pokes her head out from the kitchen."
     voice "voice/4-scene_4-75.ogg" #Leona (Dot)
     le happy a1 "Yes?"
@@ -252,7 +254,7 @@ label scene_4:
     voice "voice/4-scene_4-77.ogg" #Leona (Dot)
     le curious "Is digital alright?"
     voice "voice/4-scene_4-78.ogg" #Raine (Nat)
-    mc shyspeak "That would be wonderful."
+    mc oho "That would be wonderful."
     voice "voice/4-scene_4-79.ogg" #Leona (Dot)
     le happy a2 "Check the shelf on the back wall. There are a bunch of mediapads I bought a while ago for next to nothing, so you can keep one if you want."
     voice "voice/4-scene_4-80.ogg" #Raine (Nat)
