@@ -49,7 +49,7 @@ label scene_5:
 
 
     voice "voice/5-default-11.ogg" #Raine (Nat)
-    mc stern "...I think it's time we found the other survivor."
+    mc gentlehandtalk "...I think it's time we found the other survivor."
 
 
     voice "voice/5-default-12.ogg" #Leona (Dot)
@@ -81,7 +81,7 @@ label scene_5:
 
 
     voice "voice/5-default-19.ogg" #Raine (Nat)
-    mc unimpressed "Did you find any of my tools earlier?"
+    mc gentlehandtalk "Did you find any of my tools earlier?"
 
 
     voice "voice/5-default-20.ogg" #Leona (Dot)
@@ -133,12 +133,7 @@ label scene_5:
 
 
     voice "voice/5-default-30.ogg" #Leona (Dot)
-
-    hide le surprised with dissolve
-
-    show le happy a2 at stage_right with dissolve
-
-    le "Encore!"
+    le happy2 a1 "Encore!"
 
 
     voice "voice/5-default-31.ogg" #Raine (Nat)
@@ -160,25 +155,24 @@ label scene_5:
 
 
     voice "voice/5-default-32.ogg" #Raine (Nat)
-    mc hmm- "Leona, hook the battery to the transformer you found, and that to your hanger's power source. We should be set once you're done."
+    mc stern "Leona, hook the battery to the transformer you found, and that to your hanger's power source. We should be set once you're done."
 
     na "These past few days without Juneau have been agonizing. Even if her hardware appears to be good to go, I won't know until I boot her up."
-    na "And while I've examined the ship pretty thoroughly, I haven't looked into the availability of the parts needed to get this bird off the ground again."
-    na "I've been making a list of things to replace, but priorities are priorities."
-    na "Juneau comes first. If she's gone..."
-    na "...Well, I won't have to worry about shopping for much longer."
+    na " And while I've examined the ship pretty thoroughly, I haven't looked into the availability of the parts needed to get this bird off the ground again."
+    na "I have a list all drawn up, but priorities are priorities."
+    na "Juneau comes first, always."
 
 
     voice "voice/5-default-33.ogg" #Raine (Nat)
-    mc questioning "How're we doing, Leona?"
+    mc concernspeak "How're we doing, Leona?"
 
     show le crazy a2 at stage_left with dissolve:
         xflip
     voice "voice/5-default-34.ogg" #Leona (Dot)
     le "Almost got it!"
 
-    na "She's surprisingly adept at the mechanical side of things, despite not being sure what half of everything does."
-    na "To be fair, she's been trying very hard to learn as much as she can, bless her heart."
+    na "She's surprisingly adept at the mechanical side of things, despite her clumsy nature."
+    na "To be fair to her, she's been trying very hard to learn as much as she can. She wants to help me, bless her heart."
     na "While I could do all of this on my own, it feels good to have someone who isn't a collection of ones and zeros on my side for once."
 
     voice "voice/5-default-35.ogg" #Leona (Dot)
@@ -194,28 +188,27 @@ label scene_5:
     na "Just another part sucked out the ejection hatch with me, I guess."
     na "She won't be able to form hard light just yet, but at least she'll be on display."
     na "The light blinks slowly, then quickly, eventually becoming a solid green."
-
-    play sound "sfx/power up.ogg"
-    show ju aah at hologram:
+    show ju concerned a1 at hologram:
         stage_right
+    pause 1.0
     voice "voice/5-default-36.ogg" #Juneau (Lily)
     ju "...Huh?"
 
     na "Juneau materializes."
 
     voice "voice/5-default-37.ogg" #Juneau (Lily)
-    ju worry "I-Is t-that you? Raine? You’re okay?!"
+    ju concerned a2 "I-Is t-that you? Raine? You’re okay?!"
 
     voice "voice/5-default-38.ogg" #Raine (Nat)
-    mc happy "Yeah, yeah! Leona here pulled my butt out of a tree and helped get you back online."
-    show le look at stage_left with dissolve:
+    mc oho "Yeah, yeah! Leona here pulled my butt out of a tree and helped get you back online."
+    show le happy a1 at stage_left with dissolve:
         xflip
     show ju wha at stage_right with dissolve
     voice "voice/5-default-39.ogg" #Leona (Dot)
-    le "...Uuh, Hellooo~"
+    le "Umm... Hellooo..."
 
     voice "voice/5-default-40.ogg" #Juneau (Lily)
-    ju noice "Hi! Thanks a bundle for the save. Those horns real?"
+    ju snarky a1 "Hi! Thanks a bundle for the save. Those horns real?"
 
     voice "voice/5-default-41.ogg" #Leona (Dot)
     le curious "Uuh, yes?"
@@ -400,10 +393,10 @@ label scene_5:
     le suspicious a2 "According to my top lieutenant, yeah. Everything here came from that area."
 
     na "Hell, there's stuff here I can probably use to streamline my ship. Maybe the poor thing won't get torn apart next time I happen upon a wormhole."
-    na "...Actually, forget upgrades, I can't even get this thing off the ground as it stands."
+
 
     voice "voice/5-default-77.ogg" #Raine (Nat)
-    mc surprised "Bit of a problem, Juneau. Engine's gone."
+    mc surprised "Oh, that'll be a bit of a problem, Juneau. Engine's gone."
 
 
     voice "voice/5-default-78.ogg" #Juneau (Lily)
