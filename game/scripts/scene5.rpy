@@ -657,7 +657,7 @@ label scene_5:
 
 
     voice "voice/5-default-137.ogg" #Leona (Dot)
-    le happy speaking a3 "Ooh, good idea. We can swap stories."
+    le happyspeaking a3 "Ooh, good idea. We can swap stories."
 
 #VFX JOURNAL ENTRY ADDED 2
 
