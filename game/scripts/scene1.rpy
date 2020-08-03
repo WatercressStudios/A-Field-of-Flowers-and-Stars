@@ -409,9 +409,6 @@ label scene1:
     voice "voice/1-scene1-53.ogg" #Raine (Nat)
     mc shocked armraised "Shit. Don't wanna go there."
 
-    voice "voice/1-scene1-54.ogg" #Raine (Nat)
-    mc annoyed "Out of the frying pan and into the fire."
-
     voice "voice/1-scene1-55.ogg" #Raine (Nat)
     mc upset "Juneau, I need you! Like, right now!"
 
