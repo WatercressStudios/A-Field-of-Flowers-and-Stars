@@ -271,7 +271,10 @@ label scene_5:
 
 
     voice "voice/5-default-52.ogg" #Juneau (Lily)
-    ju loe "Spoil sport. Leona, let's chat~"
+    ju loe "Spoil sport {nw}."
+
+    voice "voice/5-default-52.2.ogg" #Juneau (Lily)
+    ju noice "Leona, let's chat!"
     hide ju
     hide le
     with moveoutright
@@ -282,7 +285,7 @@ label scene_5:
 
     show ju sarcastic a1 e2 at stage_right with dissolve
     voice "voice/5-default-53.ogg" #Juneau (Lily)
-    ju "Hey, you're not allowed to slack now that you have me back, lazy ass."
+    ju tch "Hey, you're not allowed to slack now that you have me back, lazy ass."
 
 
     voice "voice/5-default-54.ogg" #Raine (Nat)
