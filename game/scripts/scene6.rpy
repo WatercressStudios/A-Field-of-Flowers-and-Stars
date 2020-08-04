@@ -12,9 +12,9 @@ label scene_6:
     mc upset "It has to be at least 35°C in here!"
     show le happy speaking a2 with dissolve
     voice "voice/6-scene_6-3.ogg" #Leona (Dot)
-    le "Whatever that means. I think it's nice 'n' toasty."
+    le "Whatever that means. I think it's nice and toasty."
     voice "voice/6-scene_6-4.ogg" #Leona (Dot)
-    le "Much better than outside, it's always freezing out there."
+    le "Much better than outside. It's always freezing out there."
     voice "voice/6-scene_6-5.ogg" #Raine (Nat)
     mc unimpressed "I think I'd rather be out there in the direct sunlight, thanks."
     voice "voice/6-scene_6-6.ogg" #Raine (Nat)
@@ -58,7 +58,7 @@ label scene_6:
     voice "voice/6-scene_6-18.ogg" #Leona (Dot)
     le happy a2 "I found the word I was looking for. You’re scrawny!"
     voice "voice/6-scene_6-19.ogg" #Raine (Nat)
-    mc annoyed "I'll show you scrawny, ya dingbat."
+    mc annoyed "I'll show you scrawny, ya dingbat!"
     voice "voice/6-scene_6-20.ogg" #Leona (Dot)
     le sassyquestioning "Oho? And how will you do that?"
     na "A playful smirk comes across my face."
@@ -77,7 +77,7 @@ label scene_6:
     voice "voice/6-scene_6-27.ogg" #Raine (Nat)
     mc "I thought it was just the adrenaline at the time, but it didn't seem like we fell very hard."
     voice "voice/6-scene_6-28.ogg" #Leona (Dot)
-    le concerned "...I don't follow."
+    le concerned "Uhhh...I… I don’t follow"
     voice "voice/6-scene_6-29.ogg" #Raine (Nat)
     mc questioning2 "Are there any rocks you can pick up around us?"
     voice "voice/6-scene_6-30.ogg" #Leona (Dot)
@@ -102,7 +102,7 @@ label scene_6:
     voice "voice/6-scene_6-34.ogg" #Leona (Dot)
     le suspicious a2 "Smell that?"
     voice "voice/6-scene_6-35.ogg" #Raine (Nat)
-    mc questioning2 "What?"
+    mc questioning2 "Uhhh... What?"
 
     voice "voice/6-scene_6-36.ogg" #Leona (Dot)
     le happy a2 "Rust! We're getting close to something." #i wanted to put a bounce but couldnt figure out the right format since i keep getting errors
@@ -272,7 +272,7 @@ label scene_6:
     na "As Leona gingerly flips through muddied pages, I saunter towards the panel adjacent to the metal behemoth."
     na "It's a digital lock alright. I'd be surprised if it still had any juice left in it."
     voice "voice/6-scene_6-66.ogg" #Raine (Nat)
-    mc "One thing's for sure, this control panel's as old as dirt. Wanna take a guess at how long it's been here?"
+    mc "One thing's for sure, this control panel's old as dirt. Wanna take a guess at how long it's been here?"
     voice "voice/6-scene_6-67.ogg" #Leona (Dot)
     le questioning a3 "A while?"
     na "Leona continues to study her books, eyes only occasionally glancing back in my direction."

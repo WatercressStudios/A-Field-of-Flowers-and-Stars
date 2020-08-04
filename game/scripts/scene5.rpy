@@ -73,7 +73,7 @@ label scene_5:
 
 
     voice "voice/5-default-17.ogg" #Raine (Nat)
-    mc concernspeak "Not sure. Yesterday I touched up the hull and engine, but there's no power to release the hatch."
+    mc concernspeak "Yesterday I touched up the hull and engine, but there's no power to release the hatch."
 
 
     voice "voice/5-default-18.ogg" #Raine (Nat)
@@ -160,7 +160,7 @@ label scene_5:
 
 
     voice "voice/5-default-32.ogg" #Raine (Nat)
-    mc hmm- "Leona, hook the battery to the transformer you found, and that to your hanger's power source. We should be set once you're done."
+    mc hmmm- "Leona, hook the battery to the transformer you found, and that to your hanger's power source. We should be set once you're done."
 
     na "These past few days without Juneau have been agonizing. Even if her hardware appears to be good to go, I won't know until I boot her up."
     na "And while I've examined the ship pretty thoroughly, I haven't looked into the availability of the parts needed to get this bird off the ground again."
@@ -278,7 +278,7 @@ label scene_5:
     hide ju
     hide le
     with moveoutright
-    na "As the two get to know each other I scour what's left of my ship."
+    na "As the two get to know each other, I scour what's left of my ship."
     na "Leona's team was nice enough to bring my ship back to the city, pieces and all, but my original assessment was right - this'll be one hell of a task."
     na "Honestly, I don't know if I'll be able to get this thing flying again. So many parts are ripped up, dented, melted or downright missing."
     na "Sighing, I stretch out my arms, ready for a very, very long day."

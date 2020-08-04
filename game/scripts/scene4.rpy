@@ -32,7 +32,7 @@ label scene_4:
     le look "But can you fix it?"
     na "I lean down to look at the roof of the ship, now pressed firmly against the ground, metal jutting out every which way."
     voice "voice/4-scene_4-6.ogg" #Raine (Nat)
-    mc sighing "Not sure. The hardware will be a real bitch to repair, but I can do it."
+    mc sighing "Huh. Not sure. The hardware will be a real bitch to repair, but I can do it."
     voice "voice/4-scene_4-7.ogg" #Raine (Nat)
     mc grumpy "The software is the issue. If it's trashed, I'm not sure if it can be fixed."
     na "Juneau... please be alright."
@@ -60,7 +60,7 @@ label scene_4:
     voice "voice/4-scene_4-17.ogg" #Leona (Dot)
     le happy2 a1 "I can pick some more up, if you'd like."
     voice "voice/4-scene_4-18.ogg" #Raine (Nat)
-    mc smugly "...Yes."
+    mc smugly "...Yes!"
     voice "voice/4-scene_4-19.ogg" #Leona (Dot)
     le happy a1 "We'll make a stop at the store later then."
     voice "voice/4-scene_4-20.ogg" #Leona (Dot)
@@ -86,7 +86,7 @@ label scene_4:
     voice "voice/4-scene_4-25.ogg" #Leona (Dot)
     le speakingthink "This is really amazing stuff, even when it's in shambles."
     voice "voice/4-scene_4-26.ogg" #Leona (Dot)
-    le "I never could have imagined this type of metal could be used like this."
+    le kindly "Oh, uh, thanks! I never could have imagined this type of metal could be used like this."
     voice "voice/4-scene_4-27.ogg" #Leona (Dot)
     le curious "Or that this shape would make for a good space ship."
     voice "voice/4-scene_4-28.ogg" #Leona (Dot)
@@ -99,13 +99,13 @@ label scene_4:
     voice "voice/4-scene_4-29.ogg" #Leona (Dot)
     le awk "Oops."
     voice "voice/4-scene_4-30.ogg" #Leona (Dot)
-    le shylook "And she just fixed that too..."
+    le shylook "Uhhh... And she just fixed that too..."
     voice "voice/4-scene_4-31.ogg" #Leona (Dot)
     le "Not a great start."
     na "Leona notices me watching from the doorway."
     na "I've caught her red handed."
     voice "voice/4-scene_4-32.ogg" #Raine (Nat)
-    mc "Everything okay?"
+    mc "Uhhh... Everything okay?"
     voice "voice/4-scene_4-33.ogg" #Leona (Dot)
     le "Yeah! Totally! Um, actually no, it's not..."
     voice "voice/4-scene_4-34.ogg" #Raine (Nat)
@@ -133,7 +133,7 @@ label scene_4:
     voice "voice/4-scene_4-45.ogg" #Raine (Nat)
     mc happy "Haha, I'll bet."
     voice "voice/4-scene_4-46.ogg" #Raine (Nat)
-    mc questioning "As soon as everyone realized who I was, they cleared out of there right quick."
+    mc questioning "As soon as everyone realized who I was, they cleared out of there really quick."
     voice "voice/4-scene_4-47.ogg" #Raine (Nat)
     mc "I bet the one in the storage room is only still there because he felt a bit trapped."
     voice "voice/4-scene_4-48.ogg" #Leona (Dot)
