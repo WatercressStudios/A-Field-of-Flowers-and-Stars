@@ -109,6 +109,14 @@ init:
         hide_sides = []
 
         #Leona
+        MapEmote('le huh', 'le hip base arms_raised tail_default2 md_pout ed_wide brow_up')
+        MapEmote('le hype', 'le hip base arms_raised tail_default mdo_smuggrin ed_wide brow_up')
+        MapEmote('le curious2', 'le think base tail_default md_default ed_default brow_default')
+        MapEmote('le teehee', 'le hip base arms_default tail_default2 mdo_smuggrin ed_bedroom brow_up')
+        MapEmote('le kindly', 'le neutral base arms_raised md_default ed_default brow_uparrow')
+        MapEmote('le smuglite', 'le hip base arms_pout tail_default2 md_default ed_bedroom brow_default')
+        MapEmote('le thinky', 'le think base tail_default2 md_default ed_look brow_default')
+        MapEmote('le awk', 'le neutral base arms_default md_default ed_default brow_uparrow')
         MapEmote('le curious', 'le think base tail_default mdo_default ed_default brow_default')
         MapEmote('le speaking a1', 'le neutral base arms_default mdo_default ed_default brow_default')
         MapEmote('le speaking a2', 'le neutral base arms_raised mdo_default ed_default brow_default')
@@ -153,8 +161,21 @@ init:
         #MapEmote('le pout p1 2', 'le neutral base arms_raised md_default ed_away brow_line')
 
         #juneau
+        MapEmote('ju damn', 'ju red hair_default base arms_angry md_default ec_angry brow_default')
+        MapEmote('ju detb', 'ju blue base arms_default md_default ed_default brow_downarrow')
+        MapEmote('ju wha', 'ju red hair_default base arms_worried md_small ed_glitch brow_raised')
+        MapEmote('ju noice', 'ju blue base arms_raised mdo_default ed_slightlyclosed brow_raised')
+        MapEmote('ju worry', 'ju red hair_default2 base arms_worried mdo_small ed_glitch brow_worried')
+        MapEmote('ju aah', 'ju red hair_default2 base arms_angry mdo_small ed_glitch brow_raised')
+        MapEmote('ju thriller', 'ju red hair_default base arms_glitch md_small ed_glitch brow_worried')
+        MapEmote('ju det', 'ju red hair_default2 base arms_angry md_small ed_default brow_default')
+        MapEmote('ju whoa', 'ju red hair_default base arms_worried mdo_O ed_glitch brow_raised')
+        MapEmote('ju loe', 'ju blue base arms_default md_line ed_default brow_default')
+        MapEmote('ju tch', 'ju blue base arms_default md_O ed_slightlyclosed brow_downarrow')
+        MapEmote('ju blu neutral', 'ju blue base arms_default md_O ed_default brow_raised')
         MapEmote('ju snarky a1', 'ju blue base arms_default mdo_O ed_slightlyclosed brow_raised')
         MapEmote('ju snarky a2', 'ju blue base arms_raised mdo_O ed_slightlyclosed brow_raised')
+        MapEmote('ju snarky a3', 'ju blue base arms_raised_tea mdo_O ed_slightlyclosed brow_raised')
         MapEmote('ju concerned a1', 'ju blue base arms_default mdo_O ed_default brow_uparrow')
         MapEmote('ju concerned a2', 'ju blue base arms_raised mdo_O ed_default brow_uparrow')
         MapEmote('ju speaking eclosed', 'ju blue base arms_default mdo_O ec_default brow_raised')
@@ -168,6 +189,23 @@ init:
         MapEmote('ju red worried speaking', 'ju red hair_default base arms_default mdo_small ed_glitch brow_worried')
         MapEmote('ju red sassy', 'ju red hair_default base arms_default mdo_default ec_angry brow_default')
         #raine
+        MapEmote('mc det', 'mc confident base md_default ed_default brow_angry')
+        MapEmote('mc smugly', 'mc confident base md_smug ec_default brow_raised')
+        MapEmote('mc worry', 'mc normal base md_line ed_lookaway brow_sad')
+        MapEmote('mc xpl', 'mc normal armraised md_default ed_lookup brow_angry')
+        MapEmote('mc yuck2', 'mc angry base mdo_default ec_angry brow_angry')
+        MapEmote('mc thonk', 'mc confident base md_stretch ec_default brow_angry')
+        MapEmote('mc yuck', 'mc angry base mdo_toothy ec_angry brow_angry')
+        MapEmote('mc grr', 'mc angry base md_default ed_default brow_angry')
+        MapEmote('mc smug', 'mc armraised base md_smug ed_squint')
+        MapEmote('mc unamused', 'mc confident base md_stretch ed_default brow_sad')
+        MapEmote('mc anger', 'mc angry base mdo_toothy ed_default brow_angry')
+        MapEmote('mc ohno', 'mc angry hands md_default ed_default brow_angry')
+        MapEmote('mc oho', 'mc confident base md_default ed_default brow_raised')
+        MapEmote('mc hmm', 'mc confident base md_stretch ed_default brow_raised')
+        MapEmote('mc dreamworks', 'mc normal armraised md_default ed_default brow_dreamworks')
+        MapEmote('mc nono', 'mc angry hands mdo_default ec_default brow_angry')
+        MapEmote('mc ugh', 'mc angry base mdo_default ec_default brow_default')
         MapEmote('mc thankful', 'mc normal base mdo_default ed_default brow_sad')
         MapEmote('mc yawn', 'mc armraised base mdo_default ed_default')
         MapEmote('mc yawn2', 'mc armraised base mdo_default ed_squint')
@@ -282,9 +320,9 @@ label splashscreen:
     python:
             if not persistent.set_volumes:
                 persistent.set_volumes = True
-                _preferences.volumes['music'] *= 1
-                _preferences.volumes['voice'] *= 1
-                _preferences.volumes['sfx'] *= 1
+                _preferences.volumes['music'] *= .7
+                _preferences.volumes['voice'] *= .7
+                _preferences.volumes['sfx'] *= .7
 
     ##Play the music configured in options so that the music begins as soon as the splash screen shows
     $ renpy.music.play(config.main_menu_music)
@@ -295,16 +333,18 @@ label splashscreen:
         subpixel True
         alpha 0
         zoom 0.4
-        anchor (0.5, 0.5)
+        anchor (0.5, 0.45)
         align (0.5, 0.5)
         parallel:
-            linear 2 alpha 1
+            ease 2 alpha 1
         parallel:
-            linear 6 zoom 0.3
+            easein2 6 zoom 0.3
     $ renpy.pause(3, hard=False)
-    hide afofaslogo with Dissolve(1.0)
-    #scene black with Dissolve(2.0)
+    hide afofaslogo with Dissolve(2)
 
+
+    #scene black with Dissolve(2.0)
+    jump update
     ##When the splash screen ends, we jump to the updater script. If theres no updates, it will go to the menu screen and be invisible to the player.
     #jump update
 
@@ -316,12 +356,14 @@ label splashscreen:
 #     # show screen main_menu
 #     $ renpy.call_in_new_context("main_menu")
 
-label update:
     ##If a new update exists, run the updater script located in the engine files at renpy/common/00updater.rpy
     ##**Note: Sarchalen uses a modified version of 00updater.rpy which integrates our GUI to create a seamless user experience.**##
     ##**If renpy is not using our game's GUI when the updater is run, you need to add this file to the renpy SDK before you create a build.**##
     ##**If anyone knows how to do this without modifying engine files please let us know :) **##
 
+label update:
+    $ UPDATE_URL = "http://sarchalen.com/afieldofflowersandstars/update/updates.json"
+    $ new_version = updater.UpdateVersion(url=UPDATE_URL, simulate=None)
     if new_version != None:
         $ updater.update(url=UPDATE_URL, base=None, force=False, public_key=None, simulate=None, add=[], restart=True)
     else:

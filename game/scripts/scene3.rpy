@@ -1,5 +1,7 @@
 label scene_3:
 
+    scene black
+    pause 2
     #iris open
     scene house with wipeup:
         zoom 0.75
@@ -7,12 +9,14 @@ label scene_3:
 
     na "As I wake, I feel a mountain of pillows and blankets all around me."
     voice "voice/3-scene_3-1.ogg" #Raine (Nat)
-    mc blech "Nhyegh-"
-    na "Digging myself out and sitting up, I look around the room and am reminded of my situation."
-    na "Leona, was it? What a life saver."
-    na "I don't know what I would have done if she didn't show up."
-    na "Her and that green healing gunk."
-    na "Where is she, by the way?"
+    mc ugh "Nhyegh-"
+
+    na "Hauling myself up, I wipe the sleep from my eyes and take in my surroundings."
+    na "In this moment, everything that's happened slams back into my mind."
+    na "The wormhole. The crash. Goat people-"
+    na "-no, goat girl. Leona."
+    na "Leona's pillowy... bed-pile?"
+    na "Comfy as hell, I'll admit."
 
     #movement SFX
     play sound "sfx/footsteps 2.ogg"
@@ -20,9 +24,7 @@ label scene_3:
 
     voice "voice/3-scene_3-2.ogg" #Leona (Dot)
     le "Hey Raine! Good morning!"
-
     show le happy a1 at stage_right with dissolve
-    na "Leona emerges from the kitchenette."
 
     voice "voice/3-scene_3-3.ogg" #Leona (Dot)
     le "You've been out for a long time, the sun just came up!"
@@ -40,7 +42,7 @@ label scene_3:
     mc unimpressed  "I must have been pretty tired after yesterday."
 
     voice "voice/3-scene_3-8.ogg" #Leona (Dot)
-    le speaking a1 "It's alright, both body and mind need rest after a traumatic experience, you know?"
+    le awk "It's alright, both body and mind need rest after a traumatic experience, you know?"
     voice "voice/3-scene_3-9.ogg" #Leona (Dot)
     le "Want some food? I'm cooking some stuff right now if you want some!"
 
@@ -49,14 +51,14 @@ label scene_3:
     #stomach growl SFX
 
     play sound "sfx/stomach.ogg"
-    pause 1.0
+    pause 3.0
 
     voice "voice/3-scene_3-10.ogg" #Leona (Dot)
     le smug a2 "Is that a yes?"
 
 
     voice "voice/3-scene_3-11.ogg" #Raine (Nat)
-    mc surprised "Sure, I'd like that."
+    mc happy "Sure, I'd like that."
 
     voice "voice/3-scene_3-12.ogg" #Leona (Dot)
     le smug a3 "One plate of grub, coming up!"
@@ -77,28 +79,28 @@ label scene_3:
     na "Food is food. If we share similar enough biology that her medicine works then this should go down without much of a fuss, right?"
 
     voice "voice/3-scene_3-15.ogg" #Raine (Nat)
-    mc "Thanks for the meal, Leona."
+    mc oho "Thanks for the meal, Leona."
     show le relaxed with dissolve
     voice "voice/3-scene_3-16.ogg" #Raine (Nat)
-    mc "..."
+    mc thonk "..."
 
     show le surprised
     voice "voice/3-scene_3-17.ogg" #Raine (Nat)
-    mc blech "Blech!" (what_size = 48) with vpunch
+    mc onfire "Ugh! Uh..." (what_size = 48) with vpunch
 
 
     voice "voice/3-scene_3-18.ogg" #Raine (Nat)
-    mc shocked m2 "This… -i-i-in-op ro-ot is… is..."
+    mc yuck "This… -i-i-in-op ro-ot is… is..."
     na "I can't even chew it without an intense wave of pain coursing through my tongue."
 
     voice "voice/3-scene_3-19.ogg" #Raine (Nat)
-    mc onfire "It’s so spicy… I-I c-can’t!"
+    mc yuck2 "It’s so spicy… I-I c-can’t!"
 
     voice "voice/3-scene_3-20.ogg" #Leona (Dot)
     le concerned "What do you mean?"
 
     voice "voice/3-scene_3-21.ogg" #Raine (Nat)
-    mc onfire "Mouth... on f-fire..."
+    mc "Mouth... on f-fire..."
 
 
     show le concerned onlayer master:
@@ -123,28 +125,26 @@ label scene_3:
     scene house with Dissolve(2.0):
         zoom 0.75
     voice "voice/3-scene_3-23.ogg" #Raine (Nat)
-    mc annoyed "Ack! How can you eat that?!?"
+    mc blech "Ack! How can you eat that?!?"
 
     voice "voice/3-scene_3-24.ogg" #Raine (Nat)
-    mc blech "My eyes are watering and my tongue feels like it's swelling up."
+    mc onfire "My eyes are watering and my tongue feels like it's swelling up."
 
     show le crying2 at stage_right with dissolve
     voice "voice/3-scene_3-25.ogg" #Leona (Dot)
     le crying2 "I don't know! I don't know what you mean by 'spicy'! Inop root is just a..."
-    show le concerned with dissolve
+    show le frustrated a2 with dissolve
     na "Her eyes widen."
 
     voice "voice/3-scene_3-26.ogg" #Leona (Dot)
-    le frustrated a2 "Oh shoot!"
+    le "Oh shoot!"
     voice "voice/3-scene_3-27.ogg" #Leona (Dot)
     le "I forgot, none of the animals here will touch the stuff!"
     voice "voice/3-scene_3-28.ogg" #Leona (Dot)
-    le tired "This must be why! I'm so sorry!"
+    le cryingtalk "This must be why! I'm so sorry!"
 
-    na "Apparently she has no concept of spicy foods. Damn, her species must have one helluva tolerance for that stuff."
-    na "Well, now's a better time than any to explain some of this stuff to her."
-    na "...I don't want a repeat of this. Hell, who knows what food here is perfectly fine for her kind, but absolutely toxic for mine?"
-    na "Better safe than sorry."
+    na" Maybe I should have considered earlier the fact no two species can eat the same exact things."
+    na "Lessons learned, right?"
 
     voice "voice/3-scene_3-29.ogg" #Raine (Nat)
     mc upset "Can I get some more water?"
@@ -153,19 +153,19 @@ label scene_3:
     voice "voice/3-scene_3-31.ogg" #Raine (Nat)
     mc blech "It's out, but it still stings. Drinking water helps."
     voice "voice/3-scene_3-32.ogg" #Leona (Dot)
-    le frustratedshout "I see... I'll fetch some more, just a second-"
+    le concerned "I see... I'll fetch some more, just a second-"
     hide le with easeoutright
 
     voice "voice/3-scene_3-33.ogg" #Raine (Nat)
-    mc satisfied "Capsaicin is a strange thing, I tell you."
+    mc weary "Capsaicin is a strange thing, I tell you."
     voice "voice/3-scene_3-34.ogg" #Raine (Nat)
-    mc "Some plants use it as a defensive mechanism. It kills insects and causes pain in animals that try to eat it."
+    mc xpl "Some plants use it as a defensive mechanism."
 
     show le concerned at stage_right with easeinright
     voice "voice/3-scene_3-35.ogg" #Leona (Dot)
     le "Here, water."
     voice "voice/3-scene_3-36.ogg" #Raine (Nat)
-    mc "Thanks-"
+    mc unamused "Thanks-"
     na "Taking a sip, the burning continues to subside."
     voice "voice/3-scene_3-37.ogg" #Raine (Nat)
     mc unimpressed "Would you believe there are those who actually love this stuff?"
@@ -187,6 +187,8 @@ label scene_3:
     voice "voice/3-scene_3-45.ogg" #Leona (Dot)
     le shylook "Again, I'm sorry about that. I should have thought about it before giving you our food."
 
+    na "Not that I have much choice. It's not like I carry rations for the occasional crash landing..."
+
     voice "voice/3-scene_3-46.ogg" #Raine (Nat)
     mc unimpressed "I'm just surprised that your species isn't affected by it."
 
@@ -194,14 +196,14 @@ label scene_3:
     le concerned "Are you still hungry?"
 
     voice "voice/3-scene_3-48.ogg" #Raine (Nat)
-    mc "Let me try the other food; surely that's not too bad, right?"
+    mc amused "Let me try the other food; surely that's not too bad, right?"
 
     voice "voice/3-scene_3-49.ogg" #Leona (Dot)
     le "I hope so..."
     na "She nervously looks at me as I take a bite of the o'eke'ke."
 
     voice "voice/3-scene_3-50.ogg" #Raine (Nat)
-    mc "..."
+    mc thonk "..."
 
     voice "voice/3-scene_3-51.ogg" #Raine (Nat)
     mc shocked armraised "Oh!"
@@ -266,10 +268,10 @@ label scene_3:
 
     $ hide_sides = []
     voice "voice/3-scene_3-65.ogg" #Leona (Dot)
-    le relaxed "Break fast? Is that a religious thing?"
+    le thinky "Break fast? Is that a religious thing?"
 
     voice "voice/3-scene_3-66.ogg" #Raine (Nat)
-    mc thankful "It's just our name for our morning meal."
+    mc oho "It's just our name for our morning meal."
     voice "voice/3-scene_3-67.ogg" #Raine (Nat)
     mc "We eat 3 times a day, give or take."
 
@@ -290,7 +292,7 @@ label scene_3:
     mc speaking "Oh, I have an implant that automatically translates foreign languages for me. So to me, it sounds like English, but the implant does the talking for your… Oleloahak?"
 
     voice "voice/3-scene_3-73.ogg" #Leona (Dot)
-    le happy a1 "I see. That's some impressive technology."
+    le curious "I see. That's some impressive technology."
 
     voice "voice/3-scene_3-74.ogg" #Leona (Dot)
     le smug a3 "I wonder what other goodies you have that we don't?"
@@ -299,7 +301,9 @@ label scene_3:
     mc happy "Yeah, we're a pretty curious species. We've got a lot of different things figured out."
 
     voice "voice/3-scene_3-76.ogg" #Raine (Nat)
-    mc sighing "Including personal space flight."
+    mc sighing "Including personal space... flight..."
+
+    na "Well, more or less. But she doesn't need to know that."
 
     voice "voice/3-scene_3-77.ogg" #Raine (Nat)
     mc "Unfortunately, I didn't get here by normal space travel."
@@ -309,19 +313,19 @@ label scene_3:
     na "Chances are it closed the moment I was spit out by it."
 
     voice "voice/3-scene_3-79.ogg" #Leona (Dot)
-    le curious "Are you really telling me you went through a wormhole to get here?"
+    le hmm "Are you really telling me you went through a wormhole to get here?"
 
     voice "voice/3-scene_3-80.ogg" #Leona (Dot)
-    le suspicious a2 "Anything could’ve happened. You could have... You know..."
+    le crying2 "Anything could’ve happened. You could have... You know..."
 
     voice "voice/3-scene_3-81.ogg" #Raine (Nat)
-    mc sighing "Y-Yeah..."
+    mc worry "Y-Yeah..."
 
     voice "voice/3-scene_3-82.ogg" #Leona (Dot)
     le questioning a3 "Ah, sorry! What I meant to say is that you're extremely lucky. None of our tests with wormholes have been fruitful."
 
     voice "voice/3-scene_3-83.ogg" #Leona (Dot)
-    le "I'm surprised you took a ship through one to begin with."
+    le concerned "I'm surprised you took a ship through one to begin with."
 
     voice "voice/3-scene_3-84.ogg" #Raine (Nat)
     mc "I didn't really have a choice. I ran into one while I was flying."
@@ -330,7 +334,7 @@ label scene_3:
     mc "When I exited the wormhole, I was close to Fireside. My ship was damaged and I…"
 
     voice "voice/3-scene_3-86.ogg" #Raine (Nat)
-    mc blech "...had a really rough day."
+    mc grumpy "...had a really rough day."
 
     voice "voice/3-scene_3-87.ogg" #Leona (Dot)
     le surprised "Sounds like it."
@@ -357,17 +361,17 @@ label scene_3:
     na "Leona suddenly stands up."
 
     voice "voice/3-scene_3-91.ogg" #Leona (Dot)
-    le happy speaking a3 "So, I think it's high time I took you on a short tour of Aster!"
+    le crazy "So, I think it's high time I took you on a short tour of Aster!"
 
     voice "voice/3-scene_3-92.ogg" #Leona (Dot)
     le "If you're going to be stuck with us for awhile, you might as well get the lay of the land."
 
     voice "voice/3-scene_3-93.ogg" #Raine (Nat)
-    mc "Umm..."
+    mc sighing "Umm..."
     na "I honestly don't want to stay any longer than I have to. Leona's a wonderful host, but planetary life just isn't for me."
 
     voice "voice/3-scene_3-94.ogg" #Raine (Nat)
-    mc "Maybe later."
+    mc worry "Maybe later."
 
     voice "voice/3-scene_3-95.ogg" #Leona (Dot)
     le sassyquestioning "Don't you want to go outside? You can't stay cooped up in here forever..."
@@ -440,7 +444,7 @@ label scene_3:
     play sound3 "amb/City Day.ogg" fadein 2.0
 
     na "Leona's neighborhood is full of people just like her, with differently shaped horns and a variety of builds."
-    na "They're super similar to humans, minus the horns."
+    na "They're super similar to Humans, minus the horns."
     na "Were I more interested in xenobiology, I'd certainly be interested in how they grow. Are they part of the skull, or are they more like antlers?"
 
     #Voice lines are not implimented yet

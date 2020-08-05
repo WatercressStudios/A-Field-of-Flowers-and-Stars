@@ -59,7 +59,7 @@
     voice "voice/12-default-19.ogg" #Raine (Nat)
     mc annoyed  "S-Shut up!" with hpunch
 
-    scene sky with dissolve:
+    scene sky_shootingstar with dissolve:
         zoom 0.75
 
     na "Even with Leona's constant flirting…"
