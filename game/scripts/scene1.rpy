@@ -195,18 +195,16 @@ label scene1:
     na "Juneau guides us through the belt with the graceful touch that only an AI navigator could..."
     na "...all while gingerly sipping her own holographic tea, eyes closed, having a simulated good time while the bulk of her processing power pilots the ship."
     na "What a show off."
-    na "As much of a killjoy as she can be at times, she was literally made for this role."
+    na "As catty as she can be at times, she was literally made for this role."
     na "I'd rate her a full three-and-a-half stars."
 
     voice "voice/1-scene1-32.ogg" #Raine (Nat)
     mc happy "Hey Juneau. When we get back to Lum- {nw}"
-
-    scene asteroidfield_red at main_menu_bg_restore_transform
+    scene asteroidfield_red at main_menu_bg_restore_transform with Dissolve(.1)
     show cockpitoverlay2:
         zoom 0.75
         anchor (0.5, 0.5)
         align (0.5, 0.0)
-
     #SFX whoosh
     play sound "sfx/wormhole.ogg"
     voice "voice/1-scene1-33.ogg" #Juneau (Lily)
@@ -224,6 +222,7 @@ label scene1:
                 repeat
 
     ju "Woah!"
+    $ renpy.pause(2, hard=True)
     #ART Wormhole appears outside the cockpit. Screen shake."
     $ hide_sides = []
     show asteroidfield_red:
@@ -307,14 +306,16 @@ label scene1:
     # ###
     # VFX - SCREEN SHAKING BECOMES EVER MORE VIOLENT
     # ART/VFX - INSIDE THE WORMHOLE BG (LIKE A VORTEX, DOESN'T NEED TO BE FANCY SINCE IT DOESN'T LAST LONG. MAYBE JUST DISTORT/SPIN THE WORMHOLE BG?)
+    play sound "sfx/wormhole.ogg"
+    #play sound5 "sfx/SSL2.ogg"
+    pause(.5)
     show asteroidfield_red:
         linear .2 zoom 5
         parallel:
             linear .2 xanchor .27
             linear .2 yanchor .38
     #play sound2 "sfx/astroid impact.ogg"
-    play sound "sfx/wormhole.ogg"
-    play sound5 "sfx/SSL2.ogg"
+    #play sound "sfx/wormhole.ogg"
     scene wormhole:
         subpixel True
         parallel:
@@ -334,8 +335,9 @@ label scene1:
                 ease 0.17 pos (0.504, -0.006)
                 ease 0.12 pos (0.496, 0.006)
                 repeat
-    pause 1.0
+    pause .5
     play sound2 "sfx/astroid impact.ogg"
+    play sound5 "sfx/SSL2.ogg"
     pause (.1)
     show wormhole with vpunch:
         parallel:
@@ -450,5 +452,4 @@ label scene1:
     stop sound5 fadeout 2.0
     stop music fadeout 2.0
     play sound2 "sfx/Crash.ogg"
-
     jump scene_2
