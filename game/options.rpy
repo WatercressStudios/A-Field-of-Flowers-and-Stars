@@ -204,7 +204,7 @@ init python:
 
     ## If True, Ren'Py will include update information into packages. This
     ## allows the updater to run.
-    build.include_update = True
+    build.include_update = False
 
 ## Set this to a string containing your Apple Developer ID Application to enable
 ## codesigning on the Mac. Be sure to change it to your own Apple-issued ID.
@@ -222,4 +222,4 @@ init python:
 ## The username and project name associated with an itch.io project, separated
 ## by a slash.
 
-# define build.itch_project = "renpytom/test-project"
+define build.itch_project = "watercress/afofas"
