@@ -369,11 +369,9 @@ init python:
         ('save', ShowMenu('save')),
         ('load', ShowMenu('load')),
         ('pref', ShowMenu('custom_preferences')),
-        # ('log', Show('journal')),
         ('quit', Quit(confirm=not main_menu)),
         ('menu', MainMenu()),
-        ### DEBUG BUTTONS
-        ('sprite', Show('dynamicspritespreview')),
+       
     ]
 
     def polygon_point_offset(ind, distance=75, points=5):

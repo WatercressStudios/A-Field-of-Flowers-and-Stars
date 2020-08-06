@@ -17,7 +17,7 @@ init python:
         ( "Music/Trust In You.ogg", "Trust In You", "Paul Robins"),
         ( "Music/wormhole.ogg", "Entering Wormhole", "Speedy"),
     ]
-# I still don't know who did each of these songs
+
     musicbox_currently_playing = None
 screen Jukebox():
     tag menu
