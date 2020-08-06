@@ -371,7 +371,7 @@ init python:
         ('pref', ShowMenu('custom_preferences')),
         ('quit', Quit(confirm=not main_menu)),
         ('menu', MainMenu()),
-       
+
     ]
 
     def polygon_point_offset(ind, distance=75, points=5):
@@ -714,7 +714,7 @@ screen quick_menu():
 
             xalign 0.75
             yalign .95
-            textbutton _("<") action Rollback()
+            textbutton _("<") action Rollback() alt "Rollback"
             textbutton _(">") action Preference("auto-forward", "toggle")
             textbutton _(">>") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("LOG") action [
