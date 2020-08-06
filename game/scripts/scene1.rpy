@@ -32,7 +32,7 @@ label scene1:
 
     na "No star in the sky I can't touch."
 
-    na "So…"
+    na "So..."
 
     voice "voice/1-scene1-1.ogg" #Raine (Nat)
     mc grumpy "So why won't you finish these damn calibrations already?!"
@@ -112,7 +112,7 @@ label scene1:
         stage_right
         hologram
     na "The hologram projectors come online and Juneau appears at the controls. I spin my seat around and head for the food synthesizer at the rear of the cockpit."
-    na "With a press of a button, the machine materializes a toasty warm cup of coffee, French vanilla cream and extra sugar already included."
+    na "With a press of a button, the machine fills a pouch of toasty warm coffee, French vanilla cream and extra sugar already included."
 
     show ju concerned a2 with dissolve
     voice "voice/1-scene1-15.ogg" #Juneau (Lily)
@@ -160,12 +160,11 @@ label scene1:
     voice "voice/1-scene1-28.ogg" #Raine (Nat)
     mc weary "Fine."
     hide ju with dissolve
-    na "I retrieve my coffee from the receptacle and turn back towards the console."
+    na 'I sip my coffee and lean back in my seat, preparing for another long day of "exploration"'
 
     scene asteroidfield at main_menu_bg_transform with dissolve
 
-    na "At least I can sell the data from the scan to the cartographer's guild on Lumin."
-    na "I don't consider myself much of a map maker, but I guess the extra credits wouldn't hurt."
+    na "At least I can sell the asteroid data back to the miner's guild on Lumin. The extra credits wouldn't hurt."
     na "Maybe I’ll buy some new drink recipes for the synthesizer. Or a new outfit for Juneau."
     na "I wonder how she'd react if I installed a maid costume on her software kit."
 

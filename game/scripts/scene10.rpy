@@ -211,7 +211,7 @@
     le concerned "Hmm?"
 
     voice "voice/10-default-61.ogg" #Raine (Nat)
-    mc "I… I really am sorry."
+    mc "I...I really am sorry."
 
     voice "voice/10-default-62.ogg" #Leona (Dot)
     le "We can discuss this later. There's no time to waste."

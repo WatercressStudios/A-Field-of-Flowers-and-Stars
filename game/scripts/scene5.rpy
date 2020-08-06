@@ -339,7 +339,7 @@ label scene_5:
 
     hide ju with dissolve
 
-    na "I think Juneau got the message, though Leona is looking a little lost."
+    na "Juneau got the message, though Leona is looking a little confused."
 
     voice "voice/5-default-63.ogg" #Raine (Nat)
     mc stern "Settle down already, we got shit to do."
@@ -389,9 +389,9 @@ label scene_5:
     voice "voice/5-default-74.ogg" #Raine (Nat)
     mc stern "No, not a chance. It's not yours either."
 
-    na "It’s like… some old drone equipment, and what looks like lifepod parts. A bunch of mini thrusters and some eye modules here and there, busted and grimy circuitry shattered in a dozen pieces."
+    na "It’s like... some old drone equipment, and what looks like lifepod parts. A bunch of mini thrusters and some eye modules here and there, busted and grimy circuitry shattered in a dozen pieces."
     na "This looks absolutely ancient, but it's easily more advanced than whatever the locals have."
-    na "I think I can use some of this!"
+    na "I might be able to use some of this!"
     na "Rifling through it, there's plenty that'll help me get basic functions online, like life support and carbon dioxide scrubbing."
 
 
@@ -630,34 +630,6 @@ label scene_5:
 
     voice "voice/5-default-130.ogg" #Raine (Nat)
     mc happy "Looks like we're going exploring then."
-
-
-    voice "voice/5-default-131.ogg" #Leona (Dot)
-    le happy2 a1 "Hell yeah!"
-
-
-    voice "voice/5-default-132.ogg" #Raine (Nat)
-    mc questioning2 "...Hell?"
-
-
-    voice "voice/5-default-133.ogg" #Leona (Dot)
-    le questioning p2 "Oh, do you not know that expression?"
-
-
-    voice "voice/5-default-134.ogg" #Raine (Nat)
-    mc surprised "No, I do. I'm just surprised you know it."
-
-
-    voice "voice/5-default-135.ogg" #Leona (Dot)
-    le curious "Interesting. Does that mean we have similar concepts about religion?"
-
-
-    voice "voice/5-default-136.ogg" #Raine (Nat)
-    mc gentlehandtalk "Maybe. We can talk about that on the trip."
-
-
-    voice "voice/5-default-137.ogg" #Leona (Dot)
-    le happyspeaking a3 "Ooh, good idea. We can swap stories."
 
 #VFX JOURNAL ENTRY ADDED 2
 

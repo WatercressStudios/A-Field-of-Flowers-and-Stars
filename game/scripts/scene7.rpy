@@ -222,8 +222,8 @@ label scene_7:
     stop env fadeout 1.0
     play sound3 "amb/Explosion After.ogg" fadein 1.0
     show forest with vpunch
-    na "Leona and I look to the horizon as we feel the ground shake beneath our feet, a burst of sound echoing through the air."
-    na "And in the distance, visible through the treetops…"
+    na "Leona and I look to the horizon as the ground shakes beneath our feet, a burst of sound echoing through the air."
+    na "And in the distance, visible through the treetops..."
     na "Was a large chunk of a mountain torn right from the earth."
     voice "voice/7-scene_7-98.ogg" #Raine (Nat)
     mc shocked armraised "Oh my god."
@@ -264,7 +264,7 @@ label scene_7:
     show le crying2 at stage_right with easeinright
 
     voice "voice/7-scene_7-107.ogg" #Leona (Dot)
-    le concerned "Um…"
+    le concerned "Um..."
     na "She opens her mouth to speak."
     na "But then turns her face away from me."
     na "..."
@@ -278,7 +278,7 @@ label scene_7:
     voice "voice/7-scene_7-111.ogg" #Raine (Nat)
     mc upset "But you lied to me. I trusted you, and you lied to me."
     voice "voice/7-scene_7-112.ogg" #Leona (Dot)
-    le "...I'm sorry…"
+    le "...I'm sorry..."
     voice "voice/7-scene_7-113.ogg" #Raine (Nat)
     mc unimpressed "I want to know why."
     na "Head still hung low, she turned her head to me, unable to look me in the eye."

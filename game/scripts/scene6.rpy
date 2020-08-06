@@ -77,7 +77,7 @@ label scene_6:
     voice "voice/6-scene_6-27.ogg" #Raine (Nat)
     mc "I thought it was just the adrenaline at the time, but it didn't seem like we fell very hard."
     voice "voice/6-scene_6-28.ogg" #Leona (Dot)
-    le concerned "Uhhh...I… I don’t follow"
+    le concerned "Uhhh...I... I don’t follow"
     voice "voice/6-scene_6-29.ogg" #Raine (Nat)
     mc questioning2 "Are there any rocks you can pick up around us?"
     voice "voice/6-scene_6-30.ogg" #Leona (Dot)
@@ -97,7 +97,7 @@ label scene_6:
     na "Great, first it was hot, and now I'm nearly shivering."
     na "Leona continues forward, ahead of me. I walk quietly and carefully behind her, trusting her as the expert here."
     na "I may be able to navigate an asteroid belt and maneuver around a pulsar, but down here, she's queen."
-    na "She's a little airheaded, but… she knows what she's doing. I have more faith in her than I do myself in a place like this."
+    na "She's a little airheaded, but I have more faith in her than I do myself in a place like this."
 
     voice "voice/6-scene_6-34.ogg" #Leona (Dot)
     le suspicious a2 "Smell that?"
@@ -111,12 +111,12 @@ label scene_6:
     hide le with easeoutright
     na "But, if she's right about the rust, then we're getting close to something man made."
     na "Er, well. Not {i}man{/i} made. Alien made?"
-    na "Artificial. Let's go with that. Speaking of…"
+    na "Artificial. Let's go with that. Speaking of..."
     stop sound3 fadeout 2.0
     na "A glint on the cave wall catches my eye."
     na "Bioluminescence? A button or lightbulb covered in something?"
     na "I move off, my curiosity getting the better of me. It's probably just my mind playing tricks on me."
-    na "It's like… some sort of glowing moss? Something sticking out of the wall?"
+    na "It's like... some sort of glowing moss? Something sticking out of the wall?"
     play sound "sfx/cave switch.ogg"
     na "Putting my hand on it, I feel something give way, ever so slightly, and hear a small click from further inside."
     voice "voice/6-scene_6-38.ogg" #Raine (Nat)
@@ -142,7 +142,7 @@ label scene_6:
     na "But then again, if I yell out, she'd know that I'm not with her."
     na "Screw it."
     voice "voice/6-scene_6-40.ogg" #Raine (Nat)
-    mc shocked m2 "...Leona? I, uhh, I think I'm lost."
+
     na "Stay calm. A clear, moderate voice will travel without confusing her."
     voice "voice/6-scene_6-41.ogg" #Raine (Nat)
     mc thankful "I'll stay put, okay?"
@@ -152,7 +152,6 @@ label scene_6:
     na "Just gonna grab it out of the bag and-"
     na"-and..."
     na "...Leona has my bag."
-    na "I gave it to her before we came in so I wouldn't snag it on anything. Son of a bitch!"
     na "I hold onto the wet, slightly slimy wall to keep my bearings."
     na "The last thing I want to do is walk around and lose the one thing grounding me."
     na "Well, more than I already have."
@@ -163,7 +162,7 @@ label scene_6:
     na "You're such a moron, Raine..."
     na "Stupid little girl always pawning off her responsibilities to others."
     na "Maybe Juneau is right; I am just a lazy ass."
-    na "Just a pathetic girl who can't get anything fucking done on her own."
+    na "Just a pathetic girl who can't get anything done on her own."
     play sound3 "voice/crying.ogg"
     na "..."
     na "I feel tears fall from my eyes, as quiet sobs echo through the cavern."
@@ -200,7 +199,7 @@ label scene_6:
     na "Maybe I should follow her advice and bulk up a bit..."
     na "Leona produces a blanket from her pack, wiping me down and wrapping it gently around my shoulders."
     voice "voice/6-scene_6-47.ogg" #Leona (Dot)
-    le concerned "I was so worried…"
+    le concerned "I was so worried..."
     show le crying with dissolve
     na "She looks at me with a pained expression, her breathing erratic and her heart beating fast. I think she's about to cry."
     na "Crap, now I feel bad."
@@ -216,12 +215,12 @@ label scene_6:
     voice "voice/6-scene_6-52.ogg" #Raine (Nat)
     mc thankful "Thank you, Leona. If it weren't for you, I'd be a goner."
     na "Leona remains quiet, attached to me."
-    na "I really do have to rely on her. Not only is she my ticket out of here, but…"
+    na "I really do have to rely on her. Not only is she my ticket out of here, but..."
     na "I don't have to go it alone."
     na "I am with her, now."
     na "Slowly, she catches her breath and lets go, however reluctantly."
     voice "voice/6-scene_6-53.ogg" #Leona (Dot)
-    le relaxed "So, uh…"
+    le relaxed "So, uh..."
     voice "voice/6-scene_6-54.ogg" #Raine (Nat)
     mc questioning2"Yeah?"
     voice "voice/6-scene_6-55.ogg" #Leona (Dot)
@@ -294,12 +293,12 @@ label scene_6:
     mc "Still gotta get it open though. Leona! Could you give me my bag for a second?"
     na "I walk over to Leona, taking the bag in my hand and digging through it."
     voice "voice/6-scene_6-76.ogg" #Raine (Nat)
-    mc satisfied "And… there it is!"
+    mc satisfied "And... there it is!"
     na "I pull out a small energy detector from my bag. It's not as good as the one I had on my ship, but it's fortunate Fireside's tech has this."
     play sound "sfx/scan.ogg"
     na "I turn it on and scan it around the door."
     voice "voice/6-scene_6-77.ogg" #Raine (Nat)
-    mc questioning2 "There's definitely something like a generator behind this, but…"
+    mc questioning2 "There's definitely something like a generator behind this, but..."
     voice "voice/6-scene_6-78.ogg" #Raine (Nat)
     mc "There's a lot of energy noise floating around. The detector's going kind of crazy."
     voice "voice/6-scene_6-79.ogg" #Raine (Nat)
@@ -355,7 +354,7 @@ label scene_6:
     na "Then, I grab and pull. When that doesn't work, I try twisting."
     play sound3 "sfx/small wind.ogg" fadein 1.0
     play sound "sfx/pop.ogg"
-    na "With a pop, the bolt comes free and a gentle whistle can be heard coming from the hole."
+    na "The bolt comes free with a pop, and a jet of pressurized air whistles from the hole."
     na "Just as I'm about to lean back in to see what might be on the other side-"
     stop sound3 fadeout 1.0
 
@@ -374,13 +373,11 @@ label scene_6:
     mc questioning2 "I'd be surprised if I didn't. What the hell was that?"
     voice "voice/6-scene_6-95.ogg" #Leona (Dot)
     le concerned "Ssh! Don't be so loud, please!"
-    na "Leona looks around cautiously, keeping her eyes and ears open."
+    na "Leona looks around cautiously."
     voice "voice/6-scene_6-96.ogg" #Leona (Dot)
     le suspicious a2 "I think it was back the way we came?"
     voice "voice/6-scene_6-97.ogg" #Raine (Nat)
     mc "Are you sure?"
-    voice "voice/6-scene_6-98.ogg" #Leona (Dot)
-    le "No, but the cave is just a straight path. One way in, one way out."
     voice "voice/6-scene_6-99.ogg" #Leona (Dot)
     le "I think we should get out of here, just to be safe."
     voice "voice/6-scene_6-100.ogg" #Raine (Nat)
@@ -398,16 +395,13 @@ label scene_6:
     voice "voice/6-scene_6-106.ogg" #Leona (Dot)
     le "Good idea."
     na "Leona and I quickly gather up the old books she'd set aside and head out."
-
     scene cave with dissolve:
         anchor (0.5, 0.5) align (0.9, 0.5) zoom 3
-
     na "Walking back the way we came, Leona and I got to talking about something she said earlier."
     na "About how everyone she knows including herself likes small, dark corners."
     na "Looking at the city of Aster, and even Leona's home, I can see it. Their architecture is downright utilitarian, edging on brutalist."
     na "She herself isn't too happy about that, saying pictures of cities back on Dawne she saw in school were much more colorful and warm than the grayscale mess here on Aster."
     na "To me, this felt like a contradiction, but as I'm about to say something..."
-
     voice "voice/6-scene_6-107.ogg" #Leona (Dot)
     le "H-Hey, Raine! Can you stay there for a second?"
     voice "voice/6-scene_6-108.ogg" #Raine (Nat)
@@ -415,7 +409,7 @@ label scene_6:
     voice "voice/6-scene_6-109.ogg" #Leona (Dot)
     le happy a2 "Yeah! Just need to check something out, won't take me long!"
     na "I look ahead into the darkness."
-    na "In the distance… lies a hallway that wasn't there before. With sharp, edged corners, and a green glow illuminating its form."
+    na "In the distance... lies a hallway that wasn't there before. With sharp, edged corners, and a green glow illuminating its form."
     voice "voice/6-scene_6-110.ogg" #Raine (Nat)
     mc questioning2 "You'll be alright, right!?"
     voice "voice/6-scene_6-111.ogg" #Leona (Dot)

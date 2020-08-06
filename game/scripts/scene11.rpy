@@ -41,7 +41,7 @@
     le shylook "Well, do you wanna do something for the time being, then?"
 
     voice "voice/11-default-9.ogg" #Leona (Dot)
-    le "Or…"
+    le "Or..."
 
     na "Leona's face looks shyly towards the ground, before she looks back up as her eyes meet mine."
 
@@ -53,7 +53,7 @@
     voice "voice/11-default-11.ogg" #Raine (Nat)
     mc shyspeak "Y-You don't need to act so nervous about it, you know. Just makes me more anxious seeing you treat it like that."
 
-    na "Leona fidgets around with her fingers a little bit…"
+    na "Leona fidgets around with her fingers a little bit..."
 
     voice "voice/11-default-12.ogg" #Leona (Dot)
     le speakingthink "W-well, I know this nice cafe that's a few blocks from here! I always liked going there whenever I had a bit of a break."
@@ -65,7 +65,7 @@
     mc yawn2 "All this chaos out here is giving me a headache. I need someplace quiet."
 
     voice "voice/11-default-15.ogg" #Leona (Dot)
-    le shylook "W-Well, it's a little bit messy…"
+    le shylook "W-Well, it's a little bit messy..."
 
     voice "voice/11-default-16.ogg" #Raine (Nat)
     mc stern "Don't care."
@@ -269,10 +269,10 @@
     mc "I wanted to trust you so badly. I did everything I could to push those feelings out of my heart."
 
     voice "voice/11-default-69.ogg" #Raine (Nat)
-    mc weary "But…"
+    mc weary "But..."
 
     voice "voice/11-default-70.ogg" #Raine (Nat)
-    mc "When you confessed to me that you lied…"
+    mc "When you confessed to me that you lied..."
 
     voice "voice/11-default-71.ogg" #Raine (Nat)
     mc "I let myself believe you were just the same as everyone else."

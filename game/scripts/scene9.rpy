@@ -304,7 +304,7 @@
     ju "It's not from the blast site."
 
     voice "voice/9-default-68.ogg" #Raine (Nat)
-    mc questioning "They're from… the center of town?"
+    mc questioning "They're from...the center of town?"
 
     voice "voice/9-default-69.ogg" #Juneau (Lily)
     ju concerned a1 "And there's two other readings I can't identify."

@@ -7,7 +7,7 @@ label scene_3:
         zoom 0.75
     play env "amb/Leonas house.ogg"
 
-    na "As I wake, I feel a mountain of pillows and blankets all around me."
+    na "I wake up to something on top of me...a mountain of...what are these, pillows?"
     voice "voice/3-scene_3-1.ogg" #Raine (Nat)
     mc ugh "Nhyegh-"
 
@@ -73,10 +73,10 @@ label scene_3:
     show le happy a2 at stage_right with easeinright
     voice "voice/3-scene_3-14.ogg" #Leona (Dot)
     le "Let's see... sliced inop root, some o'eke'ke, and fresh iwaiwa eggs!"
-    na "Huh… those didn't translate. I don't know what these could actually be."
+    na "Huh... those don't translate."
     show le kind a2 with dissolve
     na "Despite the alien nature of them, it smells really good."
-    na "Food is food. If we share similar enough biology that her medicine works then this should go down without much of a fuss, right?"
+    na "Food is food. If we share a similar enough biology, then this should go down without much of a fuss, right?"
 
     voice "voice/3-scene_3-15.ogg" #Raine (Nat)
     mc oho "Thanks for the meal, Leona."
@@ -90,11 +90,11 @@ label scene_3:
 
 
     voice "voice/3-scene_3-18.ogg" #Raine (Nat)
-    mc yuck "This… -i-i-in-op ro-ot is… is..."
+    mc yuck "This... -i-i-in-op ro-ot is... is..."
     na "I can't even chew it without an intense wave of pain coursing through my tongue."
 
     voice "voice/3-scene_3-19.ogg" #Raine (Nat)
-    mc yuck2 "It’s so spicy… I-I c-can’t!"
+    mc yuck2 "It’s so spicy... I-I c-can’t!"
 
     voice "voice/3-scene_3-20.ogg" #Leona (Dot)
     le concerned "What do you mean?"
@@ -289,7 +289,7 @@ label scene_3:
     le speakingthink "That reminds me, you're not from Dawne, but you speak Oleloahak just fine. What's up with that?"
 
     voice "voice/3-scene_3-72.ogg" #Raine (Nat)
-    mc speaking "Oh, I have an implant that automatically translates foreign languages for me. So to me, it sounds like English, but the implant does the talking for your… Oleloahak?"
+    mc speaking "Oh, I have an implant that automatically translates foreign languages for me. So to me, it sounds like English, but the implant does the talking for your... Oleloahak?"
 
     voice "voice/3-scene_3-73.ogg" #Leona (Dot)
     le curious "I see. That's some impressive technology."
@@ -331,7 +331,7 @@ label scene_3:
     mc "I didn't really have a choice. I ran into one while I was flying."
 
     voice "voice/3-scene_3-85.ogg" #Raine (Nat)
-    mc "When I exited the wormhole, I was close to Fireside. My ship was damaged and I…"
+    mc "When I exited the wormhole, I was close to Fireside. My ship was damaged and I..."
 
     voice "voice/3-scene_3-86.ogg" #Raine (Nat)
     mc grumpy "...had a really rough day."

@@ -112,7 +112,6 @@ label scene_2:
 
     voice "voice/2-scene_2-14.ogg" #Leona (Dot)
     le " Uo said iwi aum okay?"
-    na "It seems like it's starting to work though."
 
     voice "voice/2-scene_2-15.ogg" #Raine (Nat)
     mc thankful "S-Sorry, can you say that again?"
@@ -144,7 +143,6 @@ label scene_2:
 
     voice "voice/2-scene_2-23.ogg" #Leona (Dot)
     le "Hm?"
-    na "I notice the pair of horns on her head."
 
     voice "voice/2-scene_2-24.ogg" #Raine (Nat)
     mc "H-Horns..."
@@ -154,7 +152,6 @@ label scene_2:
     show le curious
     voice "voice/2-scene_2-25.2.ogg" #Leona (dot)
     extend "Oh!"
-
 
     voice "voice/2-scene_2-26.ogg" #Leona (Dot)
     le thinky "You don't have any horns?"
@@ -329,7 +326,7 @@ label scene_2:
     voice "voice/2-scene_2-71.ogg" #Raine (Nat)
     mc shocked m2 "Oh... Okay."
 
-    na "She has a tender look as she finishes wrapping my wound, like a mother looking after her kid."
+    na "She has a gentle touch, like a mother looking after her kid."
     na "She's done this before, I guess."
     na "And now she's doing it for me. This and everything else."
     na "All for someone she's only just met."
@@ -461,11 +458,10 @@ label scene_2:
     ###
     # VFX - EYES CLOSE
     ###
-
-    na "But before I conk out, I hear something."
     voice "voice/2-scene_2-114.ogg" #Leona (Dot)
     le "Logdate 2301: Today was interesting. I found an alien! She -- or at least, I think it's a she -- crash-landed..."
-    na "Huh... She has... a diary..."
+    na "Huh..."
+    na "..Leona has a diary."
     stop music fadeout 2.0
     na "I guess... we're not... that... diff..."
     jump scene_3
