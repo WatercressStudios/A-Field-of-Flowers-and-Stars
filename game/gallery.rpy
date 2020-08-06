@@ -35,22 +35,13 @@ screen gallery_item(item):
 
 screen gallery():
     tag menu
-    style_prefix "journal"
 
     if main_menu:
         add "backgrounds/space.png" at main_menu_bg_transform
 
-    if main_menu:
-        $ close_action = [
-            Hide('custom_file_slots'),
-            Return(),
-        ]
-    else:
-        $ close_action = [
-            Hide('custom_file_slots'),
-            Show('flower_menu_button'),
-            Return(),
-        ]
+    $ close_action = [
+        Return(),
+    ]
     button at fade_transform:
         background None
         xysize (1.0, 1.0)
