@@ -1545,7 +1545,6 @@ screen custom_preferences():
                                     text_xpos 12
                                     text_yoffset -15
                                     yoffset 1
-                                    focus True
                                 textbutton _("Fullscreen") action Preference("display", "fullscreen"):
                                     xsize 250
                                     text_xalign 0.0
@@ -1632,7 +1631,6 @@ screen custom_preferences():
                 align (0.5, 0.5)
 
     key "K_ESCAPE" action close_action
-    #key "K_UP" action
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text
