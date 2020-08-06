@@ -99,7 +99,7 @@ label scene_2:
     na "If I wasn't sore before, I am now."
 
     voice "voice/2-scene_2-12.ogg" #Raine (Nat)
-    mc thankful "Thanks. Thought I was done for..."
+    mc thankful "Thanks. I thought I was done for..."
 
     show le concerned with dissolve:
         stage_right

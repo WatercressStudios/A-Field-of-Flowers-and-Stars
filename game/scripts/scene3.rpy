@@ -178,14 +178,14 @@ label scene_3:
     voice "voice/3-scene_3-41.ogg" #Raine (Nat)
     mc "Who doesn't want to eat fire?"
     voice "voice/3-scene_3-42.ogg" #Raine (Nat)
-    mc speaking "'No pain, no gain.'"
+    mc speaking "\"No pain, no gain.\""
     voice "voice/3-scene_3-43.ogg" #Raine (Nat)
     mc blech "Bunch of idiots, if you ask me."
     voice "voice/3-scene_3-44.ogg" #Raine (Nat)
-    mc happy "This root could sell for a lot back home, now that I think about it."
+    mc happy "This root could sell for a lot back home, now that I think of it."
 
     voice "voice/3-scene_3-45.ogg" #Leona (Dot)
-    le shylook "Again, I'm sorry about that. I should have thought about it before giving you our food."
+    le shylook "Again, sorry about that. I should have thought about it before giving your food."
 
     na "Not that I have much choice. It's not like I carry rations for the occasional crash landing..."
 
