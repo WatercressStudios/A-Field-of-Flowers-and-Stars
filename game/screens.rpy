@@ -469,6 +469,7 @@ screen flower_menu():
             ]
 
         button at flower_menu_transform:
+            key_events True
             background None
             padding (0, 0)
             margin (0, 0)
@@ -493,6 +494,7 @@ screen flower_menu():
                             Hide('flower_menu_moon'),
                             flower_menu_actions[i][1],
                         ]
+                        alt flower_menu_actions[i][0]
                     text flower_menu_actions[i][0]:
                         align (0.5, 0.5)
                         yoffset 13
@@ -1628,6 +1630,7 @@ screen custom_preferences():
             text 'X':
                 align (0.5, 0.5)
 
+    key "K_ESCAPE" action close_action
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text

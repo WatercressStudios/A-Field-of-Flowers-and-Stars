@@ -224,7 +224,7 @@
     mc "Yeah. For all of it."
 
     voice "voice/11-default-56.ogg" #Raine (Nat)
-    mc concernedspeak "Even for reading my journal, which you neglected to mention."
+    mc shyspeak "Even for reading my journal, which you neglected to mention."
 
     voice "voice/11-default-57.ogg" #Leona (Dot)
     le "...But?"
@@ -396,7 +396,7 @@
     mc "Do... Do you have something in mind?"
 
     voice "voice/11-default-107.ogg" #Leona (Dot)
-    le "I want to help you build another ship"
+    le "I want to help you build another ship."
 
     voice "voice/11-default-108.ogg" #Raine (Nat)
     mc "How? I can't use anything here."
@@ -619,7 +619,7 @@
     le happy speaking a2 "Hey, you should be just as happy!"
 
     voice "voice/11-default-168.ogg" #Leona (Dot)
-    le happy speaking a3 "Afterall, we got big days ahead of us, don't we, Rainey?"
+    le happy speaking a2 "Afterall, we got big days ahead of us, don't we, Rainey?"
 
     voice "voice/11-default-169.ogg" #Raine (Nat)
     mc surprised "Excuse me?"

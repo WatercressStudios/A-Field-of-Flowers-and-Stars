@@ -419,7 +419,7 @@
     ju annoyed a1 "About time."
 
     voice "voice/9-default-105.ogg" #Raine (Nat)
-    mc questioning "Remind me to look at your subroutines when I get back, you've got a hell of an attitude today."
+    mc questioning "Remind me to look at your subroutines when I get back, you've got one hell of an attitude today."
 
     voice "voice/9-default-106.ogg" #Juneau (Lily)
     ju annoyed a2 "I'm blaming it on the rads, roll with it."

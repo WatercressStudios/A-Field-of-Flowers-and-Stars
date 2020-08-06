@@ -77,7 +77,7 @@ label scene_6:
     voice "voice/6-scene_6-27.ogg" #Raine (Nat)
     mc "I thought it was just the adrenaline at the time, but it didn't seem like we fell very hard."
     voice "voice/6-scene_6-28.ogg" #Leona (Dot)
-    le concerned "Uhhh...I... I don’t follow"
+    le concerned "Uhhh...I... I don’t follow."
     voice "voice/6-scene_6-29.ogg" #Raine (Nat)
     mc questioning2 "Are there any rocks you can pick up around us?"
     voice "voice/6-scene_6-30.ogg" #Leona (Dot)
