@@ -493,6 +493,7 @@ screen flower_menu():
                             Hide('flower_menu_moon'),
                             flower_menu_actions[i][1],
                         ]
+                        alt flower_menu_actions[i][0]
                     text flower_menu_actions[i][0]:
                         align (0.5, 0.5)
                         yoffset 13
