@@ -1073,9 +1073,9 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("{i}A Field of Flowers and Stars{/i} was developed for Yurijam 2019 by Watercress Studios in collaboration with Somnova Studios and Sarchalen Visual Media.\n") 
+            text _("{i}A Field of Flowers and Stars{/i} was developed for Yurijam 2019 by Watercress Studios in collaboration with Somnova Studios and Sarchalen Visual Media.\n")
 
-            #text _("If you loved this game, check out our {a=https://watercressstudios.com/}official website{/a}, {a=http://somnovastudios.org/}Somnova Studios{/a}, and {a=https://sarchalen.itch.io/}Sarchalen Visual Media{/a} or go straight to our {a=https://watercress.itch.io/}itch.io page{/a} for more of our projects.\n") 
+            #text _("If you loved this game, check out our {a=https://watercressstudios.com/}official website{/a}, {a=http://somnovastudios.org/}Somnova Studios{/a}, and {a=https://sarchalen.itch.io/}Sarchalen Visual Media{/a} or go straight to our {a=https://watercress.itch.io/}itch.io page{/a} for more of our projects.\n")
 
             #text _("Also, we have a {a=https://store.steampowered.com/developer/Watercress/}Steam page{/a} where you can download and play several of our previously published visual novels.\n")
 
@@ -1087,7 +1087,7 @@ screen about():
 
             text _("{a=https://twitter.com/Hamadyne}Hamadyne{/a} (Story Writer)\n")
 
-            text _ ("{a=https://twitter.com/Hoakkun}A.D. 'Hoa' Hemingway{/a} (Story Writer, Scripting)\n") 
+            text _ ("{a=https://twitter.com/Hoakkun}A.D. 'Hoa' Hemingway{/a} (Story Writer, Scripting)\n")
 
             text _ ("Monochrome (Story Writer)\n")
 
@@ -1095,7 +1095,7 @@ screen about():
 
             text _ ("{a=https://twitter.com/alchworks}TheAlchemyst{/a} (Editing Director, Cinematics Directing, Marketing Director, Logo Design)\n")
 
-            text _ ("{a=https://twitter.com/Paul__Robins}Paul Robbins{/a} (Music Director, Sound Design, Sound Editor, Audio)\n")
+            text _ ("{a=https://twitter.com/Paul__Robins}Paul Robins{/a} (Music Director, Sound Design, Sound Editor, Audio)\n")
 
             text _ ("{a=https://twitter.com/KartProwler}Kart Prowler{/a} (Sprite, CG, Concept Art)\n")
 
@@ -1125,15 +1125,15 @@ screen about():
 
             text _ ("{a=https://www.deviantart.com/ebagigi}Gabriel 'Ebagigi'{/a} (Scripting)\n")
 
-            text _ ("{a=https://twitter.com/Meyvol}Meyvol{/a} (Scripting)\n") 
-            
+            text _ ("{a=https://twitter.com/Meyvol}Meyvol{/a} (Scripting)\n")
+
             text _ ("{a=https://twitter.com/SandraMJdev}Sandra 'SandraMJ' Molina{/a} (Voice Direction)\n")
 
             text _ ("{a=https://twitter.com/Dottovuu}Dottovu{/a} (VA of Leona)\n")
 
-            text _ ("Natalie (VA of Raine)\n")
+            text _ ("{a=https://twitter.com/nvansistine}Natalie{/a} (VA of Raine)\n")
 
-            text _ ("{a=https://twitter.com/homulily}Lily Lammers{/a} (VA of Juneau)\n") 
+            text _ ("{a=https://twitter.com/homulily}Lily Lammers{/a} (VA of Juneau)\n")
 
             text _ ("{a=https://twitter.com/Bodo1215}Bodo{/a} (Marketing)\n")
 
@@ -1143,8 +1143,8 @@ screen about():
             add "images/logos/somnovalogo.jpg"  xalign 0.5
             add "images/logos/sarchalenlogo.png" zoom 0.2 xalign 0.5
 
-            #imagebutton auto "images/logos/watercresslogo.png" zoom 0.2 xalign 0.5 action OpenURL("https://watercressstudios.com/") 
-            #imagebutton auto "images/logos/somnovalogo.jpg" xalign 0.5 action OpenURL("http://somnovastudios.org/")  
+            #imagebutton auto "images/logos/watercresslogo.png" zoom 0.2 xalign 0.5 action OpenURL("https://watercressstudios.com/")
+            #imagebutton auto "images/logos/somnovalogo.jpg" xalign 0.5 action OpenURL("http://somnovastudios.org/")
             #imagebutton auto "images/logos/sarchalenlogo.png"  zoom 0.2 xalign 0.5  action OpenURL(" https://sarchalen.itch.io/")
 
 
