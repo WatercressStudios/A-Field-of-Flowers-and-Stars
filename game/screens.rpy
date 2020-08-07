@@ -1091,7 +1091,7 @@ screen about():
 
             text _ ("{a=https://twitter.com/alchworks}TheAlchemyst{/a} (Editing Director, Cinematics Directing, Marketing Director, Logo Design)\n")
 
-            text _ ("{a=https://twitter.com/Paul__Robins}Paul Robbins{/a} (Music Director, Sound Design, Sound Editor, Audio)\n")
+            text _ ("{a=https://twitter.com/Paul__Robins}Paul Robins{/a} (Music Director, Sound Design, Sound Editor, Audio)\n")
 
             text _ ("{a=https://twitter.com/KartProwler}Kart Prowler{/a} (Sprite, CG, Concept Art)\n")
 
@@ -1127,7 +1127,7 @@ screen about():
 
             text _ ("{a=https://twitter.com/Dottovuu}Dottovu{/a} (VA of Leona)\n")
 
-            text _ ("Natalie (VA of Raine)\n")
+            text _ ("{a=https://twitter.com/nvansistine}Natalie{/a} (VA of Raine)\n")
 
             text _ ("{a=https://twitter.com/homulily}Lily Lammers{/a} (VA of Juneau)\n")
 
