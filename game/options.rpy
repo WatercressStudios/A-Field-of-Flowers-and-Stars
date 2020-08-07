@@ -23,7 +23,8 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "0.7"
+define config.version = "1.0.0"
+define config.developer = "false"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -37,7 +38,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "AFOFAS"
+define build.name = "A-Field-of-Flowers-and-Stars"
 
 
 ## Sounds and music ############################################################
@@ -120,7 +121,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 70
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
@@ -204,7 +205,7 @@ init python:
 
     ## If True, Ren'Py will include update information into packages. This
     ## allows the updater to run.
-    build.include_update = True
+    build.include_update = False
 
 ## Set this to a string containing your Apple Developer ID Application to enable
 ## codesigning on the Mac. Be sure to change it to your own Apple-issued ID.
@@ -222,4 +223,4 @@ init python:
 ## The username and project name associated with an itch.io project, separated
 ## by a slash.
 
-# define build.itch_project = "renpytom/test-project"
+define build.itch_project = "watercress/afofas"

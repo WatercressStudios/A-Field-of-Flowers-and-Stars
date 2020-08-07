@@ -59,10 +59,10 @@
     voice "voice/12-default-19.ogg" #Raine (Nat)
     mc annoyed  "S-Shut up!" with hpunch
 
-    scene sky with dissolve:
+    scene sky_shootingstar with dissolve:
         zoom 0.75
 
-    na "Even with Leona's constant flirting…"
+    na "Even with Leona's constant flirting..."
     na "It's not been a bad life out here."
     na "Sure, we've seen more than our fair share of trouble, but together it feels like we can take on the world."
     na "It's nice to know that no matter what happens, we'll always have each other."

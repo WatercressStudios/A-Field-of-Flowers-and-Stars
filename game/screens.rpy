@@ -369,11 +369,9 @@ init python:
         ('save', ShowMenu('save')),
         ('load', ShowMenu('load')),
         ('pref', ShowMenu('custom_preferences')),
-        # ('log', Show('journal')),
         ('quit', Quit(confirm=not main_menu)),
         ('menu', MainMenu()),
-        ### DEBUG BUTTONS
-        # ('sprite', Show('dynamicspritespreview')),
+
     ]
 
     def polygon_point_offset(ind, distance=75, points=5):
@@ -450,7 +448,6 @@ screen flower_menu_moon():
             add im.FactorScale('gui/sagi/roundbutton-hover.png', 0.15):
                 align (0.5, 0.5)
                 xoffset 25
-
 screen flower_menu():
     if quick_menu:
         button:
@@ -470,6 +467,7 @@ screen flower_menu():
             ]
 
         button at flower_menu_transform:
+            key_events True
             background None
             padding (0, 0)
             margin (0, 0)
@@ -494,6 +492,7 @@ screen flower_menu():
                             Hide('flower_menu_moon'),
                             flower_menu_actions[i][1],
                         ]
+                        alt flower_menu_actions[i][0]
                     text flower_menu_actions[i][0]:
                         align (0.5, 0.5)
                         yoffset 13
@@ -629,7 +628,7 @@ screen journal():
                         draggable True mousewheel True
                         vbox:
                             xsize 890
-                            spacing 5
+                            spacing 15
                             for h in _history_list:
                                 if h.who:
                                     hbox:
@@ -652,7 +651,7 @@ screen journal():
                                         $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                                         label what:
                                             substitute False
-                                            xsize 480
+                                            xsize 700
                                             text_align (0.0, 0.0)
                                             text_size 30
                                             if "color" in h.what_args:
@@ -662,7 +661,7 @@ screen journal():
                                     label what:
                                         substitute False
                                         xsize 850
-                                        text_xalign 0.5
+                                        text_xalign 0.0
                                         text_size 30
                     vbar value YScrollValue("history_list"):
                         xalign -0.063
@@ -715,7 +714,7 @@ screen quick_menu():
 
             xalign 0.75
             yalign .95
-            textbutton _("<") action Rollback()
+            textbutton _("<") action Rollback() alt "Rollback"
             textbutton _(">") action Preference("auto-forward", "toggle")
             textbutton _(">>") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("LOG") action [
@@ -771,8 +770,6 @@ screen navigation():
         textbutton _("Load") action ShowMenu("load")
 
         textbutton _("Preferences") action ShowMenu("custom_preferences")
-
-        textbutton _("Credits") action ShowMenu("credits")
 
         textbutton _("About") action ShowMenu("about")
 
@@ -1009,7 +1006,7 @@ style return_button_text is navigation_button_text
 
 style game_menu_outer_frame:
     bottom_padding 45
-    top_padding 180
+    top_padding 45
 
     #background "gui/overlay/game_menu.png"
 
@@ -1018,7 +1015,7 @@ style game_menu_navigation_frame:
     yfill True
 
 style game_menu_content_frame:
-    left_margin 160
+    left_margin 130
     right_margin 130
     top_margin 15
 
@@ -1063,7 +1060,6 @@ screen about():
     use game_menu(_(""), scroll="viewport"):
 
         style_prefix "about"
-
         vbox:
 
             label "[config.name!t]"
@@ -1138,14 +1134,12 @@ screen about():
             text _ ("{a=https://twitter.com/Bodo1215}Bodo{/a} (Marketing)\n")
 
             text _ ("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
-
-            add "images/logos/watercresslogo.png"  zoom 0.2 xalign 0.5
-            add "images/logos/somnovalogo.jpg"  xalign 0.5
-            add "images/logos/sarchalenlogo.png" zoom 0.2 xalign 0.5
-
-            #imagebutton auto "images/logos/watercresslogo.png" zoom 0.2 xalign 0.5 action OpenURL("https://watercressstudios.com/")
-            #imagebutton auto "images/logos/somnovalogo.jpg" xalign 0.5 action OpenURL("http://somnovastudios.org/")
-            #imagebutton auto "images/logos/sarchalenlogo.png"  zoom 0.2 xalign 0.5  action OpenURL(" https://sarchalen.itch.io/")
+            hbox:
+                xalign .5
+                #add "images/logos/watercresslogo.png"  zoom 0.13 yalign 0.5 xalign .25
+                imagebutton idle "images/logos/watercresslogo.png" action OpenURL("https://watercressstudios.com/")
+                imagebutton idle "images/logos/somnovalogo.png" action OpenURL("http://somnovastudios.org/")
+                imagebutton idle "images/logos/sarchalenlogo.png" action OpenURL("http://sarchalen.com/")
 
 
 ## This is redefined in options.rpy to add text to the about screen.
@@ -1634,6 +1628,7 @@ screen custom_preferences():
             text 'X':
                 align (0.5, 0.5)
 
+    key "K_ESCAPE" action close_action
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text

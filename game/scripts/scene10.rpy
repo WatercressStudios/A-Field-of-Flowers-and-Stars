@@ -158,7 +158,7 @@
     mc shocked armraised "...Oh, God, I hadn't thought of that."
 
     voice "voice/10-default-44.ogg" #Leona (Dot)
-    le cryingtalk "We can't disable the nuclear reactor. Plenty of people could die from losing that power ."
+    le cryingtalk "We can't disable the nuclear reactor. Plenty of people could die from losing that power."
 
     voice "voice/10-default-45.ogg" #Leona (Dot)
     le concernedspeaking "You can't get any parts from it either. The council would never allow it. We need everything there just to keep Aster running."
@@ -211,7 +211,7 @@
     le concerned "Hmm?"
 
     voice "voice/10-default-61.ogg" #Raine (Nat)
-    mc "I… I really am sorry."
+    mc "I...I really am sorry."
 
     voice "voice/10-default-62.ogg" #Leona (Dot)
     le "We can discuss this later. There's no time to waste."
@@ -416,7 +416,7 @@
     le frustrated a1 "I'm moving, I'm moving!"
 
     voice "voice/10-default-113.ogg" #Leona (Dot)
-    le snarky a1 "Sending out the order now! I'll let you know as soon as I hear back!"
+    le happy a2 "Sending out the order now! I'll let you know as soon as I hear back!"
 
     voice "voice/10-default-114.ogg" #Raine (Nat)
     mc happy "If all goes as planned, we'll be able to tell from here if it worked, right Juneau?"
