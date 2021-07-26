@@ -42,18 +42,18 @@ screen gallery():
     $ close_action = [
         Return(),
     ]
-    button at fade_transform:
-        background None
-        xysize (1.0, 1.0)
-        action close_action
+    # button at fade_transform:
+    #     background None
+    #     xysize (1.0, 1.0)
+    #     action close_action
     frame at fade_transform:
         align (0.5, 0.5)
         xysize (1600, 900)
         margin (0, 0)
-        button:
-            background None
-            xysize (1.0, 1.0)
-            action NullAction()
+        # button:
+        #     background None
+        #     xysize (1.0, 1.0)
+        #     action NullAction()
         frame:
             background colors.namebox['Default']
             xysize (255, 55)

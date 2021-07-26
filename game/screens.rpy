@@ -450,7 +450,7 @@ screen flower_menu_moon():
                 xoffset 25
 screen flower_menu():
     if quick_menu:
-        button:
+        frame:
             background None
             padding (0, 0)
             margin (0, 0)
@@ -460,14 +460,15 @@ screen flower_menu():
                 Show('flower_menu_button'),
                 Hide('flower_menu_moon'),
             ]
-            action [
-                Hide('flower_menu'),
-                Show('flower_menu_button'),
-                Hide('flower_menu_moon'),
-            ]
+            # action [
+            #     Hide('flower_menu'),
+            #     Show('flower_menu_button'),
+            #     Hide('flower_menu_moon'),
+            # ]
 
-        button at flower_menu_transform:
-            key_events True
+        frame at flower_menu_transform:
+            # key_events True
+            modal True
             background None
             padding (0, 0)
             margin (0, 0)
@@ -498,7 +499,7 @@ screen flower_menu():
                         yoffset 13
                         text_align 0.5
                         size 15
-            action []
+            # action []
             if not tap_mode:
                 mousearea:
                     unhovered [
@@ -549,22 +550,22 @@ screen journal():
 
     style_prefix "journal"
 
-    button at fade_transform:
+    frame at fade_transform:
         background "#000000CC"
         xysize (1.0, 1.0)
-        action [
-            Hide('journal'),
-            Show('flower_menu_button'),
-        ]
+        # action [
+        #     Hide('journal'),
+        #     Show('flower_menu_button'),
+        # ]
 
     frame at journal_transform:
         align (0.5, 0.5)
         xysize (1200, 800)
         margin (0, 0)
-        button:
-            background None
-            xysize (1.0, 1.0)
-            action NullAction()
+        # button:
+        #     background None
+        #     xysize (1.0, 1.0)
+        #     action NullAction()
         frame:
             background colors.namebox['Default']
             xysize (255, 55)
@@ -1280,18 +1281,18 @@ screen custom_file_slots(title):
             Show('flower_menu_button'),
             Return(),
         ]
-    button at fade_transform:
-        background "#000000CC"
+    frame at fade_transform:
+        background "#000000AA"
         xysize (1.0, 1.0)
-        action close_action
+        # action close_action
     frame at fade_transform:
         align (0.5, 0.5)
         xysize (1200, 800)
         margin (0, 0)
-        button:
-            background None
-            xysize (1.0, 1.0)
-            action NullAction()
+        # button:
+        #     background None
+        #     xysize (1.0, 1.0)
+        #     action NullAction()
         frame:
             background colors.namebox['Default']
             xysize (255, 55)
@@ -1486,18 +1487,18 @@ screen custom_preferences():
         ]
     if main_menu:
         add "backgrounds/space.png" at main_menu_bg_transform
-    button at fade_transform:
-        background "#000000CC"
+    frame at fade_transform:
+        background "#000000AA"
         xysize (1.0, 1.0)
-        action close_action
+        # action close_action
     frame at fade_transform:
         align (0.5, 0.5)
         xysize (1200, 600)
         margin (0, 0)
-        button:
-            background None
-            xysize (1.0, 1.0)
-            action NullAction()
+        # button:
+        #     background None
+        #     xysize (1.0, 1.0)
+        #     action NullAction()
         frame:
             background colors.namebox['Default']
             xysize (330, 55)
@@ -2381,19 +2382,19 @@ screen demo_letter():
 
     style_prefix "journal"
 
-    button at fade_transform:
-        background "#000000CC"
+    frame at fade_transform:
+        background "#000000AA"
         xysize (1.0, 1.0)
-        action Return()
+        # action close_action
 
     frame at fade_transform:
         align (0.5, 0.5)
         xysize (1200, 800)
         margin (0, 0)
-        button:
-            background None
-            xysize (1.0, 1.0)
-            action NullAction()
+        # button:
+        #     background None
+        #     xysize (1.0, 1.0)
+        #     action NullAction()
 
         frame:
             background None
