@@ -1140,7 +1140,7 @@ screen about():
                 #add "images/logos/watercresslogo.png"  zoom 0.13 yalign 0.5 xalign .25
                 imagebutton idle "images/logos/watercresslogo.png" action OpenURL("https://watercressstudios.com/")
                 imagebutton idle "images/logos/somnovalogo.png" action OpenURL("http://somnovastudios.org/")
-                imagebutton idle "images/logos/sarchalenlogo.png" action OpenURL("http://sarchalen.com/")
+                imagebutton idle "images/logos/sarchalenlogo.png" action OpenURL("https://twitter.com/Sarchalen_Team/")
 
 
 ## This is redefined in options.rpy to add text to the about screen.
