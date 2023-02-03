@@ -1069,7 +1069,7 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("{i}A Field of Flowers and Stars{/i} was developed for Yurijam 2019 by Watercress Studios in collaboration with Somnova Studios and Sarchalen Visual Media.\n")
+            text _("{i}A Field of Flowers and Stars{/i} was developed for Yurijam 2019 by Watercress in collaboration with Somnova Studios and Sarchalen Visual Media.\n")
 
             #text _("If you loved this game, check out our {a=https://watercressstudios.com/}official website{/a}, {a=http://somnovastudios.org/}Somnova Studios{/a}, and {a=https://sarchalen.itch.io/}Sarchalen Visual Media{/a} or go straight to our {a=https://watercress.itch.io/}itch.io page{/a} for more of our projects.\n")
 
@@ -1077,15 +1077,15 @@ screen about():
 
             text _("You can follow the team members on twitter to keep up to date with new studio releases and experience their artwork and other talents.\n")
 
-            text _("{a=https://twitter.com/Wolf_GameDev}Tristan 'Wolf' Barber{/a} (Director, Story Writer, Editor, Sound Editor)\n")
+            text _("{a=https://twitter.com/Wolf_GameDev}Tristan 'Wolf' Barber{/a} (Director, Story Concept, Story Writer, Editor, Sound Editor)\n")
 
-            text _("{a=https://m.imdb.com/name/nm7026286/}Kevin Bomer{/a} (Director, Story Writer, Scripting)\n")
+            text _("{a=https://m.imdb.com/name/nm7026286/}Kevin Bomer{/a} (Director, Story Concept,  Story Writer, Scripting)\n")
 
-            text _("{a=https://twitter.com/Hamadyne}Hamadyne{/a} (Story Writer)\n")
+            text _("{a=https://twitter.com/Hamadyne}Hamadyne{/a} (Story Concept, Story Writer)\n")
 
             text _ ("{a=https://twitter.com/Hoakkun}A.D. 'Hoa' Hemingway{/a} (Story Writer, Scripting)\n")
 
-            text _ ("Monochrome (Story Writer)\n")
+            text _ ("Monochrome (Story Concept, Story Writer)\n")
 
             text _ ("{a=https://twitter.com/Zodai_Stryde}Zodai{/a} (Story Writer, Story Concept, Editor, Scripting)\n")
 
@@ -1105,7 +1105,7 @@ screen about():
 
             text _ ("{a=https://twitter.com/JaeJaeAgogo}Jae{/a} (Music)\n")
 
-            text _ ("{a=https://twitter.com/TheVoiderling}Voiderling{/a} (Concept Art, BG art)\n")
+            text _ ("{a=https://twitter.com/TheVoiderling}Voiderling{/a} (Concept Art, CG, BG art)\n")
 
             text _ ("{a=https://twitter.com/liah0227}Liah{/a} (Concept Art)\n")
 
@@ -1116,8 +1116,6 @@ screen about():
             text _ ("{a=https://twitter.com/Happinessplus__}Happiness+{/a} (Programming Director)\n")
 
             text _ ("{a=https://twitter.com/DreadLindwyrm}Steve/DreadLindwyrm{/a} (Development Director)\n")
-
-            text _ ("General (Scripting)\n")
 
             text _ ("{a=https://www.deviantart.com/ebagigi}Gabriel 'Ebagigi'{/a} (Scripting)\n")
 
